@@ -1,0 +1,12 @@
+Binary files dropbox-python-sdk-1.5.1-orig/.DS_Store and dropbox-python-sdk-1.5.1/.DS_Store differ
+diff -uNr dropbox-python-sdk-1.5.1-orig/dropbox/client.py dropbox-python-sdk-1.5.1/dropbox/client.py
+--- dropbox-python-sdk-1.5.1-orig/dropbox/client.py	2012-08-21 03:37:26.000000000 +0200
++++ dropbox-python-sdk-1.5.1/dropbox/client.py	2012-10-04 20:27:58.000000000 +0200
+@@ -195,6 +195,7 @@
+             """
+ 
+             while self.offset < self.target_length:
++            	print "Uploading: ", self.offset
+                 next_chunk_size = min(chunk_size, self.target_length - self.offset)
+                 if self.last_block == None:
+                     self.last_block = self.file_obj.read(next_chunk_size)

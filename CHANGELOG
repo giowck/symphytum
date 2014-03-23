@@ -1,0 +1,44 @@
+CHANGELOG
+
+Version X.X
+===========
+
+[New Features]
+
+[Improvements]
+
+[Bug Fixes]
+
+
+Version 1.1
+===========
+
+[New Features]
+- New appearance option for dark toolbar (Ambiance theme) on Linux
+
+[Improvements]
+- Last used record is now saved and restored when changing between collections
+- Performance of form view has been noticeably improved
+- Selection of a field in the form view can now be cleared by pressing the escape key
+- The clean database menu action "Menu->Tools->Database->Free unused space" now includes the removal
+  of obsolete files, which are no longer linked to any specific record
+
+[Bug Fixes]
+- Fields with identical names are now correctly identified and handled by form view
+- CSV exporting generates no longer an invalid column/content structure when records contain multiple new lines
+- Form view is no longer disabled when adding a new record after a search operation with no results
+- Form view scrolls now correctly the viewport to ensures visibility of the last selected field in table view mode
+- Field name is now correctly loaded when editing an existing field of creation date type and last modification date type
+- Incorrect records are no longer restored after adding, removing or modifying a field, during an active search filter
+- Alarms are now set to fire at midnight (time 00:00) if new records have date fields without the time format spec
+- Alarms are no longer incorrectly modified when enabling reminders for date fields with existing records
+- Alarms are now correctly enabled/disabled when a field modification is triggered by undo/redo
+- Last used collection is now correctly selected after a cloud sync session, where collections have been deleted
+- Image fields are now scaling correctly the size of the content image, after changing from table view to form view
+- Minor UI bugfixes
+
+
+Version 1.0
+===========
+
+- Initial release

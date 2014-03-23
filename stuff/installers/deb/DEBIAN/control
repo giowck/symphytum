@@ -1,0 +1,15 @@
+Package: symphytum
+Version: 1.1
+Section: utils
+Priority: optional
+Architecture: amd64
+Essential: no
+Depends: libc6, libqt4-core, libqt4-gui, libqt4-network, libqt4-sql-sqlite, libqt4-svg
+Recommends:
+Suggests:
+Installed-Size: 3000
+Maintainer: GIOWISYS Software <info@giowisys.com>
+Conflicts:
+Replaces:
+Description: Easy-to-use personal database software with cloud synchronization support
+ Symphytum is a personal database software for everyone who desires to manage and organize data in an easy and intuitive way, without having to study complex database languages and software user interfaces.

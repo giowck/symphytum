@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/icons/searchline_clear.png</file>
+        <file>images/icons/searchline_icon.png</file>
+        <file>images/icons/deletefield.png</file>
+        <file>images/icons/deleterecord.png</file>
+        <file>images/icons/duplicatefield.png</file>
+        <file>images/icons/duplicaterecord.png</file>
+        <file>images/icons/newfield.png</file>
+        <file>images/icons/newrecord.png</file>
+        <file>images/icons/symphytum.png</file>
+        <file>images/icons/deletecollection.png</file>
+        <file>images/icons/newcollection.png</file>
+        <file>images/icons/nextrecord.png</file>
+        <file>images/icons/previousrecord.png</file>
+        <file>images/icons/collectionlistitem.png</file>
+        <file>images/icons/sync.png</file>
+        <file>images/icons/dropbox.png</file>
+        <file>images/icons/initConflict.png</file>
+        <file>images/icons/revConflict.png</file>
+        <file>images/icons/settings_advanced.png</file>
+        <file>images/icons/settings_general.png</file>
+        <file>images/icons/draghere.png</file>
+        <file>images/icons/settings_appearance.png</file>
+        <file>images/icons/add.png</file>
+        <file>images/icons/export.png</file>
+        <file>images/icons/remove.png</file>
+        <file>images/icons/alarm.png</file>
+        <file>images/sample/calendula.jpg</file>
+        <file>images/sample/coffea.jpg</file>
+        <file>images/sample/symphytum.jpg</file>
+    </qresource>
+</RCC>

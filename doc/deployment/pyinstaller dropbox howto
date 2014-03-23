@@ -1,0 +1,33 @@
+Get PyInstaller working with Dropbox Python SDK
+===============================================
+
+1. Download and install Python
+2. Extend your windows PATH variable to be able to run the 'python' command from console
+   see http://docs.python.org/using/windows.html#excursus-setting-environment-variables
+3. Download and install the 'setuptools' module which is required to install the Dropbox SDK.
+4. Download and install PyWin32 as required by PyInstaller
+5. Download PyInstaller and extract it somewhere
+6. In the 'pyinstaller-x.x.x' directory run the following command to configure PyInstaller.
+   See http://www.pyinstaller.org/export/d3398dd79b68901ae1edd761f3fe0f4ff19cfb1a/project/doc/Manual.html?format=raw#getting-started
+   for reference.
+   > python Configure.py
+7. Download the Dropbox Python SDK archive and extract it.
+8. Go to the 'dropbox-x.x.x\dropbox' directory and backup the 'trusted-certs.crt' file for later usage.
+   In the same folder open the 'rest.py' file with a text editor and modify the line #23:
+   From: TRUSTED_CERT_FILE = pkg_resources.resource_filename(__name__, 'trusted-certs.crt')
+   To: TRUSTED_CERT_FILE = os.path.join(os.path.dirname(sys.executable), 'trusted-certs.crt')
+   This will fix the PyInstaller issue with the pkg_resource module when using '__name__'.
+9. Since the script changed, regenerate the corresponding .pyc file:
+   In the 'dropbox-x.x.x\dropbox' directory run:
+   > python -m compileall .
+10. Install the Dropbox SDK, in the 'dropbox-x.x.x' directory run:
+   > python setup.py install
+11. Now you are ready to build an example script from the Dropbox SDK (here web_upload_app example),
+    copy the .py file to PyInstaller's root directory and then execute in the same directory:
+	> python Makespec.py web_upload_app.py
+	> python Build.py web_upload_app\web_upload_app.spec
+12. Now go to the directory containing the generated .exe (here web_upload_app\dist\web_upload_app)
+    Copy the backed 'trusted-certs.crt' file to this directory. The file must be in the same directory as the .exe.
+13. Now you can run your example program and test it!
+
+NOTE: use 'python Makespec.py --noconsole file.py' to hide the console window on execution.

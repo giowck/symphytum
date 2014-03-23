@@ -1,0 +1,19 @@
+Hacking
+=========
+
+When adding a new field type, the following code locations need to be updated:
+- MetadataEngine::FieldType
+- MetadataEngine::dataTypeSqlName()
+- AddFieldDialog::nextButtonClicked()
+- AddFieldDialog::updateFieldDescription()
+- AddFieldDialog::init()
+- FormView::createFormWidget()
+- FormWidgetValidator
+- TableViewDelegate
+- PrintDialog/ExportDialog/ImportDialog
+- MainWindow::searchSlot() if field is not searchable
+  (ie. data is not saved directly in the field data)
+- StandardModel::duplicateRecord() if field doesn't support value duplication
+- StandardModel::addRecord() if field has a default init value
+- CollectionFieldCleaner if field needs some extra deletion triggers
+

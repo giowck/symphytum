@@ -1,0 +1,152 @@
+STANDARD DATABASE DESIGN
+
+
+ABSTRACT
+========
+
+Symphytum uses a SQLite database as default storage implementation for its
+standard data model and metadata. This document illustrates the database
+structure and motivates design decisions.
+
+
+LIMITATIONS
+===========
+
+SQLite lacks of support for advanced operation like renaming and deleting
+columns.
+
+
+ROWID
+=====
+
+SQLite performs extremely fast when using ROWID to access rows. When declaring
+a INTEGER PRIMARY KEY, SQLite automatically creates an alias for the builtin
+ROWID column. The primary key is automatically populated with incremental or
+unused values. An index is automatically created for the primary key.
+See: http://www.sqlite.org/lang_createtable.html
+
+
+STYLE GUIDE
+===========
+
+All names of tables and columns are not capitalized and words are separated by
+underscores. Examples: "collections" (table name), "is_active" (column name).
+
+
+TABLES
+======
+
+There are 2 main tables for each collection, one for the actual content data
+and one for the collection specific metadata. There may be other tables, for
+example the field type files is used for file archiving. To keep track of all
+files, a global file table is needed. The "collections" table stores the
+relation between collection id and collection name. The "symphytum_info" table
+contains key-value pairs where info is saved, such as database version.
+
+
+NAMES
+=====
+
+Table names should not depend on collection names. Table names are generated
+from md5 hash values of current date string with the character 'c' as prefix.
+The additional 'c' character stands for collection and is introduced to avoid
+table names starting with a numeric value such as "2ef...". This design allows
+to rename collections by modifying the metadata only. The corresponding
+metadata table name is the md5 hash string followed by a "_metadata" string concatenation.
+Since columns cannot be renamed or deleted, they also need to be field name
+independent. The first column of every table is named "_id" and is the primary
+key, this is due compatibility for android's cursors. Following column names
+are named "1", "2", "3", etc. This allows easy column (collection fileds)
+renaming.
+
+
+METADATA
+========
+
+Metadata tables contain 3 columns: "_id", "key", "value". Metadata tables store
+key-value pairs. Metadata attributes for fields/columns are formatted as:
+key: "colx_attr" value: "value1;value2;value3;...".
+
+
+METADATA FIELD PROPERTIES
+=========================
+
+Each collection field (column) can have own custom metadata properties.
+There are three main property classes:
+1. Display properties
+2. Edit properties
+3. Trigger properties
+
+Format:
+A property class is stored in the metadata table of the target collection.
+E.g. (key,value) => ("colX_class","key1:value1;key2:value2;key3:value3a,value3b;")
+e.g. ("col4_display","valueToUpper:1;")
+
+Display Properties:
+Display properties describe how the data should be presented/rendered.
+This includes only properties that influence directly the appearance
+if displayed values, for example: a property for numeric fields to set
+the amount of digits shown after the decimal dot.
+
+Edit Properties:
+Properties that restrict valid data values, for example: for numeric fields
+a property to allow only positive values.
+These properties are validated by the corresponding methods exposed
+by MetadataEngine, before data is commited to the model (storage).
+
+Trigger Properties:
+Triggers represents condition which if met require the execution of
+specific actions. For example, on date fields, show an alarm if
+a specified date is achieved.
+
+
+DESIGN ILLUSTRATION
+===================
+ ________
+|data.db |
+|________|_____________________________________________________________________
+|
+|  ___________
+| |collections|
+| |___________|___________________________
+| | _id | name      | type | table_name   | //type describes the collection type
+| |-----+-----------+------+--------------|
+| | 1   | Customers | 1    | c4b6f7d34... |
+| | 2   | Books     | 1    | c7d8949bc... |
+| |_____|___________|______|______________|
+
+|  ______________
+| |symphytum_info|
+| |______________|___________________
+| | _id | key                | value |
+| |-----+--------------------+-------|
+| | 1   | db_version         | 1     |
+| | 2   | current_collection | 1     | //current_collection represents the
+| |__________________________|_______| //last used collection
+|
+|  ____________
+| |c4b6f7d34...|
+| |____________|____________
+| | _id | 1    | 2   | 3    |
+| |-----+------+-----+------|
+| | 1   | John | Doe | 1.87 |
+| | 2   | Jane | Doe | 1.65 |
+| |_____|______|_____|______|
+|
+|
+|  ______________________
+| |c4b6f7d34..._metadata |
+| |______________________|______________
+| | _id | key            | value        | 
+| |-----+----------------+--------------|
+| | 1   | column_count   | 4            | //the number of columns including _id
+| | 2   | col1_name      | First Name   |
+| | 3   | col1_type      | 3            | //type is a constant indicating the data type
+| | 4   | col2_name      | Last Name    |
+| | 5   | col3_name      | Height       |
+| | 5   | col3_display   | "key:value;" | //example of display property
+| | 7   | col1_pos       | "0;0"        | //pos describes where the field is located in the form view (FormLayoutMatrix coordinates)
+| | 8   | col1_size      | "0;0"        | //size describes the size of the filed in width/height units (FormLayoutMatrix units)
+| |_____|_______________ |______________|
+|
+| etc...

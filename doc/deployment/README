@@ -1,0 +1,50 @@
+Deployment
+==========
+
+Build Symphytum:
+1. Create archive of last commit:
+   git archive -o symphytum.zip HEAD
+2. Uncompress and open project with release config
+3. Check DefinitionHolder
+4. Set dropbox app secret in DropboxSyncDriver::initSecrets()
+5. Compile
+
+Prepare Dropbox SDK
+1. Edit components/sync_framework/scripts/dropbox_client.py
+   and set correct app key
+2. Download latest Dropbox python SDK:
+   https://www.dropbox.com/developers/reference/sdk
+3. Apply custom patches (from stuff dir in general symphytum dir)
+   copy patches to sdk folder
+   patch -p1 < *.patch
+4. Go to dropbox folder in the sdk folder
+   delete all .pyc files and remove Makefile
+   compile all python files
+   python -m compileall .
+   delete all .py files
+   compile dropbox_client.py
+5. Copy dropbox_client.pyc and the dropbox folder to somewhere for later use
+
+Windows:
+1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto.txt"
+2. Open and compile symphytum.iss after review
+
+OS X:
+1. Move pyc files to app boundle in the sync subfolder where the binary is
+2. Use macdeployqt
+3. Add to Info.plist:
+   <key>NSPrincipalClass</key>
+   <string>NSApplication</string>
+   for retina support thing (needed as Qt 4.8.1)
+3. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
+
+Ubuntu:
+1. Copy deb dir from installers dir
+2. Update DEBIAN/control as needed
+3. Copy executable to usr/bin
+4. Copy dropbox_client.py and dropbox to usr/share/symphytum/sync
+5. Create deb package
+   sudo chown root:root -R deb/
+   sudo chmod -R 0755 deb/
+   dpkg -b deb/ symphytum-1.0-x86_64.deb
+
