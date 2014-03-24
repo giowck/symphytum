@@ -334,12 +334,12 @@ void DropboxSyncDriver::startRequest()
     else
         pythonInterpreterPath = "python2.7";
     QString path = QApplication::applicationDirPath().append("/sync/");
-    path.append("dropbox_client.pyc");
+    path.append("dropbox_client.py");
     args.append(path);
 #endif
 #ifdef Q_WS_X11
     pythonInterpreterPath = "python2";
-    args.append("/usr/share/symphytum/sync/dropbox_client.pyc");
+    args.append("/usr/share/symphytum/sync/dropbox_client.py");
 #endif
 
     //decode access token

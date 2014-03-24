@@ -19,18 +19,14 @@ Prepare Dropbox SDK
    patch -p1 < *.patch
 4. Go to dropbox folder in the sdk folder
    delete all .pyc files and remove Makefile
-   compile all python files
-   python -m compileall .
-   delete all .py files
-   compile dropbox_client.py
-5. Copy dropbox_client.pyc and the dropbox folder to somewhere for later use
+5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
 
 Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto.txt"
 2. Open and compile symphytum.iss after review
 
 OS X:
-1. Move pyc files to app boundle in the sync subfolder where the binary is
+1. Move py files to app boundle in the sync subfolder where the binary is
 2. Use macdeployqt
 3. Add to Info.plist:
    <key>NSPrincipalClass</key>
