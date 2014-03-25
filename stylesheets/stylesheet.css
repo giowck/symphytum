@@ -369,19 +369,6 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
-/* grey box for images */
-.lightGreyBox {
-    margin: 15px;
-    padding: 5px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    background-color: #F5F5F5;
-    -moz-box-shadow: 0px 0px 10px #999999;
-    -webkit-box-shadow: 0px 0px 10px #999999;
-    box-shadow: 0px 0px 10px #999999;
-}
-
 /* #Media Queries
 ================================================== */
 
