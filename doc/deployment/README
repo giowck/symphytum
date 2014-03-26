@@ -19,7 +19,10 @@ Prepare Dropbox SDK
    patch -p1 < *.patch
 4. Go to dropbox folder in the sdk folder
    delete all .pyc files and remove Makefile
-5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
+   compile all python files
+   python2 -m compileall .
+   compile dropbox_client.py
+5. Copy dropbox_client.py/.pyc and the dropbox folder to somewhere for later use
 
 Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto.txt"
@@ -38,7 +41,7 @@ Ubuntu:
 1. Copy deb dir from installers dir
 2. Update DEBIAN/control as needed
 3. Copy executable to usr/bin
-4. Copy dropbox_client.py and dropbox to usr/share/symphytum/sync
+4. Copy dropbox_client.py/.pyc and dropbox to usr/share/symphytum/sync
 5. Create deb package
    sudo chown root:root -R deb/
    sudo chmod -R 0755 deb/
