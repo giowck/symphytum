@@ -6,9 +6,10 @@ pkgdesc="Personal database software"
 arch=('i686' 'x86_64')
 url="http://giowck.github.io/symphytum/"
 license=('BSD')
-depends=('qt4') #todo check other deps like python2 and sqlite
+depends=('qt4' 'sqlite')
+optdepends=('python2: dropbox sync support' 'python2-setuptools: dropbox sync support')
 source=(http://giowck.github.io/symphytum/files/$pkgname-$pkgver-src.tar.gz)
-md5sums=('bcbc33caf19d51d6999447c4b6096f4b')
+md5sums=('1f88c56ee50fea6ea4a0b3c7fb3aad16')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver-src"
@@ -29,7 +30,8 @@ package() {
   cp -R "$srcdir/$pkgname-$pkgver-src/stuff/installers/deb/usr/share/pixmaps/" "${pkgdir}/usr/share/"
 
   # Sync framework files
-  #todo...
+  install -d "${pkgdir}/usr/share/symphytum/"
+  cp -R "$srcdir/$pkgname-$pkgver-src/stuff/installers/deb/usr/share/symphytum/" "${pkgdir}/usr/share/"
 
   # Copy license
   install -Dm644 "$srcdir/$pkgname-$pkgver-src/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
