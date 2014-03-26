@@ -3,8 +3,8 @@
 
 #define MyAppName "Symphytum"
 #define MyAppVersion "1.0"
-#define MyAppPublisher "GIOWISYS Software"
-#define MyAppURL "http://www.giowisys.com/"
+#define MyAppPublisher "Symphytum Developers"
+#define MyAppURL "http://giowck.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
 
 [Setup]

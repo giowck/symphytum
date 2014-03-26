@@ -8,7 +8,7 @@ Depends: libc6, libqt4-core, libqt4-gui, libqt4-network, libqt4-sql-sqlite, libq
 Recommends:
 Suggests:
 Installed-Size: 3000
-Maintainer: GIOWISYS Software <info@giowisys.com>
+Maintainer: Giorgio Wicklein <giowckln@gmail.com>
 Conflicts:
 Replaces:
 Description: Easy-to-use personal database software with cloud synchronization support
