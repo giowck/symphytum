@@ -10,7 +10,7 @@ from sys import argv, exit
 from dropbox import client, rest, session
 
 ACCESS_TYPE = 'app_folder'
-APP_KEY = 'yhes0ma0ptan2as'
+APP_KEY = '3gef8jrsy599xfg'
 APP_SECRET = ''
 
 # This is a workaround to get unbuffered console output

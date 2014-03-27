@@ -308,7 +308,7 @@ void DropboxSyncDriver::initSecrets()
     //3. Now switch first and second half
     //4. Result is: secondHalf+firstHalf
     //to decode apply reverse algorithm
-    m_appSecretEncoded = "g4N25vNnVneGF4OXcxZ2";
+    m_appSecretEncoded = "J6d2x2MXR1aHptamhhcD";
 
     //load encoded access token from settings
     //access token is saved just as base64 encoded string
