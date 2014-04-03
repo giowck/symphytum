@@ -3,7 +3,7 @@ Deployment
 
 Build Symphytum:
 1. Create archive of last commit:
-   git archive -o symphytum.zip HEAD
+   git archive -o symphytum.tar.gz HEAD
 2. Uncompress and open project with release config
 3. Check DefinitionHolder
 4. Set dropbox app secret in DropboxSyncDriver::initSecrets()
