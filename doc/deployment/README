@@ -7,7 +7,8 @@ Build Symphytum:
 2. Uncompress and open project with release config
 3. Check DefinitionHolder
 4. Set dropbox app secret in DropboxSyncDriver::initSecrets()
-5. Compile
+5. Check authors description in about dialog, see AUTHORS file
+6. Compile
 
 Prepare Dropbox SDK
 1. Edit components/sync_framework/scripts/dropbox_client.py
@@ -46,4 +47,10 @@ Ubuntu:
    sudo chown root:root -R deb/
    sudo chmod -R 0755 deb/
    dpkg -b deb/ symphytum-1.0-x86_64.deb
+
+Archlinux:
+1. Adjust PKGBUILD script from the installers directory
+2. copy source tarball to current build directory
+3. run updpkgsums to update checksums for source tarball
+4. run makepkg -i to build pacman package and to install it
 
