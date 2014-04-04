@@ -1,6 +1,7 @@
 CHANGELOG
 
-Version X.X
+
+Version 1.2
 ===========
 
 [New Features]
@@ -12,17 +13,6 @@ Version X.X
 [Bug Fixes]
 - #1 OS X 10.6 error, python .pyc files have bad magic number
 - #7 Display correct text string of progress data in table view
-
-
-Version 1.2
-===========
-
-[New Features]
-
-[Improvements]
-
-[Bug Fixes]
-
 
 
 Version 1.1
