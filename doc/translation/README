@@ -1,0 +1,23 @@
+Translation And Localization
+============================
+
+
+Documentation
+_____________
+
+General QtLinguist documentation: http://qt-project.org/doc/qt-4.8/linguist-translators.html
+More docs on language management: http://qt-project.org/doc/qt-4.8/linguist-manager.html
+
+
+
+How to translate Symphytum in your local language
+_________________________________________________
+
+1. Update the TRANSLATIONS variable in the Symphytum.pro file so that your TS file is created in the stuff/translations directory. This is only needed for new languages.
+2. Run 'lupdate-qt4 -noobsolete Symphytum.pro' to update/create all TS files in the stuff/translations directory
+3. Open and translate the TS file with Qt4Linguist
+4. To create the QM language file, run 'lrelease-qt4 Symphytum.pro'
+5. Move the QM files to the resources/languages directory
+6. If needed, update the resources.qrc file in the resources directory
+7. Optionally, to improve and fully complete the translation, a qt_xx.qm file is also needed in your local language. The Qt framework provides some of them which are translated and compiled TS files. Copy the appropriate qt_xx.qm file to the resources/languages directory and update the resources.qrc file.
+

@@ -29,5 +29,8 @@
         <file>images/sample/calendula.jpg</file>
         <file>images/sample/coffea.jpg</file>
         <file>images/sample/symphytum.jpg</file>
+        <file>languages/qt_de.qm</file>
+        <file>languages/symphytum_de.qm</file>
+        <file>languages/symphytum_it.qm</file>
     </qresource>
 </RCC>

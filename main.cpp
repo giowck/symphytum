@@ -10,6 +10,9 @@
 #include "utils/definitionholder.h"
 #include "utils/qtsingleapplication/qtsingleapplication.h"
 
+#include <QtCore/QTranslator>
+#include <QtCore/QLocale>
+
 
 //-----------------------------------------------------------------------------
 // Main
@@ -28,6 +31,16 @@ int main(int argc, char *argv[])
     if (symphytumApp.sendMessage("Wake up!"))
         return 0;
 
+    //setup translations
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(),
+                      ":/languages");
+    symphytumApp.installTranslator(&qtTranslator);
+    QTranslator myappTranslator;
+    myappTranslator.load("symphytum_" + QLocale::system().name(), ":/languages");
+    symphytumApp.installTranslator(&myappTranslator);
+
+    //init gui
     MainWindow w;
     w.show();
 

@@ -207,5 +207,8 @@ FORMS += \
     ui/importdialog.ui \
     ui/aboutdialog.ui
 
+TRANSLATIONS = stuff/translations/symphytum_de.ts \
+    stuff/translations/symphytum_it.ts
+
 ICON = resources/images/icons/symphytum.icns # for mac
 RC_FILE = resources/symphytum.rc # for windows
