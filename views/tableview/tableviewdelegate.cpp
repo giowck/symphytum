@@ -1,5 +1,6 @@
 /*
  *  Copyright (c) 2012 Giorgio Wicklein <giorgio.wicklein@giowisys.com>
+ *  Copyright (C) 2014 Giorgio Wicklein <giowckln@gmail.com>
  */
 
 //-----------------------------------------------------------------------------
@@ -744,7 +745,8 @@ void TableViewDelegate::paintProgressType(QPainter *painter,
     progressBarOption.textAlignment = Qt::AlignCenter;
     progressBarOption.textVisible = true;
     progressBarOption.progress = value;
-    progressBarOption.text = QString().sprintf("%d%%", progressBarOption.progress);
+    int progressPercent = ((double) value) / ((double) max) * 100.0;
+    progressBarOption.text = QString().sprintf("%d%%", progressPercent);
 
     QApplication::style()->drawControl(QStyle::CE_ProgressBar, &progressBarOption, painter);
 }

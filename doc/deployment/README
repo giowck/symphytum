@@ -7,10 +7,11 @@ Build Symphytum:
 2. Check DefinitionHolder
 3. Set dropbox app secret in DropboxSyncDriver::initSecrets()
 4. Check authors description in about dialog, see AUTHORS file
-5. Create archive of last commit:
+5. Check and update CHANGELOG file
+6. Create archive of last commit:
    git archive -o symphytum.tar.gz HEAD
-6. Uncompress and open project with release config
-7. Compile
+7. Uncompress and open project with release config
+8. Compile
 
 Prepare Dropbox SDK
 1. Edit components/sync_framework/scripts/dropbox_client.py
