@@ -4,10 +4,25 @@ Version X.X
 ===========
 
 [New Features]
+- Symphytum is now open source
+
+[Improvements]
+- Source code translation and localization capabilities for future interface translation work
+
+[Bug Fixes]
+- #1 OS X 10.6 error, python .pyc files have bad magic number
+- #7 Display correct text string of progress data in table view
+
+
+Version 1.2
+===========
+
+[New Features]
 
 [Improvements]
 
 [Bug Fixes]
+
 
 
 Version 1.1
