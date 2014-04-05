@@ -6,52 +6,52 @@
     <message>
         <location filename="../../ui/aboutdialog.ui" line="17"/>
         <source>About Symphytum</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Symphytum</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="26"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="43"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="87"/>
         <source>&lt;b&gt;Symphytum&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="96"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="103"/>
         <source>version</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="110"/>
         <source>Build:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="117"/>
         <source>build</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="156"/>
         <source>copyright</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="173"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Entwickler</translation>
     </message>
     <message utf8="true">
         <location filename="../../ui/aboutdialog.ui" line="182"/>
@@ -75,12 +75,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;www.giowisys.com&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Germany&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2012-2014&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="209"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lizenz</translation>
     </message>
     <message utf8="true">
         <location filename="../../ui/aboutdialog.ui" line="218"/>
@@ -101,12 +101,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="242"/>
         <source>Third-party licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Drittlizenzen</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="251"/>
@@ -965,12 +965,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;agrees to be bound by the terms and conditions of this License&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Agreement.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="1134"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schließen</translation>
     </message>
 </context>
 <context>
@@ -978,54 +978,54 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/addfielddialog.ui" line="14"/>
         <source>Field Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld-Wizard</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="57"/>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="52"/>
         <source>Create Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Erstellen</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="84"/>
         <source>1. Choose a field type</source>
-        <translation type="unfinished"></translation>
+        <translation>1. Feldtyp wählen</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="121"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschreibung</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="127"/>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="220"/>
         <source>Select a field type from the list on the left</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie ein Feldtyp aus der Liste links</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="158"/>
         <source>2. Set field name</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Feld benennen</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="204"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="214"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Weiter</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="58"/>
         <source>Duplicate Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Duplizieren</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="65"/>
         <source>Modify Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Ändern</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="165"/>
@@ -1080,62 +1080,62 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="263"/>
         <source>Created on</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstellt am</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="266"/>
         <source>Modified on</source>
-        <translation type="unfinished"></translation>
+        <translation>Geändert am</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="278"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="279"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummer</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="280"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="281"/>
         <source>Creation Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstellungsdatum</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="282"/>
         <source>Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderungsdatum</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="283"/>
         <source>Checkbox</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="284"/>
         <source>Combobox</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="285"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortschritt</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="286"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="287"/>
         <source>File list</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateiliste</translation>
     </message>
 </context>
 <context>
@@ -1158,7 +1158,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="119"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schließen</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="167"/>
@@ -1168,7 +1168,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="168"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="169"/>
@@ -1796,7 +1796,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/filemanager.cpp" line="403"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei-Fehler</translation>
     </message>
 </context>
 <context>
@@ -3299,7 +3299,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/form_widgets/progressformwidget.cpp" line="111"/>
         <source> of %1</source>
-        <translation type="unfinished"></translation>
+        <translation> von %1</translation>
     </message>
 </context>
 <context>
@@ -3308,7 +3308,7 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../components/databasemanager.cpp" line="163"/>
         <location filename="../../components/databasemanager.cpp" line="284"/>
         <source>Database Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank-Fehler</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="164"/>
@@ -3415,12 +3415,12 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/searchlineedit.cpp" line="37"/>
         <location filename="../../widgets/searchlineedit.cpp" line="87"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchen</translation>
     </message>
     <message>
         <location filename="../../widgets/searchlineedit.cpp" line="52"/>
         <source>Clears the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text löschen</translation>
     </message>
 </context>
 <context>
@@ -3445,12 +3445,12 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/syncconfigdialog.ui" line="225"/>
         <location filename="../../ui/syncconfigdialog.ui" line="326"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="121"/>
         <source>&amp;Login</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="140"/>
@@ -3473,7 +3473,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="238"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="272"/>
@@ -3488,7 +3488,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="346"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="111"/>
@@ -3518,7 +3518,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="167"/>
         <source>Dropbox</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3853,37 +3853,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="120"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nein</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="121"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="170"/>
         <source> of %1</source>
-        <translation type="unfinished"></translation>
+        <translation> von %1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="493"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungültige Eingabe</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="494"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungültige Eingabedaten!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="802"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Datei</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="803"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Dateien</translation>
     </message>
 </context>
 <context>
@@ -3929,12 +3929,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../components/updatemanager.cpp" line="76"/>
         <source>New Software Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Software Version</translation>
     </message>
     <message>
         <location filename="../../components/updatemanager.cpp" line="77"/>
         <source>A new version of %1 is available!&lt;br&gt;Do you want to download the new version?</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine neue Version von %1 ist erhältlich!&lt;br&gt;Möchten Sie die neue Version herunterladen?</translation>
     </message>
 </context>
 <context>
