@@ -1030,52 +1030,52 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="165"/>
         <source>Generic input field for all kind of data. Text Fields can be resized to create multi-lined text areas.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingabefeld für allgemeine Daten. Die veränderbare Größe der Text Felder erlaubt mehrzeilige Texteingaben.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="171"/>
         <source>Input field for numbers with support for decimal and scientific notation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingabefeld für Zahlen mit Unterstützung für Dezimal- und wissenschaftliche Notation.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="176"/>
         <source>Input and display field for date and time values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingabe- und Anzeigefeld für Zeit- und Datumsangaben.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="181"/>
         <source>Display field for record creation date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigefeld des Erstellungsdatums eines Eintrags.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="185"/>
         <source>Display field for record modification date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigefeld des Änderungsdatums eines Eintrags.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="189"/>
         <source>Status field with two possible values: checked (yes) and unchecked (no). Checkboxes are generally used to answer simple yes/no questions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Statusfeld mit zwei möglichen Werten: angehakt (ja) und nicht angehakt (nein). Checkboxen repräsentieren häufig Antworten auf einfache ja/nein Fragen.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="196"/>
         <source>Drop-down list which allows to choose one value from a predefined list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dropdown-Liste, erlaubt eine einzige Auswahl aus einer vordefinierten Liste von Werten.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="201"/>
         <source>A progressbar to indicate the current progress state of a task.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fortschrittsbalken der den aktuellen Fortschritt eines Auftrags repräsentiert.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="206"/>
         <source>Display field for image files. Supported file formats: PNG, JPG/JPEG, GIF, TIFF, BMP, SVG.</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigefeld für Bilderdateien. Unterstützte Dateiformate: PNG, JPG/JPEG, GIF, TIFF, BMP, SVG.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="212"/>
         <source>File management. This field allows you to link files to a specific record. Added files are copied to the database and can be opened/modified later on.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei-Verwaltung. Dieses Feld ermöglicht die Verlinkung von Dateien zu einem spezifischen Eintrag. Hinzugefügte Dateien werden in die Datenbank kopiert und können später geöffnet/bearbeitet werden.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="263"/>
@@ -1095,7 +1095,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="279"/>
         <source>Number</source>
-        <translation>Nummer</translation>
+        <translation>Zahl</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="280"/>
@@ -1143,17 +1143,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="17"/>
         <source>Date Reminder</source>
-        <translation type="unfinished"></translation>
+        <translation>Datumserinnerung</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="50"/>
         <source>The following dates need your attention</source>
-        <translation type="unfinished"></translation>
+        <translation>Die folgende Daten verlangen Ihre Aufmerksamkeit</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="71"/>
         <source>&lt;i&gt;There are no open reminders&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Keine offene Erinnerungen vorhanden&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="119"/>
@@ -1163,7 +1163,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="167"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigen</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="168"/>
@@ -1173,12 +1173,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="169"/>
         <source>Show affected record</source>
-        <translation type="unfinished"></translation>
+        <translation>Betroffenen Eintrag anzeigen</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="170"/>
         <source>Remove reminder from list</source>
-        <translation type="unfinished"></translation>
+        <translation>Erinnerung von der Liste entfernen</translation>
     </message>
 </context>
 <context>
@@ -1186,12 +1186,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="17"/>
         <source>Database Backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank-Backup</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="36"/>
         <source>Create or restore a backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstellung und Wiederherstellung von Backups</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="46"/>
@@ -1201,66 +1201,66 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="56"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorgang</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="62"/>
         <source>Create backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup erstellen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="72"/>
         <source>Restore backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup wiederherstellen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="117"/>
         <location filename="../../ui/backupdialog.ui" line="432"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="127"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Weiter</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="146"/>
         <source>Create a new backup file</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Backup-Datei erstellen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="156"/>
         <source>Save as</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern unter</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="162"/>
         <location filename="../../ui/backupdialog.ui" line="269"/>
         <source>Backup file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup-Datei:</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="169"/>
         <source>Please select destination...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte wählen Sie ein Zielpfad aus...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="176"/>
         <location filename="../../ui/backupdialog.ui" line="283"/>
         <source>B&amp;rowse...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Durchsuchen...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="221"/>
         <location filename="../../ui/backupdialog.ui" line="328"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="234"/>
         <source>B&amp;ackup</source>
-        <translation type="unfinished"></translation>
+        <translation>Bac&amp;kup</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="253"/>
@@ -1270,7 +1270,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="263"/>
         <source>Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="276"/>
@@ -1280,63 +1280,63 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="341"/>
         <source>Res&amp;tore</source>
-        <translation type="unfinished"></translation>
+        <translation>W&amp;iederherstellen</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="360"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte warten...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="375"/>
         <source>Initializing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Initialisierung...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="442"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>Bee&amp;nden</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="125"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei speichern</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="127"/>
         <location filename="../../widgets/backupdialog.cpp" line="141"/>
         <source>Symphytum Backup(*.syb)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="139"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei öffnen</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="162"/>
         <source>Exporting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportieren...</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="170"/>
         <source>Importing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Importieren...</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="183"/>
         <source>Backup operation failed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Backupvorgang gescheitert: %1</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="191"/>
         <source>Backup completed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup wurde erfolgreich erstellt!</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="200"/>
         <source>Backup restored successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup wurde erfolgreich wiederhergestellt!</translation>
     </message>
 </context>
 <context>
