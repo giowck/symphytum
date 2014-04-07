@@ -1196,7 +1196,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="46"/>
         <source>A backup file contains all your data, including all files, making it easy to export and restore database backups across different installations</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Backup-Datei enthält all Ihre Daten, einschließlich Dateien, und ermöglicht eine einfache Migration zwischen verschiedene Software-Installationen.</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="56"/>
@@ -1265,7 +1265,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="253"/>
         <source>Restore an existing backup file</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellung durch einer bereits existierende Backup-Datei</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="263"/>
@@ -1275,7 +1275,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="276"/>
         <source>Please select a backup file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte Backup-Datei auswählen...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="341"/>
@@ -1344,7 +1344,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/backupmanager.cpp" line="89"/>
         <source>Failed to open create file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffnen und Schreiben der Datei %1 fehlgeschlagen: %2</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="105"/>
@@ -1352,27 +1352,27 @@ p, li { white-space: pre-wrap; }
         <location filename="../../components/backupmanager.cpp" line="165"/>
         <location filename="../../components/backupmanager.cpp" line="259"/>
         <source>Failed to open file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffnen der Datei %1 fehlgeschlagen: %2</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="177"/>
         <source>The selected file is not a valid backup file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Die ausgewählte Datei ist keine gültige Backup-Datei!</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="181"/>
         <source>The selected backup file is not compatible with this software version. Please upgrade to a newer version and then try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die ausgewählte Backup-Datei ist nicht mit dieser Software-Version kompatibel. Bitte führen Sie eine Aktualisierung zu einer neueren Version durch. Dann erneut versuchen.</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="218"/>
         <source>Failed to remove current database file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen der aktuellen Datenbank-Datei fehlgeschlagen!</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="227"/>
         <source>Failed to remove file %1!</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen der Datei %1 fehlgeschlagen!</translation>
     </message>
 </context>
 <context>
@@ -1380,27 +1380,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="31"/>
         <source>&lt;i&gt;No field properties available&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Keine Feldeigenschaften vorhanden&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="76"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="83"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -1408,7 +1408,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../models/collectionlistmodel.cpp" line="58"/>
         <source>New Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Sammlung</translation>
     </message>
 </context>
 <context>
@@ -1416,22 +1416,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="76"/>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="77"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="119"/>
         <source>Delete Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammlung löschen</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="120"/>
         <source>Are you sure you want to delete the selected collection?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sind Sie sicher, dass Sie die ausgewählte Sammlung löschen möchten?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warnung:&lt;/b&gt; Dies kann nicht rückgängig gemacht werden!</translation>
     </message>
 </context>
 <context>
@@ -1439,88 +1439,88 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfelder müssen ausgefüllt werden</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfeld</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="53"/>
         <source>Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Einträge</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="64"/>
         <source>Add at least one item to your drop-down list by using the &quot;Add&quot; button on the right</source>
-        <translation type="unfinished"></translation>
+        <translation>Fügen Sie mindestens ein Eintrag (Auswahl) zur Dropdown-Liste hinzu. Klicken Sie auf &quot;Hinzufügen&quot;.</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="76"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="89"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Umbenennen</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="99"/>
         <source>Rem&amp;ove</source>
-        <translation type="unfinished"></translation>
+        <translation>Ent&amp;fernen</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="125"/>
         <location filename="../../ui/comboboxfieldwizard.ui" line="135"/>
         <source>Select the default item if desired. To be able to choose an item, add some to the items list above first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Falls gewünscht, Standardwert festlegen. Um ein Wert als Standard zu definieren, tragen Sie zuerst einige Einträge in die Liste oben ein.</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="128"/>
         <source>Default item (optional):</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardwert (optional):</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="142"/>
         <source>Clear default item selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardwert-Auswahl zurücksetzen</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="145"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Zurücksetzen</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="205"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="215"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/comboboxfieldwizard.cpp" line="156"/>
         <source>New item</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
 </context>
 <context>
@@ -1528,32 +1528,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="102"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="109"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -1561,27 +1561,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="67"/>
         <source>Reminder</source>
-        <translation type="unfinished"></translation>
+        <translation>Erinnerung</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="73"/>
@@ -1596,12 +1596,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="121"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="128"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
