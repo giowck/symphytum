@@ -1642,12 +1642,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="54"/>
         <source>Get Ready!</source>
-        <translation type="unfinished"></translation>
+        <translation>So geht&apos;s los!</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="147"/>
@@ -1672,7 +1672,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../../ui/exportdialog.ui" line="36"/>
         <location filename="../../ui/exportdialog.ui" line="59"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Export</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="49"/>
@@ -1682,113 +1682,113 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/exportdialog.ui" line="65"/>
         <source>All records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Einträge</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="75"/>
         <source>Selected records (0 items)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewählte Einträge (0 Datensätze)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="87"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="98"/>
         <source>Comma-separated values (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommagetrennte Werte (CSV)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="156"/>
         <location filename="../../ui/exportdialog.ui" line="366"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="166"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Weiter</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="184"/>
         <source>Text encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text-Codierung:</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="207"/>
         <source>Field separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Feldtrennzeichen:</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="218"/>
         <source>, (comma)</source>
-        <translation type="unfinished"></translation>
+        <translation>, (Komma)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="223"/>
         <source>; (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>; (Semikolon)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="281"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="291"/>
         <source>&amp;Export</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="312"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte warten...</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="49"/>
         <source>item</source>
-        <translation type="unfinished"></translation>
+        <translation>Datensatz</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="49"/>
         <source>items</source>
-        <translation type="unfinished"></translation>
+        <translation>Datensätze</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="50"/>
         <source>Selected records (%1 %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewählte Einträge (%1 %2)</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="116"/>
         <source>Save CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-Datei speichern</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="118"/>
         <source>CSV file(*.csv)</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-Datei (*.csv)</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="466"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="468"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nein</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="556"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Datei</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="557"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Dateien</translation>
     </message>
 </context>
 <context>
@@ -1804,12 +1804,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/filemanager.cpp" line="61"/>
         <source>Failed to copy %1 to %2: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Kopieren von %1 nach %2: %3</translation>
     </message>
     <message>
         <location filename="../../components/filemanager.cpp" line="69"/>
         <source>Failed to remove %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Entfernen von %1: %2</translation>
     </message>
 </context>
 <context>
@@ -1817,17 +1817,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="31"/>
         <source>Visible sections</source>
-        <translation type="unfinished"></translation>
+        <translation>Sichtbare Kopfzeilen</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="40"/>
@@ -1838,27 +1838,27 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="51"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfelder müssen ausgefüllt werden</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="54"/>
         <source>Show file type</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateityp anzeigen</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="61"/>
         <source>Show date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum anzeigen</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="106"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="113"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -2051,27 +2051,27 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="31"/>
         <source>&lt;i&gt;No field properties available&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Keine Feldeigenschaften vorhanden&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="76"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="83"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -2891,32 +2891,32 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="102"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="109"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -2924,42 +2924,42 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="33"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="42"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfelder müssen ausgefüllt werden</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="45"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfeld</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="55"/>
         <source>Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Werte</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="61"/>
         <source>Show negative values in red</source>
-        <translation type="unfinished"></translation>
+        <translation>Negative Zahlen in rot markieren</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="64"/>
         <source>Mark negative values</source>
-        <translation type="unfinished"></translation>
+        <translation>Negative Zahlen rot markieren</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="78"/>
@@ -2974,7 +2974,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="86"/>
         <source>Notation:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="93"/>
@@ -2989,17 +2989,17 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="102"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="107"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Dezimal</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="112"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Wissenschaftlich</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="138"/>
@@ -3011,22 +3011,22 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="141"/>
         <source>Precision</source>
-        <translation type="unfinished"></translation>
+        <translation>Prezision</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="150"/>
         <source>Number of digits after the decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachkommastellen:</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="218"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="225"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -3034,54 +3034,54 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="28"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="58"/>
         <location filename="../../ui/preferencesdialog.ui" line="113"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="67"/>
         <location filename="../../ui/preferencesdialog.ui" line="190"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Erscheinung</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="76"/>
         <source>Cloud Sync</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="85"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortgeschritten</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="120"/>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisierungen</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="128"/>
         <source>Check for updates:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach Aktualisierungen suchen:</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="139"/>
         <source>At startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Start</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="144"/>
         <source>Manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuell</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="197"/>
         <source>Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Hauptfenster</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="203"/>
@@ -3096,43 +3096,43 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="216"/>
         <source>Form View</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular-Ansicht</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="224"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="235"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="281"/>
         <source>Cloud Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Synchronisierung</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="290"/>
         <source>Status:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="298"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktiv</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="303"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiv</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="326"/>
         <location filename="../../ui/preferencesdialog.ui" line="399"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="334"/>
@@ -3147,7 +3147,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="392"/>
         <source>Adanced Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortgeschrittene Eigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="407"/>
@@ -3157,12 +3157,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="417"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="479"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schließen</translation>
     </message>
 </context>
 <context>
@@ -3171,83 +3171,83 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/printdialog.ui" line="17"/>
         <location filename="../../ui/printdialog.ui" line="33"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Drucken</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="39"/>
         <source>All records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Einträge</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="49"/>
         <source>Selected records (0 items)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewählte Einträge (0 Datensätze)</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="94"/>
         <location filename="../../ui/printdialog.ui" line="189"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="104"/>
         <source>&amp;Save PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF &amp;Speichern</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="114"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Drucken</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="135"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte warten...</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="48"/>
         <source>item</source>
-        <translation type="unfinished"></translation>
+        <translation>Datensatz</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="48"/>
         <source>items</source>
-        <translation type="unfinished"></translation>
+        <translation>Datensätze</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="49"/>
         <source>Selected records (%1 %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewählte Einträge (%1 %2)</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="88"/>
         <source>Save PDF file</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF-Datei speichern</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="90"/>
         <source>PDF file(*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF-Datei (*pdf)</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="365"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="367"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nein</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="484"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Datei</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="485"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Dateien</translation>
     </message>
 </context>
 <context>
@@ -3255,12 +3255,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="31"/>
@@ -3281,17 +3281,17 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="56"/>
         <source> steps</source>
-        <translation type="unfinished"></translation>
+        <translation> Schritte</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="110"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="117"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -3463,7 +3463,7 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/syncconfigdialog.cpp" line="94"/>
         <location filename="../../widgets/syncconfigdialog.cpp" line="102"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte warten...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="171"/>
@@ -3560,7 +3560,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="17"/>
         <source>Cloud Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Synchronisierung</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="36"/>
@@ -3598,13 +3598,13 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/syncprocessdialog.ui" line="639"/>
         <location filename="../../ui/syncprocessdialog.ui" line="737"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="159"/>
         <location filename="../../ui/syncprocessdialog.ui" line="649"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="178"/>
@@ -3648,7 +3648,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="507"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="526"/>
@@ -3815,37 +3815,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="258"/>
         <source>New field</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Feld</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="259"/>
         <source>Duplicate field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld duplizieren</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="260"/>
         <source>Delete field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld löschen</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="261"/>
         <source>Modify field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld bearbeiten</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="262"/>
         <source>New record</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="263"/>
         <source>Duplicate record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag duplizieren</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="264"/>
         <source>Delete record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag löschen</translation>
     </message>
 </context>
 <context>
@@ -3891,37 +3891,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Konfiguration der Feldeigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfelder müssen ausgefüllt werden</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfeld</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="88"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="95"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
 </context>
 <context>
@@ -3942,12 +3942,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="33"/>
         <source>New Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="34"/>
         <source>New Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="36"/>
@@ -3957,12 +3957,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="44"/>
         <source>Duplicate Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag duplizieren</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="45"/>
         <source>Duplicate Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag duplizieren (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="47"/>
@@ -3972,12 +3972,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="60"/>
         <source>Delete Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="61"/>
         <source>Delete Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag löschen (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="63"/>
@@ -3987,12 +3987,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="79"/>
         <source>New Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Feld</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="80"/>
         <source>New Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Feld (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="82"/>
@@ -4002,12 +4002,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="91"/>
         <source>Duplicate Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Duplizieren</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="92"/>
         <source>Duplicate Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag duplizieren (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="94"/>
@@ -4017,12 +4017,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="107"/>
         <source>Delete Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="108"/>
         <source>Delete Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld löschen (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="110"/>
@@ -4032,7 +4032,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="125"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="126"/>
@@ -4042,7 +4042,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="133"/>
         <source>Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabelle</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="134"/>
