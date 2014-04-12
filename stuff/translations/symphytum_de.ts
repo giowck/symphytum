@@ -4072,7 +4072,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="168"/>
         <source>Next Record (%1)</source>
-        <translation>Nächster# Eintrag (%1)</translation>
+        <translation>Nächster Eintrag (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="170"/>
