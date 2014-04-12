@@ -1973,32 +1973,32 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="32"/>
         <source>Add files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien hinzufügen</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="85"/>
         <source>Import Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien importieren</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="115"/>
         <source>Importing file 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei 0 von %1 wird importiert</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="117"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbrechen</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="120"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="133"/>
         <source>Importing file %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei %1 von %2 wird importiert</translation>
     </message>
 </context>
 <context>
@@ -2008,42 +2008,42 @@ Additional sections can be configured:</source>
         <location filename="../../views/formview/formview.cpp" line="251"/>
         <location filename="../../views/formview/formview.cpp" line="270"/>
         <source>Record %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag %1 von %2</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1532"/>
         <source>New field</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Feld</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1533"/>
         <source>Duplicate field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Duplizieren</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1534"/>
         <source>Delete field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld löschen</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1535"/>
         <source>Modify field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld Ändern</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1536"/>
         <source>New record</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1537"/>
         <source>Duplicate record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag duplizieren</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1538"/>
         <source>Delete record</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag löschen</translation>
     </message>
 </context>
 <context>
@@ -2079,77 +2079,77 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="64"/>
         <source>Drag your image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild hierher ziehen</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="80"/>
         <source>or click here...</source>
-        <translation type="unfinished"></translation>
+        <translation>oder hier klicken...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="114"/>
         <source>Select image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild auswählen...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="115"/>
         <source>Delete image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="116"/>
         <source>Save image as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild speichern unter...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="117"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild öffnen</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="373"/>
         <source>Import Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild importieren</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="375"/>
         <source>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilder (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="405"/>
         <source>Export Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild exportieren</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="416"/>
         <source>Delete Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="417"/>
         <source>Are you sure you want to delete the selected image?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sind Sie sicher, dass Sie das ausgewählte Bild löschen möchten?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warnung:&lt;/b&gt; Dies kann nicht rückgängig gemacht werden!</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="431"/>
         <source>Deleting file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="432"/>
         <source>Deleting image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild-Datei wird gelöscht... Bitte warten!</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="522"/>
         <source>Importing file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei importieren</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="523"/>
         <source>Copying image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild-Datei wird kopiert... Bitte warten!</translation>
     </message>
 </context>
 <context>
@@ -2157,27 +2157,27 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="31"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="80"/>
         <source>Import Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild importieren</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="82"/>
         <source>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilder (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="94"/>
         <source>Importing file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei importieren</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="95"/>
         <source>Copying image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild-Datei wird kopiert... Bitte warten!</translation>
     </message>
 </context>
 <context>
@@ -2186,7 +2186,7 @@ Additional sections can be configured:</source>
         <location filename="../../ui/importdialog.ui" line="17"/>
         <location filename="../../ui/importdialog.ui" line="36"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Import</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="49"/>
@@ -2196,23 +2196,23 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../ui/importdialog.ui" line="61"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="72"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="130"/>
         <location filename="../../ui/importdialog.ui" line="379"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="140"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Weiter</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="158"/>
@@ -2223,57 +2223,57 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../ui/importdialog.ui" line="161"/>
         <source>Collection name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Name der Sammlung:</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="180"/>
         <source>CSV Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-Eigenschaften</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="188"/>
         <source>Field separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Feldtrennzeichen:</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="212"/>
         <source>, (comma)</source>
-        <translation type="unfinished"></translation>
+        <translation>, (Komma)</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="217"/>
         <source>; (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>; (Semikolon)</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="241"/>
         <source>Text encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text-Codierung:</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="288"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurück</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="301"/>
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Import</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="325"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte warten...</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="104"/>
         <source>Open CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-Datei öffnen</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="106"/>
         <source>CSV file(*.csv)</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-Datei (*.csv)</translation>
     </message>
 </context>
 <context>
@@ -2281,13 +2281,13 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="100"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="223"/>
         <location filename="../../widgets/mainwindow.cpp" line="292"/>
         <source>Software Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Software-Reset</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="224"/>
@@ -2312,7 +2312,7 @@ Additional sections can be configured:</source>
         <location filename="../../widgets/mainwindow.cpp" line="676"/>
         <location filename="../../widgets/mainwindow.cpp" line="849"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortschritt</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="256"/>
@@ -2379,17 +2379,17 @@ Additional sections can be configured:</source>
         <location filename="../../widgets/mainwindow.cpp" line="673"/>
         <location filename="../../widgets/mainwindow.cpp" line="846"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbrechen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="554"/>
         <source>Duplicating record %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliziere Eintrag %1 von %2</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="579"/>
         <source>%1 record(s) duplicated</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Einträge dupliziert</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="595"/>
@@ -2416,7 +2416,7 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="628"/>
         <source>Record %1 deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag %1 gelöscht</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="647"/>
@@ -2446,17 +2446,17 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="727"/>
         <source>%1 record(s) deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Einträge gelöscht</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="754"/>
         <source>Cloud not connected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud nicht verbunden</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="791"/>
         <source>Delete All Records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Einträge löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="792"/>
@@ -2476,7 +2476,7 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="880"/>
         <source>Database Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank Größe</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="881"/>
@@ -2553,12 +2553,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1386"/>
         <source>Sync Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Sync Fehler</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1387"/>
         <source>Cloud sync error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Sync Fehler:</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1400"/>
@@ -2598,97 +2598,97 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1521"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1522"/>
         <source>Exit from this application</source>
-        <translation type="unfinished"></translation>
+        <translation>Anwendung schließen und beenden</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1526"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Über %1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1529"/>
         <source>About Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Qt</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1532"/>
         <source>New Collection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Sammlung...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1534"/>
         <source>Create a new collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Sammlung erstellen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1536"/>
         <source>Delete Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammlung löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1538"/>
         <source>Delete current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuelle Sammlung löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1540"/>
         <source>New Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1544"/>
         <source>New Field...</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Feld</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1547"/>
         <source>Backup...</source>
-        <translation type="unfinished"></translation>
+        <translation>Backup...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1548"/>
         <source>Backup or restore a database file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank-Datei sichern oder wiederherstellen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1550"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1553"/>
         <source>Change application settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Anwendungseinstellungen ändern</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1555"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rückgängig</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1558"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1561"/>
         <source>Select all records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Einträge auswählen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1563"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1566"/>
         <source>Form View</source>
-        <translation type="unfinished"></translation>
+        <translation>Formular-Ansicht</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1568"/>
@@ -2698,7 +2698,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1572"/>
         <source>Table View</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabellen-Ansicht</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1574"/>
@@ -2708,27 +2708,27 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1577"/>
         <source>View Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Anischtsmodus</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1585"/>
         <source>Minimize</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimieren</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1588"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Schließen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1592"/>
         <source>Fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Vollbild</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1597"/>
         <source>Delete all records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Einträge löschen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1599"/>
@@ -2738,27 +2738,27 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1601"/>
         <source>Free unused space</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbenutzter Speicherplatz befreien</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1602"/>
         <source>Optimize size of database file by freeing unused resources</source>
-        <translation type="unfinished"></translation>
+        <translation>Optimierung der Größe der Datenbank-Datei durch Freilegung von unbenutzten Ressourcen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1605"/>
         <source>Cloud synchronization...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Synchronisierung...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1606"/>
         <source>Synchronize your database with a cloud service</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank synchronisieren durch einem Cloud-Service</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1610"/>
         <source>Read-only mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur-Lese-Modus</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1611"/>
@@ -2768,122 +2768,122 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1616"/>
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach Aktualisierungen suchen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1617"/>
         <source>Check for %1 updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach %1-Aktualisierungen suchen</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1621"/>
         <source>Date reminder list...</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste der Datumserinnerungen...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1623"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation>Drucken...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1624"/>
         <source>Print records or export them as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Einträge drucken oder als PDF exportieren</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1627"/>
         <source>Import...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1628"/>
         <source>Import existing records to the database</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestehende Einträge in die Datenbank importieren</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1630"/>
         <source>Export...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1631"/>
         <source>Export all or only selected records</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle oder nur ausgewählte Einträge exportieren</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1633"/>
         <source>Help and support</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe und Support</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1634"/>
         <source>Need some help? Do you want to contact us?</source>
-        <translation type="unfinished"></translation>
+        <translation>Brauchen Sie hilfe? Möchten SIe uns kontaktieren?</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1640"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1672"/>
         <source>COLLECTIONS</source>
-        <translation type="unfinished"></translation>
+        <translation>SAMMLUNGEN</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1700"/>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1705"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Datei</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1717"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1725"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ansicht</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1733"/>
         <source>Cloud</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1736"/>
         <source>Records</source>
-        <translation type="unfinished"></translation>
+        <translation>Einträge</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1739"/>
         <source>Database</source>
-        <translation type="unfinished"></translation>
+        <translation>Datenbank</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1742"/>
         <source>&amp;Tools</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1752"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fenster</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1757"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hilfe</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1769"/>
         <source> Ready </source>
-        <translation type="unfinished"></translation>
+        <translation> Bereit </translation>
     </message>
 </context>
 <context>
@@ -3265,18 +3265,18 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="31"/>
         <source>Progress Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Fortschrittsbereich</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="40"/>
         <location filename="../../ui/progressfieldwizard.ui" line="50"/>
         <source>The maximum value for the progress. In other words when this value is met, 100% progress is achieved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der maximale Fortschrittswert. Anders ausgedrückt, wenn dieser Wert erreicht ist, sind 100% des Fortschrittes erreicht.</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="43"/>
         <source>Total progress steps:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesamtanzahl der Einzelschritte:</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="56"/>
@@ -3313,100 +3313,100 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../components/databasemanager.cpp" line="164"/>
         <source>Failed to open the database file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim öffnen der Datenbank-Datei: %1</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="285"/>
         <source>Failed to initialize the database: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler bei der Initialisierung der Datenbank: %1</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="30"/>
         <source>collection change</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammlungswechsel</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="70"/>
         <source>collection edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammlungsänderung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="122"/>
         <source>field creation</source>
-        <translation type="unfinished"></translation>
+        <translation>Felderstellung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="125"/>
         <source>field duplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Feldduplizierung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="184"/>
         <source>field modification</source>
-        <translation type="unfinished"></translation>
+        <translation>Feldänderung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="267"/>
         <source>record edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintragänderung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="349"/>
         <source>record creation</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintragerstellung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="401"/>
         <source>record deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintraglöschung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="475"/>
         <source>record duplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintragduplizierung</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="527"/>
         <source>field layout change</source>
-        <translation type="unfinished"></translation>
+        <translation>Feld-Layout-Änderung</translation>
     </message>
     <message>
         <location filename="../../utils/formwidgetvalidator.cpp" line="43"/>
         <source>Read-only mode: Editing is not allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur-Lese-Modus: Bearbeiten ist nicht erlaubt.</translation>
     </message>
     <message>
         <location filename="../../utils/formwidgetvalidator.cpp" line="87"/>
         <location filename="../../utils/formwidgetvalidator.cpp" line="112"/>
         <source>Required field: empty values not allowed
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Pflichtfeld: unbesetzte Werte sind nicht erlaubt</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="142"/>
         <source>Error in CSV export</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim CSV-Export</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="143"/>
         <source>Unable to create CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstellen der CSV-Datei fehlgeschlagen!</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="125"/>
         <location filename="../../widgets/importdialog.cpp" line="144"/>
         <source>Error in CSV import</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim CSV-Import</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="126"/>
         <source>Unable to open CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffnen der CSV-Datei fehlgeschlagen!</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="145"/>
         <source>Invalid CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungultige CSV-Datei!</translation>
     </message>
 </context>
 <context>
@@ -3428,7 +3428,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="17"/>
         <source>Sync Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Sync-Konfiguration</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="36"/>
@@ -3438,7 +3438,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="71"/>
         <source>Cloud service:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Service:</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="111"/>
@@ -3468,7 +3468,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="171"/>
         <source>Requesting URL...</source>
-        <translation type="unfinished"></translation>
+        <translation>Anfordern der URL...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="238"/>
@@ -3478,12 +3478,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="272"/>
         <source>Authorizing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorisieren...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="336"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Wiederholen</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="346"/>
@@ -3493,27 +3493,27 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="111"/>
         <source>%1 Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bitte erneut versuchen.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="122"/>
         <source>The authentication token is invalid or expired.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Autorisierungs-Token ist ungültig oder abgelaufen.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="127"/>
         <source>Connection to cloud service failed, check your connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbindung zum Cloud-Service fehlgeschlagen, bitte überprüfen Sie Ihre Verbindung.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="145"/>
         <source>Accessing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zugreifen...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="153"/>
         <source>Logged in as %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingeloggt als %1</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="167"/>
@@ -3756,58 +3756,58 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="42"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur lesen</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="45"/>
         <source>online</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="48"/>
         <source>offline</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="51"/>
         <location filename="../../widgets/syncstatuswidget.cpp" line="110"/>
         <source>undefined</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="63"/>
         <source>Authenticating...</source>
-        <translation type="unfinished"></translation>
+        <translation>Authentifizieren...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="68"/>
         <source>Opening session...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sitzung öffnen...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="73"/>
         <source>Closing session...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sitzung schließen...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="78"/>
         <source>Accessing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Zugreifen...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="83"/>
         <source>Downloading...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="88"/>
         <source>Uploading...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="109"/>
         <source>Cloud:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4052,32 +4052,32 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="154"/>
         <source>Previous Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorheriger Eintrag</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="155"/>
         <source>Previous Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorheriger Eintrag (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="157"/>
         <source>Navigate to the previous record</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigiere zum vorherigen Eintrag</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="167"/>
         <source>Next Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächster Eintrag</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="168"/>
         <source>Next Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächster# Eintrag (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="170"/>
         <source>Navigate to the next record</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigiere zum nächsten Eintrag</translation>
     </message>
 </context>
 </TS>
