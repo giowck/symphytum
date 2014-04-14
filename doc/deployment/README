@@ -29,7 +29,7 @@ Prepare Dropbox SDK
 5. Copy dropbox_client.py/.pyc and the dropbox folder to somewhere for later use
 
 Windows:
-1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto.txt"
+1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto"
 2. Open and compile symphytum.iss after review
 
 OS X:

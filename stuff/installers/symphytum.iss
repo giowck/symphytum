@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Symphytum"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.2"
 #define MyAppPublisher "Symphytum Developers"
 #define MyAppURL "http://giowck.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
