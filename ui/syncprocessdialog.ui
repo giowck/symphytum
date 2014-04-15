@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>406</width>
     <height>300</height>
    </rect>
   </property>
@@ -17,7 +17,16 @@
    <string>Cloud Sync</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -66,7 +75,7 @@
             <pixmap resource="../resources/resources.qrc">:/images/icons/initConflict.png</pixmap>
            </property>
            <property name="scaledContents">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -309,7 +318,7 @@
             <pixmap resource="../resources/resources.qrc">:/images/icons/sync.png</pixmap>
            </property>
            <property name="scaledContents">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -556,7 +565,7 @@
             <pixmap resource="../resources/resources.qrc">:/images/icons/revConflict.png</pixmap>
            </property>
            <property name="scaledContents">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
           </widget>
          </item>
