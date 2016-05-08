@@ -8,8 +8,8 @@
 
 #include "testformwidget.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
 
 

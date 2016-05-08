@@ -16,11 +16,11 @@
 #include "../../widgets/mainwindow.h"
 #include "../../utils/collectionfieldcleaner.h"
 
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 #include <QtGui/QContextMenuEvent>
-#include <QtGui/QMessageBox>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QUndoStack>
 
 
 //-----------------------------------------------------------------------------
@@ -54,7 +54,7 @@ CollectionListView::CollectionListView(QWidget *parent) :
                                                   "stop:1 rgba(108, 186, 230, 255));"
                 "color: white;"
                 "}"
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
                 "QListView:item:selected:!active { "
                 "border-top: 1px solid #BBC5D5;"
                 "border-bottom: 1px solid #92A0B8;"
@@ -62,7 +62,7 @@ CollectionListView::CollectionListView(QWidget *parent) :
                                                   "stop:1 rgba(195, 204, 222, 255));"
                 "color: white;"
                 "}"
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
                 );
 
     //set model

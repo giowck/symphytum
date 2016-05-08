@@ -14,7 +14,7 @@
 
 #include "abstractformwidget.h"
 
-#include <QtGui/QTableWidget>
+#include <QtWidgets/QTableWidget>
 
 
 //-----------------------------------------------------------------------------

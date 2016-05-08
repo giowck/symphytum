@@ -400,8 +400,6 @@ void BackupManager::createBackupThreadConnections(QThread *thread,
     //thread delete
     connect(thread, SIGNAL(finished()),
             thread, SLOT(deleteLater()));
-    connect(thread, SIGNAL(terminated()),
-            thread, SLOT(deleteLater()));
 
     //backupTask signals
     connect(backupTask, SIGNAL(errorSignal(QString)),

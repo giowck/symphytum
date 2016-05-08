@@ -11,9 +11,9 @@
 #include "../../utils/formwidgetvalidator.h"
 #include "../../components/metadataengine.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QCheckBox>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
 
 

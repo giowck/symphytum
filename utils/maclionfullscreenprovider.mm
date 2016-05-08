@@ -8,7 +8,7 @@
 
 #include "maclionfullscreenprovider.h"
 
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 
 //-----------------------------------------------------------------------------
@@ -16,31 +16,31 @@
 //-----------------------------------------------------------------------------
 
 void MacLionFullscreenProvider::enableWindow(QMainWindow *window)
-{
+{/*
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
     NSView *nsview = (NSView *) window->winId();
     NSWindow *nswindow = [nsview window];
     [nswindow setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
-#endif
+#endif*/
 }
 
 void MacLionFullscreenProvider::toggleFullscreen(QMainWindow *window)
-{
+{/*
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
     NSView *nsview = (NSView *) window->winId();
     NSWindow *nswindow = [nsview window];
     [nswindow toggleFullScreen:nil];
-#endif
+#endif*/
 }
 
 bool MacLionFullscreenProvider::isFullScreen(QMainWindow *window)
 {
-    bool result;
+    bool result;/*
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
     NSView *nsview = (NSView *) window->winId();
     NSWindow *nswindow = [nsview window];
     NSUInteger masks = [nswindow styleMask];
     result = masks & NSFullScreenWindowMask;
-#endif
+#endif*/
     return result;
 }

@@ -14,10 +14,10 @@
 #include "../components/sync_framework/syncsession.h"
 
 #include <QtSql/QSqlQuery>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QFile>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtCore/QTextStream>
 
 
@@ -98,8 +98,8 @@ void ImportDialog::importCSVButtonClicked()
     qApp->processEvents();
 
     //get output file
-    QString documentsDir = QDesktopServices::storageLocation(
-                QDesktopServices::DocumentsLocation);
+    QString documentsDir = QStandardPaths::standardLocations(
+                QStandardPaths::DocumentsLocation).at(0);
     QString fileName = QFileDialog::getOpenFileName(this,
                                                     tr("Open CSV file"),
                                                     documentsDir,
@@ -322,11 +322,11 @@ void ImportDialog::initUiCSV()
 
     //set default
     int defaultCodec = 0;
-#if defined(Q_WS_WIN)
+#if defined(Q_OS_WIN)
     defaultCodec = 1;
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_OSX)
     defaultCodec = 2;
-#elif defined(Q_WS_X11)
+#elif defined(Q_OS_LINUX)
     defaultCodec = 0;
 #endif
     ui->encodingCombo->setCurrentIndex(defaultCodec);

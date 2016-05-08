@@ -34,25 +34,25 @@
 #include "../components/alarmmanager.h"
 #include "../utils/collectionfieldcleaner.h"
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
 #include "../utils/maclionfullscreenprovider.h"
 #endif
 
 #include <QApplication>
-#include <QtGui/QToolBar>
-#include <QtGui/QDockWidget>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QStackedWidget>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QDockWidget>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QStackedWidget>
 #include <QtGui/QCloseEvent>
 #include <QVBoxLayout>
 #include <QtCore/QString>
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QTimer>
-#include <QtGui/QMessageBox>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QUndoStack>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
 
@@ -191,7 +191,7 @@ void MainWindow::preferenceActionTriggered()
     if (dialog.appearanceChanged()) {
         if (m_formView)
             m_formView->reloadAppearanceSettings();
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
         //update toolbar style
         if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())
             m_toolBar->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad,"
@@ -201,7 +201,7 @@ void MainWindow::preferenceActionTriggered()
                                      "QToolBar:!active {background-color: rgb(60, 59, 55);}");
         else
             m_toolBar->setStyleSheet("");
-#endif //Q_WS_X11
+#endif //Q_OS_LINUX
     }
     if (dialog.cloudSyncChanged()) {
         if (m_settingsManager->isCloudSyncActive()) {
@@ -337,7 +337,7 @@ void MainWindow::tableViewModeTriggered()
 
 void MainWindow::fullscreenActionTriggered()
 {
-#ifdef Q_WS_MAC
+/*#ifdef Q_OS_OSX
     if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
         MacLionFullscreenProvider::toggleFullscreen(this); //mac lion fullscreen API
     } else {
@@ -349,13 +349,13 @@ void MainWindow::fullscreenActionTriggered()
             showFullScreen();
         }
     }
-#else
+#else*/
     if (isFullScreen()) {
         showNormal();
     } else {
         showFullScreen();
     }
-#endif // Q_WS_MAC
+//#endif // Q_OS_OSX
 }
 
 void MainWindow::currentCollectionIdChanged(int collectionId)
@@ -674,11 +674,11 @@ void MainWindow::deleteRecordActionTriggered()
                                        rows.size(), this);
         progressDialog.setWindowModality(Qt::WindowModal);
         progressDialog.setWindowTitle(tr("Progress"));
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         progressDialog.setMinimumDuration(0);
         progressDialog.show();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         int progress = 0;
 
         //remove selected rows
@@ -690,10 +690,10 @@ void MainWindow::deleteRecordActionTriggered()
         qSort(rowList.begin(), rowList.end());
         int rowListSize = rowList.size();
         for (int i = rowListSize - 1; i >= 0; i--) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
             //workaroung for windows bug where dialog remains hidden sometimes
             qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
             if (progressDialog.wasCanceled())
                 break;
             progressDialog.setValue(++progress);
@@ -847,11 +847,11 @@ void MainWindow::optimizeDbSizeActionTriggered()
                                    steps, this);
     progressDialog.setWindowModality(Qt::WindowModal);
     progressDialog.setWindowTitle(tr("Progress"));
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
     //workaroung for windows bug where dialog remains hidden sometimes
     progressDialog.setMinimumDuration(0);
     progressDialog.show();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
     int progress = 0;
 
     //clean db
@@ -859,10 +859,10 @@ void MainWindow::optimizeDbSizeActionTriggered()
     progress++;
 
     foreach (QString s, files) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         if (progressDialog.wasCanceled())
             break;
 
@@ -1581,16 +1581,16 @@ void MainWindow::createActions()
     m_viewModeActionGroup->addAction(m_formViewModeAction);
     m_viewModeActionGroup->addAction(m_tableViewModeAction);
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     m_minimizeAction = new QAction(tr("Minimize"), this);
     m_minimizeAction->setShortcut(QString("CTRL+M"));
 
     m_closeWindowAction = new QAction(tr("Close"), this);
     m_closeWindowAction->setShortcut(QString("CTRL+W"));
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
 
     m_fullscreenAction = new QAction(tr("Fullscreen"), this);
-#ifndef Q_WS_MAC
+#ifndef Q_OS_OSX
     m_fullscreenAction->setShortcut(QString("F11"));
 #endif
 
@@ -1650,7 +1650,7 @@ void MainWindow::createToolBar()
     m_toolBar->addSeparator();
     m_toolBar->addAction(m_syncAction);
 
-//#ifndef Q_WS_MAC
+//#ifndef Q_OS_OSX
 //    m_toolBar->setStyleSheet(
 //                "QToolBar { background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(246, 248, 249), stop:0.5 rgb(229, 235, 238),stop:0.51 rgb(215, 222, 227),stop:1 rgb(245, 247,249)); }"
 //                "QToolButton {"
@@ -1661,7 +1661,7 @@ void MainWindow::createToolBar()
 //                "border-radius: 6px;"
 //                "background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #d2d4d5, stop:0.5 #a8a9a9,stop:0.51 #98999a,stop:1 #d2d4d5);"
 //                "}");
-//#endif //Q_WS_MAC
+//#endif //Q_OS_OSX
 
     this->addToolBar(m_toolBar);
 }
@@ -1748,11 +1748,11 @@ void MainWindow::createMenu()
     m_toolsMenu->addSeparator();
     m_toolsMenu->addAction(m_settingsAction);
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     m_windowMenu = menuBar()->addMenu(tr("&Window"));
     m_windowMenu->addAction(m_minimizeAction);
     m_windowMenu->addAction(m_closeWindowAction);
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
 
     m_helpMenu = menuBar()->addMenu(tr("&Help"));
     m_helpMenu->addAction(m_aboutAction);
@@ -1910,13 +1910,13 @@ void MainWindow::createConnections()
     connect(m_optimizeDbSizeAction, SIGNAL(triggered()),
             this, SLOT(optimizeDbSizeActionTriggered()));
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     //minimize action
     connect(m_minimizeAction, SIGNAL(triggered()),
             this, SLOT(showMinimized()));
     connect(m_closeWindowAction, SIGNAL(triggered()),
             this, SLOT(close()));
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
 
     //view toolbar
     connect(m_viewToolBar, SIGNAL(formViewModeSignal()),
@@ -1959,7 +1959,7 @@ void MainWindow::restoreSettings()
             m_tableView->setCurrentIndex(index);
     }
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
         bool f = m_settingsManager->restoreProperty("macLionFullscreen", "mainWindow")
                 .toBool();
@@ -1968,9 +1968,9 @@ void MainWindow::restoreSettings()
             QTimer::singleShot(100, this, SLOT(fullscreenActionTriggered()));
         }
     }
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
 
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
     if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow")
             .toBool()) {
         m_toolBar->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad,"
@@ -1979,7 +1979,7 @@ void MainWindow::restoreSettings()
                                  "rgba(84, 82, 74, 255), stop:1 rgba(66, 65, 60, 255));} "
                                  "QToolBar:!active {background-color: rgb(60, 59, 55);}");
     }
-#endif //Q_WS_X11
+#endif //Q_OS_LINUX
 
     //sync
     SyncSession::LOCAL_DATA_CHANGED = m_syncEngine->localDataChanged();
@@ -1994,12 +1994,12 @@ void MainWindow::saveSettings()
     m_settingsManager->saveViewMode(m_currentViewMode);
     m_settingsManager->saveLastUsedRecord(m_formView->getCurrentRow());
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
         m_settingsManager->saveProperty("macLionFullscreen", "mainWindow",
                                         MacLionFullscreenProvider::isFullScreen(this));
     }
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
 
     //sync
     if (SyncSession::IS_ENABLED) {
@@ -2012,7 +2012,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::init()
 {
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     //mac fullscreen tweaks
     if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
         //enable new lion fullscreen API
@@ -2021,7 +2021,7 @@ void MainWindow::init()
     }
     if (!isFullScreen())
         this->setUnifiedTitleAndToolBarOnMac(true); //workaround for QTBUG-16274
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
 }
 
 void MainWindow::attachModelToViews(const int collectionId)

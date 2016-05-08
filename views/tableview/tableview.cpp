@@ -11,9 +11,9 @@
 #include "../../components/settingsmanager.h"
 #include "../../components/metadataengine.h"
 
-#include <QtGui/QHeaderView>
-#include <QtGui/QMenu>
-#include <QtGui/QAction>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QAction>
 #include <QtGui/QContextMenuEvent>
 
 
@@ -180,7 +180,7 @@ void TableView::initView()
     setAlternatingRowColors(true);
 
     //allow section move and resizing
-    horizontalHeader()->setMovable(true);
+    horizontalHeader()->setSectionsMovable(true);
     connect(horizontalHeader(), SIGNAL(sectionMoved(int,int,int)),
             this, SLOT(saveSectionOrder()), Qt::UniqueConnection);
     connect(horizontalHeader(), SIGNAL(sectionMoved(int,int,int)),

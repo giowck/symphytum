@@ -13,7 +13,7 @@
 // Headers
 //-----------------------------------------------------------------------------
 
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QtCore/QMap>
 
 
@@ -195,9 +195,9 @@ private:
     QMenu *m_recordsMenu;
     QMenu *m_databaseMenu;
     QMenu *m_viewMenu;
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     QMenu *m_windowMenu;
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
     QMenu *m_helpMenu;
     QAction *m_quitAction;
     QAction *m_aboutAction;
@@ -226,10 +226,10 @@ private:
     QAction *m_exportAction;
     QAction *m_importAction;
     QAction *m_helpAction;
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     QAction *m_minimizeAction;
     QAction *m_closeWindowAction;
-#endif //Q_WS_MAC
+#endif //Q_OS_OSX
     QActionGroup *m_viewModeActionGroup;
     QStackedWidget *m_centralStackedWidget; /**< The central stackable widget of MainWindow */
     QStackedWidget *m_viewStackedWidget; /**< This stacked widget is used to change

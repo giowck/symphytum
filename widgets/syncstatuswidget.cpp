@@ -9,10 +9,10 @@
 #include "syncstatuswidget.h"
 #include "../components/sync_framework/syncsession.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QProgressBar>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QProgressBar>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 
 
 //-----------------------------------------------------------------------------

@@ -10,13 +10,13 @@
 #include "../../../components/filemanager.h"
 #include "../../../components/metadataengine.h"
 
-#include <QtGui/QPushButton>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QFrame>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QFrame>
 
 
 //-----------------------------------------------------------------------------

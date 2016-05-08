@@ -476,8 +476,8 @@ SyncEngine::SyncEngine(QObject *parent) :
     m_currentEngineOperation(NoSpecialOp),
     m_cloudSessionOpened(false)
 {
-    QString dataDir = QDesktopServices::storageLocation(
-                QDesktopServices::DataLocation);
+    QString dataDir = QStandardPaths::standardLocations(
+                QStandardPaths::DataLocation).at(0);
     m_metadataFileName = "sync.meta";
     m_metadataFilePath = dataDir.append("/");
     m_metadataFilePath.append(m_metadataFileName);

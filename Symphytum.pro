@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql network svg
+QT       += core gui sql network svg widgets printsupport
 
 macx {
     TARGET = Symphytum

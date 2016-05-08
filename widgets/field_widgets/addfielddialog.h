@@ -21,7 +21,7 @@
 // Headers
 //-----------------------------------------------------------------------------
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 #include "abstractfieldwizard.h"
 #include "../../components/metadataengine.h"

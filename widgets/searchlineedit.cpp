@@ -16,8 +16,8 @@
 #include "searchlineedit.h"
 #include "../utils/platformcolorservice.h"
 
-#include <QtGui/QToolButton>
-#include <QtGui/QStyle>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QStyle>
 
 
 //-----------------------------------------------------------------------------
@@ -57,11 +57,11 @@ SearchLineEdit::SearchLineEdit(QWidget *parent)
     int frameWidth = style()->pixelMetric(QStyle::PM_DefaultFrameWidth);
 
     int borderRadius;
-#if defined(Q_WS_X11)
+#if defined(Q_OS_LINUX)
     borderRadius = 11; //ideal everywhere is 12px, only kde's oxygen theme requires 11px
-#elif defined(Q_WS_WIN)
+#elif defined(Q_OS_WIN)
     borderRadius = 11;
-#elif defined(Q_WS_MAC)
+#elif defined(Q_OS_OSX)
     borderRadius = 11;
 #endif
 

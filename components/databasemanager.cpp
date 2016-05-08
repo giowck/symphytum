@@ -16,7 +16,7 @@
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
 #include <QtCore/QVariant>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QDir>
 
@@ -127,8 +127,8 @@ QString DatabaseManager::getDatabasePath()
 
 DatabaseManager::DatabaseManager()
 {
-    QString dataDir = QDesktopServices::storageLocation(
-                QDesktopServices::DataLocation);
+    QString dataDir = QStandardPaths::standardLocations(
+                QStandardPaths::DataLocation).at(0);
     m_databaseName = "data.db";
     m_databasePath = dataDir.append("/");
     m_databasePath.append(m_databaseName);

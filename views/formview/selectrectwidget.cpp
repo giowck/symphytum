@@ -9,8 +9,8 @@
 #include "selectrectwidget.h"
 #include "../../utils/platformcolorservice.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
 
 
 //-----------------------------------------------------------------------------

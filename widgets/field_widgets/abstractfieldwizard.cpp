@@ -11,8 +11,8 @@
 #include "../../components/sync_framework/syncsession.h"
 #include "../mainwindow.h"
 
-#include <QtGui/QUndoCommand>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QUndoCommand>
+#include <QtWidgets/QUndoStack>
 
 
 //-----------------------------------------------------------------------------

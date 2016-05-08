@@ -10,15 +10,15 @@
 #include "../../../components/filemanager.h"
 #include "../../../components/metadataengine.h"
 
-#include <QtGui/QPushButton>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QDir>
 #include <QtCore/QEventLoop>
 #include <QtCore/QFile>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QFrame>
-#include <QtGui/QApplication>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QApplication>
 
 
 //-----------------------------------------------------------------------------
@@ -123,10 +123,10 @@ void FilesTypeEditor::browseButtonClicked()
     int progress = 0;
 
     for (int i = 0; i < count; i++) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         if (progressDialog.wasCanceled())
             break;
         progressDialog.setValue(++progress);

@@ -17,7 +17,7 @@
 
 #include "../components/sync_framework/syncengine.h"
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 
 //-----------------------------------------------------------------------------

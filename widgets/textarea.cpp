@@ -9,7 +9,7 @@
 #include "textarea.h"
 
 #include <QtGui/QKeyEvent>
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 
 
 //-----------------------------------------------------------------------------

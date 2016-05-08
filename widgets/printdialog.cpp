@@ -16,10 +16,10 @@
 #include "../utils/definitionholder.h"
 
 #include <QtSql/QSqlQuery>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtGui/QDesktopServices>
-#include <QtGui/QPrintDialog>
-#include <QtGui/QPrinter>
+#include <QPrintDialog>
+#include <QPrinter>
 #include <QtGui/QTextDocument>
 #include <QtCore/QDateTime>
 
@@ -82,8 +82,8 @@ void PrintDialog::pdfButtonClicked()
     qApp->processEvents();
 
     //get output file
-    QString documentsDir = QDesktopServices::storageLocation(
-                QDesktopServices::DocumentsLocation);
+    QString documentsDir = QStandardPaths::standardLocations(
+                QStandardPaths::DocumentsLocation).at(0);
     QString fileName = QFileDialog::getSaveFileName(this,
                                                     tr("Save PDF file"),
                                                     documentsDir,

@@ -13,8 +13,8 @@
 #include <QtNetwork/QNetworkRequest>
 #include <QtNetwork/QNetworkReply>
 #include <QtCore/QStringList>
-#include <QtGui/QMessageBox>
-#include <QtGui/QApplication>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QApplication>
 #include <QtGui/QDesktopServices>
 
 

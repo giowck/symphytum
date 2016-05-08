@@ -13,7 +13,7 @@
 // Headers
 //-----------------------------------------------------------------------------
 
-#include <QtGui/QUndoCommand>
+#include <QtWidgets/QUndoCommand>
 #include <QtCore/QVariant>
 #include <QtCore/QList>
 

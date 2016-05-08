@@ -32,15 +32,15 @@
 #include "../../components/sync_framework/syncsession.h"
 
 #include <QtCore/QPropertyAnimation>
-#include <QtGui/QScrollBar>
+#include <QtWidgets/QScrollBar>
 #include <QtGui/QMouseEvent>
-#include <QtGui/QApplication>
-#include <QtGui/QStatusBar>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QStatusBar>
 #include <QtGui/QContextMenuEvent>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
-#include <QtGui/QUndoCommand>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QUndoCommand>
+#include <QtWidgets/QUndoStack>
 
 
 //-----------------------------------------------------------------------------
@@ -1213,7 +1213,7 @@ void FormView::selectFormWidget(int row, int column)
     //deltaPx = additional pixel used to position the resize widgets in the setGeometry method
     //deltaPx is subtracted from the x/y coordinate to move the resize grips closer to the respective FW
     int deltaPx;
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     deltaPx = 8;
 #else
     deltaPx = 5;

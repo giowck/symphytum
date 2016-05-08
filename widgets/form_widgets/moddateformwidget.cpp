@@ -12,9 +12,9 @@
 #include "../../utils/formwidgetvalidator.h"
 #include "../../components/metadataengine.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
 #include <QtCore/QLocale>
 

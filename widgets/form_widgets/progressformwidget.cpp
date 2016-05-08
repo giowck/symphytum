@@ -11,11 +11,11 @@
 #include "../../utils/formwidgetvalidator.h"
 #include "../../components/metadataengine.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QSpinBox>
-#include <QtGui/QProgressBar>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QProgressBar>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
 
 

@@ -13,8 +13,8 @@
 #include "../components/metadataengine.h"
 #include "../components/sync_framework/syncsession.h"
 
-#include <QtGui/QTableWidgetItem>
-#include <QtGui/QPushButton>
+#include <QtWidgets/QTableWidgetItem>
+#include <QtWidgets/QPushButton>
 
 
 //-----------------------------------------------------------------------------
@@ -37,7 +37,7 @@ AlarmListDialog::AlarmListDialog(QWidget *parent) :
     //setup table view
     ui->alarmTableWidget->verticalHeader()->hide();
     ui->alarmTableWidget->horizontalHeader()->hide();
-    ui->alarmTableWidget->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+    ui->alarmTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->alarmTableWidget->setShowGrid(false);
     ui->alarmTableWidget->setAlternatingRowColors(true);
     ui->alarmTableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);

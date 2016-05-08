@@ -16,7 +16,7 @@
 // Headers
 //-----------------------------------------------------------------------------
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 
 #include "../../components/metadataengine.h"
 

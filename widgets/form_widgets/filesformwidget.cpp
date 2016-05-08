@@ -12,36 +12,37 @@
 #include "../../utils/metadatapropertiesparser.h"
 #include "../mainwindow.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtCore/QVariant>
-#include <QtGui/QPushButton>
-#include <QtGui/QFrame>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
 #include <QtCore/QDateTime>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QMenu>
-#include <QtGui/QAction>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QAction>
 #include <QtGui/QContextMenuEvent>
 #include <QtGui/QMouseEvent>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
 #include <QtCore/QMimeData>
 #include <QtCore/QList>
-#include <QtGui/QFileIconProvider>
-#include <QtGui/QApplication>
+#include <QtWidgets/QFileIconProvider>
+#include <QtWidgets/QApplication>
 #include <QtGui/QDragEnterEvent>
 #include <QtGui/QDropEvent>
-#include <QtGui/QToolButton>
-#include <QtGui/QHeaderView>
-#include <QtGui/QTableWidgetItem>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableWidgetItem>
 #include <QtCore/QEventLoop>
-#include <QtGui/QApplication>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QUndoStack>
+#include <QtGui/QDrag>
 
 
 //-----------------------------------------------------------------------------
@@ -247,9 +248,9 @@ void FilesFormWidget::setData(const QVariant &data)
 
         //strect first column and resize other to contents
         QHeaderView *header = m_filesTable->horizontalHeader();
-        header->setResizeMode(1, QHeaderView::Stretch);
+        header->setSectionResizeMode(1, QHeaderView::Stretch);
         for (int i = 2; i < columns; i++) {
-            header->setResizeMode(i, QHeaderView::ResizeToContents);
+            header->setSectionResizeMode(i, QHeaderView::ResizeToContents);
         }
 
         for (int i = 0; i < rows; i++) {
@@ -338,9 +339,9 @@ void FilesFormWidget::dropEvent(QDropEvent *event)
 
         foreach (QUrl url, urls) {
             QString filePath = url.path();
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
             filePath.remove(0, 1); //on windows: /C:/file_path is returned from mime
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
             fileList.append(filePath);
         }
 
@@ -429,10 +430,10 @@ void FilesFormWidget::removeButtonClicked()
     int progress = 0;
 
     for (int i = size - 1; i >= 0; i--) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         if (progressDialog.wasCanceled())
             break;
         progressDialog.setValue(++progress);
@@ -499,10 +500,10 @@ void FilesFormWidget::exportButtonClicked()
     int progress = 0;
 
     for (int i = 0; i < size; i++) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         if (progressDialog.wasCanceled())
             break;
         progressDialog.setValue(++progress);
@@ -624,10 +625,10 @@ void FilesFormWidget::importFiles(const QStringList &list)
     int progress = 0;
 
     for (int i = 0; i < count; i++) {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         //workaroung for windows bug where dialog remains hidden sometimes
         qApp->processEvents();
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
         if (progressDialog.wasCanceled())
             break;
         progressDialog.setValue(++progress);

@@ -16,7 +16,7 @@
 #include <QtCore/QDir>
 #include <QtCore/QFile>
 #include <QtCore/QThread>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtCore/QDateTime>
 #include <QtCore/QCryptographicHash>
 #include <QtGui/QDesktopServices>
@@ -90,11 +90,11 @@ void FileTask::startFileOp()
 FileManager::FileManager(QObject *parent) :
     QObject(parent), m_fileOpThread(0)
 {
-    QString dataDir = QDesktopServices::storageLocation(
-                QDesktopServices::DataLocation);
-#ifdef Q_WS_WIN
+    QString dataDir = QStandardPaths::standardLocations(
+                QStandardPaths::DataLocation).at(0);
+#ifdef Q_OS_WIN
     dataDir.replace("\\", "/");
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
     if (!QDir(dataDir).exists()) {
         QDir::current().mkpath(dataDir);
     }
@@ -464,8 +464,6 @@ void FileManager::createFileThreadConnections(QThread *thread,
 
     //thread delete
     connect(thread, SIGNAL(finished()),
-            thread, SLOT(deleteLater()));
-    connect(thread, SIGNAL(terminated()),
             thread, SLOT(deleteLater()));
 
     //fileTask signals

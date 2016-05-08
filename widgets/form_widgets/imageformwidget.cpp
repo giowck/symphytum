@@ -13,29 +13,30 @@
 #include "../../components/filemanager.h"
 #include "../mainwindow.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtCore/QVariant>
-#include <QtGui/QPushButton>
-#include <QtGui/QFrame>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QMenu>
-#include <QtGui/QAction>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QAction>
 #include <QtGui/QContextMenuEvent>
 #include <QtGui/QMouseEvent>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
 #include <QtCore/QMimeData>
 #include <QtCore/QList>
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include <QtGui/QDragEnterEvent>
 #include <QtGui/QDropEvent>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QUndoStack>
+#include <QtGui/QDrag>
 
 
 //-----------------------------------------------------------------------------
@@ -339,9 +340,9 @@ void ImageFormWidget::dropEvent(QDropEvent *event)
             QString fileSuffix = info.suffix().toUpper();
             if (m_supportedFileTypes.contains(fileSuffix)) {
                 QString filePath = url.path();
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
                 filePath.remove(0, 1); //on windows: /C:/file_path is returned from mime
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN
                 importImage(filePath);
                 break;
             }

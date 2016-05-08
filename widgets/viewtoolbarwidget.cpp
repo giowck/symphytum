@@ -9,12 +9,12 @@
 #include "viewtoolbarwidget.h"
 #include "searchlineedit.h"
 
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QFrame>
-#include <QtGui/QToolButton>
-#include <QtGui/QFrame>
-#include <QtGui/QPushButton>
-#include <QtGui/QButtonGroup>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QButtonGroup>
 
 //-----------------------------------------------------------------------------
 // Public
@@ -51,11 +51,11 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
     m_duplicateRecordButton->setFocusPolicy(Qt::NoFocus);
     m_duplicateRecordButton->setShortcut(duplicateKey);
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     QKeySequence deleteKey(Qt::Key_Backspace);
 #else
     QKeySequence deleteKey(QKeySequence::Delete);
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
     m_deleteRecordButton = new QToolButton(m_mainFrame);
     m_deleteRecordButton->setText(tr("Delete Record"));
     m_deleteRecordButton->setToolTip(tr("Delete Record (%1)")
@@ -98,11 +98,11 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
     m_duplicateFieldButton->setFocusPolicy(Qt::NoFocus);
     m_duplicateFieldButton->setShortcut(dupFieldKey);
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     QKeySequence delFieldKey(Qt::CTRL + Qt::SHIFT + Qt::Key_Backspace);
 #else
     QKeySequence delFieldKey(Qt::CTRL + Qt::SHIFT + Qt::Key_Delete);
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
     m_deleteFieldButton = new QToolButton(m_mainFrame);
     m_deleteFieldButton->setText(tr("Delete Field"));
     m_deleteFieldButton->setToolTip(tr("Delete Field (%1)")

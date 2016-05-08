@@ -20,18 +20,18 @@
 #include "tableview.h"
 #include "../../components/alarmmanager.h"
 
-#include <QtGui/QLineEdit>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtCore/QLocale>
-#include <QtGui/QMessageBox>
-#include <QtGui/QUndoCommand>
-#include <QtGui/QUndoStack>
-#include <QtGui/QApplication>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QUndoCommand>
+#include <QtWidgets/QUndoStack>
+#include <QtWidgets/QApplication>
 #include <QtGui/QPixmap>
 #include <QtGui/QPainter>
-#include <QtGui/QSpinBox>
-#include <QtGui/QDateTimeEdit>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QDateTimeEdit>
 
 
 //-----------------------------------------------------------------------------
@@ -116,7 +116,7 @@ QWidget* TableViewDelegate::createEditor(QWidget *parent, const QStyleOptionView
     {
         //on OS X checkbox editors are not clickable (only with spacebar)
         //this is a bug, so here we use QComboBox instead of QCheckbox
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
         QComboBox *c = new QComboBox(parent);
         c->addItem(tr("No"));
         c->addItem(tr("Yes"));
@@ -124,7 +124,7 @@ QWidget* TableViewDelegate::createEditor(QWidget *parent, const QStyleOptionView
 #else
         e = new QCheckBox(parent);
 
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
     }
         break;
     case MetadataEngine::ComboboxType:
@@ -299,9 +299,11 @@ void TableViewDelegate::updateEditorGeometry(QWidget *editor,
         break;
     case MetadataEngine::CheckboxType:
     {
-        //on OS X checkbox editors are not clickable (only with spacebar)
-        //this is a bug, so here we use QComboBox instead of QCheckbox
-#ifdef Q_WS_MAC
+        //because of the bug on Qt 5.6 for OS X where the checkbox (display) in tableview
+        //is drawn at the wrong position here we use QComboBox instead of QCheckbox
+        //to match better the simple text display instead of the checkbox display
+        //see paintCheckboxType()
+#ifdef Q_OS_OSX
         editor->setGeometry(option.rect);
 #else
         //center checkbox
@@ -311,7 +313,7 @@ void TableViewDelegate::updateEditorGeometry(QWidget *editor,
         checkboxstyle.rect.setLeft(option.rect.x() +
                                    option.rect.width()/2 - checkbox_rect.width()/2);
         editor->setGeometry(checkboxstyle.rect);
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
     }
         break;
     default:
@@ -366,9 +368,11 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
         break;
     case MetadataEngine::CheckboxType:
     {
-        //on OS X checkbox editors are not clickable (only with spacebar)
-        //this is a bug, so here we use QComboBox instead of QCheckbox
-#ifdef Q_WS_MAC
+        //because of the bug on Qt 5.6 for OS X where the checkbox (display) in tableview
+        //is drawn at the wrong position here we use QComboBox instead of QCheckbox
+        //to match better the simple text display instead of the checkbox display
+        //see paintCheckboxType()
+#ifdef Q_OS_OSX
         QComboBox *c;
         c = qobject_cast<QComboBox*>(editor);
         if (c) {
@@ -382,7 +386,7 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
         c = qobject_cast<QCheckBox*>(editor);
         if (c)
             data = ((int) c->isChecked());
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
     }
         break;
     case MetadataEngine::ComboboxType:
@@ -643,6 +647,15 @@ void TableViewDelegate::paintCheckboxType(QPainter *painter,
                                       const QModelIndex &index) const
 {
     bool checked = index.model()->data(index).toInt();
+
+#ifdef Q_OS_OSX
+    //there is a bug in Qt 5.6 for OS X where the checkbox position is wrong
+    //so instead on OS X use a simple combobox yes/no display as a workaround
+    QString dataString = checked ? tr("Yes") : tr("No");
+    QStyleOptionViewItemV4 opt(option);
+    opt.text = dataString;
+    opt.widget->style()->drawControl(QStyle::CE_ItemViewItem, &opt, painter);
+#else
     QStyleOptionButton checkboxstyle;
     //center checkbox
     QRect checkbox_rect = QApplication::style()->subElementRect(QStyle::SE_CheckBoxIndicator,
@@ -656,6 +669,7 @@ void TableViewDelegate::paintCheckboxType(QPainter *painter,
         checkboxstyle.state = QStyle::State_Off|QStyle::State_Enabled;
 
     QApplication::style()->drawControl(QStyle::CE_CheckBox, &checkboxstyle, painter);
+#endif //Q_OS_OSX
 }
 
 void TableViewDelegate::paintComboboxType(QPainter *painter,
@@ -860,9 +874,11 @@ void TableViewDelegate::setNumericTypeEditorData(QWidget *editor,
 void TableViewDelegate::setCheckboxTypeEditorData(QWidget *editor,
                                                   const QModelIndex &index) const
 {
-    //on OS X checkbox editors are not clickable (only with spacebar)
-    //this is a bug, so here we use QComboBox instead of QCheckbox
-#ifdef Q_WS_MAC
+    //because of the bug on Qt 5.6 for OS X where the checkbox (display) in tableview
+    //is drawn at the wrong position here we use QComboBox instead of QCheckbox
+    //to match better the simple text display instead of the checkbox display
+    //see paintCheckboxType()
+#ifdef Q_OS_OSX
     QComboBox *comboBox;
     comboBox = qobject_cast<QComboBox*>(editor);
     if (comboBox) {
@@ -876,7 +892,7 @@ void TableViewDelegate::setCheckboxTypeEditorData(QWidget *editor,
 
     checkBox = qobject_cast<QCheckBox*>(editor);
     if (checkBox) checkBox->setChecked(index.data().toInt());
-#endif // Q_WS_MAC
+#endif // Q_OS_OSX
 }
 
 void TableViewDelegate::setComboboxTypeEditorData(QWidget *editor,

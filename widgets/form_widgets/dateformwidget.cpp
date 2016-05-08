@@ -13,10 +13,10 @@
 #include "../../views/formview/formview.h"
 #include "../../components/alarmmanager.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QDateTimeEdit>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtCore/QDateTime>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
 #include <QtCore/QLocale>
 

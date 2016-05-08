@@ -62,12 +62,12 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
         ui->updateGroupBox->setEnabled(false);
     }
 
-#ifndef Q_WS_X11
+#ifndef Q_OS_LINUX
     //if not running linux, hide dark toolbar (ambiance) option
     //NOTE: if more option are added to the main window group box
     //      update this, else valid option are hidden
     ui->mainWindowGroupBox->setVisible(false);
-#endif //Q_WS_X11
+#endif //Q_OS_LINUX
 }
 
 PreferencesDialog::~PreferencesDialog()
@@ -237,9 +237,9 @@ void PreferencesDialog::loadSettings()
                 "backgroundColorIndex", "formView").toInt();
     ui->formViewColorCombo->setCurrentIndex(colorCodeIndex);
 
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
     //dark toolbar ambiance style
     if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())
         ui->darkToolbarAmbianceCheckBox->setChecked(true);
-#endif //Q_WS_X11
+#endif //Q_OS_LINUX
 }

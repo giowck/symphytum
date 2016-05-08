@@ -10,7 +10,7 @@
 #include "ui_backupdialog.h"
 #include "../components/backupmanager.h"
 
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtGui/QDesktopServices>
 #include <QtCore/QDateTime>
 
@@ -99,8 +99,8 @@ void BackupDialog::chooseNextButtonClicked()
     if (ui->createRadioButton->isChecked()) {
         ui->stackedWidget->setCurrentIndex(1);
         //set file name
-        QString documentsDir = QDesktopServices::storageLocation(
-                    QDesktopServices::DocumentsLocation);
+        QString documentsDir = QStandardPaths::standardLocations(
+                    QStandardPaths::DocumentsLocation).at(0);
         QString fileName = QDateTime::currentDateTime()
                 .toString("yyyy_MM_dd_hhmm").append("_backup.syb");
         QString defaultDest = documentsDir + "/" + fileName;
@@ -134,8 +134,8 @@ void BackupDialog::exportBrowseButtonClicked()
 
 void BackupDialog::importBrowseButtonClicked()
 {
-    QString documentsDir = QDesktopServices::storageLocation(
-                QDesktopServices::DocumentsLocation);
+    QString documentsDir = QStandardPaths::standardLocations(
+                QStandardPaths::DocumentsLocation).at(0);
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                     documentsDir,
                                                     tr("Symphytum Backup(*.syb)"));

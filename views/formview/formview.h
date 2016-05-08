@@ -14,7 +14,7 @@
 // Headers
 //-----------------------------------------------------------------------------
 
-#include <QtGui/QAbstractItemView>
+#include <QtWidgets/QAbstractItemView>
 #include <QtCore/QList>
 
 #include "../../components/metadataengine.h"

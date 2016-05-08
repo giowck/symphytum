@@ -10,9 +10,9 @@
 #include "../../widgets/mainwindow.h"
 #include "../../components/undocommands.h"
 
-#include <QtGui/QUndoStack>
-#include <QtGui/QUndoCommand>
-#include <QtGui/QLineEdit>
+#include <QtWidgets/QUndoStack>
+#include <QtWidgets/QUndoCommand>
+#include <QtWidgets/QLineEdit>
 
 
 //-----------------------------------------------------------------------------

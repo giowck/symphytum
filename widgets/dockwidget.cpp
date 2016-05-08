@@ -11,8 +11,8 @@
 #include "syncstatuswidget.h"
 #include "../components/settingsmanager.h"
 
-#include <QtGui/QListView>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QListView>
+#include <QtWidgets/QVBoxLayout>
 
 
 //-----------------------------------------------------------------------------

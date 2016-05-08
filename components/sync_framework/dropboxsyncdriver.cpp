@@ -10,7 +10,7 @@
 #include "../settingsmanager.h"
 
 #include <QtCore/QFileInfo>
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 
 
 //-----------------------------------------------------------------------------
@@ -190,7 +190,7 @@ void DropboxSyncDriver::processFinished(int exitCode,
                             token = list.at(i + 1);
                     }
                 }
-                QString encodedToken = QString(token.toAscii().toBase64());
+                QString encodedToken = QString(token.toLatin1().toBase64());
                 m_accessTokenEncoded = encodedToken;
                 SettingsManager s;
                 s.saveEncodedAccessToken(encodedToken);
@@ -324,11 +324,11 @@ void DropboxSyncDriver::startRequest()
     QString accessToken;
     QString command;
 
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
     pythonInterpreterPath = QApplication::applicationDirPath()
             .append("/sync/").append("dropbox_client.exe");
 #endif
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
     if (QSysInfo::MacintoshVersion <= QSysInfo::MV_10_6)
         pythonInterpreterPath = "python2.6";
     else
@@ -337,14 +337,14 @@ void DropboxSyncDriver::startRequest()
     path.append("dropbox_client.py");
     args.append(path);
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
     pythonInterpreterPath = "python2";
     args.append("/usr/share/symphytum/sync/dropbox_client.py");
 #endif
 
     //decode access token
     accessToken = QString(
-                QByteArray::fromBase64(m_accessTokenEncoded.toAscii()));
+                QByteArray::fromBase64(m_accessTokenEncoded.toLatin1()));
 
     //decode app secret
     QString s2;
@@ -357,7 +357,7 @@ void DropboxSyncDriver::startRequest()
         s1.append(m_appSecretEncoded.at(i));
     }
     QString e = s1 + s2;
-    appSecret = QString(QByteArray::fromBase64(e.toAscii()));
+    appSecret = QString(QByteArray::fromBase64(e.toLatin1()));
 
     //init command and etra args
     QStringList extraArgs; //extra arguments for specific command
