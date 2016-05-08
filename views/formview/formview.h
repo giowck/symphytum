@@ -105,7 +105,8 @@ public slots:
     void updateLastModified(int startRow, int endRow);
 
 protected slots:
-     void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
+     void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
+                      const QVector<int> &roles);
      void currentChanged(const QModelIndex &current, const QModelIndex &previous);
      void rowsInserted(const QModelIndex &parent, int start, int end);
      void contextMenuEvent(QContextMenuEvent *event);

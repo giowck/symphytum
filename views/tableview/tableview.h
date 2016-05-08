@@ -74,7 +74,8 @@ signals:
 
 protected slots:
     void closeEditor(QWidget *editor, QAbstractItemDelegate::EndEditHint hint);
-    void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
+    void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
+                     const QVector<int> &roles);
     void currentChanged(const QModelIndex &current, const QModelIndex &previous);
 
 protected:

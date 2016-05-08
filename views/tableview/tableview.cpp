@@ -112,11 +112,12 @@ void TableView::closeEditor(QWidget *editor, QAbstractItemDelegate::EndEditHint 
     }
 }
 
-void TableView::dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+void TableView::dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
+                            const QVector<int> &roles)
 {
     modelFetchAll();
 
-    QTableView::dataChanged(topLeft, bottomRight);
+    QTableView::dataChanged(topLeft, bottomRight, roles);
 }
 
 void TableView::currentChanged(const QModelIndex &current, const QModelIndex &previous)

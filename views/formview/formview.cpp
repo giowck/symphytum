@@ -71,9 +71,9 @@ QRect FormView::visualRect(const QModelIndex &index) const
         if (column > 0) { //column 0 (ID) is not valid here
             return m_formWidgetList.at(column - 1)->geometry(); //-1 because column ID has not a form widget
         }
-    } else {
-        return QRect();
     }
+    //else
+    return QRect();
 }
 
 void FormView::scrollTo(const QModelIndex &index, ScrollHint hint)
@@ -297,9 +297,11 @@ void FormView::updateLastModified(int startRow, int endRow)
 //-----------------------------------------------------------------------------
 
 void FormView::dataChanged(const QModelIndex &topLeft,
-                           const QModelIndex &bottomRight)
+                           const QModelIndex &bottomRight,
+                           const QVector<int> &roles)
+
 {
-    QAbstractItemView::dataChanged(topLeft, bottomRight);
+    QAbstractItemView::dataChanged(topLeft, bottomRight, roles);
 
     int start = topLeft.row();
     int end = bottomRight.row();
@@ -382,6 +384,10 @@ QModelIndex FormView::moveCursor(QAbstractItemView::CursorAction cursorAction,
     case MoveEnd:
     case MovePageDown:
         navigateToRecord(model()->rowCount() - 1);
+        break;
+    case MoveNext:
+    case MovePrevious:
+        //skip
         break;
     }
 
@@ -783,7 +789,7 @@ void FormView::animationsFinished()
 
 void FormView::formWidgetDataChanged()
 {
-    FormWidget *fw;
+    FormWidget *fw = NULL;
     QObject *s = sender();
     if (s)
         fw = qobject_cast<AbstractFormWidget*>(s);
@@ -826,7 +832,7 @@ void FormView::formWidgetDataChanged()
 
 void FormView::formWidgetRequireAttention(QString &message)
 {
-    FormWidget *fw;
+    FormWidget *fw = NULL;
     QObject *s = sender();
     if (s)
         fw = qobject_cast<AbstractFormWidget*>(s);
