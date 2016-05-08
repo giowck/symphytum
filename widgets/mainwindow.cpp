@@ -34,10 +34,6 @@
 #include "../components/alarmmanager.h"
 #include "../utils/collectionfieldcleaner.h"
 
-#ifdef Q_OS_OSX
-#include "../utils/maclionfullscreenprovider.h"
-#endif
-
 #include <QApplication>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QDockWidget>
@@ -92,7 +88,6 @@ MainWindow::MainWindow(QWidget *parent)
     attachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
     restoreSettings();
-    init();
     checkAlarmTriggers();
     initSync();
     checkForUpdatesSlot();
@@ -1994,13 +1989,6 @@ void MainWindow::saveSettings()
     m_settingsManager->saveViewMode(m_currentViewMode);
     m_settingsManager->saveLastUsedRecord(m_formView->getCurrentRow());
 
-#ifdef Q_OS_OSX
-    if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
-        m_settingsManager->saveProperty("macLionFullscreen", "mainWindow",
-                                        MacLionFullscreenProvider::isFullScreen(this));
-    }
-#endif //Q_OS_OSX
-
     //sync
     if (SyncSession::IS_ENABLED) {
         bool changed = SyncSession::LOCAL_DATA_CHANGED;
@@ -2008,20 +1996,6 @@ void MainWindow::saveSettings()
             m_syncEngine->setLocalDataChanged(changed);
         }
     }
-}
-
-void MainWindow::init()
-{
-#ifdef Q_OS_OSX
-    //mac fullscreen tweaks
-    if (QSysInfo::MacintoshVersion >= QSysInfo::MV_10_7) {
-        //enable new lion fullscreen API
-        //FIXME: remove this fullscreen tweak when Qt5 is out
-        MacLionFullscreenProvider::enableWindow(this);
-    }
-    if (!isFullScreen())
-        this->setUnifiedTitleAndToolBarOnMac(true); //workaround for QTBUG-16274
-#endif // Q_OS_OSX
 }
 
 void MainWindow::attachModelToViews(const int collectionId)

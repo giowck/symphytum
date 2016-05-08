@@ -67,7 +67,7 @@ void AlarmListDialog::reloadAlarmList()
 
 void AlarmListDialog::showButtonClicked()
 {
-    QPushButton *b;
+    QPushButton *b = NULL;
     QObject *s = sender();
     if (s)
         b = qobject_cast<QPushButton*>(s);
@@ -99,7 +99,7 @@ void AlarmListDialog::showButtonClicked()
 
 void AlarmListDialog::removeButtonClicked()
 {
-    QPushButton *b;
+    QPushButton *b = NULL;
     QObject *s = sender();
     if (s)
         b = qobject_cast<QPushButton*>(s);

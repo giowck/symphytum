@@ -146,7 +146,6 @@ private:
     void createConnections();
     void restoreSettings();
     void saveSettings();
-    void init();
 
     /**
      * This method creates an appropriate model for the specified collection id

@@ -75,6 +75,8 @@ void StandardModel::addRecord()
             newRecord.setValue(i, nowDateTime);
         }
             break;
+        default:
+            break;
         }
     }
 

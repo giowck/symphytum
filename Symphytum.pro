@@ -178,12 +178,6 @@ HEADERS  += widgets/mainwindow.h \
 RESOURCES += \
     resources/resources.qrc
 
-macx {
-    HEADERS += utils/maclionfullscreenprovider.h
-    OBJECTIVE_SOURCES += utils/maclionfullscreenprovider.mm
-    LIBS += -framework Foundation
-}
-
 FORMS += \
     ui/emptyformwidget.ui \
     ui/textfieldwizard.ui \

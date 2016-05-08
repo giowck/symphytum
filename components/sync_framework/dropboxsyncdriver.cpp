@@ -258,6 +258,8 @@ void DropboxSyncDriver::processFinished(int exitCode,
             }
         }
             break;
+        default:
+            break;
         }
 
         //inform about errors with signals
@@ -289,6 +291,8 @@ void DropboxSyncDriver::processReadyReadOutput()
                 m_chunksUploaded++;
             }
         }
+        break;
+    default:
         break;
     }
 }
@@ -362,6 +366,9 @@ void DropboxSyncDriver::startRequest()
     //init command and etra args
     QStringList extraArgs; //extra arguments for specific command
     switch (m_currentRequest) {
+    case NoRequest:
+        //skip
+        break;
     case AuthRequest:
         command = "authorize_url";
         accessToken = "none";

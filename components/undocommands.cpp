@@ -117,7 +117,7 @@ AddFieldCommand::AddFieldCommand(int collectionId, int fieldId,
     m_editProperties(editProperties),
     m_triggerProperties(triggerProperties)
 {
-    switch (op) {
+    switch (m_fieldOperation) {
     case AddField:
         setText(QObject::tr("field creation"));
         break;
