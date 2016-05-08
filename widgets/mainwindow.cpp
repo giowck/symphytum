@@ -88,6 +88,7 @@ MainWindow::MainWindow(QWidget *parent)
     attachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
     restoreSettings();
+    init();
     checkAlarmTriggers();
     initSync();
     checkForUpdatesSlot();
@@ -1996,6 +1997,13 @@ void MainWindow::saveSettings()
             m_syncEngine->setLocalDataChanged(changed);
         }
     }
+}
+
+void MainWindow::init()
+{
+#ifdef Q_OS_OSX
+    setUnifiedTitleAndToolBarOnMac(true);
+#endif // Q_OS_OSX
 }
 
 void MainWindow::attachModelToViews(const int collectionId)
