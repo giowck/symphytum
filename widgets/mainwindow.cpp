@@ -1305,11 +1305,6 @@ void MainWindow::importActionTriggered()
     this->activateWindow();
 }
 
-void MainWindow::helpActionTriggered()
-{
-    QDesktopServices::openUrl(QUrl(DefinitionHolder::HELP_URL));
-}
-
 void MainWindow::showAlarmListDialog()
 {
     if (!m_alarmListDialog) {
@@ -1625,10 +1620,6 @@ void MainWindow::createActions()
 
     m_exportAction = new QAction(tr("Export..."), this);
     m_exportAction->setStatusTip(tr("Export all or only selected records"));
-
-    m_helpAction = new QAction(tr("Help and support"), this);
-    m_helpAction->setStatusTip(tr("Need some help? Do you want to contact us?"));
-    m_helpAction->setShortcut(QKeySequence::HelpContents);
 }
 
 void MainWindow::createToolBar()
@@ -1756,7 +1747,6 @@ void MainWindow::createMenu()
     m_helpMenu->addSeparator();
     if (!DefinitionHolder::APP_STORE)
         m_helpMenu->addAction(m_checkUpdatesAction);
-    m_helpMenu->addAction(m_helpAction);
 }
 
 void MainWindow::createStatusBar()
@@ -1837,8 +1827,6 @@ void MainWindow::createConnections()
             this, SLOT(exportActionTriggered()));
     connect(m_importAction, SIGNAL(triggered()),
             this, SLOT(importActionTriggered()));
-    connect(m_helpAction, SIGNAL(triggered()),
-            this, SLOT(helpActionTriggered()));
 
     //record actions
     connect(m_newRecordAction, SIGNAL(triggered()),

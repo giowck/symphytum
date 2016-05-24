@@ -69,7 +69,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>:/images/icons/symphytum.png</pixmap>
+            <pixmap resource="../resources/resources.qrc">:/images/icons/symphytum.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -149,6 +149,16 @@
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>&lt;a href=&quot;https://giowck.github.io/symphytum&quot;&gt;Symphytum on GitHub&lt;/a&gt;</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="copyRightLabel">
@@ -1142,6 +1152,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
