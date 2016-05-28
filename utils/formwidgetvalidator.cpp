@@ -47,6 +47,8 @@ bool FormWidgetValidator::validate(const QVariant &inputData,
 
     switch (m_fieldType) {
     case MetadataEngine::TextType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
         valid = validateTextType(inputData, errorMessage);
         break;
     case MetadataEngine::NumericType:

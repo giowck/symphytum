@@ -96,7 +96,11 @@ SOURCES += main.cpp\
     widgets/printdialog.cpp \
     widgets/exportdialog.cpp \
     widgets/importdialog.cpp \
-    widgets/aboutdialog.cpp
+    widgets/aboutdialog.cpp \
+    widgets/form_widgets/urlformwidget.cpp \
+    widgets/field_widgets/urlfieldwizard.cpp \
+    widgets/field_widgets/emailfieldwizard.cpp \
+    widgets/form_widgets/emailformwidget.cpp
 
 HEADERS  += widgets/mainwindow.h \
     utils/definitionholder.h \
@@ -173,7 +177,11 @@ HEADERS  += widgets/mainwindow.h \
     widgets/printdialog.h \
     widgets/exportdialog.h \
     widgets/importdialog.h \
-    widgets/aboutdialog.h
+    widgets/aboutdialog.h \
+    widgets/form_widgets/urlformwidget.h \
+    widgets/field_widgets/urlfieldwizard.h \
+    widgets/field_widgets/emailfieldwizard.h \
+    widgets/form_widgets/emailformwidget.h
 
 RESOURCES += \
     resources/resources.qrc
@@ -199,7 +207,9 @@ FORMS += \
     ui/printdialog.ui \
     ui/exportdialog.ui \
     ui/importdialog.ui \
-    ui/aboutdialog.ui
+    ui/aboutdialog.ui \
+    ui/urlfieldwizard.ui \
+    ui/emailfieldwizard.ui
 
 TRANSLATIONS = stuff/translations/symphytum_de.ts \
     stuff/translations/symphytum_it.ts

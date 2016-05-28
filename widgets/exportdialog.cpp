@@ -188,6 +188,8 @@ void ExportDialog::exportCSVButtonClicked()
             MetadataEngine::FieldType type = m_metadataEngine->getFieldType(i, m_collectionId);
             switch (type) {
             case MetadataEngine::TextType:
+            case MetadataEngine::URLTextType:
+            case MetadataEngine::EmailTextType:
                 csvString.append(textTypeItemText(query.value(i), i));
                 break;
             case MetadataEngine::NumericType:

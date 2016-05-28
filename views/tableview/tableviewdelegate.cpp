@@ -51,6 +51,8 @@ void TableViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &opt
 
     switch (type) {
     case MetadataEngine::TextType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
         paintTextType(painter, option, index);
         break;
     case MetadataEngine::NumericType:
@@ -101,6 +103,8 @@ QWidget* TableViewDelegate::createEditor(QWidget *parent, const QStyleOptionView
 
     switch (fieldType) {
     case MetadataEngine::TextType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
         e = new QLineEdit(parent);
         break;
     case MetadataEngine::NumericType:
@@ -246,6 +250,8 @@ void TableViewDelegate::setEditorData(QWidget *editor, const QModelIndex &index)
 
     switch (fieldType) {
     case MetadataEngine::TextType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
         setTextTypeEditorData(editor, index);
         break;
     case MetadataEngine::NumericType:
@@ -295,6 +301,8 @@ void TableViewDelegate::updateEditorGeometry(QWidget *editor,
     case MetadataEngine::ProgressType:
     case MetadataEngine::ImageType:
     case MetadataEngine::FilesType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
         editor->setGeometry(option.rect);
         break;
     case MetadataEngine::CheckboxType:
@@ -359,6 +367,8 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
     }
         break;
     case MetadataEngine::TextType:
+    case MetadataEngine::URLTextType:
+    case MetadataEngine::EmailTextType:
     {
         QLineEdit *l;
         l = qobject_cast<QLineEdit*>(editor);

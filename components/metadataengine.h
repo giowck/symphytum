@@ -55,7 +55,9 @@ public:
         ComboboxType,       /**< Combobox (drop-down list) type */
         ProgressType,       /**< Progress type */
         ImageType,          /**< Image type */
-        FilesType           /**< File list type */
+        FilesType,          /**< File list type */
+        URLTextType,        /**< URL text type */
+        EmailTextType       /**< Email text type */
     };
 
     /**

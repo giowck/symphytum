@@ -18,6 +18,8 @@
 #include "comboboxfieldwizard.h"
 #include "progressfieldwizard.h"
 #include "filesfieldwizard.h"
+#include "urlfieldwizard.h"
+#include "emailfieldwizard.h"
 
 
 //-----------------------------------------------------------------------------
@@ -135,6 +137,14 @@ void AddFieldDialog::nextButtonClicked()
             m_currentWizard = new FilesFieldWizard(fieldName, this, m_currentMode);
             m_fieldType = MetadataEngine::FilesType;
             break;
+        case 10:
+            m_currentWizard = new URLFieldWizard(fieldName, this, m_currentMode);
+            m_fieldType = MetadataEngine::URLTextType;
+            break;
+        case 11:
+            m_currentWizard = new EmailFieldWizard(fieldName, this, m_currentMode);
+            m_fieldType = MetadataEngine::EmailTextType;
+            break;
         default:
             return;
         }
@@ -216,6 +226,20 @@ void AddFieldDialog::updateFieldDescription()
                                          "and can be opened/modified later on."
                                          ));
         break;
+    case 10:
+        ui->descriptionLabel->setText(tr("URL text links. "
+                                         "Input field for web links."
+                                         "Each link can be opened with one click "
+                                         "on the inline open link button."
+                                         ));
+        break;
+    case 11:
+        ui->descriptionLabel->setText(tr("Email address. "
+                                         "Input field for email adresses. "
+                                         "New email can be written with one click "
+                                         "on the inline email button"
+                                         ));
+        break;
     default:
         ui->descriptionLabel->setText(tr("Select a field type from "
                                          "the list on the left"));
@@ -285,6 +309,8 @@ void AddFieldDialog::init()
     ui->fieldTypeListWidget->addItem(tr("Progress"));
     ui->fieldTypeListWidget->addItem(tr("Image"));
     ui->fieldTypeListWidget->addItem(tr("File list"));
+    ui->fieldTypeListWidget->addItem(tr("Web Link"));
+    ui->fieldTypeListWidget->addItem(tr("Email Address"));
 }
 
 void AddFieldDialog::createConnections()

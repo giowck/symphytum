@@ -212,6 +212,8 @@ void PrintDialog::print(bool pdf, QString pdfOutputPath)
             MetadataEngine::FieldType type = m_metadataEngine->getFieldType(i, m_collectionId);
             switch (type) {
             case MetadataEngine::TextType:
+            case MetadataEngine::URLTextType:
+            case MetadataEngine::EmailTextType:
                 htmlString.append(textTypeItemHtml(query.value(i), i));
                 break;
             case MetadataEngine::NumericType:

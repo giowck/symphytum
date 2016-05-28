@@ -24,6 +24,8 @@
 #include "../../widgets/form_widgets/progressformwidget.h"
 #include "../../widgets/form_widgets/imageformwidget.h"
 #include "../../widgets/form_widgets/filesformwidget.h"
+#include "../../widgets/form_widgets/urlformwidget.h"
+#include "../../widgets/form_widgets/emailformwidget.h"
 #include "../../widgets/mainwindow.h"
 #include "../../models/standardmodel.h"
 #include "emptyformwidget.h"
@@ -1498,6 +1500,12 @@ AbstractFormWidget* FormView::createFormWidget(MetadataEngine::FieldType type,
         break;
     case MetadataEngine::FilesType:
         f = new FilesFormWidget(viewport());
+        break;
+    case MetadataEngine::URLTextType:
+        f = new URLFormWidget(viewport());
+        break;
+    case MetadataEngine::EmailTextType:
+        f = new EmailFormWidget(viewport());
         break;
     default:
         f = new TestFormWidget(viewport());

@@ -946,6 +946,8 @@ QString MetadataEngine::dataTypeSqlName(FieldType type)
     case CreationDateType:
     case ModDateType:
     case FilesType:
+    case URLTextType:
+    case EmailTextType:
         s = "TEXT";
         break;
     case NumericType:
