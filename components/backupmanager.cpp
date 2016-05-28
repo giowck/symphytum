@@ -183,11 +183,8 @@ bool BackupTask::fullImport(const QString &filePath,
                           "Please upgrade to a newer version and then try again.");
         return false;
     }
-    if (dbVersion < DefinitionHolder::DATABASE_VERSION) {
-        //TODO: upgrade database using DatabaseManager
-        //      implement this on new db version
-        return false; // <-- rm this when implementation
-    }
+    //in case the database version is old
+    //on restart it will be upgraded by DatabaseManager
 
     //get metadata offset
     qint64 metadatOffset = 0;

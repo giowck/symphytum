@@ -80,6 +80,9 @@ private:
     /** Delete permanently the db file */
     void deleteDatabase();
 
+    /** Query current database for database version */
+    int getDatabaseVersion();
+
     /** Upgrade the database to the new version */
     void upgradeDatabase(const int oldVersion, const int newVersion);
 

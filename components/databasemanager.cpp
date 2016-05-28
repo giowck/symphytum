@@ -170,9 +170,21 @@ void DatabaseManager::openDatabase()
         initDatabase(database);
     }
 
-    //TODO: on next db version
-    //on open database check db version, if higher don't open it
-    //and how error message
+
+    //check database version
+    //upgrade if possible
+    int version = getDatabaseVersion();
+    if (version < DefinitionHolder::DATABASE_VERSION) {
+        upgradeDatabase(version, DefinitionHolder::DATABASE_VERSION);
+    } else if (version > DefinitionHolder::DATABASE_VERSION) {
+        QMessageBox::critical(0, QObject::tr("Database Version Incompatible"),
+                              QObject::tr("Failed to open the database file: db_version %1. "
+                                          " Please upgrade %2 to a newer version "
+                                          "and then try again!")
+                              .arg(version).arg(DefinitionHolder::NAME));
+        closeDatabase();
+        return;
+    }
 }
 
 void DatabaseManager::closeDatabase()
@@ -301,14 +313,36 @@ void DatabaseManager::deleteDatabase()
     QFile::remove(m_databasePath);
 }
 
+int DatabaseManager::getDatabaseVersion()
+{
+    int v = 0;
+
+    QSqlQuery query(getDatabase());
+
+    query.exec("SELECT value FROM symphytum_info WHERE key='db_version'");
+    if (query.next()) {
+        QString v_string = query.value(0).toString();
+        v = v_string.toInt();
+    }
+
+    return v;
+}
+
 void DatabaseManager::upgradeDatabase(const int oldVersion, const int newVersion)
 {
-    //TODO: on db version change
-    //implement this method and add it to constructor
-    //if a new db version is released (structure change)
-    //also check upgrade code in backup manager (import)
+    //handle database version upgrades
 
-    //for now unused
-    Q_UNUSED(oldVersion);
-    Q_UNUSED(newVersion);
+    //upgrade v1 -> v2
+    if ((oldVersion == 1) && (newVersion == 2)) {
+        //no major change (only new field type URL and email)
+    }
+    //add new else if blocks on new versions here
+
+    //upgrade done
+    //so upgrade version info
+    QSqlQuery query(getDatabase());
+
+    query.prepare("UPDATE symphytum_info SET value=:version WHERE key='db_version'");
+    query.bindValue(":version", DefinitionHolder::DATABASE_VERSION);
+    query.exec();
 }
