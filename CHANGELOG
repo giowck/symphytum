@@ -1,5 +1,21 @@
 CHANGELOG
 
+Version 2.0
+===========
+
+[New Features]
+- #11 #12 #16 New fields for web links and email addresses
+
+[Improvements]
+- Migration from Qt4 to Qt5 (User interface library)
+- Updated Dropbox certificates (Old ones are valid until August 2016)
+- Implemented database version checking and upgrading on format change
+- Updated about dialog to include github project link
+- Compiler warning fixes
+
+[Bug Fixes]
+- #19 Unable to restore from backup on windows caused by improper sample image file permissions
+
 
 Version 1.2
 ===========
