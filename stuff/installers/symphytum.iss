@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Symphytum"
-#define MyAppVersion "1.2"
+#define MyAppVersion "2.0"
 #define MyAppPublisher "Symphytum Developers"
 #define MyAppURL "http://giowck.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 OutputDir=C:\Users\giowck\Desktop
-OutputBaseFilename=symphytum-1.0-setup
+OutputBaseFilename=symphytum-2.0-setup
 Compression=lzma
 SolidCompression=yes
 
@@ -38,15 +38,16 @@ Source: "C:\Users\giowck\Desktop\sync\*"; DestDir: "{app}\sync"; Flags: ignoreve
 Source: "C:\Users\giowck\Desktop\imageformats\*"; DestDir: "{app}\imageformats"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\sqldrivers\*"; DestDir: "{app}\sqldrivers"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\mingwm10.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtCore4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtGui4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtNetwork4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtSql4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtSvg4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\QtXml4.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\libstdc++-6.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Widgets.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Network.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Sql.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-
+    
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
