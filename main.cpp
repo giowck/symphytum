@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     symphytumApp.setApplicationName(DefinitionHolder::NAME);
     symphytumApp.setApplicationVersion(DefinitionHolder::VERSION);
     symphytumApp.setOrganizationName(DefinitionHolder::COMPANY);
-    symphytumApp.setOrganizationDomain(DefinitionHolder::DOMAIN);
+    symphytumApp.setOrganizationDomain(DefinitionHolder::DOMAIN_NAME);
     symphytumApp.setWindowIcon(QIcon(":/images/icons/symphytum.png"));
 
     //only one instance allowed

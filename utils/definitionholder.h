@@ -27,7 +27,7 @@ public:
     static QString NAME;           /**< Software name                      */
     static QString COPYRIGHT;      /**< Software copyright                 */
     static QString COMPANY;        /**< Company name used in settings      */
-    static QString DOMAIN;         /**< Domain name used in settings       */
+    static QString DOMAIN_NAME;    /**< Domain name used in settings       */
     static QString UPDATE_URL;     /**< Url where to check for updates     */
     static QString DOWNLOAD_URL;   /**< Url where to download the software */
     static int SOFTWARE_BUILD;     /**< Build no. of the software          */
