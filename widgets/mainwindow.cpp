@@ -452,6 +452,12 @@ void MainWindow::newRecordActionTriggered()
 
         statusBar()->showMessage(tr("New record created"));
 
+        //FIXME: temporary workaround for Qt5
+        //views should atomatically update but don't
+        //needs investigation
+        //update views (hard way)
+        attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+
         //select newly created record
         m_formView->selectionModel()->setCurrentIndex(
                     m_currentModel->index(sModel->realRowCount() - 1, 1),
@@ -492,6 +498,12 @@ void MainWindow::duplicateRecordActionTriggered()
 
             sModel->duplicateRecord(row); //add duplicated record of row
             statusBar()->showMessage(tr("Record %1 duplicated").arg(row+1));
+
+            //FIXME: temporary workaround for Qt5
+            //views should atomatically update but don't
+            //needs investigation
+            //update views (hard way)
+            attachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
             m_formView->selectionModel()->setCurrentIndex(
                         m_currentModel->index(sModel->realRowCount() - 1, 1),
@@ -620,6 +632,12 @@ void MainWindow::deleteRecordActionTriggered()
 
             //remove
             m_currentModel->removeRow(index.row());
+
+            //FIXME: temporary workaround for Qt5
+            //views should atomatically update but don't
+            //needs investigation
+            //update views (hard way)
+            attachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
             statusBar()->showMessage(tr("Record %1 deleted").arg(index.row()+1));
         }
