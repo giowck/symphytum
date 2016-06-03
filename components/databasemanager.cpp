@@ -304,6 +304,15 @@ void DatabaseManager::initDatabase(QSqlDatabase &database)
     QFile::copy(":/images/sample/symphytum.jpg", filesDir + "25993661ea0bdede9699836f9ba0956b.jpg");
     QFile::copy(":/images/sample/calendula.jpg", filesDir + "81f87c38d8fd4cff00f35847e454e753.jpg");
     QFile::copy(":/images/sample/coffea.jpg", filesDir + "fd461a1f28d6682993422d65dafa2ddf.jpg");
+
+    //fix file permission because qrc files are read only
+    QFile f;
+    f.setFileName(filesDir + "25993661ea0bdede9699836f9ba0956b.jpg");
+    f.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadOther | QFile::WriteOther);
+    f.setFileName(filesDir + "81f87c38d8fd4cff00f35847e454e753.jpg");
+    f.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadOther | QFile::WriteOther);
+    f.setFileName(filesDir + "fd461a1f28d6682993422d65dafa2ddf.jpg");
+    f.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadOther | QFile::WriteOther);
 }
 
 void DatabaseManager::deleteDatabase()
