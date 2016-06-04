@@ -9,7 +9,7 @@ Build Symphytum:
 4. Check authors description in about dialog, see AUTHORS file
 5. Check and update CHANGELOG file
 6. Create archive of last commit:
-   git archive -o symphytum.tar.gz HEAD
+   git archive -o symphytum-1.0-src.tar.gz HEAD
 7. Uncompress and open project with release config
 8. Compile
 
