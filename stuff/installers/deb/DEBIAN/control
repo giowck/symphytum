@@ -1,13 +1,13 @@
 Package: symphytum
-Version: 1.2
+Version: 2.0
 Section: utils
 Priority: optional
 Architecture: amd64
 Essential: no
-Depends: libc6, libqt4-core, libqt4-gui, libqt4-network, libqt4-sql-sqlite, libqt4-svg
+Depends: libc6, libqt5core5a, libqt5gui5, libqt5network5, libqt5sql5-sqlite, libqt5svg5, python2.7, python-setuptools
 Recommends:
 Suggests:
-Installed-Size: 3000
+Installed-Size: 5000
 Maintainer: Giorgio Wicklein <giowckln@gmail.com>
 Conflicts:
 Replaces:
