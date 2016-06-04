@@ -32,7 +32,7 @@ EmailFormWidget::EmailFormWidget(QWidget *parent) :
     m_mainLayout = new QVBoxLayout(this);
     m_lineEdit = new QLineEdit(this);
     m_openURLAction = m_lineEdit->addAction(QIcon(":/images/icons/mail.png"),
-                                            QLineEdit::ActionPosition::TrailingPosition);
+                                            QLineEdit::TrailingPosition);
     m_openURLAction->setToolTip(tr("Write new email"));
 
     //static styling

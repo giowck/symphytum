@@ -32,7 +32,7 @@ URLFormWidget::URLFormWidget(QWidget *parent) :
     m_mainLayout = new QVBoxLayout(this);
     m_lineEdit = new QLineEdit(this);
     m_openURLAction = m_lineEdit->addAction(QIcon(":/images/icons/browser.png"),
-                                            QLineEdit::ActionPosition::TrailingPosition);
+                                            QLineEdit::TrailingPosition);
     m_openURLAction->setToolTip(tr("Open web link"));
 
     //static styling
