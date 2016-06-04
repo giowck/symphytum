@@ -10,6 +10,13 @@ Code
 ------------------
 This is the official code repository for the Symphytum project.      
 
+##### Build Instructions #####
+Unpack archive   
+`cd symphytum`   
+`qmake -config release`   
+`make`   
+
+See doc/deployment/ and stuff/installers/ for further information on dependencies and deployment.
 
 
 Origin And License
