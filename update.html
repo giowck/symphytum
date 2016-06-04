@@ -32,18 +32,44 @@
 <a name="symphytum" class="anchor" href="#symphytum"><span class="octicon octicon-link"></span></a>Symphytum Update</h1>   
 
 <p>
-<h2>New Version: 1.2</h2><br />
+<h2>New Version: 2.0</h2><br />
 A new software version is available.
 <br />
 Updating Symphytum is save, all your data and files won't be deleted or altered.
 <br /><br />
 What's new?
 <ul>
-<li>Open source transition - This update brings Symphytum under an open source licence (see changelog)</li>
+<li>New fields for web links and email addresses</li>
+<li>Migration from Qt4 to Qt5 user interface toolkit</li>
+<li>Bug fix: restoring a previous backup on windows no longer fails</li>
+<li>Minor improvements and changes (see changelog below)</li>
 </ul>
 <br />
+<h2>WARNING: This release is not compatible with older releases because the database format changed:</h2> Updating Symphytum will automatically upgrade the old database format to the new format. Please create a backup (File->Backup) before upgrading to be on the safe side.
+<br /><br />
+<h2>WARNING For Linux Users:</h2> The default storage path changed due the migration from Qt4 to Qt5. Files (database and files) are no longer stored in ~/.local/share/data/giowisys/, instead they are now under ~/.local/share/giowisys/. Creating, before upgrading, and restoring a backup (File->Backup), after upgrading, allows to accomodate this change, alternatively a manual intervention to move the files is possible (copy the giowisys directory from ~/.local/share/data to ~/.local/share/).
+<br /><br />
 Changelog
 <pre>
+CHANGELOG
+
+Version 2.0
+===========
+
+[New Features]
+- #11 #12 #16 New fields for web links and email addresses
+
+[Improvements]
+- Migration from Qt4 to Qt5 (User interface library)
+- Updated Dropbox certificates (Old ones are valid until August 2016)
+- Implemented database version checking and upgrading on format change
+- Updated about dialog to include github project link
+- Compiler warning fixes
+
+[Bug Fixes]
+- #19 Unable to restore from backup on windows caused by improper sample image file permissions
+
+
 Version 1.2
 ===========
 
