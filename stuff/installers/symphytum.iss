@@ -36,6 +36,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "C:\Users\giowck\Desktop\symphytum.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\sync\*"; DestDir: "{app}\sync"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\imageformats\*"; DestDir: "{app}\imageformats"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\giowck\Desktop\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\sqldrivers\*"; DestDir: "{app}\sqldrivers"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libstdc++-6.dll"; DestDir: "{app}"; Flags: ignoreversion
