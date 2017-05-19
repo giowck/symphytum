@@ -34,5 +34,7 @@
         <file>languages/symphytum_it.qm</file>
         <file>images/icons/browser.png</file>
         <file>images/icons/mail.png</file>
+        <file>languages/qt_pl.qm</file>
+        <file>languages/symphytum_pl.qm</file>
     </qresource>
 </RCC>
