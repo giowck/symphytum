@@ -539,7 +539,7 @@ void TableViewDelegate::paintTextType(QPainter *painter,
                                       const QModelIndex &index) const
 {
     QString dataString = index.data().toString();
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.text = dataString;
 
     //adapt to display properties
@@ -565,7 +565,7 @@ void TableViewDelegate::paintNumericType(QPainter *painter,
                                          const QStyleOptionViewItem &option,
                                          const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     QString dataString;
     bool empty = index.data().toString().isEmpty();
 
@@ -619,7 +619,7 @@ void TableViewDelegate::paintCreateDateType(QPainter *painter,
                                             const QStyleOptionViewItem &option,
                                             const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     QLocale locale;
     QString dateFormat = locale.dateTimeFormat(QLocale::ShortFormat);
 
@@ -691,7 +691,7 @@ void TableViewDelegate::paintComboboxType(QPainter *painter,
     if (!ok) itemId = -1;
     QString itemString;
 
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
 
     //adapt to display properties
     QString metadata =
@@ -782,7 +782,7 @@ void TableViewDelegate::paintImageType(QPainter *painter,
     int fileId = index.data().toInt();
     if (!fileId) return;
 
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
 
     QString filePath;
     QString fileName;
@@ -820,7 +820,7 @@ void TableViewDelegate::paintFilesType(QPainter *painter,
                                        const QModelIndex &index) const
 {
     QString dataString = index.data().toString();
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
 
     int fileCount = dataString.split(',', QString::SkipEmptyParts).size();
     //opt.text = tr("%n file(s)", "", fileCount);
