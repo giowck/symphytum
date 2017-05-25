@@ -248,10 +248,11 @@ void TableView::editingFinished()
 void TableView::modelFetchAll()
 {
     QAbstractItemModel *m = model();
-
-    const QModelIndex invalidIndex;
-    while (m->canFetchMore(invalidIndex))
-        m->fetchMore(invalidIndex);
+    if (m) {
+        const QModelIndex invalidIndex;
+        while (m->canFetchMore(invalidIndex))
+            m->fetchMore(invalidIndex);
+    }
 }
 
 void TableView::createContextActions()

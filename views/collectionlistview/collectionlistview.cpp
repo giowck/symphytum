@@ -103,6 +103,11 @@ void CollectionListView::createNewCollection()
     //prepare collection table and metadata
     MetadataEngine::getInstance().createNewCollection();
 
+    //FIXME: temporary workaround for listview not updating the items
+    //needs investigation, caused by migration from Qt4 to Qt5
+    this->detachModel();
+    this->attachModel();
+
     //edit it
     QModelIndex index = m_model->index(m_model->rowCount() - 1, 1);
     setCurrentIndex(index);
@@ -157,6 +162,11 @@ void CollectionListView::deleteCollection()
 
     //set local data changed
     SyncSession::LOCAL_DATA_CHANGED = true;
+
+    //FIXME: temporary workaround for listview not updating the items
+    //needs investigation, caused by migration from Qt4 to Qt5
+    this->detachModel();
+    this->attachModel();
 }
 
 void CollectionListView::attachModel()
@@ -167,7 +177,7 @@ void CollectionListView::attachModel()
     setModelColumn(1);
 
     //connections
-    connect(m_model, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
+    connect(m_model, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
             this, SLOT(editingFinished()));
 
     //select last used collection
@@ -179,7 +189,7 @@ void CollectionListView::detachModel()
     setModel(0);
 
     //delete model
-    disconnect(m_model, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
+    disconnect(m_model, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
                this, SLOT(editingFinished()));
     if (m_model) {
         delete m_model;
