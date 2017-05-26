@@ -354,6 +354,11 @@ void MainWindow::fullscreenActionTriggered()
 //#endif // Q_OS_OSX
 }
 
+void MainWindow::toggleDockActionTriggered()
+{
+    m_dockContainerWidget->setHidden(m_toggleDockAction->isChecked());
+}
+
 void MainWindow::currentCollectionIdChanged(int collectionId)
 {
     //save last active record id (row) to restore it on changeback
@@ -1603,6 +1608,10 @@ void MainWindow::createActions()
     m_fullscreenAction->setShortcut(QString("F11"));
 #endif
 
+    m_toggleDockAction = new QAction(tr("Hide collection sidebar"), this);
+    m_toggleDockAction->setCheckable(true);
+    m_toggleDockAction->setShortcut(QString("CTRL+B"));
+
     m_deleteAllRecordsAction = new QAction(tr("Delete all records"), this);
     m_deleteAllRecordsAction->setStatusTip(
                 tr("Remove all records from current collection"));
@@ -1729,6 +1738,7 @@ void MainWindow::createMenu()
 
     m_viewMenu = menuBar()->addMenu(tr("&View"));
     m_viewMenu->addAction(m_fullscreenAction);
+    m_viewMenu->addAction(m_toggleDockAction);
     m_viewMenu->addAction(m_viewModeActionSeparator);
     m_viewMenu->addAction(m_formViewModeAction);
     m_viewMenu->addAction(m_tableViewModeAction);
@@ -1829,6 +1839,8 @@ void MainWindow::createConnections()
             this, SLOT(tableViewModeTriggered()));
     connect(m_fullscreenAction, SIGNAL(triggered()),
             this, SLOT(fullscreenActionTriggered()));
+    connect(m_toggleDockAction, SIGNAL(triggered()),
+            this, SLOT(toggleDockActionTriggered()));
     connect(m_syncAction, SIGNAL(triggered()),
             this, SLOT(syncActionTriggered()));
     connect(m_selectAllAction, SIGNAL(triggered()),
@@ -1982,6 +1994,12 @@ void MainWindow::restoreSettings()
                                  "QToolBar:!active {background-color: rgb(60, 59, 55);}");
     }
 #endif //Q_OS_LINUX
+
+    //update dock widget status (hidden/visisble) and toggleDockAction
+    //dock status is saved as part of geometry so only menu sync is needed
+    if (m_dockContainerWidget->isHidden()){
+        m_toggleDockAction->setChecked(true);
+    }
 
     //sync
     SyncSession::LOCAL_DATA_CHANGED = m_syncEngine->localDataChanged();
