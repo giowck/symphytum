@@ -46,9 +46,10 @@ void DropboxSyncDriver::startAuthenticationRequest()
     startRequest();
 }
 
-void DropboxSyncDriver::startAuthenticationValidationRequest()
+void DropboxSyncDriver::startAuthenticationValidationRequest(QString &authToken)
 {
     m_currentRequest = AuthValidationRequest;
+    m_requestArgs.append(authToken);
     startRequest();
 }
 
@@ -96,7 +97,7 @@ void DropboxSyncDriver::stopAllRequests()
 
 QString DropboxSyncDriver::getServiceUrl()
 {
-    return "<a href=\"http://www.dropbox.com\">www.dropbox.com</a>";
+    return "<a href=\"https://www.dropbox.com\">www.dropbox.com</a>";
 }
 
 
@@ -156,15 +157,11 @@ void DropboxSyncDriver::processFinished(int exitCode,
         case AuthRequest:
         {
             QString url;
-            if (result.contains("Request token:") &&
-                    (result.contains("URL:"))) {
+            if (result.contains("URL:")) {
                 QStringList list = result.split(':', QString::SkipEmptyParts);
                 for (int i = 0; i < list.size(); i++) {
                     QString s = list.at(i);
-                    if (s == "Request token") {
-                        if ((i + 1) < list.size())
-                            m_requestToken = list.at(i + 1);
-                    } else if (s == "URL") {
+                    if (s == "URL") {
                         if ((i + 2) < list.size()) {
                             url = list.at(i + 1);
                             //since https:// contains ':'
@@ -226,7 +223,7 @@ void DropboxSyncDriver::processFinished(int exitCode,
 
             if (result.contains("Download:OK")) {
                 emit downloadReady(src, dest);
-            } else if (result.contains("[404]")) {
+            } else if (result.contains("not_found")) {
                 emit downloadFileNotFound(src);
             } else {
                 error = true;
@@ -251,7 +248,7 @@ void DropboxSyncDriver::processFinished(int exitCode,
             QString file;
             file = requestArgs.at(0);
 
-            if (result.contains("Delete:OK") || result.contains("[404]")) {
+            if (result.contains("Delete:OK") || result.contains("not_found")) {
                 emit removeReady(file);
             } else {
                 error = true;
@@ -264,11 +261,13 @@ void DropboxSyncDriver::processFinished(int exitCode,
 
         //inform about errors with signals
         if (error) {
-            if (result.contains("[401]"))
+            if (result.contains("invalid_access_token"))
                 emit authTokenExpired();
-            else if (result.contains("Error connecting to"))
+            else if (result.contains("Failed to establish a new connection"))
                 emit connectionFailed();
-            else if (result.contains("[507]"))
+            else if (result.contains("503")) //this was never tested
+                                             //check the output when storage full
+                                             //for the correct err code
                 emit storageQuotaExceeded();
             else
                 emit errorSignal(result);
@@ -336,13 +335,13 @@ void DropboxSyncDriver::startRequest()
     if (QSysInfo::MacintoshVersion <= QSysInfo::MV_10_6)
         pythonInterpreterPath = "python2.6";
     else
-        pythonInterpreterPath = "python2.7";
+        pythonInterpreterPath = "python3";
     QString path = QApplication::applicationDirPath().append("/sync/");
     path.append("dropbox_client.py");
     args.append(path);
 #endif
 #ifdef Q_OS_LINUX
-    pythonInterpreterPath = "python2";
+    pythonInterpreterPath = "python3";
     args.append("/usr/share/symphytum/sync/dropbox_client.py");
 #endif
 
@@ -376,7 +375,7 @@ void DropboxSyncDriver::startRequest()
     case AuthValidationRequest  :
         command = "create_access_token";
         accessToken = "none";
-        extraArgs.append(m_requestToken);
+        extraArgs = m_requestArgs;
         break;
     case UserNameRequest:
         command = "user_name";
@@ -391,20 +390,23 @@ void DropboxSyncDriver::startRequest()
         break;
     case UploadRequest:
         //files bigger 4MiB are uploaded in chunks
+        //FIXME: since there's a timeout bug in python v2 SDK for Dropbox
+        //reduce to 1 MiB chunks
         QFileInfo file(m_requestArgs.at(0));
         qint64 size = file.size();
-        qint64 _4MiB = 4194304;
-        if (size <= _4MiB) {
+        //qint64 _4MiB = 4194304; //using 1MB to avoid timeouts
+        qint64 _1MiB = 1048576;
+        if (size <= _1MiB) {
             command = "upload_file";
             m_totUploadChunks = 0;
             m_chunksUploaded = 0;
         } else {
             command = "upload_file_chunked";
             m_chunksUploaded = 0;
-            m_totUploadChunks = size / _4MiB;
+            m_totUploadChunks = size / _1MiB;
 
             //if rest, add smaller chunk
-            if (size % _4MiB)
+            if (size % _1MiB)
                 m_totUploadChunks++;
         }
         extraArgs = m_requestArgs;

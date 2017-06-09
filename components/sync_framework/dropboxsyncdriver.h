@@ -37,7 +37,7 @@ public:
     ~DropboxSyncDriver();
 
     void startAuthenticationRequest();
-    void startAuthenticationValidationRequest();
+    void startAuthenticationValidationRequest(QString &authToken);
     void startUserNameRequest();
     void startDownloadRequest(const QString &srcFilePath,
                               const QString &destFilePath);
@@ -71,7 +71,6 @@ private:
     SyncRequest m_currentRequest;
     QString m_accessTokenEncoded;
     QString m_appSecretEncoded;
-    QString m_requestToken;
     QStringList m_requestArgs;
     QString m_processOutput;
     int m_totUploadChunks;

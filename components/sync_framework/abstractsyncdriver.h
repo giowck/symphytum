@@ -53,8 +53,9 @@ public:
      * it in an encoded/encrypted way in the settings.
      * Emit authenticationValidated() when access token has been
      * created and stored.
+     * @param authToken - the OAuth auth token required to create the access token
      */
-    virtual void startAuthenticationValidationRequest() = 0;
+    virtual void startAuthenticationValidationRequest(QString &authToken) = 0;
 
     /**
      * Start a request to get the user name of the cloud service account

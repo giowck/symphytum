@@ -51,6 +51,7 @@ private slots:
     void okButtonClicked();
     void finishButtonClicked();
     void retryButtonClicked();
+    void codeLineEditTextEdited();
 
     //sync slots
     /** Called if an error occurred */

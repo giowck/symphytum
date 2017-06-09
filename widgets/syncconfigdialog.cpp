@@ -68,7 +68,8 @@ void SyncConfigDialog::okButtonClicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
 
-    m_syncDriver->startAuthenticationValidationRequest();
+    QString authToken = ui->codeLineEdit->text().trimmed();
+    m_syncDriver->startAuthenticationValidationRequest(authToken);
 }
 
 void SyncConfigDialog::finishButtonClicked()
@@ -103,6 +104,11 @@ void SyncConfigDialog::retryButtonClicked()
     ui->retryButton->setVisible(false);
 }
 
+void SyncConfigDialog::codeLineEditTextEdited()
+{
+    ui->okButton->setEnabled(!ui->codeLineEdit->text().trimmed().isEmpty());
+}
+
 void SyncConfigDialog::syncError(const QString &message)
 {
     if (ui->stackedWidget->currentIndex() == 2) {
@@ -133,8 +139,9 @@ void SyncConfigDialog::syncUrlAuth(const QString &url)
     ui->urlProgressBar->hide();
     ui->urlLabel->hide();
     ui->urlLabelOK->show();
-    ui->okButton->setEnabled(true);
-    ui->okButton->setFocus();
+    ui->codeLabel->setVisible(true);
+    ui->codeLineEdit->setVisible(true);
+    ui->codeLineEdit->setFocus();
 
     //open browser with url
     QDesktopServices::openUrl(QUrl(url));
@@ -163,6 +170,8 @@ void SyncConfigDialog::init()
 {
     ui->urlLabelOK->setVisible(false);
     ui->retryButton->setVisible(false);
+    ui->codeLabel->setVisible(false);
+    ui->codeLineEdit->setVisible(false);
     ui->serviceComboBox->addItem(QIcon(":/images/icons/dropbox.png"),
                                  tr("Dropbox"));
     ui->loginButton->setDefault(true);
@@ -184,6 +193,8 @@ void SyncConfigDialog::createConnections()
             this, SLOT(finishButtonClicked()));
     connect(ui->retryButton, SIGNAL(clicked()),
             this, SLOT(retryButtonClicked()));
+    connect(ui->codeLineEdit, SIGNAL(textEdited(QString)),
+            this, SLOT(codeLineEditTextEdited()));
 }
 
 void SyncConfigDialog::updateFinishButton(bool enabled)
