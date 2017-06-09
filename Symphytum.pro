@@ -212,7 +212,8 @@ FORMS += \
     ui/emailfieldwizard.ui
 
 TRANSLATIONS = stuff/translations/symphytum_de.ts \
-    stuff/translations/symphytum_it.ts
+    stuff/translations/symphytum_it.ts \
+    stuff/translations/symphytum_pl.ts
 
 ICON = resources/images/icons/symphytum.icns # for mac
 RC_FILE = resources/symphytum.rc # for windows
