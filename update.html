@@ -32,26 +32,41 @@
 <a name="symphytum" class="anchor" href="#symphytum"><span class="octicon octicon-link"></span></a>Symphytum Update</h1>   
 
 <p>
-<h2>New Version: 2.0</h2><br />
+<h2>New Version: 2.1</h2><br />
 A new software version is available.
 <br />
 Updating Symphytum is save, all your data and files won't be deleted or altered.
 <br /><br />
 What's new?
 <ul>
-<li>New fields for web links and email addresses</li>
-<li>Migration from Qt4 to Qt5 user interface toolkit</li>
-<li>Bug fix: restoring a previous backup on windows no longer fails</li>
-<li>Minor improvements and changes (see changelog below)</li>
+<li>Ability to hide the collection sidebar from the view menu</li>
+<li>Polish traslation added (thanks to MCbx)</li>
+<li>Dropbox API migration to v2 (v1 will stop working by 2017-06-28)</li>
+<li>Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS</li>
+<li>Bugfixes related to collection management</li>
 </ul>
 <br />
-<h2>WARNING: This release is not compatible with older releases because the database format changed:</h2> Updating Symphytum will automatically upgrade the old database format to the new format. Please create a backup (File->Backup) before upgrading to be on the safe side.
+<h2>WARNING: Please create a backup (File->Backup) before upgrading to be on the safe side.</h2>
 <br /><br />
-<h2>WARNING For Linux Users:</h2> The default storage path changed due the migration from Qt4 to Qt5. Files (database and files) are no longer stored in ~/.local/share/data/giowisys/, instead they are now under ~/.local/share/giowisys/. Creating, before upgrading, and restoring a backup (File->Backup), after upgrading, allows to accomodate this change, alternatively a manual intervention to move the files is possible (copy the giowisys directory from ~/.local/share/data to ~/.local/share/).
-<br /><br />
-Changelog
+
 <pre>
 CHANGELOG
+
+Version 2.1
+===========
+
+[New Features]
+- Ability to hide the collection sidebar from the view menu
+- Polish traslation added (thanks to MCbx)
+
+[Improvements]
+- Dropbox API migration to v2 (v1 will stop working by 2017-06-28)
+- Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS Sierra
+
+[Bug Fixes]
+- Fixed crash when adding a new collection
+- Collection list is not updated correctly when a new collection is added or deleted
+
 
 Version 2.0
 ===========
