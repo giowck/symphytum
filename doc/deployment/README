@@ -25,15 +25,12 @@ Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto"
 2. Open and compile symphytum.iss after review
 
-OS X:
-1. Use 'qmake -spec macx-g++ Symphytum.pro' to generate Makefile
+macOS:
+1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile
 2. Move py files to app boundle in the sync subfolder where the binary is
 3. Use macdeployqt
-4. Add to Info.plist:
-   <key>NSPrincipalClass</key>
-   <string>NSApplication</string>
-   for retina support thing (needed as Qt 4.8.1, after that already present)
-5. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
+4. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
+   (alt link: https://web.archive.org/web/20150423212042/http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/)
 
 Ubuntu:
 1. Copy deb dir from installers dir

@@ -4,11 +4,11 @@ Version 2.1
 ===========
 
 [New Features]
-- Dropbox API migration to v2 (v1 will stop working by 2017-06-28)
 - Ability to hide the collection sidebar from the view menu
 - Polish traslation added (thanks to MCbx)
 
 [Improvements]
+- Dropbox API migration to v2 (v1 will stop working by 2017-06-28)
 - Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS Sierra
 
 [Bug Fixes]
