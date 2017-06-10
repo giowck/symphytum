@@ -335,7 +335,7 @@ void DropboxSyncDriver::startRequest()
     if (QSysInfo::MacintoshVersion <= QSysInfo::MV_10_6)
         pythonInterpreterPath = "python2.6";
     else
-        pythonInterpreterPath = "python3";
+        pythonInterpreterPath = "python2.7"; //python3 not yet available
     QString path = QApplication::applicationDirPath().append("/sync/");
     path.append("dropbox_client.py");
     args.append(path);
