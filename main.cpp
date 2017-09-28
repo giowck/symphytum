@@ -20,6 +20,11 @@
 
 int main(int argc, char *argv[])
 {
+    //enable high DPI scaling on Windows and Linux
+    //NOTE: don't move, must be called before QApplication initialization
+    //or it won't work at all
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
     QtSingleApplication symphytumApp(argc, argv);
     symphytumApp.setApplicationName(DefinitionHolder::NAME);
     symphytumApp.setApplicationVersion(DefinitionHolder::VERSION);
