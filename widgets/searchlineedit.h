@@ -16,7 +16,7 @@
  * warranty, liability or support of any kind.
  *
  * Modified by
- * Copyright (c) 2012 Giorgio Wicklein <giorgio.wicklein@giowisys.com>
+ * Copyright (c) 2012 Giorgio Wicklein <giowckln@gmail.com>
  */
 
 #ifndef SEARCHLINEEDIT_H

@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2012 Giorgio Wicklein <giorgio.wicklein@giowisys.com>
+ *  Copyright (c) 2012 Giorgio Wicklein <giowckln@gmail.com>
  *  Copyright (c) 2014 Giorgio Wicklein <giowckln@gmail.com>
  */
 
