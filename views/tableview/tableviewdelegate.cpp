@@ -662,7 +662,7 @@ void TableViewDelegate::paintCheckboxType(QPainter *painter,
     //there is a bug in Qt 5.6 for OS X where the checkbox position is wrong
     //so instead on OS X use a simple combobox yes/no display as a workaround
     QString dataString = checked ? tr("Yes") : tr("No");
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.text = dataString;
     opt.widget->style()->drawControl(QStyle::CE_ItemViewItem, &opt, painter);
 #else
