@@ -334,6 +334,9 @@ void FormView::rowsInserted(const QModelIndex &parent, int start, int end)
 
 void FormView::contextMenuEvent(QContextMenuEvent *event)
 {
+    if (SyncSession::IS_READ_ONLY)
+        return;
+
     QMenu menu(this);
     menu.addAction(m_newRecordContextAction);
     menu.addAction(m_duplicateRecordContextAction);
@@ -466,6 +469,9 @@ void FormView::resizeEvent(QResizeEvent *event)
 
 void FormView::mousePressEvent(QMouseEvent *event)
 {
+    if (SyncSession::IS_READ_ONLY)
+        return;
+
     //set start drag pos for a possible drag operation
     //the position is recorded so that in mouseMoveEvent
     //it is possible to distinguish mouse clicks from
@@ -517,6 +523,10 @@ void FormView::mousePressEvent(QMouseEvent *event)
 }
 void FormView::mouseMoveEvent(QMouseEvent *event)
 {
+    if(SyncSession::IS_READ_ONLY) {
+        return QAbstractItemView::mouseMoveEvent(event);
+    }
+
     //TODO: do some optimizations/clean up for code reuse in this method
     bool startFWDrag = false;
 

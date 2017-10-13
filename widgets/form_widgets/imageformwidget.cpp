@@ -11,6 +11,7 @@
 #include "../../utils/formwidgetvalidator.h"
 #include "../../components/metadataengine.h"
 #include "../../components/filemanager.h"
+#include "../../components/sync_framework/syncsession.h"
 #include "../mainwindow.h"
 
 #include <QtWidgets/QLabel>
@@ -237,11 +238,13 @@ void ImageFormWidget::contextMenuEvent(QContextMenuEvent *event)
     }
 
     QMenu menu(this);
-    menu.addAction(m_selectAction);
+    if (!SyncSession::IS_READ_ONLY)
+        menu.addAction(m_selectAction);
     if (m_currentFileId) {
         menu.addAction(m_openAction);
         menu.addAction(m_saveAsAction);
-        menu.addAction(m_deleteAction);
+        if (!SyncSession::IS_READ_ONLY)
+            menu.addAction(m_deleteAction);
     }
     menu.exec(event->globalPos());
 }
@@ -256,10 +259,9 @@ void ImageFormWidget::mouseDoubleClickEvent(QMouseEvent *event)
 
     if (!m_currentFileId) {
         browseButtonClicked();
-        return;
+    } else {
+        openActionTriggered();
     }
-
-    openActionTriggered();
 }
 
 void ImageFormWidget::mousePressEvent(QMouseEvent *event)
@@ -332,6 +334,22 @@ void ImageFormWidget::dragEnterEvent(QDragEnterEvent *event)
 
 void ImageFormWidget::dropEvent(QDropEvent *event)
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     if (event->mimeData()->hasUrls()) {
         QList<QUrl> urls = event->mimeData()->urls();
         //find first image
@@ -359,8 +377,22 @@ void ImageFormWidget::dropEvent(QDropEvent *event)
 
 void ImageFormWidget::validateData()
 {
-    //always valid
-    emit dataEdited();
+    bool valid;
+
+    QString editMetadata = MetadataEngine::getInstance().getFieldProperties(
+                MetadataEngine::EditProperty, getFieldId());
+    FormWidgetValidator validator(editMetadata, MetadataEngine::ImageType);
+    QString errorMessage;
+
+    valid = validator.validate(getData(), errorMessage);
+
+    if (valid) {
+        emit dataEdited();
+    } else {
+        //inform FormView that the widget needs attention
+        //by animating the widget
+        emit requiresAttention(errorMessage);
+    }
 }
 
 
@@ -370,6 +402,22 @@ void ImageFormWidget::validateData()
 
 void ImageFormWidget::browseButtonClicked()
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     QString file = QFileDialog::getOpenFileName(this,
                                                 tr("Import Image"),
                                                 QDir::homePath(),

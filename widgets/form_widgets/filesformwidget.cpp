@@ -8,8 +8,10 @@
 
 #include "filesformwidget.h"
 #include "../../components/metadataengine.h"
+#include "../../components/sync_framework/syncsession.h"
 #include "../../components/filemanager.h"
 #include "../../utils/metadatapropertiesparser.h"
+#include "../../utils/formwidgetvalidator.h"
 #include "../mainwindow.h"
 
 #include <QtWidgets/QLabel>
@@ -306,11 +308,13 @@ void FilesFormWidget::contextMenuEvent(QContextMenuEvent *event)
     }
 
     QMenu menu(this);
-    menu.addAction(m_addAction);
+    if (!SyncSession::IS_READ_ONLY)
+        menu.addAction(m_addAction);
     if (m_filesTable->selectionModel()->selectedRows().size() > 0) {
         menu.addAction(m_openAction);
         menu.addAction(m_exportAction);
-        menu.addAction(m_deleteAction);
+        if (!SyncSession::IS_READ_ONLY)
+            menu.addAction(m_deleteAction);
     }
     menu.exec(event->globalPos());
 }
@@ -333,6 +337,22 @@ void FilesFormWidget::dragEnterEvent(QDragEnterEvent *event)
 
 void FilesFormWidget::dropEvent(QDropEvent *event)
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     if (event->mimeData()->hasUrls()) {
         QList<QUrl> urls = event->mimeData()->urls();
         QStringList fileList;
@@ -358,8 +378,22 @@ void FilesFormWidget::dropEvent(QDropEvent *event)
 
 void FilesFormWidget::validateData()
 {
-    //always valid
-    emit dataEdited();
+    bool valid;
+
+    QString editMetadata = MetadataEngine::getInstance().getFieldProperties(
+                MetadataEngine::EditProperty, getFieldId());
+    FormWidgetValidator validator(editMetadata, MetadataEngine::FilesType);
+    QString errorMessage;
+
+    valid = validator.validate(getData(), errorMessage);
+
+    if (valid) {
+        emit dataEdited();
+    } else {
+        //inform FormView that the widget needs attention
+        //by animating the widget
+        emit requiresAttention(errorMessage);
+    }
 }
 
 
@@ -377,6 +411,22 @@ void FilesFormWidget::updateToolActions()
 
 void FilesFormWidget::addButtonClicked()
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     QStringList files = QFileDialog::getOpenFileNames(this,
                                                       tr("Import Files"),
                                                       QDir::homePath()
@@ -389,6 +439,22 @@ void FilesFormWidget::addButtonClicked()
 
 void FilesFormWidget::removeButtonClicked()
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     //ask for confirmation
     QMessageBox box(QMessageBox::Warning, tr("Delete Files"),
                     tr("Are you sure you want to delete the selected files?"

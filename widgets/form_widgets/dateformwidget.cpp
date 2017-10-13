@@ -9,6 +9,7 @@
 #include "dateformwidget.h"
 #include "../../utils/platformcolorservice.h"
 #include "../../utils/metadatapropertiesparser.h"
+#include "../../utils/formwidgetvalidator.h"
 #include "../../components/metadataengine.h"
 #include "../../views/formview/formview.h"
 #include "../../components/alarmmanager.h"
@@ -31,6 +32,7 @@ DateFormWidget::DateFormWidget(QWidget *parent) :
     m_fieldNameLabel = new QLabel("Invalid Name", this);
     m_dateTimeEdit = new QDateTimeEdit(this);
     m_mainLayout = new QVBoxLayout(this);
+    m_lastValidDateTime = new QDateTime();
 
     //static styling
     m_fieldNameLabel->setStyleSheet("QLabel {color: gray;}");
@@ -67,6 +69,11 @@ DateFormWidget::DateFormWidget(QWidget *parent) :
     setupFocusPolicy();
 }
 
+DateFormWidget::~DateFormWidget()
+{
+    delete m_lastValidDateTime;
+}
+
 void DateFormWidget::setFieldName(const QString &name)
 {
     m_fieldNameLabel->setText(name);
@@ -80,14 +87,17 @@ QString DateFormWidget::getFieldName() const
 void DateFormWidget::clearData()
 {
     m_dateTimeEdit->setDateTime(QDateTime(QDate(2000, 01, 01), QTime(00, 00)));
+    *m_lastValidDateTime = (QDateTime(QDate(2000, 01, 01), QTime(00, 00)));
 }
 
 void DateFormWidget::setData(const QVariant &data)
 {
-    if (!data.isNull())
+    if (!data.isNull()) {
         m_dateTimeEdit->setDateTime(data.toDateTime());
-    else
+        *m_lastValidDateTime = data.toDateTime();
+    } else {
         clearData();
+    }
 }
 
 QVariant DateFormWidget::getData() const
@@ -130,8 +140,26 @@ void DateFormWidget::loadMetadataDisplayProperties(const QString &metadata)
 
 void DateFormWidget::validateData()
 {
-    //always valid
-    emit dataEdited();
+    bool valid;
+
+    QString editMetadata = MetadataEngine::getInstance().getFieldProperties(
+                MetadataEngine::EditProperty, getFieldId());
+    FormWidgetValidator validator(editMetadata, MetadataEngine::DateType);
+    QString errorMessage;
+
+    valid = validator.validate(getData(), errorMessage);
+
+    if (valid) {
+        *m_lastValidDateTime = m_dateTimeEdit->dateTime();
+        emit dataEdited();
+    } else {
+        //restore last valid value
+        m_dateTimeEdit->setDateTime(*m_lastValidDateTime);
+
+        //inform FormView that the widget needs attention
+        //by animating the widget
+        emit requiresAttention(errorMessage);
+    }
 }
 
 void DateFormWidget::editingFinishedSlot()

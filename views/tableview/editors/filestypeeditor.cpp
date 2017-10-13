@@ -9,6 +9,7 @@
 #include "filestypeeditor.h"
 #include "../../../components/filemanager.h"
 #include "../../../components/metadataengine.h"
+#include "../../../components/sync_framework/syncsession.h"
 
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
@@ -19,6 +20,7 @@
 #include <QtWidgets/QProgressDialog>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 
 
 //-----------------------------------------------------------------------------
@@ -81,6 +83,22 @@ QString FilesTypeEditor::getFiles()
 
 void FilesTypeEditor::browseButtonClicked()
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     QStringList fileList = QFileDialog::getOpenFileNames(this,
                                                       tr("Import Files"),
                                                       QDir::homePath()

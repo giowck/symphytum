@@ -25,7 +25,8 @@
 
 ProgressFormWidget::ProgressFormWidget(QWidget *parent) :
     AbstractFormWidget(parent),
-    m_maxValue(100)
+    m_maxValue(100),
+    m_lastValidProgress(0)
 {
     m_fieldNameLabel = new QLabel("Invalid Name", this);
     m_mainLayout = new QVBoxLayout(this);
@@ -71,7 +72,9 @@ QString ProgressFormWidget::getFieldName() const
 void ProgressFormWidget::clearData()
 {
     m_spinBox->clear();
+    m_spinBox->setValue(0);
     m_progressBar->setValue(0);
+    m_lastValidProgress = 0;
 }
 
 void ProgressFormWidget::setData(const QVariant &data)
@@ -83,9 +86,11 @@ void ProgressFormWidget::setData(const QVariant &data)
     if (validData) {
         m_spinBox->setValue(value);
         m_progressBar->setValue(value);
+        m_lastValidProgress = value;
     } else {
         m_spinBox->setValue(0);
         m_progressBar->setValue(0);
+        m_lastValidProgress = 0;
     }
 }
 
@@ -132,8 +137,26 @@ void ProgressFormWidget::focusOutEvent(QFocusEvent *event)
 
 void ProgressFormWidget::validateData()
 {
-    //always valid
-    emit dataEdited();
+    bool valid;
+
+    QString editMetadata = MetadataEngine::getInstance().getFieldProperties(
+                MetadataEngine::EditProperty, getFieldId());
+    FormWidgetValidator validator(editMetadata, MetadataEngine::ProgressType);
+    QString errorMessage;
+
+    valid = validator.validate(getData(), errorMessage);
+
+    if (valid) {
+        m_lastValidProgress = m_spinBox->value();
+        emit dataEdited();
+    } else {
+        //restore last valid value
+        m_spinBox->setValue(m_lastValidProgress);
+
+        //inform FormView that the widget needs attention
+        //by animating the widget
+        emit requiresAttention(errorMessage);
+    }
 }
 
 

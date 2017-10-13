@@ -70,6 +70,7 @@ private:
     QStringList m_itemNameList;
     int m_default; /**< The default value */
     bool m_markEmpty; /**< If data is empty mark field */
+    int m_lastValidIndex; /**< Last valid index */
 };
 
 #endif // COMBOBOXFORMWIDGET_H

@@ -70,6 +70,7 @@ private:
     QVBoxLayout *m_mainLayout;
     QHBoxLayout *m_progressLayout;
     int m_maxValue; /**< The max progress value */
+    int m_lastValidProgress; /**< last valiud progress value */
 };
 
 #endif // PROGRESSFORMWIDGET_H

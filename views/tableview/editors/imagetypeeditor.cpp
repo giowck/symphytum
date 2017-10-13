@@ -9,6 +9,7 @@
 #include "imagetypeeditor.h"
 #include "../../../components/filemanager.h"
 #include "../../../components/metadataengine.h"
+#include "../../../components/sync_framework/syncsession.h"
 
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
@@ -17,6 +18,7 @@
 #include <QtCore/QFile>
 #include <QtWidgets/QProgressDialog>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QMessageBox>
 
 
 //-----------------------------------------------------------------------------
@@ -76,6 +78,22 @@ int ImageTypeEditor::getImage()
 
 void ImageTypeEditor::browseButtonClicked()
 {
+    if (SyncSession::IS_READ_ONLY) {
+        //on invalid input show message
+        QString errorMessage;
+        errorMessage.append(QObject::tr("Read-only mode: "
+                                        "Editing is not allowed."));
+        QWidget *parent = qobject_cast<QWidget*>(this->parent());
+        QMessageBox box(QMessageBox::Warning, tr("Invalid Input"),
+                        tr("The entered data is not valid!<br>"
+                           "%1").arg(errorMessage),
+                        QMessageBox::NoButton,
+                        parent);
+        box.setWindowModality(Qt::WindowModal);
+        box.exec();
+        return;
+    }
+
     QString file = QFileDialog::getOpenFileName(this,
                                                 tr("Import Image"),
                                                 QDir::homePath(),

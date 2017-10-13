@@ -66,6 +66,9 @@ public:
      */
     int realRowCount();
 
+    /** Reimplement to avoid edits on read only session */
+    bool setData(const QModelIndex &index, const QVariant &value, int role);
+
 signals:
     /** Emitted after a model sort operation */
     void modelSortedSignal(int column);

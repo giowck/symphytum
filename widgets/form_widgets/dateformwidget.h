@@ -23,6 +23,7 @@
 class QLabel;
 class QDateTimeEdit;
 class QVBoxLayout;
+class QDateTime;
 
 
 //-----------------------------------------------------------------------------
@@ -35,6 +36,7 @@ class DateFormWidget : public AbstractFormWidget
 
 public:
     DateFormWidget(QWidget *parent = 0);
+    ~DateFormWidget();
 
     void setFieldName(const QString &name);
     QString getFieldName() const;
@@ -65,6 +67,7 @@ private:
     QLabel *m_fieldNameLabel;
     QDateTimeEdit *m_dateTimeEdit;
     QVBoxLayout *m_mainLayout;
+    QDateTime *m_lastValidDateTime;
 };
 
 #endif // DATEFORMWIDGET_H

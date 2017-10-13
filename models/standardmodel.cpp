@@ -11,6 +11,7 @@
 #include "../components/metadataengine.h"
 #include "../utils/metadatapropertiesparser.h"
 #include "../components/alarmmanager.h"
+#include "../components/sync_framework/syncsession.h"
 
 #include <QtSql/QSqlRecord>
 
@@ -169,4 +170,20 @@ int StandardModel::realRowCount()
         fetchMore();
 
     return rowCount();
+}
+
+bool StandardModel::setData(const QModelIndex &index,
+                            const QVariant &value, int role)
+{
+    //avoid data changes on read-only mode
+    if (!SyncSession::IS_READ_ONLY) {
+        //set local data changed
+        SyncSession::LOCAL_DATA_CHANGED = true; //already set elsewhere (redundant)
+                                                //TODO: cleanup and decide if better to handle data change sets here
+                                                //or like it is now done redundantly on tableview and formview?
+
+        return QSqlTableModel::setData(index, value, role);
+    } else {
+        return false;
+    }
 }

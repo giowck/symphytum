@@ -67,6 +67,7 @@ void ComboboxFormWidget::setData(const QVariant &data)
     value = data.toInt(&validData);
     if (validData) {
         m_comboBox->setCurrentIndex(value);
+        m_lastValidIndex = value;
     } else {
         m_comboBox->setCurrentIndex(m_default);
     }
@@ -114,8 +115,26 @@ void ComboboxFormWidget::loadMetadataDisplayProperties(const QString &metadata)
 
 void ComboboxFormWidget::validateData()
 {
-    //always valid
-    emit dataEdited();
+    bool valid;
+
+    QString editMetadata = MetadataEngine::getInstance().getFieldProperties(
+                MetadataEngine::EditProperty, getFieldId());
+    FormWidgetValidator validator(editMetadata, MetadataEngine::ComboboxType);
+    QString errorMessage;
+
+    valid = validator.validate(getData(), errorMessage);
+
+    if (valid) {
+        m_lastValidIndex = m_comboBox->currentIndex();
+        emit dataEdited();
+    } else {
+        //restore last valid value
+        m_comboBox->setCurrentIndex(m_lastValidIndex);
+
+        //inform FormView that the widget needs attention
+        //by animating the widget
+        emit requiresAttention(errorMessage);
+    }
 }
 
 
