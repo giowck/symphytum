@@ -178,6 +178,9 @@ void PrintDialog::print(bool pdf, QString pdfOutputPath)
                           "border: 1px solid #D3D3D3;"
                           "padding: 5px;"
                           "font-size: 11pt;"
+                      #ifdef Q_OS_WIN
+                          "font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;"
+                      #endif
                           "}"
                           "</style>"
                           "</head>"
