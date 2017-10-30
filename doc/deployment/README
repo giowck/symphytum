@@ -24,6 +24,7 @@ Prepare Dropbox SDK
 Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto"
 2. Open and compile symphytum.iss after review
+3. The missing .DLL files can be copied from the Qt install or use windeployqt
 
 macOS:
 1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile
