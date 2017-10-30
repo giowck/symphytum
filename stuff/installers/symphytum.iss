@@ -80,6 +80,7 @@ Source: "C:\Users\giowck\Desktop\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignorever
 Source: "C:\Users\giowck\Desktop\Qt5Widgets.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\Qt5Network.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\Qt5Sql.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
