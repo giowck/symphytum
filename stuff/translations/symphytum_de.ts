@@ -2651,7 +2651,7 @@ Dateiarchiv reduziert um %2 MiB</translation>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1401"/>
         <source>Cloud sync error: </source>
-        <translation>Cloud-Sync Fehler:</translation>
+        <translation>Cloud-Sync Fehler: </translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1414"/>
@@ -2681,7 +2681,7 @@ Dateiarchiv reduziert um %2 MiB</translation>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1520"/>
         <source>Your software version is up to date</source>
-        <translation>Ihre Software-Version ist auf den aktuellen Stand</translation>
+        <translation>Ihre Software-Version ist aktuell</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1525"/>
@@ -3488,7 +3488,8 @@ Dateiarchiv reduziert um %2 MiB</translation>
         <location filename="../../utils/formwidgetvalidator.cpp" line="114"/>
         <source>Required field: empty values not allowed
 </source>
-        <translation>Pflichtfeld: unbesetzte Werte sind nicht erlaubt</translation>
+        <translation>Pflichtfeld: unbesetzte Werte sind nicht erlaubt
+</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="142"/>
