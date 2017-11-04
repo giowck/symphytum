@@ -93,6 +93,46 @@ QVariant TextFormWidget::getData() const
         return m_lineEdit->text();
 }
 
+bool TextFormWidget::showHighlightSearchResults(const QString &searchString)
+{
+    bool r = getData().toString().contains(searchString, Qt::CaseInsensitive);
+    QString highLightCSS = "QLabel {"
+                           "background: yellow; }"
+                           "QLineEdit { color: red; }";
+    QString currentStyleSheet = this->styleSheet();
+    if (r) {
+        if (!currentStyleSheet.contains(highLightCSS))
+            this->setStyleSheet(currentStyleSheet.append(highLightCSS));
+
+        //highlight text area
+        QTextDocument *document = m_textArea->document();
+        QTextCursor highlightCursor(document);
+        QTextCursor cursor(document);
+
+        cursor.beginEditBlock();
+
+        QTextCharFormat plainFormat(highlightCursor.charFormat());
+        QTextCharFormat colorFormat = plainFormat;
+        colorFormat.setForeground(Qt::red);
+
+        while (!highlightCursor.isNull() && !highlightCursor.atEnd()) {
+            highlightCursor = document->find(searchString, highlightCursor);
+
+            if (!highlightCursor.isNull()) {
+                highlightCursor.movePosition(QTextCursor::WordRight,
+                                             QTextCursor::KeepAnchor);
+                highlightCursor.mergeCharFormat(colorFormat);
+            }
+        }
+
+        cursor.endEditBlock();
+    } else {
+        this->setStyleSheet(currentStyleSheet.remove(highLightCSS));
+    }
+
+    return r;
+}
+
 void TextFormWidget::loadMetadataDisplayProperties(const QString &metadata)
 {
     MetadataPropertiesParser parser(metadata);

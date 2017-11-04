@@ -108,6 +108,14 @@ public:
       */
     bool operator!= (const AbstractFormWidget& other) const;
 
+    /** Highlight the form widget or its contents if the searched string is matched.
+     * Default implementation returns false, implement if applicable.
+     * If no match is found, make sure to clear any highlighted state.
+     * @param searchString - the string to match against the data
+     * @return bool - if the data was found (matched) or not
+     */
+    virtual bool showHighlightSearchResults(const QString& searchString);
+
 signals:
     /** Emitted when content data has been edited */
     void dataEdited();

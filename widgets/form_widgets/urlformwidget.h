@@ -43,6 +43,7 @@ public:
     void clearData();
     void setData(const QVariant &data);
     QVariant getData() const;
+    bool showHighlightSearchResults(const QString &searchString);
 
     /**
      * Supported display properties are:

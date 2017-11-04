@@ -68,3 +68,9 @@ bool AbstractFormWidget::operator != (const AbstractFormWidget& other) const
 {
     return !(*this == other);
 }
+
+bool AbstractFormWidget::showHighlightSearchResults(const QString &searchString)
+{
+    Q_UNUSED(searchString);
+    return false;
+}

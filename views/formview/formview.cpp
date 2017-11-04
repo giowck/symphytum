@@ -1373,12 +1373,31 @@ void FormView::populateFields()
     while (m->canFetchMore(index))
         m->fetchMore(index);
 
+    //check if any filter aka search is active
+    QString activeSearchString = "";
+    QAbstractItemModel *imodel = this->model();
+    if (imodel) {
+        QSqlTableModel *sqlModel = static_cast<QSqlTableModel*> (imodel);
+        if (sqlModel) {
+            QString filter = sqlModel->filter();
+            if (!filter.isEmpty()) {
+                QString beforeOr = filter.split("OR").at(0);
+                QStringList wilds = beforeOr.split("%");
+                activeSearchString = wilds.at(1);
+            } else  {
+                activeSearchString = "__no_active_filter_symphytum"; //avoid empty searches
+            }
+        }
+    }
+
     FormWidget *fw;
     int column = 1; //0 is ID, so start with 1
     foreach (fw, m_formWidgetList) {
         index = m->index(m_currentRow, column);
         if (index.isValid()) {
             fw->setData(index.data());
+            //highlight fields with results, if found
+            fw->showHighlightSearchResults(activeSearchString);
         }
         column++;
     }

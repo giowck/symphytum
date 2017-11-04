@@ -85,6 +85,23 @@ QVariant EmailFormWidget::getData() const
     return m_lineEdit->text();
 }
 
+bool EmailFormWidget::showHighlightSearchResults(const QString &searchString)
+{
+    bool r = m_lineEdit->text().contains(searchString, Qt::CaseInsensitive);
+    QString highLightCSS = "QLabel {"
+                           "background: yellow; }"
+                           "QLineEdit { color: red; }";
+    QString currentStyleSheet = this->styleSheet();
+    if (r) {
+        if (!currentStyleSheet.contains(highLightCSS))
+            this->setStyleSheet(currentStyleSheet.append(highLightCSS));
+    } else {
+        this->setStyleSheet(currentStyleSheet.remove(highLightCSS));
+    }
+
+    return r;
+}
+
 void EmailFormWidget::loadMetadataDisplayProperties(const QString &metadata)
 {
     MetadataPropertiesParser parser(metadata);
