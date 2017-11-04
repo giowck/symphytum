@@ -55,6 +55,7 @@ private slots:
     void cloundUnlinkButtonClicked();
     void softwareResetButtonClicked();
     void formViewColorComboChanged();
+    void formViewFontSizeComboChanged();
     void darkToolbarAmbianceCheckChanged();
     
 private:

@@ -344,6 +344,9 @@ private:
     /** Load background theme from settings */
     void setupViewBackground();
 
+    /** Load font config from settings */
+    void setupViewFonts();
+
     FormLayoutMatrix *m_formLayoutMatrix;         /**< Layout holder for form widgets */
     QList<AbstractFormWidget*> m_formWidgetList;  /**< A list of all form widgets     */
     QList<QPropertyAnimation*> m_animationList;   /**< A list with queued animation   */

@@ -190,6 +190,7 @@ void FormView::setFormLayoutState(FormViewLayoutState &state)
 void FormView::reloadAppearanceSettings()
 {
     setupViewBackground();
+    setupViewFonts();
 }
 
 
@@ -988,6 +989,7 @@ void FormView::initFormView()
             this, SLOT(handleFocusChange(QWidget*,QWidget*)));
 
     setupViewBackground();
+    setupViewFonts();
 }
 
 void FormView::createModelConnections(QAbstractItemModel *model)
@@ -1603,4 +1605,23 @@ void FormView::setupViewBackground()
     }
 
     setPalette(p);
+}
+
+void FormView::setupViewFonts()
+{
+    SettingsManager sm;
+    QString fontSizeString = sm.restoreProperty("fontSize", "formView").toString();
+    int fontSizeIndex = sm.restoreProperty("fontSizeIndex", "formView").toInt();
+
+    if (fontSizeIndex == 0) { //auto mode
+#ifdef Q_OS_WIN
+        setStyleSheet("font-size: 13px;"); //make font bigger only on windows
+#else
+        setStyleSheet(""); //clear, use system's default on other systems
+#endif
+    } else if (fontSizeIndex == 1) { //system
+        setStyleSheet(""); //clear, use system's default
+    } else {
+        setStyleSheet(QString("font-size: %1;").arg(fontSizeString));
+    }
 }

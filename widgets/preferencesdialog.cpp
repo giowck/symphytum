@@ -54,6 +54,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(softwareResetButtonClicked()));
     connect(ui->formViewColorCombo, SIGNAL(activated(int)),
             this, SLOT(formViewColorComboChanged()));
+    connect(ui->formViewFontSizeComboBox, SIGNAL(activated(int)),
+            this, SLOT(formViewFontSizeComboChanged()));
     connect(ui->darkToolbarAmbianceCheckBox, SIGNAL(clicked()),
             this, SLOT(darkToolbarAmbianceCheckChanged()));
 
@@ -177,6 +179,17 @@ void PreferencesDialog::formViewColorComboChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::formViewFontSizeComboChanged()
+{
+    int fontSizeIndex = ui->formViewFontSizeComboBox->currentIndex();
+    QString fontSizeString = ui->formViewFontSizeComboBox->currentText();
+
+    m_settingsManager->saveProperty("fontSize", "formView", fontSizeString);
+    m_settingsManager->saveProperty("fontSizeIndex", "formView", fontSizeIndex);
+
+    m_appearanceChanged = true;
+}
+
 void PreferencesDialog::darkToolbarAmbianceCheckChanged()
 {
     bool checked = ui->darkToolbarAmbianceCheckBox->isChecked();
@@ -236,6 +249,11 @@ void PreferencesDialog::loadSettings()
     int colorCodeIndex = m_settingsManager->restoreProperty(
                 "backgroundColorIndex", "formView").toInt();
     ui->formViewColorCombo->setCurrentIndex(colorCodeIndex);
+
+    //form view font size
+    int fontSizeIndex = m_settingsManager->restoreProperty(
+                "fontSizeIndex", "formView").toInt();
+    ui->formViewFontSizeComboBox->setCurrentIndex(fontSizeIndex);
 
 #ifdef Q_OS_LINUX
     //dark toolbar ambiance style
