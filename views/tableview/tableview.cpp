@@ -33,6 +33,10 @@ TableView::TableView(QWidget *parent) :
     //connections
     connect(m_delegate, SIGNAL(commitData(QWidget*)),
             this, SLOT(editingFinished()));
+    
+#ifdef Q_OS_WIN
+    setStyleSheet("QTableView { selection-color: palette(text); }"); //fix wrong text color
+#endif
 }
 
 void TableView::setModel(QAbstractItemModel *model)
