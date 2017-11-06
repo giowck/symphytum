@@ -82,6 +82,7 @@ Source: "C:\Users\giowck\Desktop\Qt5Network.dll"; DestDir: "{app}"; Flags: ignor
 Source: "C:\Users\giowck\Desktop\Qt5Sql.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\Qt5Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\Qt5WinExtras.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

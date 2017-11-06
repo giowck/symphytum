@@ -6,6 +6,10 @@
 
 QT       += core gui sql network svg widgets printsupport
 
+win32 {
+    QT += winextras
+}
+
 macx {
     TARGET = Symphytum
 }

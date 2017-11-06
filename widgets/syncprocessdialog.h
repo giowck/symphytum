@@ -33,6 +33,10 @@ class SettingsManager;
 class DatabaseManager;
 class FileManager;
 
+#ifdef Q_OS_WIN
+class QWinTaskbarProgress;
+#endif
+
 
 //-----------------------------------------------------------------------------
 // SyncProcessDialog
@@ -118,6 +122,9 @@ private:
     };
 
     Ui::SyncProcessDialog *ui;
+#ifdef Q_OS_WIN
+    QWinTaskbarProgress *m_taskbarProgress;
+#endif
     SyncEngine *m_syncEngine;
     DatabaseManager *m_databaseManager;
     FileManager *m_fileManager;

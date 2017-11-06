@@ -17,6 +17,11 @@
 
 #include <QtCore/QFile>
 
+#ifdef Q_OS_WIN
+#include <QtWinExtras/QWinTaskbarButton>
+#include <QtWinExtras/QWinTaskbarProgress>
+#endif
+
 
 //-----------------------------------------------------------------------------
 // Public
@@ -25,6 +30,9 @@
 SyncProcessDialog::SyncProcessDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SyncProcessDialog),
+#ifdef Q_OS_WIN
+    m_taskbarProgress(nullptr),
+#endif
     m_settingsManager(0),
     m_databaseSyncOp(DbInvalidOp),
     m_downloadFileOp(DownloadNoOp),
@@ -52,6 +60,12 @@ SyncProcessDialog::~SyncProcessDialog()
 
     if (m_metadataBeforeSync)
         delete m_metadataBeforeSync;
+
+#ifdef Q_OS_WIN
+    if (m_taskbarProgress) {
+        m_taskbarProgress->setVisible(false);
+    }
+#endif
 }
 
 void SyncProcessDialog::enableAutoCloseAfterSync()
@@ -86,6 +100,9 @@ void SyncProcessDialog::connectionFailedSlot()
                                     " check your connection."));
     ui->syncOperationLabel->hide();
     ui->syncProgressBar->hide();
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setVisible(false);
+#endif
     ui->syncCurrentTaskLabel->hide();
     ui->syncCurrentTaskProgressBar->hide();
 }
@@ -97,6 +114,9 @@ void SyncProcessDialog::tokenInvalidOrExpiredSlot()
                                     "cloud service is invalid or expired."));
     ui->syncOperationLabel->hide();
     ui->syncProgressBar->hide();
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setVisible(false);
+#endif
     ui->syncCurrentTaskLabel->hide();
     ui->syncCurrentTaskProgressBar->hide();
 }
@@ -109,6 +129,9 @@ void SyncProcessDialog::syncError(const QString &message)
     ui->syncResultLabel->setText(message);
     ui->syncOperationLabel->hide();
     ui->syncProgressBar->hide();
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setVisible(false);
+#endif
     ui->syncCurrentTaskLabel->hide();
     ui->syncCurrentTaskProgressBar->hide();
 }
@@ -131,6 +154,9 @@ void SyncProcessDialog::nothingToSyncSlot()
                                     "There are no changes to synchronize."));
     ui->syncOperationLabel->hide();
     ui->syncProgressBar->hide();
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setVisible(false);
+#endif
     ui->syncCurrentTaskLabel->hide();
     ui->syncCurrentTaskProgressBar->hide();
     ui->syncOkButton->setEnabled(true);
@@ -358,6 +384,18 @@ void SyncProcessDialog::init()
     m_dbPath = m_databaseManager->getDatabasePath();
     m_dbName = m_databaseManager->getDatabaseName();
     m_filesDir = m_fileManager->getFilesDirectory();
+
+#ifdef Q_OS_WIN
+    if (m_taskbarProgress == nullptr) { //init task bar progress
+        QWinTaskbarButton *button = new QWinTaskbarButton(this);
+        QWidget *parent = this->parentWidget();
+        if (parent)
+            button->setWindow(parent->windowHandle());
+
+        m_taskbarProgress = button->progress();
+
+    }
+#endif
 }
 
 void SyncProcessDialog::initSync()
@@ -555,6 +593,10 @@ void SyncProcessDialog::startSyncProcess()
         steps++;
     ui->syncProgressBar->setRange(0, steps);
     ui->syncProgressBar->setValue(1);
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setRange(0, steps);
+    m_taskbarProgress->setValue(1);
+#endif
 
     switch (m_databaseSyncOp) {
     case UploadDbOp:
@@ -575,6 +617,10 @@ void SyncProcessDialog::startSyncProcess()
 void SyncProcessDialog::syncFiles()
 {
     ui->syncProgressBar->setValue(ui->syncProgressBar->value() + 1);
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setValue(ui->syncProgressBar->value() + 1);
+    m_taskbarProgress->setVisible(true);
+#endif
     qApp->processEvents();
 
     if (!m_fileSyncInitialized) {
@@ -617,6 +663,9 @@ void SyncProcessDialog::syncFiles()
         max += m_filesToCloudRemove.size();
         max += m_filesToLocalRemove.size();
         ui->syncProgressBar->setMaximum(max);
+#ifdef Q_OS_WIN
+        m_taskbarProgress->setRange(0, max);
+#endif
         qApp->processEvents();
 
         m_fileSyncInitialized = true;
@@ -647,6 +696,9 @@ void SyncProcessDialog::syncFiles()
             qApp->processEvents();
             QFile::remove(m_filesDir + s);
             ui->syncProgressBar->setValue(ui->syncProgressBar->value() + 1);
+#ifdef Q_OS_WIN
+            m_taskbarProgress->setValue(ui->syncProgressBar->value() + 1);
+#endif
         }
         m_filesToLocalRemove.clear();
     }
@@ -669,11 +721,17 @@ void SyncProcessDialog::syncFiles()
     m_syncDriver->startUploadRequest(m_metadataFilePath, m_metadataFileName);
 
     ui->syncProgressBar->setValue(ui->syncProgressBar->value() + 1);
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setValue(ui->syncProgressBar->value() + 1);
+#endif
 }
 
 void SyncProcessDialog::completeSync()
 {
     ui->syncProgressBar->setValue(ui->syncProgressBar->maximum());
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setValue(m_taskbarProgress->maximum());
+#endif
     qApp->processEvents();
 
     ui->stackedWidget->setCurrentIndex(3);
@@ -681,6 +739,9 @@ void SyncProcessDialog::completeSync()
                                     "synchronized."));
     ui->syncOperationLabel->hide();
     ui->syncProgressBar->hide();
+#ifdef Q_OS_WIN
+    m_taskbarProgress->setVisible(false);
+#endif
     ui->syncCurrentTaskLabel->hide();
     ui->syncCurrentTaskProgressBar->hide();
     ui->syncOkButton->setEnabled(true);
