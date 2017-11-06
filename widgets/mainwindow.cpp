@@ -892,6 +892,11 @@ void MainWindow::optimizeDbSizeActionTriggered()
         progressDialog.setValue(++progress);
     }
 
+    //finished progress dialog should auto close
+    //but steps don't match maximum() somehow
+    //so force close
+    progressDialog.close();
+
     double bytesAfter = DatabaseManager::getInstance().getDatabaseFileSize();
     double kib = (bytesBefore - bytesAfter) / (1024.0); //B -> KiB
     qint64 mib = removedFileBytes / (1024 * 1024); //b -> MiB
