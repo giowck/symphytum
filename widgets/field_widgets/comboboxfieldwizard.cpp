@@ -177,9 +177,10 @@ void ComboboxFieldWizard::removeItemButtonClicked()
     if (!ui->itemsListWidget->selectedItems().size())
         return;
 
+    int itemId = ui->itemsListWidget->currentRow();
+
     //only if in editing mode
     if (m_currentEditMode == AbstractFieldWizard::ModifyEditMode) {
-        int itemId = ui->itemsListWidget->currentRow();
         MetadataEngine *meta = &MetadataEngine::getInstance();
         int collectionId = m_collectionId;
         int fieldId = m_fieldId;
@@ -187,11 +188,10 @@ void ComboboxFieldWizard::removeItemButtonClicked()
         m_pendingSqlStatements.append(
                     QString("UPDATE \"%1\" SET \"%2\"=NULL WHERE \"%2\"=%3")
                     .arg(tableName).arg(fieldId).arg(itemId));
-
-        //hide item from list (but don't remove, otherwise item ids gets messed up)
-        QListWidgetItem *item = ui->itemsListWidget->item(itemId);
-        item->setHidden(true);
     }
+    //hide item from list (but don't remove, otherwise item ids gets messed up)
+    QListWidgetItem *item = ui->itemsListWidget->item(itemId);
+    item->setHidden(true);
 
     updateDefaultComboBox();
 }
