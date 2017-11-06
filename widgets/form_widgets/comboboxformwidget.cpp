@@ -96,6 +96,8 @@ void ComboboxFormWidget::loadMetadataDisplayProperties(const QString &metadata)
         s.replace("\\comma", ",");
         s.replace("\\colon", ":");
         s.replace("\\semicolon", ";");
+        s.replace("\\doublequote", "\"");
+        s.replace("\\singlequote", "'");
         m_comboBox->addItem(s);
     }
 

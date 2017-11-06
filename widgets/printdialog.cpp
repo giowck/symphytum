@@ -408,6 +408,8 @@ QString PrintDialog::comboboxTypeItemHtml(const QVariant &data, int fieldId)
         itemString.replace("\\comma", ",");
         itemString.replace("\\colon", ":");
         itemString.replace("\\semicolon", ";");
+        itemString.replace("\\doublequote", "\"");
+        itemString.replace("\\singlequote", "'");
     }
 
     return itemString;

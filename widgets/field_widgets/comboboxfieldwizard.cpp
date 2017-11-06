@@ -74,6 +74,8 @@ void ComboboxFieldWizard::getFieldProperties(QString &displayProperties,
         s.replace(",", "\\comma");
         s.replace(":", "\\colon");
         s.replace(";", "\\semicolon");
+        s.replace("\"", "\\doublequote");
+        s.replace("'", "\\singlequote");
         metadataItemList.append(s);
         if ((i + 1) < size)
             metadataItemList.append(",");
@@ -117,6 +119,8 @@ void ComboboxFieldWizard::loadField(const int fieldId, const int collectionId)
             s.replace("\\comma", ",");
             s.replace("\\colon", ":");
             s.replace("\\semicolon", ";");
+            s.replace("\\doublequote", "\"");
+            s.replace("\\singlequote", "'");
             QListWidgetItem *item = new QListWidgetItem(s,
                                                         ui->itemsListWidget);
             item->setFlags(item->flags() | Qt::ItemIsEditable);
