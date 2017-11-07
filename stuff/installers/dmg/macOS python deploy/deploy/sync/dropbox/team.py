@@ -15,7 +15,7 @@ try:
     from . import (
         async,
         common,
-        properties,
+        file_properties,
         team_common,
         team_policies,
         users,
@@ -24,7 +24,7 @@ try:
 except (SystemError, ValueError):
     import async
     import common
-    import properties
+    import file_properties
     import team_common
     import team_policies
     import users
@@ -32,12 +32,12 @@ except (SystemError, ValueError):
 
 class DeviceSession(object):
     """
-    :ivar session_id: The session id
-    :ivar ip_address: The IP address of the last activity from this session
+    :ivar session_id: The session id.
+    :ivar ip_address: The IP address of the last activity from this session.
     :ivar country: The country from which the last activity from this session
-        was made
-    :ivar created: The time this session was created
-    :ivar updated: The time of the last activity from this session
+        was made.
+    :ivar created: The time this session was created.
+    :ivar updated: The time of the last activity from this session.
     """
 
     __slots__ = [
@@ -85,7 +85,7 @@ class DeviceSession(object):
     @property
     def session_id(self):
         """
-        The session id
+        The session id.
 
         :rtype: str
         """
@@ -108,7 +108,7 @@ class DeviceSession(object):
     @property
     def ip_address(self):
         """
-        The IP address of the last activity from this session
+        The IP address of the last activity from this session.
 
         :rtype: str
         """
@@ -134,7 +134,7 @@ class DeviceSession(object):
     @property
     def country(self):
         """
-        The country from which the last activity from this session was made
+        The country from which the last activity from this session was made.
 
         :rtype: str
         """
@@ -160,7 +160,7 @@ class DeviceSession(object):
     @property
     def created(self):
         """
-        The time this session was created
+        The time this session was created.
 
         :rtype: datetime.datetime
         """
@@ -186,7 +186,7 @@ class DeviceSession(object):
     @property
     def updated(self):
         """
-        The time of the last activity from this session
+        The time of the last activity from this session.
 
         :rtype: datetime.datetime
         """
@@ -222,12 +222,12 @@ DeviceSession_validator = bv.Struct(DeviceSession)
 
 class ActiveWebSession(DeviceSession):
     """
-    Information on active web sessions
+    Information on active web sessions.
 
-    :ivar user_agent: Information on the hosting device
-    :ivar os: Information on the hosting operating system
-    :ivar browser: Information on the browser used for this web session
-    :ivar expires: The time this session expires
+    :ivar user_agent: Information on the hosting device.
+    :ivar os: Information on the hosting operating system.
+    :ivar browser: Information on the browser used for this web session.
+    :ivar expires: The time this session expires.
     """
 
     __slots__ = [
@@ -278,7 +278,7 @@ class ActiveWebSession(DeviceSession):
     @property
     def user_agent(self):
         """
-        Information on the hosting device
+        Information on the hosting device.
 
         :rtype: str
         """
@@ -301,7 +301,7 @@ class ActiveWebSession(DeviceSession):
     @property
     def os(self):
         """
-        Information on the hosting operating system
+        Information on the hosting operating system.
 
         :rtype: str
         """
@@ -324,7 +324,7 @@ class ActiveWebSession(DeviceSession):
     @property
     def browser(self):
         """
-        Information on the browser used for this web session
+        Information on the browser used for this web session.
 
         :rtype: str
         """
@@ -347,7 +347,7 @@ class ActiveWebSession(DeviceSession):
     @property
     def expires(self):
         """
-        The time this session expires
+        The time this session expires.
 
         :rtype: datetime.datetime
         """
@@ -384,84 +384,6 @@ class ActiveWebSession(DeviceSession):
         )
 
 ActiveWebSession_validator = bv.Struct(ActiveWebSession)
-
-class AddPropertyTemplateArg(properties.PropertyGroupTemplate):
-    """
-    Arguments for adding property templates.
-    """
-
-    __slots__ = [
-    ]
-
-    _has_required_fields = True
-
-    def __init__(self,
-                 name=None,
-                 description=None,
-                 fields=None):
-        super(AddPropertyTemplateArg, self).__init__(name,
-                                                     description,
-                                                     fields)
-
-    def __repr__(self):
-        return 'AddPropertyTemplateArg(name={!r}, description={!r}, fields={!r})'.format(
-            self._name_value,
-            self._description_value,
-            self._fields_value,
-        )
-
-AddPropertyTemplateArg_validator = bv.Struct(AddPropertyTemplateArg)
-
-class AddPropertyTemplateResult(object):
-    """
-    :ivar template_id: An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-    """
-
-    __slots__ = [
-        '_template_id_value',
-        '_template_id_present',
-    ]
-
-    _has_required_fields = True
-
-    def __init__(self,
-                 template_id=None):
-        self._template_id_value = None
-        self._template_id_present = False
-        if template_id is not None:
-            self.template_id = template_id
-
-    @property
-    def template_id(self):
-        """
-        An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-
-        :rtype: str
-        """
-        if self._template_id_present:
-            return self._template_id_value
-        else:
-            raise AttributeError("missing required field 'template_id'")
-
-    @template_id.setter
-    def template_id(self, val):
-        val = self._template_id_validator.validate(val)
-        self._template_id_value = val
-        self._template_id_present = True
-
-    @template_id.deleter
-    def template_id(self):
-        self._template_id_value = None
-        self._template_id_present = False
-
-    def __repr__(self):
-        return 'AddPropertyTemplateResult(template_id={!r})'.format(
-            self._template_id_value,
-        )
-
-AddPropertyTemplateResult_validator = bv.Struct(AddPropertyTemplateResult)
 
 class AdminTier(bb.Union):
     """
@@ -529,14 +451,14 @@ AdminTier_validator = bv.Union(AdminTier)
 
 class ApiApp(object):
     """
-    Information on linked third party applications
+    Information on linked third party applications.
 
-    :ivar app_id: The application unique id
-    :ivar app_name: The application name
-    :ivar publisher: The application publisher name
-    :ivar publisher_url: The publisher's URL
-    :ivar linked: The time this application was linked
-    :ivar is_app_folder: Whether the linked application uses a dedicated folder
+    :ivar app_id: The application unique id.
+    :ivar app_name: The application name.
+    :ivar publisher: The application publisher name.
+    :ivar publisher_url: The publisher's URL.
+    :ivar linked: The time this application was linked.
+    :ivar is_app_folder: Whether the linked application uses a dedicated folder.
     """
 
     __slots__ = [
@@ -591,7 +513,7 @@ class ApiApp(object):
     @property
     def app_id(self):
         """
-        The application unique id
+        The application unique id.
 
         :rtype: str
         """
@@ -614,7 +536,7 @@ class ApiApp(object):
     @property
     def app_name(self):
         """
-        The application name
+        The application name.
 
         :rtype: str
         """
@@ -637,7 +559,7 @@ class ApiApp(object):
     @property
     def publisher(self):
         """
-        The application publisher name
+        The application publisher name.
 
         :rtype: str
         """
@@ -663,7 +585,7 @@ class ApiApp(object):
     @property
     def publisher_url(self):
         """
-        The publisher's URL
+        The publisher's URL.
 
         :rtype: str
         """
@@ -689,7 +611,7 @@ class ApiApp(object):
     @property
     def linked(self):
         """
-        The time this application was linked
+        The time this application was linked.
 
         :rtype: datetime.datetime
         """
@@ -715,7 +637,7 @@ class ApiApp(object):
     @property
     def is_app_folder(self):
         """
-        Whether the linked application uses a dedicated folder
+        Whether the linked application uses a dedicated folder.
 
         :rtype: bool
         """
@@ -833,6 +755,17 @@ class BaseTeamFolderError(bb.Union):
         """
         return cls('status_error', val)
 
+    @classmethod
+    def team_shared_dropbox_error(cls, val):
+        """
+        Create an instance of this class set to the
+        ``team_shared_dropbox_error`` tag with value ``val``.
+
+        :param TeamFolderTeamSharedDropboxError val:
+        :rtype: BaseTeamFolderError
+        """
+        return cls('team_shared_dropbox_error', val)
+
     def is_access_error(self):
         """
         Check if the union tag is ``access_error``.
@@ -848,6 +781,14 @@ class BaseTeamFolderError(bb.Union):
         :rtype: bool
         """
         return self._tag == 'status_error'
+
+    def is_team_shared_dropbox_error(self):
+        """
+        Check if the union tag is ``team_shared_dropbox_error``.
+
+        :rtype: bool
+        """
+        return self._tag == 'team_shared_dropbox_error'
 
     def is_other(self):
         """
@@ -877,17 +818,205 @@ class BaseTeamFolderError(bb.Union):
             raise AttributeError("tag 'status_error' not set")
         return self._value
 
+    def get_team_shared_dropbox_error(self):
+        """
+        Only call this if :meth:`is_team_shared_dropbox_error` is true.
+
+        :rtype: TeamFolderTeamSharedDropboxError
+        """
+        if not self.is_team_shared_dropbox_error():
+            raise AttributeError("tag 'team_shared_dropbox_error' not set")
+        return self._value
+
     def __repr__(self):
         return 'BaseTeamFolderError(%r, %r)' % (self._tag, self._value)
 
 BaseTeamFolderError_validator = bv.Union(BaseTeamFolderError)
 
+class CustomQuotaError(bb.Union):
+    """
+    Error returned by setting member custom quota.
+
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar too_many_users: A maximum of 1000 users can be set for a single call.
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    too_many_users = None
+    # Attribute is overwritten below the class definition
+    other = None
+
+    def is_too_many_users(self):
+        """
+        Check if the union tag is ``too_many_users``.
+
+        :rtype: bool
+        """
+        return self._tag == 'too_many_users'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def __repr__(self):
+        return 'CustomQuotaError(%r, %r)' % (self._tag, self._value)
+
+CustomQuotaError_validator = bv.Union(CustomQuotaError)
+
+class CustomQuotaResult(bb.Union):
+    """
+    User custom quota.
+
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar UserCustomQuotaResult success: User's custom quota.
+    :ivar UserSelectorArg invalid_user: Invalid user (not in team).
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    other = None
+
+    @classmethod
+    def success(cls, val):
+        """
+        Create an instance of this class set to the ``success`` tag with value
+        ``val``.
+
+        :param UserCustomQuotaResult val:
+        :rtype: CustomQuotaResult
+        """
+        return cls('success', val)
+
+    @classmethod
+    def invalid_user(cls, val):
+        """
+        Create an instance of this class set to the ``invalid_user`` tag with
+        value ``val``.
+
+        :param UserSelectorArg val:
+        :rtype: CustomQuotaResult
+        """
+        return cls('invalid_user', val)
+
+    def is_success(self):
+        """
+        Check if the union tag is ``success``.
+
+        :rtype: bool
+        """
+        return self._tag == 'success'
+
+    def is_invalid_user(self):
+        """
+        Check if the union tag is ``invalid_user``.
+
+        :rtype: bool
+        """
+        return self._tag == 'invalid_user'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def get_success(self):
+        """
+        User's custom quota.
+
+        Only call this if :meth:`is_success` is true.
+
+        :rtype: UserCustomQuotaResult
+        """
+        if not self.is_success():
+            raise AttributeError("tag 'success' not set")
+        return self._value
+
+    def get_invalid_user(self):
+        """
+        Invalid user (not in team).
+
+        Only call this if :meth:`is_invalid_user` is true.
+
+        :rtype: UserSelectorArg
+        """
+        if not self.is_invalid_user():
+            raise AttributeError("tag 'invalid_user' not set")
+        return self._value
+
+    def __repr__(self):
+        return 'CustomQuotaResult(%r, %r)' % (self._tag, self._value)
+
+CustomQuotaResult_validator = bv.Union(CustomQuotaResult)
+
+class CustomQuotaUsersArg(object):
+    """
+    :ivar users: List of users.
+    """
+
+    __slots__ = [
+        '_users_value',
+        '_users_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 users=None):
+        self._users_value = None
+        self._users_present = False
+        if users is not None:
+            self.users = users
+
+    @property
+    def users(self):
+        """
+        List of users.
+
+        :rtype: list of [UserSelectorArg]
+        """
+        if self._users_present:
+            return self._users_value
+        else:
+            raise AttributeError("missing required field 'users'")
+
+    @users.setter
+    def users(self, val):
+        val = self._users_validator.validate(val)
+        self._users_value = val
+        self._users_present = True
+
+    @users.deleter
+    def users(self):
+        self._users_value = None
+        self._users_present = False
+
+    def __repr__(self):
+        return 'CustomQuotaUsersArg(users={!r})'.format(
+            self._users_value,
+        )
+
+CustomQuotaUsersArg_validator = bv.Struct(CustomQuotaUsersArg)
+
 class DateRange(object):
     """
     Input arguments that can be provided for most reports.
 
-    :ivar start_date: Optional starting date (inclusive)
-    :ivar end_date: Optional ending date (exclusive)
+    :ivar start_date: Optional starting date (inclusive).
+    :ivar end_date: Optional ending date (exclusive).
     """
 
     __slots__ = [
@@ -914,7 +1043,7 @@ class DateRange(object):
     @property
     def start_date(self):
         """
-        Optional starting date (inclusive)
+        Optional starting date (inclusive).
 
         :rtype: datetime.datetime
         """
@@ -940,7 +1069,7 @@ class DateRange(object):
     @property
     def end_date(self):
         """
-        Optional ending date (exclusive)
+        Optional ending date (exclusive).
 
         :rtype: datetime.datetime
         """
@@ -999,14 +1128,14 @@ DateRangeError_validator = bv.Union(DateRangeError)
 
 class DesktopClientSession(DeviceSession):
     """
-    Information about linked Dropbox desktop client sessions
+    Information about linked Dropbox desktop client sessions.
 
-    :ivar host_name: Name of the hosting desktop
-    :ivar client_type: The Dropbox desktop client type
-    :ivar client_version: The Dropbox client version
-    :ivar platform: Information on the hosting platform
+    :ivar host_name: Name of the hosting desktop.
+    :ivar client_type: The Dropbox desktop client type.
+    :ivar client_version: The Dropbox client version.
+    :ivar platform: Information on the hosting platform.
     :ivar is_delete_on_unlink_supported: Whether it's possible to delete all of
-        the account files upon unlinking
+        the account files upon unlinking.
     """
 
     __slots__ = [
@@ -1064,7 +1193,7 @@ class DesktopClientSession(DeviceSession):
     @property
     def host_name(self):
         """
-        Name of the hosting desktop
+        Name of the hosting desktop.
 
         :rtype: str
         """
@@ -1087,7 +1216,7 @@ class DesktopClientSession(DeviceSession):
     @property
     def client_type(self):
         """
-        The Dropbox desktop client type
+        The Dropbox desktop client type.
 
         :rtype: DesktopPlatform
         """
@@ -1110,7 +1239,7 @@ class DesktopClientSession(DeviceSession):
     @property
     def client_version(self):
         """
-        The Dropbox client version
+        The Dropbox client version.
 
         :rtype: str
         """
@@ -1133,7 +1262,7 @@ class DesktopClientSession(DeviceSession):
     @property
     def platform(self):
         """
-        Information on the hosting platform
+        Information on the hosting platform.
 
         :rtype: str
         """
@@ -1156,7 +1285,7 @@ class DesktopClientSession(DeviceSession):
     @property
     def is_delete_on_unlink_supported(self):
         """
-        Whether it's possible to delete all of the account files upon unlinking
+        Whether it's possible to delete all of the account files upon unlinking.
 
         :rtype: bool
         """
@@ -1198,9 +1327,9 @@ class DesktopPlatform(bb.Union):
     return true. To get the associated value of a tag (if one exists), use the
     corresponding ``get_*`` method.
 
-    :ivar windows: Official Windows Dropbox desktop client
-    :ivar mac: Official Mac Dropbox desktop client
-    :ivar linux: Official Linux Dropbox desktop client
+    :ivar windows: Official Windows Dropbox desktop client.
+    :ivar mac: Official Mac Dropbox desktop client.
+    :ivar linux: Official Linux Dropbox desktop client.
     """
 
     _catch_all = 'other'
@@ -1252,8 +1381,8 @@ DesktopPlatform_validator = bv.Union(DesktopPlatform)
 
 class DeviceSessionArg(object):
     """
-    :ivar session_id: The session id
-    :ivar team_member_id: The unique id of the member owning the device
+    :ivar session_id: The session id.
+    :ivar team_member_id: The unique id of the member owning the device.
     """
 
     __slots__ = [
@@ -1280,7 +1409,7 @@ class DeviceSessionArg(object):
     @property
     def session_id(self):
         """
-        The session id
+        The session id.
 
         :rtype: str
         """
@@ -1303,7 +1432,7 @@ class DeviceSessionArg(object):
     @property
     def team_member_id(self):
         """
-        The unique id of the member owning the device
+        The unique id of the member owning the device.
 
         :rtype: str
         """
@@ -1590,11 +1719,15 @@ class Feature(bb.Union):
 
     :ivar upload_api_rate_limit: The number of upload API calls allowed per
         month.
+    :ivar has_team_shared_dropbox: Does this team have a have a company shared
+        dropbox.
     """
 
     _catch_all = 'other'
     # Attribute is overwritten below the class definition
     upload_api_rate_limit = None
+    # Attribute is overwritten below the class definition
+    has_team_shared_dropbox = None
     # Attribute is overwritten below the class definition
     other = None
 
@@ -1605,6 +1738,14 @@ class Feature(bb.Union):
         :rtype: bool
         """
         return self._tag == 'upload_api_rate_limit'
+
+    def is_has_team_shared_dropbox(self):
+        """
+        Check if the union tag is ``has_team_shared_dropbox``.
+
+        :rtype: bool
+        """
+        return self._tag == 'has_team_shared_dropbox'
 
     def is_other(self):
         """
@@ -1644,6 +1785,17 @@ class FeatureValue(bb.Union):
         """
         return cls('upload_api_rate_limit', val)
 
+    @classmethod
+    def has_team_shared_dropbox(cls, val):
+        """
+        Create an instance of this class set to the ``has_team_shared_dropbox``
+        tag with value ``val``.
+
+        :param HasTeamSharedDropboxValue val:
+        :rtype: FeatureValue
+        """
+        return cls('has_team_shared_dropbox', val)
+
     def is_upload_api_rate_limit(self):
         """
         Check if the union tag is ``upload_api_rate_limit``.
@@ -1651,6 +1803,14 @@ class FeatureValue(bb.Union):
         :rtype: bool
         """
         return self._tag == 'upload_api_rate_limit'
+
+    def is_has_team_shared_dropbox(self):
+        """
+        Check if the union tag is ``has_team_shared_dropbox``.
+
+        :rtype: bool
+        """
+        return self._tag == 'has_team_shared_dropbox'
 
     def is_other(self):
         """
@@ -1668,6 +1828,16 @@ class FeatureValue(bb.Union):
         """
         if not self.is_upload_api_rate_limit():
             raise AttributeError("tag 'upload_api_rate_limit' not set")
+        return self._value
+
+    def get_has_team_shared_dropbox(self):
+        """
+        Only call this if :meth:`is_has_team_shared_dropbox` is true.
+
+        :rtype: HasTeamSharedDropboxValue
+        """
+        if not self.is_has_team_shared_dropbox():
+            raise AttributeError("tag 'has_team_shared_dropbox' not set")
         return self._value
 
     def __repr__(self):
@@ -5275,9 +5445,69 @@ class GroupsSelector(bb.Union):
 
 GroupsSelector_validator = bv.Union(GroupsSelector)
 
+class HasTeamSharedDropboxValue(bb.Union):
+    """
+    The value for ``Feature.has_team_shared_dropbox``.
+
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar bool has_team_shared_dropbox: Does this team have a team shared
+        dropbox.
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    other = None
+
+    @classmethod
+    def has_team_shared_dropbox(cls, val):
+        """
+        Create an instance of this class set to the ``has_team_shared_dropbox``
+        tag with value ``val``.
+
+        :param bool val:
+        :rtype: HasTeamSharedDropboxValue
+        """
+        return cls('has_team_shared_dropbox', val)
+
+    def is_has_team_shared_dropbox(self):
+        """
+        Check if the union tag is ``has_team_shared_dropbox``.
+
+        :rtype: bool
+        """
+        return self._tag == 'has_team_shared_dropbox'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def get_has_team_shared_dropbox(self):
+        """
+        Does this team have a team shared dropbox.
+
+        Only call this if :meth:`is_has_team_shared_dropbox` is true.
+
+        :rtype: bool
+        """
+        if not self.is_has_team_shared_dropbox():
+            raise AttributeError("tag 'has_team_shared_dropbox' not set")
+        return self._value
+
+    def __repr__(self):
+        return 'HasTeamSharedDropboxValue(%r, %r)' % (self._tag, self._value)
+
+HasTeamSharedDropboxValue_validator = bv.Union(HasTeamSharedDropboxValue)
+
 class ListMemberAppsArg(object):
     """
-    :ivar team_member_id: The team member id
+    :ivar team_member_id: The team member id.
     """
 
     __slots__ = [
@@ -5297,7 +5527,7 @@ class ListMemberAppsArg(object):
     @property
     def team_member_id(self):
         """
-        The team member id
+        The team member id.
 
         :rtype: str
         """
@@ -5366,7 +5596,7 @@ ListMemberAppsError_validator = bv.Union(ListMemberAppsError)
 class ListMemberAppsResult(object):
     """
     :ivar linked_api_apps: List of third party applications linked by this team
-        member
+        member.
     """
 
     __slots__ = [
@@ -5386,7 +5616,7 @@ class ListMemberAppsResult(object):
     @property
     def linked_api_apps(self):
         """
-        List of third party applications linked by this team member
+        List of third party applications linked by this team member.
 
         :rtype: list of [ApiApp]
         """
@@ -5415,13 +5645,13 @@ ListMemberAppsResult_validator = bv.Struct(ListMemberAppsResult)
 
 class ListMemberDevicesArg(object):
     """
-    :ivar team_member_id: The team's member id
+    :ivar team_member_id: The team's member id.
     :ivar include_web_sessions: Whether to list web sessions of the team's
-        member
+        member.
     :ivar include_desktop_clients: Whether to list linked desktop devices of the
-        team's member
+        team's member.
     :ivar include_mobile_clients: Whether to list linked mobile devices of the
-        team's member
+        team's member.
     """
 
     __slots__ = [
@@ -5462,7 +5692,7 @@ class ListMemberDevicesArg(object):
     @property
     def team_member_id(self):
         """
-        The team's member id
+        The team's member id.
 
         :rtype: str
         """
@@ -5485,7 +5715,7 @@ class ListMemberDevicesArg(object):
     @property
     def include_web_sessions(self):
         """
-        Whether to list web sessions of the team's member
+        Whether to list web sessions of the team's member.
 
         :rtype: bool
         """
@@ -5508,7 +5738,7 @@ class ListMemberDevicesArg(object):
     @property
     def include_desktop_clients(self):
         """
-        Whether to list linked desktop devices of the team's member
+        Whether to list linked desktop devices of the team's member.
 
         :rtype: bool
         """
@@ -5531,7 +5761,7 @@ class ListMemberDevicesArg(object):
     @property
     def include_mobile_clients(self):
         """
-        Whether to list linked mobile devices of the team's member
+        Whether to list linked mobile devices of the team's member.
 
         :rtype: bool
         """
@@ -5599,10 +5829,11 @@ ListMemberDevicesError_validator = bv.Union(ListMemberDevicesError)
 
 class ListMemberDevicesResult(object):
     """
-    :ivar active_web_sessions: List of web sessions made by this team member
+    :ivar active_web_sessions: List of web sessions made by this team member.
     :ivar desktop_client_sessions: List of desktop clients used by this team
-        member
-    :ivar mobile_client_sessions: List of mobile client used by this team member
+        member.
+    :ivar mobile_client_sessions: List of mobile client used by this team
+        member.
     """
 
     __slots__ = [
@@ -5636,7 +5867,7 @@ class ListMemberDevicesResult(object):
     @property
     def active_web_sessions(self):
         """
-        List of web sessions made by this team member
+        List of web sessions made by this team member.
 
         :rtype: list of [ActiveWebSession]
         """
@@ -5662,7 +5893,7 @@ class ListMemberDevicesResult(object):
     @property
     def desktop_client_sessions(self):
         """
-        List of desktop clients used by this team member
+        List of desktop clients used by this team member.
 
         :rtype: list of [DesktopClientSession]
         """
@@ -5688,7 +5919,7 @@ class ListMemberDevicesResult(object):
     @property
     def mobile_client_sessions(self):
         """
-        List of mobile client used by this team member
+        List of mobile client used by this team member.
 
         :rtype: list of [MobileClientSession]
         """
@@ -5729,7 +5960,7 @@ class ListMembersAppsArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`
         the cursor shouldn't be passed. Then, if the result of the call includes
         a cursor, the following requests should include the received cursors in
-        order to receive the next sub list of the team applications
+        order to receive the next sub list of the team applications.
     """
 
     __slots__ = [
@@ -5753,7 +5984,7 @@ class ListMembersAppsArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`
         the cursor shouldn't be passed. Then, if the result of the call includes
         a cursor, the following requests should include the received cursors in
-        order to receive the next sub list of the team applications
+        order to receive the next sub list of the team applications.
 
         :rtype: str
         """
@@ -5786,7 +6017,7 @@ ListMembersAppsArg_validator = bv.Struct(ListMembersAppsArg)
 class ListMembersAppsError(bb.Union):
     """
     Error returned by
-    :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`
+    :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`.
 
     This class acts as a tagged union. Only one of the ``is_*`` methods will
     return true. To get the associated value of a tag (if one exists), use the
@@ -5829,7 +6060,7 @@ class ListMembersAppsResult(object):
     Information returned by
     :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`.
 
-    :ivar apps: The linked applications of each member of the team
+    :ivar apps: The linked applications of each member of the team.
     :ivar has_more: If true, then there are more apps available. Pass the cursor
         to
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_members_linked_apps`
@@ -5870,7 +6101,7 @@ class ListMembersAppsResult(object):
     @property
     def apps(self):
         """
-        The linked applications of each member of the team
+        The linked applications of each member of the team.
 
         :rtype: list of [MemberLinkedApps]
         """
@@ -5958,12 +6189,13 @@ class ListMembersDevicesArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_devices_list_members_devices` the
         cursor shouldn't be passed. Then, if the result of the call includes a
         cursor, the following requests should include the received cursors in
-        order to receive the next sub list of team devices
-    :ivar include_web_sessions: Whether to list web sessions of the team members
+        order to receive the next sub list of team devices.
+    :ivar include_web_sessions: Whether to list web sessions of the team
+        members.
     :ivar include_desktop_clients: Whether to list desktop clients of the team
-        members
+        members.
     :ivar include_mobile_clients: Whether to list mobile clients of the team
-        members
+        members.
     """
 
     __slots__ = [
@@ -6008,7 +6240,7 @@ class ListMembersDevicesArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_devices_list_members_devices` the
         cursor shouldn't be passed. Then, if the result of the call includes a
         cursor, the following requests should include the received cursors in
-        order to receive the next sub list of team devices
+        order to receive the next sub list of team devices.
 
         :rtype: str
         """
@@ -6034,7 +6266,7 @@ class ListMembersDevicesArg(object):
     @property
     def include_web_sessions(self):
         """
-        Whether to list web sessions of the team members
+        Whether to list web sessions of the team members.
 
         :rtype: bool
         """
@@ -6057,7 +6289,7 @@ class ListMembersDevicesArg(object):
     @property
     def include_desktop_clients(self):
         """
-        Whether to list desktop clients of the team members
+        Whether to list desktop clients of the team members.
 
         :rtype: bool
         """
@@ -6080,7 +6312,7 @@ class ListMembersDevicesArg(object):
     @property
     def include_mobile_clients(self):
         """
-        Whether to list mobile clients of the team members
+        Whether to list mobile clients of the team members.
 
         :rtype: bool
         """
@@ -6150,7 +6382,7 @@ ListMembersDevicesError_validator = bv.Union(ListMembersDevicesError)
 
 class ListMembersDevicesResult(object):
     """
-    :ivar devices: The devices of each member of the team
+    :ivar devices: The devices of each member of the team.
     :ivar has_more: If true, then there are more devices available. Pass the
         cursor to
         :meth:`dropbox.dropbox.Dropbox.team_devices_list_members_devices` to
@@ -6191,7 +6423,7 @@ class ListMembersDevicesResult(object):
     @property
     def devices(self):
         """
-        The devices of each member of the team
+        The devices of each member of the team.
 
         :rtype: list of [MemberDevices]
         """
@@ -6282,7 +6514,7 @@ class ListTeamAppsArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`
         the cursor shouldn't be passed. Then, if the result of the call includes
         a cursor, the following requests should include the received cursors in
-        order to receive the next sub list of the team applications
+        order to receive the next sub list of the team applications.
     """
 
     __slots__ = [
@@ -6306,7 +6538,7 @@ class ListTeamAppsArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`
         the cursor shouldn't be passed. Then, if the result of the call includes
         a cursor, the following requests should include the received cursors in
-        order to receive the next sub list of the team applications
+        order to receive the next sub list of the team applications.
 
         :rtype: str
         """
@@ -6339,7 +6571,7 @@ ListTeamAppsArg_validator = bv.Struct(ListTeamAppsArg)
 class ListTeamAppsError(bb.Union):
     """
     Error returned by
-    :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`
+    :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`.
 
     This class acts as a tagged union. Only one of the ``is_*`` methods will
     return true. To get the associated value of a tag (if one exists), use the
@@ -6382,7 +6614,7 @@ class ListTeamAppsResult(object):
     Information returned by
     :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`.
 
-    :ivar apps: The linked applications of each member of the team
+    :ivar apps: The linked applications of each member of the team.
     :ivar has_more: If true, then there are more apps available. Pass the cursor
         to
         :meth:`dropbox.dropbox.Dropbox.team_linked_apps_list_team_linked_apps`
@@ -6423,7 +6655,7 @@ class ListTeamAppsResult(object):
     @property
     def apps(self):
         """
-        The linked applications of each member of the team
+        The linked applications of each member of the team.
 
         :rtype: list of [MemberLinkedApps]
         """
@@ -6511,12 +6743,13 @@ class ListTeamDevicesArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_devices_list_team_devices` the
         cursor shouldn't be passed. Then, if the result of the call includes a
         cursor, the following requests should include the received cursors in
-        order to receive the next sub list of team devices
-    :ivar include_web_sessions: Whether to list web sessions of the team members
+        order to receive the next sub list of team devices.
+    :ivar include_web_sessions: Whether to list web sessions of the team
+        members.
     :ivar include_desktop_clients: Whether to list desktop clients of the team
-        members
+        members.
     :ivar include_mobile_clients: Whether to list mobile clients of the team
-        members
+        members.
     """
 
     __slots__ = [
@@ -6561,7 +6794,7 @@ class ListTeamDevicesArg(object):
         :meth:`dropbox.dropbox.Dropbox.team_devices_list_team_devices` the
         cursor shouldn't be passed. Then, if the result of the call includes a
         cursor, the following requests should include the received cursors in
-        order to receive the next sub list of team devices
+        order to receive the next sub list of team devices.
 
         :rtype: str
         """
@@ -6587,7 +6820,7 @@ class ListTeamDevicesArg(object):
     @property
     def include_web_sessions(self):
         """
-        Whether to list web sessions of the team members
+        Whether to list web sessions of the team members.
 
         :rtype: bool
         """
@@ -6610,7 +6843,7 @@ class ListTeamDevicesArg(object):
     @property
     def include_desktop_clients(self):
         """
-        Whether to list desktop clients of the team members
+        Whether to list desktop clients of the team members.
 
         :rtype: bool
         """
@@ -6633,7 +6866,7 @@ class ListTeamDevicesArg(object):
     @property
     def include_mobile_clients(self):
         """
-        Whether to list mobile clients of the team members
+        Whether to list mobile clients of the team members.
 
         :rtype: bool
         """
@@ -6703,7 +6936,7 @@ ListTeamDevicesError_validator = bv.Union(ListTeamDevicesError)
 
 class ListTeamDevicesResult(object):
     """
-    :ivar devices: The devices of each member of the team
+    :ivar devices: The devices of each member of the team.
     :ivar has_more: If true, then there are more devices available. Pass the
         cursor to :meth:`dropbox.dropbox.Dropbox.team_devices_list_team_devices`
         to retrieve the rest.
@@ -6743,7 +6976,7 @@ class ListTeamDevicesResult(object):
     @property
     def devices(self):
         """
-        The devices of each member of the team
+        The devices of each member of the team.
 
         :rtype: list of [MemberDevices]
         """
@@ -7557,10 +7790,10 @@ class MemberDevices(object):
     """
     Information on devices of a team's member.
 
-    :ivar team_member_id: The member unique Id
-    :ivar web_sessions: List of web sessions made by this team member
-    :ivar desktop_clients: List of desktop clients by this team member
-    :ivar mobile_clients: List of mobile clients by this team member
+    :ivar team_member_id: The member unique Id.
+    :ivar web_sessions: List of web sessions made by this team member.
+    :ivar desktop_clients: List of desktop clients by this team member.
+    :ivar mobile_clients: List of mobile clients by this team member.
     """
 
     __slots__ = [
@@ -7601,7 +7834,7 @@ class MemberDevices(object):
     @property
     def team_member_id(self):
         """
-        The member unique Id
+        The member unique Id.
 
         :rtype: str
         """
@@ -7624,7 +7857,7 @@ class MemberDevices(object):
     @property
     def web_sessions(self):
         """
-        List of web sessions made by this team member
+        List of web sessions made by this team member.
 
         :rtype: list of [ActiveWebSession]
         """
@@ -7650,7 +7883,7 @@ class MemberDevices(object):
     @property
     def desktop_clients(self):
         """
-        List of desktop clients by this team member
+        List of desktop clients by this team member.
 
         :rtype: list of [DesktopClientSession]
         """
@@ -7676,7 +7909,7 @@ class MemberDevices(object):
     @property
     def mobile_clients(self):
         """
-        List of mobile clients by this team member
+        List of mobile clients by this team member.
 
         :rtype: list of [MobileClientSession]
         """
@@ -7713,9 +7946,9 @@ class MemberLinkedApps(object):
     """
     Information on linked applications of a team member.
 
-    :ivar team_member_id: The member unique Id
+    :ivar team_member_id: The member unique Id.
     :ivar linked_api_apps: List of third party applications linked by this team
-        member
+        member.
     """
 
     __slots__ = [
@@ -7742,7 +7975,7 @@ class MemberLinkedApps(object):
     @property
     def team_member_id(self):
         """
-        The member unique Id
+        The member unique Id.
 
         :rtype: str
         """
@@ -7765,7 +7998,7 @@ class MemberLinkedApps(object):
     @property
     def linked_api_apps(self):
         """
-        List of third party applications linked by this team member
+        List of third party applications linked by this team member.
 
         :rtype: list of [ApiApp]
         """
@@ -9270,7 +9503,7 @@ class MembersRemoveError(MembersDeactivateError):
     :ivar remove_last_admin: The user is the last admin of the team, so it
         cannot be removed from it.
     :ivar removed_and_transfer_dest_should_differ: Expected removed user and
-        transfer_dest user to be different
+        transfer_dest user to be different.
     :ivar removed_and_transfer_admin_should_differ: Expected removed user and
         transfer_admin user to be different.
     :ivar transfer_dest_user_not_found: No matching user found for the argument
@@ -9917,15 +10150,14 @@ class MembersSetProfileError(MemberSelectorError):
     corresponding ``get_*`` method.
 
     :ivar external_id_and_new_external_id_unsafe: It is unsafe to use both
-        external_id and new_external_id
+        external_id and new_external_id.
     :ivar no_new_data_specified: None of new_email, new_given_name, new_surname,
-        or new_external_id are specified
+        or new_external_id are specified.
     :ivar email_reserved_for_other_user: Email is already reserved for another
         user.
     :ivar external_id_used_by_other_user: The external ID is already in use by
         another team member.
-    :ivar set_profile_disallowed: Pending team member's email cannot be
-        modified.
+    :ivar set_profile_disallowed: Modifying deleted users is not allowed.
     :ivar param_cannot_be_empty: Parameter new_email cannot be empty.
     :ivar persistent_id_disabled: Persistent ID is only available to teams with
         persistent ID SAML configuration. Please contact Dropbox for more
@@ -10177,11 +10409,11 @@ class MobileClientPlatform(bb.Union):
     return true. To get the associated value of a tag (if one exists), use the
     corresponding ``get_*`` method.
 
-    :ivar iphone: Official Dropbox iPhone client
-    :ivar ipad: Official Dropbox iPad client
-    :ivar android: Official Dropbox Android client
-    :ivar windows_phone: Official Dropbox Windows phone client
-    :ivar blackberry: Official Dropbox Blackberry client
+    :ivar iphone: Official Dropbox iPhone client.
+    :ivar ipad: Official Dropbox iPad client.
+    :ivar android: Official Dropbox Android client.
+    :ivar windows_phone: Official Dropbox Windows phone client.
+    :ivar blackberry: Official Dropbox Blackberry client.
     """
 
     _catch_all = 'other'
@@ -10253,13 +10485,13 @@ MobileClientPlatform_validator = bv.Union(MobileClientPlatform)
 
 class MobileClientSession(DeviceSession):
     """
-    Information about linked Dropbox mobile client sessions
+    Information about linked Dropbox mobile client sessions.
 
-    :ivar device_name: The device name
-    :ivar client_type: The mobile application type
-    :ivar client_version: The dropbox client version
-    :ivar os_version: The hosting OS version
-    :ivar last_carrier: last carrier used by the device
+    :ivar device_name: The device name.
+    :ivar client_type: The mobile application type.
+    :ivar client_version: The dropbox client version.
+    :ivar os_version: The hosting OS version.
+    :ivar last_carrier: last carrier used by the device.
     """
 
     __slots__ = [
@@ -10317,7 +10549,7 @@ class MobileClientSession(DeviceSession):
     @property
     def device_name(self):
         """
-        The device name
+        The device name.
 
         :rtype: str
         """
@@ -10340,7 +10572,7 @@ class MobileClientSession(DeviceSession):
     @property
     def client_type(self):
         """
-        The mobile application type
+        The mobile application type.
 
         :rtype: MobileClientPlatform
         """
@@ -10363,7 +10595,7 @@ class MobileClientSession(DeviceSession):
     @property
     def client_version(self):
         """
-        The dropbox client version
+        The dropbox client version.
 
         :rtype: str
         """
@@ -10389,7 +10621,7 @@ class MobileClientSession(DeviceSession):
     @property
     def os_version(self):
         """
-        The hosting OS version
+        The hosting OS version.
 
         :rtype: str
         """
@@ -10415,7 +10647,7 @@ class MobileClientSession(DeviceSession):
     @property
     def last_carrier(self):
         """
-        last carrier used by the device
+        last carrier used by the device.
 
         :rtype: str
         """
@@ -10453,6 +10685,318 @@ class MobileClientSession(DeviceSession):
         )
 
 MobileClientSession_validator = bv.Struct(MobileClientSession)
+
+class NamespaceMetadata(object):
+    """
+    Properties of a namespace.
+
+    :ivar name: The name of this namespace.
+    :ivar namespace_id: The ID of this namespace.
+    :ivar namespace_type: The type of this namespace.
+    :ivar team_member_id: If this is a team member folder, the ID of the team
+        member. Otherwise, this field is not present.
+    """
+
+    __slots__ = [
+        '_name_value',
+        '_name_present',
+        '_namespace_id_value',
+        '_namespace_id_present',
+        '_namespace_type_value',
+        '_namespace_type_present',
+        '_team_member_id_value',
+        '_team_member_id_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 name=None,
+                 namespace_id=None,
+                 namespace_type=None,
+                 team_member_id=None):
+        self._name_value = None
+        self._name_present = False
+        self._namespace_id_value = None
+        self._namespace_id_present = False
+        self._namespace_type_value = None
+        self._namespace_type_present = False
+        self._team_member_id_value = None
+        self._team_member_id_present = False
+        if name is not None:
+            self.name = name
+        if namespace_id is not None:
+            self.namespace_id = namespace_id
+        if namespace_type is not None:
+            self.namespace_type = namespace_type
+        if team_member_id is not None:
+            self.team_member_id = team_member_id
+
+    @property
+    def name(self):
+        """
+        The name of this namespace.
+
+        :rtype: str
+        """
+        if self._name_present:
+            return self._name_value
+        else:
+            raise AttributeError("missing required field 'name'")
+
+    @name.setter
+    def name(self, val):
+        val = self._name_validator.validate(val)
+        self._name_value = val
+        self._name_present = True
+
+    @name.deleter
+    def name(self):
+        self._name_value = None
+        self._name_present = False
+
+    @property
+    def namespace_id(self):
+        """
+        The ID of this namespace.
+
+        :rtype: str
+        """
+        if self._namespace_id_present:
+            return self._namespace_id_value
+        else:
+            raise AttributeError("missing required field 'namespace_id'")
+
+    @namespace_id.setter
+    def namespace_id(self, val):
+        val = self._namespace_id_validator.validate(val)
+        self._namespace_id_value = val
+        self._namespace_id_present = True
+
+    @namespace_id.deleter
+    def namespace_id(self):
+        self._namespace_id_value = None
+        self._namespace_id_present = False
+
+    @property
+    def namespace_type(self):
+        """
+        The type of this namespace.
+
+        :rtype: NamespaceType
+        """
+        if self._namespace_type_present:
+            return self._namespace_type_value
+        else:
+            raise AttributeError("missing required field 'namespace_type'")
+
+    @namespace_type.setter
+    def namespace_type(self, val):
+        self._namespace_type_validator.validate_type_only(val)
+        self._namespace_type_value = val
+        self._namespace_type_present = True
+
+    @namespace_type.deleter
+    def namespace_type(self):
+        self._namespace_type_value = None
+        self._namespace_type_present = False
+
+    @property
+    def team_member_id(self):
+        """
+        If this is a team member folder, the ID of the team member. Otherwise,
+        this field is not present.
+
+        :rtype: str
+        """
+        if self._team_member_id_present:
+            return self._team_member_id_value
+        else:
+            return None
+
+    @team_member_id.setter
+    def team_member_id(self, val):
+        if val is None:
+            del self.team_member_id
+            return
+        val = self._team_member_id_validator.validate(val)
+        self._team_member_id_value = val
+        self._team_member_id_present = True
+
+    @team_member_id.deleter
+    def team_member_id(self):
+        self._team_member_id_value = None
+        self._team_member_id_present = False
+
+    def __repr__(self):
+        return 'NamespaceMetadata(name={!r}, namespace_id={!r}, namespace_type={!r}, team_member_id={!r})'.format(
+            self._name_value,
+            self._namespace_id_value,
+            self._namespace_type_value,
+            self._team_member_id_value,
+        )
+
+NamespaceMetadata_validator = bv.Struct(NamespaceMetadata)
+
+class NamespaceType(bb.Union):
+    """
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar app_folder: App sandbox folder.
+    :ivar shared_folder: Shared folder.
+    :ivar team_folder: Top-level team-owned folder.
+    :ivar team_member_folder: Team member's home folder.
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    app_folder = None
+    # Attribute is overwritten below the class definition
+    shared_folder = None
+    # Attribute is overwritten below the class definition
+    team_folder = None
+    # Attribute is overwritten below the class definition
+    team_member_folder = None
+    # Attribute is overwritten below the class definition
+    other = None
+
+    def is_app_folder(self):
+        """
+        Check if the union tag is ``app_folder``.
+
+        :rtype: bool
+        """
+        return self._tag == 'app_folder'
+
+    def is_shared_folder(self):
+        """
+        Check if the union tag is ``shared_folder``.
+
+        :rtype: bool
+        """
+        return self._tag == 'shared_folder'
+
+    def is_team_folder(self):
+        """
+        Check if the union tag is ``team_folder``.
+
+        :rtype: bool
+        """
+        return self._tag == 'team_folder'
+
+    def is_team_member_folder(self):
+        """
+        Check if the union tag is ``team_member_folder``.
+
+        :rtype: bool
+        """
+        return self._tag == 'team_member_folder'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def __repr__(self):
+        return 'NamespaceType(%r, %r)' % (self._tag, self._value)
+
+NamespaceType_validator = bv.Union(NamespaceType)
+
+class RemoveCustomQuotaResult(bb.Union):
+    """
+    User result for setting member custom quota.
+
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar UserSelectorArg success: Successfully removed user.
+    :ivar UserSelectorArg invalid_user: Invalid user (not in team).
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    other = None
+
+    @classmethod
+    def success(cls, val):
+        """
+        Create an instance of this class set to the ``success`` tag with value
+        ``val``.
+
+        :param UserSelectorArg val:
+        :rtype: RemoveCustomQuotaResult
+        """
+        return cls('success', val)
+
+    @classmethod
+    def invalid_user(cls, val):
+        """
+        Create an instance of this class set to the ``invalid_user`` tag with
+        value ``val``.
+
+        :param UserSelectorArg val:
+        :rtype: RemoveCustomQuotaResult
+        """
+        return cls('invalid_user', val)
+
+    def is_success(self):
+        """
+        Check if the union tag is ``success``.
+
+        :rtype: bool
+        """
+        return self._tag == 'success'
+
+    def is_invalid_user(self):
+        """
+        Check if the union tag is ``invalid_user``.
+
+        :rtype: bool
+        """
+        return self._tag == 'invalid_user'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def get_success(self):
+        """
+        Successfully removed user.
+
+        Only call this if :meth:`is_success` is true.
+
+        :rtype: UserSelectorArg
+        """
+        if not self.is_success():
+            raise AttributeError("tag 'success' not set")
+        return self._value
+
+    def get_invalid_user(self):
+        """
+        Invalid user (not in team).
+
+        Only call this if :meth:`is_invalid_user` is true.
+
+        :rtype: UserSelectorArg
+        """
+        if not self.is_invalid_user():
+            raise AttributeError("tag 'invalid_user' not set")
+        return self._value
+
+    def __repr__(self):
+        return 'RemoveCustomQuotaResult(%r, %r)' % (self._tag, self._value)
+
+RemoveCustomQuotaResult_validator = bv.Union(RemoveCustomQuotaResult)
 
 class RemovedStatus(object):
     """
@@ -10507,7 +11051,7 @@ class RevokeDesktopClientArg(DeviceSessionArg):
     """
     :ivar delete_on_unlink: Whether to delete all files of the account (this is
         possible only if supported by the desktop client and  will be made the
-        next time the client access the account)
+        next time the client access the account).
     """
 
     __slots__ = [
@@ -10533,7 +11077,7 @@ class RevokeDesktopClientArg(DeviceSessionArg):
         """
         Whether to delete all files of the account (this is possible only if
         supported by the desktop client and  will be made the next time the
-        client access the account)
+        client access the account).
 
         :rtype: bool
         """
@@ -10568,9 +11112,9 @@ class RevokeDeviceSessionArg(bb.Union):
     return true. To get the associated value of a tag (if one exists), use the
     corresponding ``get_*`` method.
 
-    :ivar DeviceSessionArg web_session: End an active session
-    :ivar RevokeDesktopClientArg desktop_client: Unlink a linked desktop device
-    :ivar DeviceSessionArg mobile_client: Unlink a linked mobile device
+    :ivar DeviceSessionArg web_session: End an active session.
+    :ivar RevokeDesktopClientArg desktop_client: Unlink a linked desktop device.
+    :ivar DeviceSessionArg mobile_client: Unlink a linked mobile device.
     """
 
     _catch_all = None
@@ -10634,7 +11178,7 @@ class RevokeDeviceSessionArg(bb.Union):
 
     def get_web_session(self):
         """
-        End an active session
+        End an active session.
 
         Only call this if :meth:`is_web_session` is true.
 
@@ -10646,7 +11190,7 @@ class RevokeDeviceSessionArg(bb.Union):
 
     def get_desktop_client(self):
         """
-        Unlink a linked desktop device
+        Unlink a linked desktop device.
 
         Only call this if :meth:`is_desktop_client` is true.
 
@@ -10658,7 +11202,7 @@ class RevokeDeviceSessionArg(bb.Union):
 
     def get_mobile_client(self):
         """
-        Unlink a linked mobile device
+        Unlink a linked mobile device.
 
         Only call this if :meth:`is_mobile_client` is true.
 
@@ -10834,8 +11378,8 @@ RevokeDeviceSessionError_validator = bv.Union(RevokeDeviceSessionError)
 
 class RevokeDeviceSessionStatus(object):
     """
-    :ivar success: Result of the revoking request
-    :ivar error_type: The error cause in case of a failure
+    :ivar success: Result of the revoking request.
+    :ivar error_type: The error cause in case of a failure.
     """
 
     __slots__ = [
@@ -10862,7 +11406,7 @@ class RevokeDeviceSessionStatus(object):
     @property
     def success(self):
         """
-        Result of the revoking request
+        Result of the revoking request.
 
         :rtype: bool
         """
@@ -10885,7 +11429,7 @@ class RevokeDeviceSessionStatus(object):
     @property
     def error_type(self):
         """
-        The error cause in case of a failure
+        The error cause in case of a failure.
 
         :rtype: RevokeDeviceSessionError
         """
@@ -10918,10 +11462,10 @@ RevokeDeviceSessionStatus_validator = bv.Struct(RevokeDeviceSessionStatus)
 
 class RevokeLinkedApiAppArg(object):
     """
-    :ivar app_id: The application's unique id
-    :ivar team_member_id: The unique id of the member owning the device
+    :ivar app_id: The application's unique id.
+    :ivar team_member_id: The unique id of the member owning the device.
     :ivar keep_app_folder: Whether to keep the application dedicated folder (in
-        case the application uses  one)
+        case the application uses  one).
     """
 
     __slots__ = [
@@ -10955,7 +11499,7 @@ class RevokeLinkedApiAppArg(object):
     @property
     def app_id(self):
         """
-        The application's unique id
+        The application's unique id.
 
         :rtype: str
         """
@@ -10978,7 +11522,7 @@ class RevokeLinkedApiAppArg(object):
     @property
     def team_member_id(self):
         """
-        The unique id of the member owning the device
+        The unique id of the member owning the device.
 
         :rtype: str
         """
@@ -11002,7 +11546,7 @@ class RevokeLinkedApiAppArg(object):
     def keep_app_folder(self):
         """
         Whether to keep the application dedicated folder (in case the
-        application uses  one)
+        application uses  one).
 
         :rtype: bool
         """
@@ -11198,8 +11742,8 @@ RevokeLinkedAppError_validator = bv.Union(RevokeLinkedAppError)
 
 class RevokeLinkedAppStatus(object):
     """
-    :ivar success: Result of the revoking request
-    :ivar error_type: The error cause in case of a failure
+    :ivar success: Result of the revoking request.
+    :ivar error_type: The error cause in case of a failure.
     """
 
     __slots__ = [
@@ -11226,7 +11770,7 @@ class RevokeLinkedAppStatus(object):
     @property
     def success(self):
         """
-        Result of the revoking request
+        Result of the revoking request.
 
         :rtype: bool
         """
@@ -11249,7 +11793,7 @@ class RevokeLinkedAppStatus(object):
     @property
     def error_type(self):
         """
-        The error cause in case of a failure
+        The error cause in case of a failure.
 
         :rtype: RevokeLinkedAppError
         """
@@ -11279,6 +11823,55 @@ class RevokeLinkedAppStatus(object):
         )
 
 RevokeLinkedAppStatus_validator = bv.Struct(RevokeLinkedAppStatus)
+
+class SetCustomQuotaArg(object):
+    """
+    :ivar users_and_quotas: List of users and their custom quotas.
+    """
+
+    __slots__ = [
+        '_users_and_quotas_value',
+        '_users_and_quotas_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 users_and_quotas=None):
+        self._users_and_quotas_value = None
+        self._users_and_quotas_present = False
+        if users_and_quotas is not None:
+            self.users_and_quotas = users_and_quotas
+
+    @property
+    def users_and_quotas(self):
+        """
+        List of users and their custom quotas.
+
+        :rtype: list of [UserCustomQuotaArg]
+        """
+        if self._users_and_quotas_present:
+            return self._users_and_quotas_value
+        else:
+            raise AttributeError("missing required field 'users_and_quotas'")
+
+    @users_and_quotas.setter
+    def users_and_quotas(self, val):
+        val = self._users_and_quotas_validator.validate(val)
+        self._users_and_quotas_value = val
+        self._users_and_quotas_present = True
+
+    @users_and_quotas.deleter
+    def users_and_quotas(self):
+        self._users_and_quotas_value = None
+        self._users_and_quotas_present = False
+
+    def __repr__(self):
+        return 'SetCustomQuotaArg(users_and_quotas={!r})'.format(
+            self._users_and_quotas_value,
+        )
+
+SetCustomQuotaArg_validator = bv.Struct(SetCustomQuotaArg)
 
 class StorageBucket(object):
     """
@@ -12274,6 +12867,8 @@ class TeamFolderMetadata(object):
     :ivar team_folder_id: The ID of the team folder.
     :ivar name: The name of the team folder.
     :ivar status: The status of the team folder.
+    :ivar is_team_shared_dropbox: True if this team folder is the team shared
+        dropbox.
     """
 
     __slots__ = [
@@ -12283,6 +12878,8 @@ class TeamFolderMetadata(object):
         '_name_present',
         '_status_value',
         '_status_present',
+        '_is_team_shared_dropbox_value',
+        '_is_team_shared_dropbox_present',
     ]
 
     _has_required_fields = True
@@ -12290,19 +12887,24 @@ class TeamFolderMetadata(object):
     def __init__(self,
                  team_folder_id=None,
                  name=None,
-                 status=None):
+                 status=None,
+                 is_team_shared_dropbox=None):
         self._team_folder_id_value = None
         self._team_folder_id_present = False
         self._name_value = None
         self._name_present = False
         self._status_value = None
         self._status_present = False
+        self._is_team_shared_dropbox_value = None
+        self._is_team_shared_dropbox_present = False
         if team_folder_id is not None:
             self.team_folder_id = team_folder_id
         if name is not None:
             self.name = name
         if status is not None:
             self.status = status
+        if is_team_shared_dropbox is not None:
+            self.is_team_shared_dropbox = is_team_shared_dropbox
 
     @property
     def team_folder_id(self):
@@ -12373,11 +12975,35 @@ class TeamFolderMetadata(object):
         self._status_value = None
         self._status_present = False
 
+    @property
+    def is_team_shared_dropbox(self):
+        """
+        True if this team folder is the team shared dropbox.
+
+        :rtype: bool
+        """
+        if self._is_team_shared_dropbox_present:
+            return self._is_team_shared_dropbox_value
+        else:
+            raise AttributeError("missing required field 'is_team_shared_dropbox'")
+
+    @is_team_shared_dropbox.setter
+    def is_team_shared_dropbox(self, val):
+        val = self._is_team_shared_dropbox_validator.validate(val)
+        self._is_team_shared_dropbox_value = val
+        self._is_team_shared_dropbox_present = True
+
+    @is_team_shared_dropbox.deleter
+    def is_team_shared_dropbox(self):
+        self._is_team_shared_dropbox_value = None
+        self._is_team_shared_dropbox_present = False
+
     def __repr__(self):
-        return 'TeamFolderMetadata(team_folder_id={!r}, name={!r}, status={!r})'.format(
+        return 'TeamFolderMetadata(team_folder_id={!r}, name={!r}, status={!r}, is_team_shared_dropbox={!r})'.format(
             self._team_folder_id_value,
             self._name_value,
             self._status_value,
+            self._is_team_shared_dropbox_value,
         )
 
 TeamFolderMetadata_validator = bv.Struct(TeamFolderMetadata)
@@ -12554,6 +13180,42 @@ class TeamFolderStatus(bb.Union):
         return 'TeamFolderStatus(%r, %r)' % (self._tag, self._value)
 
 TeamFolderStatus_validator = bv.Union(TeamFolderStatus)
+
+class TeamFolderTeamSharedDropboxError(bb.Union):
+    """
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar disallowed: This action is not allowed for a team shared dropbox.
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    disallowed = None
+    # Attribute is overwritten below the class definition
+    other = None
+
+    def is_disallowed(self):
+        """
+        Check if the union tag is ``disallowed``.
+
+        :rtype: bool
+        """
+        return self._tag == 'disallowed'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def __repr__(self):
+        return 'TeamFolderTeamSharedDropboxError(%r, %r)' % (self._tag, self._value)
+
+TeamFolderTeamSharedDropboxError_validator = bv.Union(TeamFolderTeamSharedDropboxError)
 
 class TeamGetInfoResult(object):
     """
@@ -12819,11 +13481,14 @@ class TeamMemberProfile(MemberProfile):
     Profile of a user as a member of a team.
 
     :ivar groups: List of group IDs of groups that the user belongs to.
+    :ivar member_folder_id: The namespace id of the user's root folder.
     """
 
     __slots__ = [
         '_groups_value',
         '_groups_present',
+        '_member_folder_id_value',
+        '_member_folder_id_present',
     ]
 
     _has_required_fields = True
@@ -12836,6 +13501,7 @@ class TeamMemberProfile(MemberProfile):
                  name=None,
                  membership_type=None,
                  groups=None,
+                 member_folder_id=None,
                  external_id=None,
                  account_id=None,
                  joined_on=None,
@@ -12852,8 +13518,12 @@ class TeamMemberProfile(MemberProfile):
                                                 persistent_id)
         self._groups_value = None
         self._groups_present = False
+        self._member_folder_id_value = None
+        self._member_folder_id_present = False
         if groups is not None:
             self.groups = groups
+        if member_folder_id is not None:
+            self.member_folder_id = member_folder_id
 
     @property
     def groups(self):
@@ -12878,8 +13548,31 @@ class TeamMemberProfile(MemberProfile):
         self._groups_value = None
         self._groups_present = False
 
+    @property
+    def member_folder_id(self):
+        """
+        The namespace id of the user's root folder.
+
+        :rtype: str
+        """
+        if self._member_folder_id_present:
+            return self._member_folder_id_value
+        else:
+            raise AttributeError("missing required field 'member_folder_id'")
+
+    @member_folder_id.setter
+    def member_folder_id(self, val):
+        val = self._member_folder_id_validator.validate(val)
+        self._member_folder_id_value = val
+        self._member_folder_id_present = True
+
+    @member_folder_id.deleter
+    def member_folder_id(self):
+        self._member_folder_id_value = None
+        self._member_folder_id_present = False
+
     def __repr__(self):
-        return 'TeamMemberProfile(team_member_id={!r}, email={!r}, email_verified={!r}, status={!r}, name={!r}, membership_type={!r}, groups={!r}, external_id={!r}, account_id={!r}, joined_on={!r}, persistent_id={!r})'.format(
+        return 'TeamMemberProfile(team_member_id={!r}, email={!r}, email_verified={!r}, status={!r}, name={!r}, membership_type={!r}, groups={!r}, member_folder_id={!r}, external_id={!r}, account_id={!r}, joined_on={!r}, persistent_id={!r})'.format(
             self._team_member_id_value,
             self._email_value,
             self._email_verified_value,
@@ -12887,6 +13580,7 @@ class TeamMemberProfile(MemberProfile):
             self._name_value,
             self._membership_type_value,
             self._groups_value,
+            self._member_folder_id_value,
             self._external_id_value,
             self._account_id_value,
             self._joined_on_value,
@@ -13020,6 +13714,263 @@ class TeamMembershipType(bb.Union):
 
 TeamMembershipType_validator = bv.Union(TeamMembershipType)
 
+class TeamNamespacesListArg(object):
+    """
+    :ivar limit: Specifying a value here has no effect.
+    """
+
+    __slots__ = [
+        '_limit_value',
+        '_limit_present',
+    ]
+
+    _has_required_fields = False
+
+    def __init__(self,
+                 limit=None):
+        self._limit_value = None
+        self._limit_present = False
+        if limit is not None:
+            self.limit = limit
+
+    @property
+    def limit(self):
+        """
+        Specifying a value here has no effect.
+
+        :rtype: long
+        """
+        if self._limit_present:
+            return self._limit_value
+        else:
+            return 1000
+
+    @limit.setter
+    def limit(self, val):
+        val = self._limit_validator.validate(val)
+        self._limit_value = val
+        self._limit_present = True
+
+    @limit.deleter
+    def limit(self):
+        self._limit_value = None
+        self._limit_present = False
+
+    def __repr__(self):
+        return 'TeamNamespacesListArg(limit={!r})'.format(
+            self._limit_value,
+        )
+
+TeamNamespacesListArg_validator = bv.Struct(TeamNamespacesListArg)
+
+class TeamNamespacesListContinueArg(object):
+    """
+    :ivar cursor: Indicates from what point to get the next set of
+        team-accessible namespaces.
+    """
+
+    __slots__ = [
+        '_cursor_value',
+        '_cursor_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 cursor=None):
+        self._cursor_value = None
+        self._cursor_present = False
+        if cursor is not None:
+            self.cursor = cursor
+
+    @property
+    def cursor(self):
+        """
+        Indicates from what point to get the next set of team-accessible
+        namespaces.
+
+        :rtype: str
+        """
+        if self._cursor_present:
+            return self._cursor_value
+        else:
+            raise AttributeError("missing required field 'cursor'")
+
+    @cursor.setter
+    def cursor(self, val):
+        val = self._cursor_validator.validate(val)
+        self._cursor_value = val
+        self._cursor_present = True
+
+    @cursor.deleter
+    def cursor(self):
+        self._cursor_value = None
+        self._cursor_present = False
+
+    def __repr__(self):
+        return 'TeamNamespacesListContinueArg(cursor={!r})'.format(
+            self._cursor_value,
+        )
+
+TeamNamespacesListContinueArg_validator = bv.Struct(TeamNamespacesListContinueArg)
+
+class TeamNamespacesListContinueError(bb.Union):
+    """
+    This class acts as a tagged union. Only one of the ``is_*`` methods will
+    return true. To get the associated value of a tag (if one exists), use the
+    corresponding ``get_*`` method.
+
+    :ivar invalid_cursor: The cursor is invalid.
+    """
+
+    _catch_all = 'other'
+    # Attribute is overwritten below the class definition
+    invalid_cursor = None
+    # Attribute is overwritten below the class definition
+    other = None
+
+    def is_invalid_cursor(self):
+        """
+        Check if the union tag is ``invalid_cursor``.
+
+        :rtype: bool
+        """
+        return self._tag == 'invalid_cursor'
+
+    def is_other(self):
+        """
+        Check if the union tag is ``other``.
+
+        :rtype: bool
+        """
+        return self._tag == 'other'
+
+    def __repr__(self):
+        return 'TeamNamespacesListContinueError(%r, %r)' % (self._tag, self._value)
+
+TeamNamespacesListContinueError_validator = bv.Union(TeamNamespacesListContinueError)
+
+class TeamNamespacesListResult(object):
+    """
+    Result for :meth:`dropbox.dropbox.Dropbox.team_namespaces_list`.
+
+    :ivar namespaces: List of all namespaces the team can access.
+    :ivar cursor: Pass the cursor into
+        :meth:`dropbox.dropbox.Dropbox.team_namespaces_list_continue` to obtain
+        additional namespaces. Note that duplicate namespaces may be returned.
+    :ivar has_more: Is true if there are additional namespaces that have not
+        been returned yet.
+    """
+
+    __slots__ = [
+        '_namespaces_value',
+        '_namespaces_present',
+        '_cursor_value',
+        '_cursor_present',
+        '_has_more_value',
+        '_has_more_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 namespaces=None,
+                 cursor=None,
+                 has_more=None):
+        self._namespaces_value = None
+        self._namespaces_present = False
+        self._cursor_value = None
+        self._cursor_present = False
+        self._has_more_value = None
+        self._has_more_present = False
+        if namespaces is not None:
+            self.namespaces = namespaces
+        if cursor is not None:
+            self.cursor = cursor
+        if has_more is not None:
+            self.has_more = has_more
+
+    @property
+    def namespaces(self):
+        """
+        List of all namespaces the team can access.
+
+        :rtype: list of [NamespaceMetadata]
+        """
+        if self._namespaces_present:
+            return self._namespaces_value
+        else:
+            raise AttributeError("missing required field 'namespaces'")
+
+    @namespaces.setter
+    def namespaces(self, val):
+        val = self._namespaces_validator.validate(val)
+        self._namespaces_value = val
+        self._namespaces_present = True
+
+    @namespaces.deleter
+    def namespaces(self):
+        self._namespaces_value = None
+        self._namespaces_present = False
+
+    @property
+    def cursor(self):
+        """
+        Pass the cursor into
+        :meth:`dropbox.dropbox.Dropbox.team_namespaces_list_continue` to obtain
+        additional namespaces. Note that duplicate namespaces may be returned.
+
+        :rtype: str
+        """
+        if self._cursor_present:
+            return self._cursor_value
+        else:
+            raise AttributeError("missing required field 'cursor'")
+
+    @cursor.setter
+    def cursor(self, val):
+        val = self._cursor_validator.validate(val)
+        self._cursor_value = val
+        self._cursor_present = True
+
+    @cursor.deleter
+    def cursor(self):
+        self._cursor_value = None
+        self._cursor_present = False
+
+    @property
+    def has_more(self):
+        """
+        Is true if there are additional namespaces that have not been returned
+        yet.
+
+        :rtype: bool
+        """
+        if self._has_more_present:
+            return self._has_more_value
+        else:
+            raise AttributeError("missing required field 'has_more'")
+
+    @has_more.setter
+    def has_more(self, val):
+        val = self._has_more_validator.validate(val)
+        self._has_more_value = val
+        self._has_more_present = True
+
+    @has_more.deleter
+    def has_more(self):
+        self._has_more_value = None
+        self._has_more_present = False
+
+    def __repr__(self):
+        return 'TeamNamespacesListResult(namespaces={!r}, cursor={!r}, has_more={!r})'.format(
+            self._namespaces_value,
+            self._cursor_value,
+            self._has_more_value,
+        )
+
+TeamNamespacesListResult_validator = bv.Struct(TeamNamespacesListResult)
+
 class TokenGetAuthenticatedAdminError(bb.Union):
     """
     Error returned by
@@ -13126,220 +14077,6 @@ class TokenGetAuthenticatedAdminResult(object):
 
 TokenGetAuthenticatedAdminResult_validator = bv.Struct(TokenGetAuthenticatedAdminResult)
 
-class UpdatePropertyTemplateArg(object):
-    """
-    :ivar template_id: An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-    :ivar name: A display name for the property template. Property template
-        names can be up to 256 bytes.
-    :ivar description: Description for new property template. Property template
-        descriptions can be up to 1024 bytes.
-    :ivar add_fields: This is a list of custom properties to add to the property
-        template. There can be up to 64 properties in a single property
-        template.
-    """
-
-    __slots__ = [
-        '_template_id_value',
-        '_template_id_present',
-        '_name_value',
-        '_name_present',
-        '_description_value',
-        '_description_present',
-        '_add_fields_value',
-        '_add_fields_present',
-    ]
-
-    _has_required_fields = True
-
-    def __init__(self,
-                 template_id=None,
-                 name=None,
-                 description=None,
-                 add_fields=None):
-        self._template_id_value = None
-        self._template_id_present = False
-        self._name_value = None
-        self._name_present = False
-        self._description_value = None
-        self._description_present = False
-        self._add_fields_value = None
-        self._add_fields_present = False
-        if template_id is not None:
-            self.template_id = template_id
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if add_fields is not None:
-            self.add_fields = add_fields
-
-    @property
-    def template_id(self):
-        """
-        An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-
-        :rtype: str
-        """
-        if self._template_id_present:
-            return self._template_id_value
-        else:
-            raise AttributeError("missing required field 'template_id'")
-
-    @template_id.setter
-    def template_id(self, val):
-        val = self._template_id_validator.validate(val)
-        self._template_id_value = val
-        self._template_id_present = True
-
-    @template_id.deleter
-    def template_id(self):
-        self._template_id_value = None
-        self._template_id_present = False
-
-    @property
-    def name(self):
-        """
-        A display name for the property template. Property template names can be
-        up to 256 bytes.
-
-        :rtype: str
-        """
-        if self._name_present:
-            return self._name_value
-        else:
-            return None
-
-    @name.setter
-    def name(self, val):
-        if val is None:
-            del self.name
-            return
-        val = self._name_validator.validate(val)
-        self._name_value = val
-        self._name_present = True
-
-    @name.deleter
-    def name(self):
-        self._name_value = None
-        self._name_present = False
-
-    @property
-    def description(self):
-        """
-        Description for new property template. Property template descriptions
-        can be up to 1024 bytes.
-
-        :rtype: str
-        """
-        if self._description_present:
-            return self._description_value
-        else:
-            return None
-
-    @description.setter
-    def description(self, val):
-        if val is None:
-            del self.description
-            return
-        val = self._description_validator.validate(val)
-        self._description_value = val
-        self._description_present = True
-
-    @description.deleter
-    def description(self):
-        self._description_value = None
-        self._description_present = False
-
-    @property
-    def add_fields(self):
-        """
-        This is a list of custom properties to add to the property template.
-        There can be up to 64 properties in a single property template.
-
-        :rtype: list of [properties.PropertyFieldTemplate_validator]
-        """
-        if self._add_fields_present:
-            return self._add_fields_value
-        else:
-            return None
-
-    @add_fields.setter
-    def add_fields(self, val):
-        if val is None:
-            del self.add_fields
-            return
-        val = self._add_fields_validator.validate(val)
-        self._add_fields_value = val
-        self._add_fields_present = True
-
-    @add_fields.deleter
-    def add_fields(self):
-        self._add_fields_value = None
-        self._add_fields_present = False
-
-    def __repr__(self):
-        return 'UpdatePropertyTemplateArg(template_id={!r}, name={!r}, description={!r}, add_fields={!r})'.format(
-            self._template_id_value,
-            self._name_value,
-            self._description_value,
-            self._add_fields_value,
-        )
-
-UpdatePropertyTemplateArg_validator = bv.Struct(UpdatePropertyTemplateArg)
-
-class UpdatePropertyTemplateResult(object):
-    """
-    :ivar template_id: An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-    """
-
-    __slots__ = [
-        '_template_id_value',
-        '_template_id_present',
-    ]
-
-    _has_required_fields = True
-
-    def __init__(self,
-                 template_id=None):
-        self._template_id_value = None
-        self._template_id_present = False
-        if template_id is not None:
-            self.template_id = template_id
-
-    @property
-    def template_id(self):
-        """
-        An identifier for property template added by
-        :meth:`dropbox.dropbox.Dropbox.team_properties_template_add`.
-
-        :rtype: str
-        """
-        if self._template_id_present:
-            return self._template_id_value
-        else:
-            raise AttributeError("missing required field 'template_id'")
-
-    @template_id.setter
-    def template_id(self, val):
-        val = self._template_id_validator.validate(val)
-        self._template_id_value = val
-        self._template_id_present = True
-
-    @template_id.deleter
-    def template_id(self):
-        self._template_id_value = None
-        self._template_id_present = False
-
-    def __repr__(self):
-        return 'UpdatePropertyTemplateResult(template_id={!r})'.format(
-            self._template_id_value,
-        )
-
-UpdatePropertyTemplateResult_validator = bv.Struct(UpdatePropertyTemplateResult)
-
 class UploadApiRateLimitValue(bb.Union):
     """
     The value for ``Feature.upload_api_rate_limit``.
@@ -13411,6 +14148,162 @@ class UploadApiRateLimitValue(bb.Union):
         return 'UploadApiRateLimitValue(%r, %r)' % (self._tag, self._value)
 
 UploadApiRateLimitValue_validator = bv.Union(UploadApiRateLimitValue)
+
+class UserCustomQuotaArg(object):
+    """
+    User and their required custom quota in GB (1 TB = 1024 GB).
+    """
+
+    __slots__ = [
+        '_user_value',
+        '_user_present',
+        '_quota_gb_value',
+        '_quota_gb_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 user=None,
+                 quota_gb=None):
+        self._user_value = None
+        self._user_present = False
+        self._quota_gb_value = None
+        self._quota_gb_present = False
+        if user is not None:
+            self.user = user
+        if quota_gb is not None:
+            self.quota_gb = quota_gb
+
+    @property
+    def user(self):
+        """
+        :rtype: UserSelectorArg
+        """
+        if self._user_present:
+            return self._user_value
+        else:
+            raise AttributeError("missing required field 'user'")
+
+    @user.setter
+    def user(self, val):
+        self._user_validator.validate_type_only(val)
+        self._user_value = val
+        self._user_present = True
+
+    @user.deleter
+    def user(self):
+        self._user_value = None
+        self._user_present = False
+
+    @property
+    def quota_gb(self):
+        """
+        :rtype: long
+        """
+        if self._quota_gb_present:
+            return self._quota_gb_value
+        else:
+            raise AttributeError("missing required field 'quota_gb'")
+
+    @quota_gb.setter
+    def quota_gb(self, val):
+        val = self._quota_gb_validator.validate(val)
+        self._quota_gb_value = val
+        self._quota_gb_present = True
+
+    @quota_gb.deleter
+    def quota_gb(self):
+        self._quota_gb_value = None
+        self._quota_gb_present = False
+
+    def __repr__(self):
+        return 'UserCustomQuotaArg(user={!r}, quota_gb={!r})'.format(
+            self._user_value,
+            self._quota_gb_value,
+        )
+
+UserCustomQuotaArg_validator = bv.Struct(UserCustomQuotaArg)
+
+class UserCustomQuotaResult(object):
+    """
+    User and their custom quota in GB (1 TB = 1024 GB).  No quota returns if the
+    user has no custom quota set.
+    """
+
+    __slots__ = [
+        '_user_value',
+        '_user_present',
+        '_quota_gb_value',
+        '_quota_gb_present',
+    ]
+
+    _has_required_fields = True
+
+    def __init__(self,
+                 user=None,
+                 quota_gb=None):
+        self._user_value = None
+        self._user_present = False
+        self._quota_gb_value = None
+        self._quota_gb_present = False
+        if user is not None:
+            self.user = user
+        if quota_gb is not None:
+            self.quota_gb = quota_gb
+
+    @property
+    def user(self):
+        """
+        :rtype: UserSelectorArg
+        """
+        if self._user_present:
+            return self._user_value
+        else:
+            raise AttributeError("missing required field 'user'")
+
+    @user.setter
+    def user(self, val):
+        self._user_validator.validate_type_only(val)
+        self._user_value = val
+        self._user_present = True
+
+    @user.deleter
+    def user(self):
+        self._user_value = None
+        self._user_present = False
+
+    @property
+    def quota_gb(self):
+        """
+        :rtype: long
+        """
+        if self._quota_gb_present:
+            return self._quota_gb_value
+        else:
+            return None
+
+    @quota_gb.setter
+    def quota_gb(self, val):
+        if val is None:
+            del self.quota_gb
+            return
+        val = self._quota_gb_validator.validate(val)
+        self._quota_gb_value = val
+        self._quota_gb_present = True
+
+    @quota_gb.deleter
+    def quota_gb(self):
+        self._quota_gb_value = None
+        self._quota_gb_present = False
+
+    def __repr__(self):
+        return 'UserCustomQuotaResult(user={!r}, quota_gb={!r})'.format(
+            self._user_value,
+            self._quota_gb_value,
+        )
+
+UserCustomQuotaResult_validator = bv.Struct(UserCustomQuotaResult)
 
 class UserSelectorArg(bb.Union):
     """
@@ -13633,6 +14526,7 @@ UsersSelectorArg_validator = bv.Union(UsersSelectorArg)
 GroupsGetInfoResult_validator = bv.List(GroupsGetInfoItem_validator)
 MembersGetInfoResult_validator = bv.List(MembersGetInfoItem_validator)
 NumberPerDay_validator = bv.List(bv.Nullable(bv.UInt64()))
+UserQuota_validator = bv.UInt32(min_value=25)
 DeviceSession._session_id_validator = bv.String()
 DeviceSession._ip_address_validator = bv.Nullable(bv.String())
 DeviceSession._country_validator = bv.Nullable(bv.String())
@@ -13669,13 +14563,6 @@ ActiveWebSession._all_fields_ = DeviceSession._all_fields_ + [
     ('browser', ActiveWebSession._browser_validator),
     ('expires', ActiveWebSession._expires_validator),
 ]
-
-AddPropertyTemplateArg._all_field_names_ = properties.PropertyGroupTemplate._all_field_names_.union(set([]))
-AddPropertyTemplateArg._all_fields_ = properties.PropertyGroupTemplate._all_fields_ + []
-
-AddPropertyTemplateResult._template_id_validator = properties.TemplateId_validator
-AddPropertyTemplateResult._all_field_names_ = set(['template_id'])
-AddPropertyTemplateResult._all_fields_ = [('template_id', AddPropertyTemplateResult._template_id_validator)]
 
 AdminTier._team_admin_validator = bv.Void()
 AdminTier._user_management_admin_validator = bv.Void()
@@ -13722,14 +14609,41 @@ BaseDfbReport._all_fields_ = [('start_date', BaseDfbReport._start_date_validator
 
 BaseTeamFolderError._access_error_validator = TeamFolderAccessError_validator
 BaseTeamFolderError._status_error_validator = TeamFolderInvalidStatusError_validator
+BaseTeamFolderError._team_shared_dropbox_error_validator = TeamFolderTeamSharedDropboxError_validator
 BaseTeamFolderError._other_validator = bv.Void()
 BaseTeamFolderError._tagmap = {
     'access_error': BaseTeamFolderError._access_error_validator,
     'status_error': BaseTeamFolderError._status_error_validator,
+    'team_shared_dropbox_error': BaseTeamFolderError._team_shared_dropbox_error_validator,
     'other': BaseTeamFolderError._other_validator,
 }
 
 BaseTeamFolderError.other = BaseTeamFolderError('other')
+
+CustomQuotaError._too_many_users_validator = bv.Void()
+CustomQuotaError._other_validator = bv.Void()
+CustomQuotaError._tagmap = {
+    'too_many_users': CustomQuotaError._too_many_users_validator,
+    'other': CustomQuotaError._other_validator,
+}
+
+CustomQuotaError.too_many_users = CustomQuotaError('too_many_users')
+CustomQuotaError.other = CustomQuotaError('other')
+
+CustomQuotaResult._success_validator = UserCustomQuotaResult_validator
+CustomQuotaResult._invalid_user_validator = UserSelectorArg_validator
+CustomQuotaResult._other_validator = bv.Void()
+CustomQuotaResult._tagmap = {
+    'success': CustomQuotaResult._success_validator,
+    'invalid_user': CustomQuotaResult._invalid_user_validator,
+    'other': CustomQuotaResult._other_validator,
+}
+
+CustomQuotaResult.other = CustomQuotaResult('other')
+
+CustomQuotaUsersArg._users_validator = bv.List(UserSelectorArg_validator)
+CustomQuotaUsersArg._all_field_names_ = set(['users'])
+CustomQuotaUsersArg._all_fields_ = [('users', CustomQuotaUsersArg._users_validator)]
 
 DateRange._start_date_validator = bv.Nullable(common.Date_validator)
 DateRange._end_date_validator = bv.Nullable(common.Date_validator)
@@ -13823,19 +14737,24 @@ DevicesActive._all_fields_ = [
 ]
 
 Feature._upload_api_rate_limit_validator = bv.Void()
+Feature._has_team_shared_dropbox_validator = bv.Void()
 Feature._other_validator = bv.Void()
 Feature._tagmap = {
     'upload_api_rate_limit': Feature._upload_api_rate_limit_validator,
+    'has_team_shared_dropbox': Feature._has_team_shared_dropbox_validator,
     'other': Feature._other_validator,
 }
 
 Feature.upload_api_rate_limit = Feature('upload_api_rate_limit')
+Feature.has_team_shared_dropbox = Feature('has_team_shared_dropbox')
 Feature.other = Feature('other')
 
 FeatureValue._upload_api_rate_limit_validator = UploadApiRateLimitValue_validator
+FeatureValue._has_team_shared_dropbox_validator = HasTeamSharedDropboxValue_validator
 FeatureValue._other_validator = bv.Void()
 FeatureValue._tagmap = {
     'upload_api_rate_limit': FeatureValue._upload_api_rate_limit_validator,
+    'has_team_shared_dropbox': FeatureValue._has_team_shared_dropbox_validator,
     'other': FeatureValue._other_validator,
 }
 
@@ -14318,6 +15237,15 @@ GroupsSelector._tagmap = {
     'group_external_ids': GroupsSelector._group_external_ids_validator,
 }
 
+HasTeamSharedDropboxValue._has_team_shared_dropbox_validator = bv.Boolean()
+HasTeamSharedDropboxValue._other_validator = bv.Void()
+HasTeamSharedDropboxValue._tagmap = {
+    'has_team_shared_dropbox': HasTeamSharedDropboxValue._has_team_shared_dropbox_validator,
+    'other': HasTeamSharedDropboxValue._other_validator,
+}
+
+HasTeamSharedDropboxValue.other = HasTeamSharedDropboxValue('other')
+
 ListMemberAppsArg._team_member_id_validator = bv.String()
 ListMemberAppsArg._all_field_names_ = set(['team_member_id'])
 ListMemberAppsArg._all_fields_ = [('team_member_id', ListMemberAppsArg._team_member_id_validator)]
@@ -14527,8 +15455,8 @@ MemberAccess._all_fields_ = [
 ]
 
 MemberAddArg._member_email_validator = common.EmailAddress_validator
-MemberAddArg._member_given_name_validator = bv.Nullable(common.NamePart_validator)
-MemberAddArg._member_surname_validator = bv.Nullable(common.NamePart_validator)
+MemberAddArg._member_given_name_validator = bv.Nullable(common.OptionalNamePart_validator)
+MemberAddArg._member_surname_validator = bv.Nullable(common.OptionalNamePart_validator)
 MemberAddArg._member_external_id_validator = bv.Nullable(team_common.MemberExternalId_validator)
 MemberAddArg._member_persistent_id_validator = bv.Nullable(bv.String())
 MemberAddArg._send_welcome_email_validator = bv.Boolean()
@@ -14895,8 +15823,8 @@ MembersSetPermissionsResult._all_fields_ = [
 MembersSetProfileArg._user_validator = UserSelectorArg_validator
 MembersSetProfileArg._new_email_validator = bv.Nullable(common.EmailAddress_validator)
 MembersSetProfileArg._new_external_id_validator = bv.Nullable(team_common.MemberExternalId_validator)
-MembersSetProfileArg._new_given_name_validator = bv.Nullable(common.NamePart_validator)
-MembersSetProfileArg._new_surname_validator = bv.Nullable(common.NamePart_validator)
+MembersSetProfileArg._new_given_name_validator = bv.Nullable(common.OptionalNamePart_validator)
+MembersSetProfileArg._new_surname_validator = bv.Nullable(common.OptionalNamePart_validator)
 MembersSetProfileArg._new_persistent_id_validator = bv.Nullable(bv.String())
 MembersSetProfileArg._all_field_names_ = set([
     'user',
@@ -15018,6 +15946,53 @@ MobileClientSession._all_fields_ = DeviceSession._all_fields_ + [
     ('last_carrier', MobileClientSession._last_carrier_validator),
 ]
 
+NamespaceMetadata._name_validator = bv.String()
+NamespaceMetadata._namespace_id_validator = common.SharedFolderId_validator
+NamespaceMetadata._namespace_type_validator = NamespaceType_validator
+NamespaceMetadata._team_member_id_validator = bv.Nullable(team_common.TeamMemberId_validator)
+NamespaceMetadata._all_field_names_ = set([
+    'name',
+    'namespace_id',
+    'namespace_type',
+    'team_member_id',
+])
+NamespaceMetadata._all_fields_ = [
+    ('name', NamespaceMetadata._name_validator),
+    ('namespace_id', NamespaceMetadata._namespace_id_validator),
+    ('namespace_type', NamespaceMetadata._namespace_type_validator),
+    ('team_member_id', NamespaceMetadata._team_member_id_validator),
+]
+
+NamespaceType._app_folder_validator = bv.Void()
+NamespaceType._shared_folder_validator = bv.Void()
+NamespaceType._team_folder_validator = bv.Void()
+NamespaceType._team_member_folder_validator = bv.Void()
+NamespaceType._other_validator = bv.Void()
+NamespaceType._tagmap = {
+    'app_folder': NamespaceType._app_folder_validator,
+    'shared_folder': NamespaceType._shared_folder_validator,
+    'team_folder': NamespaceType._team_folder_validator,
+    'team_member_folder': NamespaceType._team_member_folder_validator,
+    'other': NamespaceType._other_validator,
+}
+
+NamespaceType.app_folder = NamespaceType('app_folder')
+NamespaceType.shared_folder = NamespaceType('shared_folder')
+NamespaceType.team_folder = NamespaceType('team_folder')
+NamespaceType.team_member_folder = NamespaceType('team_member_folder')
+NamespaceType.other = NamespaceType('other')
+
+RemoveCustomQuotaResult._success_validator = UserSelectorArg_validator
+RemoveCustomQuotaResult._invalid_user_validator = UserSelectorArg_validator
+RemoveCustomQuotaResult._other_validator = bv.Void()
+RemoveCustomQuotaResult._tagmap = {
+    'success': RemoveCustomQuotaResult._success_validator,
+    'invalid_user': RemoveCustomQuotaResult._invalid_user_validator,
+    'other': RemoveCustomQuotaResult._other_validator,
+}
+
+RemoveCustomQuotaResult.other = RemoveCustomQuotaResult('other')
+
 RemovedStatus._is_recoverable_validator = bv.Boolean()
 RemovedStatus._all_field_names_ = set(['is_recoverable'])
 RemovedStatus._all_fields_ = [('is_recoverable', RemovedStatus._is_recoverable_validator)]
@@ -15126,6 +16101,10 @@ RevokeLinkedAppStatus._all_fields_ = [
     ('success', RevokeLinkedAppStatus._success_validator),
     ('error_type', RevokeLinkedAppStatus._error_type_validator),
 ]
+
+SetCustomQuotaArg._users_and_quotas_validator = bv.List(UserCustomQuotaArg_validator)
+SetCustomQuotaArg._all_field_names_ = set(['users_and_quotas'])
+SetCustomQuotaArg._all_fields_ = [('users_and_quotas', SetCustomQuotaArg._users_and_quotas_validator)]
 
 StorageBucket._bucket_validator = bv.String()
 StorageBucket._users_validator = bv.UInt64()
@@ -15267,15 +16246,18 @@ TeamFolderListResult._all_fields_ = [
 TeamFolderMetadata._team_folder_id_validator = common.SharedFolderId_validator
 TeamFolderMetadata._name_validator = bv.String()
 TeamFolderMetadata._status_validator = TeamFolderStatus_validator
+TeamFolderMetadata._is_team_shared_dropbox_validator = bv.Boolean()
 TeamFolderMetadata._all_field_names_ = set([
     'team_folder_id',
     'name',
     'status',
+    'is_team_shared_dropbox',
 ])
 TeamFolderMetadata._all_fields_ = [
     ('team_folder_id', TeamFolderMetadata._team_folder_id_validator),
     ('name', TeamFolderMetadata._name_validator),
     ('status', TeamFolderMetadata._status_validator),
+    ('is_team_shared_dropbox', TeamFolderMetadata._is_team_shared_dropbox_validator),
 ]
 
 TeamFolderPermanentlyDeleteError._tagmap = {
@@ -15316,6 +16298,16 @@ TeamFolderStatus.archived = TeamFolderStatus('archived')
 TeamFolderStatus.archive_in_progress = TeamFolderStatus('archive_in_progress')
 TeamFolderStatus.other = TeamFolderStatus('other')
 
+TeamFolderTeamSharedDropboxError._disallowed_validator = bv.Void()
+TeamFolderTeamSharedDropboxError._other_validator = bv.Void()
+TeamFolderTeamSharedDropboxError._tagmap = {
+    'disallowed': TeamFolderTeamSharedDropboxError._disallowed_validator,
+    'other': TeamFolderTeamSharedDropboxError._other_validator,
+}
+
+TeamFolderTeamSharedDropboxError.disallowed = TeamFolderTeamSharedDropboxError('disallowed')
+TeamFolderTeamSharedDropboxError.other = TeamFolderTeamSharedDropboxError('other')
+
 TeamGetInfoResult._name_validator = bv.String()
 TeamGetInfoResult._team_id_validator = bv.String()
 TeamGetInfoResult._num_licensed_users_validator = bv.UInt32()
@@ -15348,8 +16340,15 @@ TeamMemberInfo._all_fields_ = [
 ]
 
 TeamMemberProfile._groups_validator = bv.List(team_common.GroupId_validator)
-TeamMemberProfile._all_field_names_ = MemberProfile._all_field_names_.union(set(['groups']))
-TeamMemberProfile._all_fields_ = MemberProfile._all_fields_ + [('groups', TeamMemberProfile._groups_validator)]
+TeamMemberProfile._member_folder_id_validator = common.NamespaceId_validator
+TeamMemberProfile._all_field_names_ = MemberProfile._all_field_names_.union(set([
+    'groups',
+    'member_folder_id',
+]))
+TeamMemberProfile._all_fields_ = MemberProfile._all_fields_ + [
+    ('groups', TeamMemberProfile._groups_validator),
+    ('member_folder_id', TeamMemberProfile._member_folder_id_validator),
+]
 
 TeamMemberStatus._active_validator = bv.Void()
 TeamMemberStatus._invited_validator = bv.Void()
@@ -15376,6 +16375,38 @@ TeamMembershipType._tagmap = {
 TeamMembershipType.full = TeamMembershipType('full')
 TeamMembershipType.limited = TeamMembershipType('limited')
 
+TeamNamespacesListArg._limit_validator = bv.UInt32(min_value=1, max_value=1000)
+TeamNamespacesListArg._all_field_names_ = set(['limit'])
+TeamNamespacesListArg._all_fields_ = [('limit', TeamNamespacesListArg._limit_validator)]
+
+TeamNamespacesListContinueArg._cursor_validator = bv.String()
+TeamNamespacesListContinueArg._all_field_names_ = set(['cursor'])
+TeamNamespacesListContinueArg._all_fields_ = [('cursor', TeamNamespacesListContinueArg._cursor_validator)]
+
+TeamNamespacesListContinueError._invalid_cursor_validator = bv.Void()
+TeamNamespacesListContinueError._other_validator = bv.Void()
+TeamNamespacesListContinueError._tagmap = {
+    'invalid_cursor': TeamNamespacesListContinueError._invalid_cursor_validator,
+    'other': TeamNamespacesListContinueError._other_validator,
+}
+
+TeamNamespacesListContinueError.invalid_cursor = TeamNamespacesListContinueError('invalid_cursor')
+TeamNamespacesListContinueError.other = TeamNamespacesListContinueError('other')
+
+TeamNamespacesListResult._namespaces_validator = bv.List(NamespaceMetadata_validator)
+TeamNamespacesListResult._cursor_validator = bv.String()
+TeamNamespacesListResult._has_more_validator = bv.Boolean()
+TeamNamespacesListResult._all_field_names_ = set([
+    'namespaces',
+    'cursor',
+    'has_more',
+])
+TeamNamespacesListResult._all_fields_ = [
+    ('namespaces', TeamNamespacesListResult._namespaces_validator),
+    ('cursor', TeamNamespacesListResult._cursor_validator),
+    ('has_more', TeamNamespacesListResult._has_more_validator),
+]
+
 TokenGetAuthenticatedAdminError._mapping_not_found_validator = bv.Void()
 TokenGetAuthenticatedAdminError._admin_not_active_validator = bv.Void()
 TokenGetAuthenticatedAdminError._other_validator = bv.Void()
@@ -15393,27 +16424,6 @@ TokenGetAuthenticatedAdminResult._admin_profile_validator = TeamMemberProfile_va
 TokenGetAuthenticatedAdminResult._all_field_names_ = set(['admin_profile'])
 TokenGetAuthenticatedAdminResult._all_fields_ = [('admin_profile', TokenGetAuthenticatedAdminResult._admin_profile_validator)]
 
-UpdatePropertyTemplateArg._template_id_validator = properties.TemplateId_validator
-UpdatePropertyTemplateArg._name_validator = bv.Nullable(bv.String())
-UpdatePropertyTemplateArg._description_validator = bv.Nullable(bv.String())
-UpdatePropertyTemplateArg._add_fields_validator = bv.Nullable(bv.List(properties.PropertyFieldTemplate_validator))
-UpdatePropertyTemplateArg._all_field_names_ = set([
-    'template_id',
-    'name',
-    'description',
-    'add_fields',
-])
-UpdatePropertyTemplateArg._all_fields_ = [
-    ('template_id', UpdatePropertyTemplateArg._template_id_validator),
-    ('name', UpdatePropertyTemplateArg._name_validator),
-    ('description', UpdatePropertyTemplateArg._description_validator),
-    ('add_fields', UpdatePropertyTemplateArg._add_fields_validator),
-]
-
-UpdatePropertyTemplateResult._template_id_validator = properties.TemplateId_validator
-UpdatePropertyTemplateResult._all_field_names_ = set(['template_id'])
-UpdatePropertyTemplateResult._all_fields_ = [('template_id', UpdatePropertyTemplateResult._template_id_validator)]
-
 UploadApiRateLimitValue._unlimited_validator = bv.Void()
 UploadApiRateLimitValue._limit_validator = bv.UInt32()
 UploadApiRateLimitValue._other_validator = bv.Void()
@@ -15425,6 +16435,28 @@ UploadApiRateLimitValue._tagmap = {
 
 UploadApiRateLimitValue.unlimited = UploadApiRateLimitValue('unlimited')
 UploadApiRateLimitValue.other = UploadApiRateLimitValue('other')
+
+UserCustomQuotaArg._user_validator = UserSelectorArg_validator
+UserCustomQuotaArg._quota_gb_validator = UserQuota_validator
+UserCustomQuotaArg._all_field_names_ = set([
+    'user',
+    'quota_gb',
+])
+UserCustomQuotaArg._all_fields_ = [
+    ('user', UserCustomQuotaArg._user_validator),
+    ('quota_gb', UserCustomQuotaArg._quota_gb_validator),
+]
+
+UserCustomQuotaResult._user_validator = UserSelectorArg_validator
+UserCustomQuotaResult._quota_gb_validator = bv.Nullable(UserQuota_validator)
+UserCustomQuotaResult._all_field_names_ = set([
+    'user',
+    'quota_gb',
+])
+UserCustomQuotaResult._all_fields_ = [
+    ('user', UserCustomQuotaResult._user_validator),
+    ('quota_gb', UserCustomQuotaResult._quota_gb_validator),
+]
 
 UserSelectorArg._team_member_id_validator = team_common.TeamMemberId_validator
 UserSelectorArg._external_id_validator = team_common.MemberExternalId_validator
@@ -15660,6 +16692,33 @@ linked_apps_revoke_linked_app_batch = bb.Route(
     {'host': u'api',
      'style': u'rpc'},
 )
+member_space_limits_get_custom_quota = bb.Route(
+    'member_space_limits/get_custom_quota',
+    False,
+    CustomQuotaUsersArg_validator,
+    bv.List(CustomQuotaResult_validator),
+    CustomQuotaError_validator,
+    {'host': u'api',
+     'style': u'rpc'},
+)
+member_space_limits_remove_custom_quota = bb.Route(
+    'member_space_limits/remove_custom_quota',
+    False,
+    CustomQuotaUsersArg_validator,
+    bv.List(RemoveCustomQuotaResult_validator),
+    CustomQuotaError_validator,
+    {'host': u'api',
+     'style': u'rpc'},
+)
+member_space_limits_set_custom_quota = bb.Route(
+    'member_space_limits/set_custom_quota',
+    False,
+    SetCustomQuotaArg_validator,
+    bv.List(CustomQuotaResult_validator),
+    CustomQuotaError_validator,
+    {'host': u'api',
+     'style': u'rpc'},
+)
 members_add = bb.Route(
     'members/add',
     False,
@@ -15777,39 +16836,57 @@ members_unsuspend = bb.Route(
     {'host': u'api',
      'style': u'rpc'},
 )
+namespaces_list = bb.Route(
+    'namespaces/list',
+    False,
+    TeamNamespacesListArg_validator,
+    TeamNamespacesListResult_validator,
+    bv.Void(),
+    {'host': u'api',
+     'style': u'rpc'},
+)
+namespaces_list_continue = bb.Route(
+    'namespaces/list/continue',
+    False,
+    TeamNamespacesListContinueArg_validator,
+    TeamNamespacesListResult_validator,
+    TeamNamespacesListContinueError_validator,
+    {'host': u'api',
+     'style': u'rpc'},
+)
 properties_template_add = bb.Route(
     'properties/template/add',
-    False,
-    AddPropertyTemplateArg_validator,
-    AddPropertyTemplateResult_validator,
-    properties.ModifyPropertyTemplateError_validator,
+    True,
+    file_properties.AddTemplateArg_validator,
+    file_properties.AddTemplateResult_validator,
+    file_properties.ModifyTemplateError_validator,
     {'host': u'api',
      'style': u'rpc'},
 )
 properties_template_get = bb.Route(
     'properties/template/get',
-    False,
-    properties.GetPropertyTemplateArg_validator,
-    properties.GetPropertyTemplateResult_validator,
-    properties.PropertyTemplateError_validator,
+    True,
+    file_properties.GetTemplateArg_validator,
+    file_properties.GetTemplateResult_validator,
+    file_properties.TemplateError_validator,
     {'host': u'api',
      'style': u'rpc'},
 )
 properties_template_list = bb.Route(
     'properties/template/list',
-    False,
+    True,
     bv.Void(),
-    properties.ListPropertyTemplateIds_validator,
-    properties.PropertyTemplateError_validator,
+    file_properties.ListTemplateResult_validator,
+    file_properties.TemplateError_validator,
     {'host': u'api',
      'style': u'rpc'},
 )
 properties_template_update = bb.Route(
     'properties/template/update',
-    False,
-    UpdatePropertyTemplateArg_validator,
-    UpdatePropertyTemplateResult_validator,
-    properties.ModifyPropertyTemplateError_validator,
+    True,
+    file_properties.UpdateTemplateArg_validator,
+    file_properties.UpdateTemplateResult_validator,
+    file_properties.ModifyTemplateError_validator,
     {'host': u'api',
      'style': u'rpc'},
 )
@@ -15965,6 +17042,9 @@ ROUTES = {
     'linked_apps/list_team_linked_apps': linked_apps_list_team_linked_apps,
     'linked_apps/revoke_linked_app': linked_apps_revoke_linked_app,
     'linked_apps/revoke_linked_app_batch': linked_apps_revoke_linked_app_batch,
+    'member_space_limits/get_custom_quota': member_space_limits_get_custom_quota,
+    'member_space_limits/remove_custom_quota': member_space_limits_remove_custom_quota,
+    'member_space_limits/set_custom_quota': member_space_limits_set_custom_quota,
     'members/add': members_add,
     'members/add/job_status/get': members_add_job_status_get,
     'members/get_info': members_get_info,
@@ -15978,6 +17058,8 @@ ROUTES = {
     'members/set_profile': members_set_profile,
     'members/suspend': members_suspend,
     'members/unsuspend': members_unsuspend,
+    'namespaces/list': namespaces_list,
+    'namespaces/list/continue': namespaces_list_continue,
     'properties/template/add': properties_template_add,
     'properties/template/get': properties_template_get,
     'properties/template/list': properties_template_list,
