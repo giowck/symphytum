@@ -187,6 +187,8 @@ void MainWindow::preferenceActionTriggered()
     if (dialog.appearanceChanged()) {
         if (m_formView)
             m_formView->reloadAppearanceSettings();
+        if (m_tableView)
+            m_tableView->reloadRowSize();
 #ifdef Q_OS_LINUX
         //update toolbar style
         if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())

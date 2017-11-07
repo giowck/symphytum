@@ -51,6 +51,7 @@ void TableView::setModel(QAbstractItemModel *model)
         //init view
         restoreSectionOrder();
         restoreSectionSizes();
+        restoreRowSize();
         initView();
     }
 }
@@ -63,6 +64,11 @@ int TableView::getLastEditRow()
 int TableView::getLastEditColumn()
 {
     return m_lastUsedColumn;
+}
+
+void TableView::reloadRowSize()
+{
+    restoreRowSize();
 }
 
 
@@ -325,5 +331,17 @@ void TableView::restoreSectionSizes()
     for (int i = 0; i < sectionSizes.size(); i++) {
         int visualIndex = header->visualIndex(i+1); //+1 because of _id column 0
         header->resizeSection(visualIndex, sectionSizes.at(i));
+    }
+}
+
+void TableView::restoreRowSize()
+{
+    QHeaderView *verticalHeader = this->verticalHeader();
+    SettingsManager s;
+    int rowSize = s.restoreProperty("rowSize", "tableView").toInt();
+    static int defaultRowSize = verticalHeader->defaultSectionSize(); //static, remember the first value
+
+    if (rowSize) {
+        verticalHeader->setDefaultSectionSize(defaultRowSize * rowSize);
     }
 }

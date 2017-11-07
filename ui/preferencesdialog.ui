@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>538</width>
-    <height>321</height>
+    <height>368</height>
    </rect>
   </property>
   <property name="sizeIncrement">
@@ -180,7 +180,7 @@
         </layout>
        </widget>
        <widget class="QWidget" name="appearance">
-        <layout class="QVBoxLayout" name="verticalLayout_9">
+        <layout class="QVBoxLayout" name="verticalLayout_8">
          <item>
           <widget class="QLabel" name="label_9">
            <property name="styleSheet">
@@ -302,6 +302,38 @@
                 <string>8px</string>
                </property>
               </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Table View</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Row size:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="tableRowSizeSpinBox">
+              <property name="toolTip">
+               <string>Number of lines of text that are shown for each row in table view</string>
+              </property>
+              <property name="suffix">
+               <string> line(s)</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>30</number>
+              </property>
              </widget>
             </item>
            </layout>

@@ -14,6 +14,8 @@
 #include "../components/filemanager.h"
 #include "../utils/definitionholder.h"
 
+#include <QtWidgets/QSpinBox>
+
 
 //-----------------------------------------------------------------------------
 // Public
@@ -58,6 +60,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(formViewFontSizeComboChanged()));
     connect(ui->darkToolbarAmbianceCheckBox, SIGNAL(clicked()),
             this, SLOT(darkToolbarAmbianceCheckChanged()));
+    connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
+            this, SLOT(tableViewRowSizeSpinChanged()));
 
     if (DefinitionHolder::APP_STORE) {
         //disable updates
@@ -199,6 +203,15 @@ void PreferencesDialog::darkToolbarAmbianceCheckChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::tableViewRowSizeSpinChanged()
+{
+    int rows = ui->tableRowSizeSpinBox->value();
+
+    m_settingsManager->saveProperty("rowSize", "tableView", rows);
+
+    m_appearanceChanged = true;
+}
+
 
 //-----------------------------------------------------------------------------
 // Private
@@ -254,6 +267,13 @@ void PreferencesDialog::loadSettings()
     int fontSizeIndex = m_settingsManager->restoreProperty(
                 "fontSizeIndex", "formView").toInt();
     ui->formViewFontSizeComboBox->setCurrentIndex(fontSizeIndex);
+
+    //table view row size
+    int tableRowSize =  m_settingsManager->restoreProperty(
+                "rowSize", "tableView").toInt();
+    if (tableRowSize) {
+        ui->tableRowSizeSpinBox->setValue(tableRowSize);
+    }
 
 #ifdef Q_OS_LINUX
     //dark toolbar ambiance style

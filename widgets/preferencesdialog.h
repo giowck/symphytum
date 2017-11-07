@@ -57,6 +57,7 @@ private slots:
     void formViewColorComboChanged();
     void formViewFontSizeComboChanged();
     void darkToolbarAmbianceCheckChanged();
+    void tableViewRowSizeSpinChanged();
     
 private:
     void initSettings();

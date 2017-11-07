@@ -45,6 +45,9 @@ public:
     /** Get the last edited column (field) */
     int getLastEditColumn();
 
+    /** Reload default row size from settings */
+    void reloadRowSize();
+
 signals:
     /** Emitted when new field action was triggered from context menu */
     void newFieldSignal();
@@ -99,6 +102,7 @@ private:
 
     void restoreSectionOrder();
     void restoreSectionSizes();
+    void restoreRowSize();
 
     //context menu actions
     QAction *m_newFieldContextAction;
