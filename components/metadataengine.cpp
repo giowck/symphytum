@@ -521,9 +521,10 @@ int MetadataEngine::createField(const QString &fieldName, FieldType type,
                .arg(triggerProperties));
 
     //metadata column name
+    QString fieldNameEscaped = QString(fieldName).replace("\"", "\"\""); //escape double quotes for SQL
     query.exec(QString("INSERT INTO '%1' (\"key\",\"value\") VALUES (\"col%2_name\","
                        "\"%3\")").arg(metadataTable).arg(fieldId)
-               .arg(fieldName));
+               .arg(fieldNameEscaped));
 
     //metadata column type
     query.exec(QString("INSERT INTO '%1' (\"key\",\"value\") VALUES (\"col%2_type\","

@@ -92,7 +92,6 @@ void AddFieldDialog::nextButtonClicked()
 {
     if (!m_currentWizard) { //only if not already created
         QString fieldName = ui->fieldNameLineEdit->text();
-        fieldName.replace('"', " "); //avoid double-quotes
 
         //create apropriate wizard
         int item = ui->fieldTypeListWidget->currentRow();

@@ -151,9 +151,9 @@ void ImportDialog::importCSVButtonClicked()
     //create new collection
     int collectionId = -1;
     QString collectionName = ui->collectionNameLineEdit->text();
-    collectionName.replace('"', " "); //replace double quotes
     QString sql = QString("INSERT INTO \"collections\" (\"name\")"
-                          " VALUES (\"%1\")").arg(collectionName);
+                          " VALUES (\"%1\")").arg(QString(collectionName)
+                                                  .replace("\"", "\"\"")); //escape double quotes for SQL
     if (query.exec(sql))
         collectionId = m_metadataEngine->createNewCollection();
     else
@@ -165,7 +165,6 @@ void ImportDialog::importCSVButtonClicked()
     //create new fields from headers
     db.transaction();
     foreach (QString s, headers) {
-        s.replace('"', " "); //replace double quotes
         m_metadataEngine->createField(s,
                                       MetadataEngine::TextType,
                                       "",
