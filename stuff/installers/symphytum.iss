@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Symphytum"
-#define MyAppVersion "2.1"
+#define MyAppVersion "2.2"
 #define MyAppPublisher "Symphytum Developers"
 #define MyAppURL "http://user.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 OutputDir=C:\Users\giowck\Desktop
-OutputBaseFilename=symphytum-2.1-setup
+OutputBaseFilename=symphytum-2.2-setup
 Compression=lzma
 SolidCompression=yes
 

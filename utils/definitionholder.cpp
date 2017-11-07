@@ -16,13 +16,13 @@
 // Static variables initialization
 //-----------------------------------------------------------------------------
 
-QString DefinitionHolder::VERSION = "2.1";
+QString DefinitionHolder::VERSION = "2.2";
 QString DefinitionHolder::NAME = "Symphytum";
 QString DefinitionHolder::COMPANY = "giowisys";
 QString DefinitionHolder::DOMAIN_NAME = "giowisys.com";
 QString DefinitionHolder::UPDATE_URL = "https://giowck.github.io/symphytum/update/symphytum/updates";
 QString DefinitionHolder::DOWNLOAD_URL = "https://giowck.github.io/symphytum/update.html";
-int DefinitionHolder::SOFTWARE_BUILD = 6;
+int DefinitionHolder::SOFTWARE_BUILD = 7;
 int DefinitionHolder::DATABASE_VERSION = 2;
 bool DefinitionHolder::APP_STORE = false;
 QString DefinitionHolder::COPYRIGHT =
