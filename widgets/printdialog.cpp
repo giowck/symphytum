@@ -22,6 +22,7 @@
 #include <QPrinter>
 #include <QtGui/QTextDocument>
 #include <QtCore/QDateTime>
+#include <QtGui/QPixmapCache>
 
 
 //-----------------------------------------------------------------------------
@@ -146,6 +147,10 @@ void PrintDialog::initRecordListToPrint()
 
 void PrintDialog::print(bool pdf, QString pdfOutputPath)
 {
+    //free memory if image caching was enabled (table view)
+    //since printing can be RAM intensive
+    QPixmapCache::clear();
+
     QPrinter printer;
     QTextDocument document(this);
     QString htmlString;
