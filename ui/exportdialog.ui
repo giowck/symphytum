@@ -17,7 +17,16 @@
    <string>Export</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -62,7 +71,7 @@
           <item>
            <widget class="QRadioButton" name="allRecordsRadio">
             <property name="text">
-             <string>All records</string>
+             <string>All &amp;records</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -72,7 +81,7 @@
           <item>
            <widget class="QRadioButton" name="selectedRecordsRadio">
             <property name="text">
-             <string>Selected records (0 items)</string>
+             <string>Selected records (&amp;0 items)</string>
             </property>
            </widget>
           </item>
@@ -95,7 +104,7 @@
            </property>
            <item>
             <property name="text">
-             <string>Comma-separated values (CSV)</string>
+             <string>CSV</string>
             </property>
            </item>
           </widget>
