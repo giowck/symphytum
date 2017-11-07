@@ -9,6 +9,7 @@
 #include "preferencesdialog.h"
 #include "ui_preferencesdialog.h"
 #include "../components/settingsmanager.h"
+#include "../components/databasemanager.h"
 #include "../components/sync_framework/syncengine.h"
 #include "../components/sync_framework/syncsession.h"
 #include "../components/filemanager.h"
@@ -17,7 +18,10 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 
 
 //-----------------------------------------------------------------------------
@@ -30,7 +34,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
     m_settingsManager(0),
     m_cloudChanged(false),
     m_softwareReset(false),
-    m_appearanceChanged(false)
+    m_appearanceChanged(false),
+    m_databasePathChanged(false)
 {
     ui->setupUi(this);
 
@@ -67,6 +72,10 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(tableViewRowSizeSpinChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
             this, SLOT(cacheImagesTableViewCheckBoxChanged()));
+    connect(ui->browseDbPathButton, SIGNAL(clicked(bool)),
+            this, SLOT(browseDbPathButtonClicked()));
+    connect(ui->resetDbPathButton, SIGNAL(clicked(bool)),
+            this, SLOT(resetDbPathButtonClicked()));
 
     if (DefinitionHolder::APP_STORE) {
         //disable updates
@@ -102,6 +111,11 @@ bool PreferencesDialog::softwareResetActivated()
 bool PreferencesDialog::appearanceChanged()
 {
     return m_appearanceChanged;
+}
+
+bool PreferencesDialog::databasePathChanged()
+{
+    return m_databasePathChanged;
 }
 
 
@@ -228,6 +242,35 @@ void PreferencesDialog::cacheImagesTableViewCheckBoxChanged()
                              QMessageBox::Ok);
 }
 
+void PreferencesDialog::browseDbPathButtonClicked()
+{
+    QString currentDbPath;
+    if (!ui->dbPathLineEdit->text().isEmpty()) {
+        currentDbPath = ui->dbPathLineEdit->text();
+    } else {
+        currentDbPath = QFileInfo(DatabaseManager::getInstance()
+                                  .getDatabasePath()).dir().path();
+    }
+
+    QString newPath = QFileDialog::getExistingDirectory(this,
+                                                        tr("Select database directory"),
+                                                        currentDbPath,
+                                                        QFileDialog::ShowDirsOnly
+                                                        | QFileDialog::DontResolveSymlinks);
+    if (!newPath.isEmpty()) {
+        ui->dbPathLineEdit->setText(newPath);
+        ui->dbPathLineEdit->setEnabled(true);
+        updateDatabasePath();
+    }
+}
+
+void PreferencesDialog::resetDbPathButtonClicked()
+{
+    ui->dbPathLineEdit->clear();
+    ui->dbPathLineEdit->setEnabled(false);
+    updateDatabasePath();
+}
+
 
 //-----------------------------------------------------------------------------
 // Private
@@ -274,6 +317,15 @@ void PreferencesDialog::loadSettings()
     if (m_settingsManager->isCloudSyncActive())
         ui->cloudStatusComboBox->setCurrentIndex(1);
 
+    //database path
+    //TODO: load path from setting or db manager?mhh
+    QString dbPath = m_settingsManager->restoreCustomDatabaseDir();
+    if (dbPath.isEmpty()) {
+        dbPath = QFileInfo(DatabaseManager::getInstance()
+                                          .getDatabasePath()).dir().path();
+    }
+    ui->dbPathLineEdit->setText(dbPath);
+
     //form view background color
     int colorCodeIndex = m_settingsManager->restoreProperty(
                 "backgroundColorIndex", "formView").toInt();
@@ -301,4 +353,10 @@ void PreferencesDialog::loadSettings()
     if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())
         ui->darkToolbarAmbianceCheckBox->setChecked(true);
 #endif //Q_OS_LINUX
+}
+
+void PreferencesDialog::updateDatabasePath()
+{
+    m_settingsManager->saveCustomDatabaseDir(ui->dbPathLineEdit->text());
+    m_databasePathChanged = true;
 }

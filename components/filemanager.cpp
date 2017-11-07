@@ -90,8 +90,8 @@ void FileTask::startFileOp()
 FileManager::FileManager(QObject *parent) :
     QObject(parent), m_fileOpThread(0)
 {
-    QString dataDir = QStandardPaths::standardLocations(
-                QStandardPaths::DataLocation).at(0);
+    QString dataDir = QFileInfo(DatabaseManager::getInstance()
+                                .getDatabasePath()).dir().path();
 #ifdef Q_OS_WIN
     dataDir.replace("\\", "/");
 #endif // Q_OS_WIN

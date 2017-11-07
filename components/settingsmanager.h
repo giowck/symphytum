@@ -169,6 +169,12 @@ public:
     /** Restore list of files to watch/check for changes */
     QHash<QString,QDateTime> restoreToWatchList();
 
+    /** Save custom database directory */
+    void saveCustomDatabaseDir(const QString &dbDir);
+
+    /** Restore custom database directory */
+    QString restoreCustomDatabaseDir();
+
 private:
     QSettings *m_settings;
 };

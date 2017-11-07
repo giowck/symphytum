@@ -385,6 +385,24 @@ QHash<QString, QDateTime> SettingsManager::restoreToWatchList()
     return map;
 }
 
+void SettingsManager::saveCustomDatabaseDir(const QString &dbDir)
+{
+    m_settings->beginGroup("database");
+    m_settings->setValue("customDirectory", dbDir);
+    m_settings->endGroup();
+}
+
+QString SettingsManager::restoreCustomDatabaseDir()
+{
+    QString d;
+
+    m_settings->beginGroup("database");
+    d = m_settings->value("customDirectory").toString();
+    m_settings->endGroup();
+
+    return d;
+}
+
 
 //-----------------------------------------------------------------------------
 // Private

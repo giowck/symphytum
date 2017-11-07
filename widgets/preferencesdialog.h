@@ -48,6 +48,9 @@ public:
     /** Return whether the appearence config changed */
     bool appearanceChanged();
 
+    /** Return wheter the database path was changed */
+    bool databasePathChanged();
+
 private slots:
     void currentCategoryChanged();
     void updatesComboBoxChanged();
@@ -59,16 +62,20 @@ private slots:
     void darkToolbarAmbianceCheckChanged();
     void tableViewRowSizeSpinChanged();
     void cacheImagesTableViewCheckBoxChanged();
+    void browseDbPathButtonClicked();
+    void resetDbPathButtonClicked();
     
 private:
     void initSettings();
     void loadSettings();
+    void updateDatabasePath();
 
     Ui::PreferencesDialog *ui;
     SettingsManager *m_settingsManager;
     bool m_cloudChanged;
     bool m_softwareReset;
     bool m_appearanceChanged;
+    bool m_databasePathChanged;
 };
 
 #endif // PREFERENCESDIALOG_H

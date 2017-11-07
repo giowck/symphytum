@@ -296,6 +296,41 @@ void MainWindow::preferenceActionTriggered()
         box2.exec();
         qApp->quit();
     }
+    if (dialog.databasePathChanged()) {
+        QMessageBox::information(this, tr("Database Directory Change"),
+                                 tr("The database directory change will not take effect"
+                                    " until software restart."
+                                    "<br />Use the backup function to export and import your "
+                                    "data to the new location."
+                                    "<br />If the selected directory is empty,"
+                                    " a new database file will be created."));
+
+        //if sync enabled close session
+        if (SyncSession::IS_ENABLED) {
+            if (SyncSession::IS_ONLINE && (!SyncSession::IS_READ_ONLY)) {
+                QProgressDialog pd(this);
+                pd.setWindowModality(Qt::WindowModal);
+                pd.setWindowTitle(tr("Closing Session"));
+                pd.setLabelText(tr("Closing sync session... Please wait!"));
+                pd.setRange(0, 0);
+                pd.setValue(-1);
+
+                connect(m_syncEngine, SIGNAL(syncSessionClosed()),
+                        &pd, SLOT(close()));
+                m_syncEngine->startCloseCloudSession();
+
+                //wait until session is closed
+                pd.exec();
+
+                //disable sync
+                m_settingsManager->setCloudSyncActive(false);
+
+                //cause conflict
+                m_settingsManager->saveCloudLocalDataChanged(true);
+                m_settingsManager->saveCloudSessionKey("invalid");
+            }
+        }
+    }
 }
 
 void MainWindow::formViewModeTriggered()

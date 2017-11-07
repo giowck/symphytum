@@ -8,6 +8,7 @@
 
 #include "databasemanager.h"
 #include "../utils/definitionholder.h"
+#include "../components/settingsmanager.h"
 #include "filemanager.h"
 
 #include <QtCore/QFile>
@@ -127,8 +128,12 @@ QString DatabaseManager::getDatabasePath()
 
 DatabaseManager::DatabaseManager()
 {
-    QString dataDir = QStandardPaths::standardLocations(
-                QStandardPaths::DataLocation).at(0);
+    SettingsManager sm;
+    QString dataDir = sm.restoreCustomDatabaseDir();
+    if (dataDir.isEmpty()) { //use default
+        dataDir = QStandardPaths::standardLocations(
+                    QStandardPaths::DataLocation).at(0);
+    }
     m_databaseName = "data.db";
     m_databasePath = dataDir.append("/");
     m_databasePath.append(m_databaseName);
