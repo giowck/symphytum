@@ -265,19 +265,19 @@ void MainWindow::preferenceActionTriggered()
         pd->setValue(2);
         qApp->processEvents();
 
+        //delete all files
+        FileManager fm(this);
+        fm.removeAllFiles();
+        pd->setValue(3);
+        qApp->processEvents();
+
         //close database
         DatabaseManager::getInstance().destroy();
-        pd->setValue(3);
+        pd->setValue(4);
         qApp->processEvents();
 
         //delete db
         QFile::remove(fullDbPath);
-        pd->setValue(4);
-        qApp->processEvents();
-
-        //delete all files
-        FileManager fm(this);
-        fm.removeAllFiles();
         pd->setValue(5);
         qApp->processEvents();
 
