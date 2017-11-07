@@ -317,7 +317,7 @@ public:
      * Set cached current collection id dirty
      * so on next getCurrentCollectionId() call
      * current collection id is read from database
-     * and cache updqated. This is used after a cloud sync
+     * and cache updated. This is used after a cloud sync
      * where collection ids may change
      */
     void setDirtyCurrentColleectionId();
