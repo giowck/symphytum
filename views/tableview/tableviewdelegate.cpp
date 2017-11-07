@@ -19,6 +19,7 @@
 #include "../../components/filemanager.h"
 #include "tableview.h"
 #include "../../components/alarmmanager.h"
+#include "../../components/settingsmanager.h"
 
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QCheckBox>
@@ -32,6 +33,7 @@
 #include <QtGui/QPainter>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QDateTimeEdit>
+#include <QtGui/QPixmapCache>
 
 
 //-----------------------------------------------------------------------------
@@ -42,6 +44,13 @@ TableViewDelegate::TableViewDelegate(QObject *parent) :
     QStyledItemDelegate(parent), m_metadataEngine(0)
 {
     m_metadataEngine = &MetadataEngine::getInstance();
+
+    //check if cache images enabled
+    SettingsManager sm;
+    m_cacheImages = sm.restoreProperty("cacheImages", "tableView").toBool();
+    if (m_cacheImages) {
+        QPixmapCache::setCacheLimit(10240 * 200); //200 * 10MB ~ 2GB RAM needed
+    }
 }
 
 void TableViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
@@ -803,7 +812,22 @@ void TableViewDelegate::paintImageType(QPainter *painter,
     if (fileHash.isEmpty()) return;
 
     filePath = fm.getFilesDirectory() + fileHash;
-    QPixmap pixmap(filePath);
+    QPixmap pixmap;
+
+    //use caching if enabled
+    if (m_cacheImages) {
+        if (!QPixmapCache::find(fileHash, &pixmap)) {
+            pixmap.load(filePath);
+            pixmap = pixmap.scaled(QSize(opt.rect.width(),
+                                         opt.rect.height()),
+                                   Qt::KeepAspectRatio,
+                                   Qt::FastTransformation);
+            QPixmapCache::insert(fileHash, pixmap);
+        }
+    } else {
+        pixmap.load(filePath);
+    }
+
     QRect imageRect = pixmap.scaled(QSize(opt.rect.width(),
                                           opt.rect.height()),
                                     Qt::KeepAspectRatio,

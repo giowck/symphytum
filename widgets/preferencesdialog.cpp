@@ -15,6 +15,9 @@
 #include "../utils/definitionholder.h"
 
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QMessageBox>
 
 
 //-----------------------------------------------------------------------------
@@ -62,6 +65,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(darkToolbarAmbianceCheckChanged()));
     connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
             this, SLOT(tableViewRowSizeSpinChanged()));
+    connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
+            this, SLOT(cacheImagesTableViewCheckBoxChanged()));
 
     if (DefinitionHolder::APP_STORE) {
         //disable updates
@@ -212,6 +217,17 @@ void PreferencesDialog::tableViewRowSizeSpinChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::cacheImagesTableViewCheckBoxChanged()
+{
+    bool b = ui->cacheImagesTableViewCheckBox->isChecked();
+
+    m_settingsManager->saveProperty("cacheImages", "tableView", b);
+
+    QMessageBox::information(this, tr("Restart required!"),
+                             tr("A restart is required for this setting to take effect."),
+                             QMessageBox::Ok);
+}
+
 
 //-----------------------------------------------------------------------------
 // Private
@@ -274,6 +290,11 @@ void PreferencesDialog::loadSettings()
     if (tableRowSize) {
         ui->tableRowSizeSpinBox->setValue(tableRowSize);
     }
+
+    //table view img caching
+    bool cacheImg =  m_settingsManager->restoreProperty(
+                "cacheImages", "tableView").toBool();
+    ui->cacheImagesTableViewCheckBox->setChecked(cacheImg);
 
 #ifdef Q_OS_LINUX
     //dark toolbar ambiance style

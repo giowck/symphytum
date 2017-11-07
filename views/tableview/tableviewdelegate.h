@@ -79,6 +79,7 @@ private:
     void setDateTypeEditorData(QWidget *editor, const QModelIndex &index) const;
 
     MetadataEngine *m_metadataEngine;
+    bool m_cacheImages;
 };
 
 #endif // TABLEVIEWDELEGATE_H
