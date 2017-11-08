@@ -4,7 +4,7 @@
 #define MyAppName "Symphytum"
 #define MyAppVersion "2.2"
 #define MyAppPublisher "Symphytum Developers"
-#define MyAppURL "http://user.github.io/symphytum/"
+#define MyAppURL "http://giowck.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
 
 [Setup]
