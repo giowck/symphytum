@@ -32,31 +32,103 @@
 <a name="symphytum" class="anchor" href="#symphytum"><span class="octicon octicon-link"></span></a>Symphytum Update</h1>   
 
 <p>
-<h2>New Version: 2.1</h2><br />
+<h2>New Version: 2.2</h2><br />
 A new software version is available.
 <br />
 Updating Symphytum is save, all your data and files won't be deleted or altered.
 <br /><br />
 What's new?
+
+<h3 id="newfeatures">New Features</h3>
+
 <ul>
-<li>Ability to hide the collection sidebar from the view menu</li>
-<li>Polish traslation added (thanks to MCbx)</li>
-<li>Dropbox API migration to v2 (v1 will stop working by 2017-06-28)</li>
-<li>Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS</li>
-<li>Bugfixes related to collection management</li>
+<li>New preference setting for font size in form view</li>
+
+<li>Highlight search results in form view, closes #34</li>
+
+<li>New setting to allow more than one line in table view for each row</li>
+
+<li>New setting to cache images in table view, fixes #37</li>
+
+<li>Allow custom database directory in settings, closes #38</li>
+</ul>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+<li>Show taskbar progress on windows during sync</li>
+
+<li>Update dropbox python sdk, fixes #35</li>
+</ul>
+
+<h3 id="bugfixes">Bug Fixes</h3>
+
+<ul>
+<li>Enable high DPI support on windows and linux, fixes #18</li>
+
+<li>Disable completely editing, including layout changes, when read only sync session is active, fixes #36</li>
+
+<li>Fix font issue where characters overlap when printing on windows</li>
+
+<li>Fix missing svg dependency windows setup script</li>
+
+<li>Add missing dependencies and langauges to windows installer, fixes #39</li>
+
+<li>Fix dependencies in PKGBUILD</li>
+
+<li>Windows, fix wrong text color in table view of selected rows (white on light blue)</li>
+
+<li>Allow removing items in combo box fields, fixes #42</li>
+
+<li>Escape single and double quotes characters for combobox fields, should also prevent SQL injections, fixes #40</li>
+
+<li>Hide progress dialog on optimize database size when finished, fixes #32</li>
+
+<li>Select correct collection when a collection is added or deleted, fixes #43</li>
+
+<li>Escape double quotes in field names correctly, fixes #29</li>
 </ul>
 <br />
 <h2>WARNING: Please create a backup (File->Backup) before upgrading to be on the safe side.</h2>
 <h2>WARNING: Dropbox users please read the following:</h2>
 <p>
-With the migration to the Dropbox API v2 the old access token (Dropbox v1 API) is recognized as invalid and an error is shown "Internal Server Error".
+With the migration to the Dropbox API v2 (since v2.1) the old access token (Dropbox v1 API) is recognized as invalid and an error is shown "Internal Server Error".
 
 As a workaround it is necessary to disable the cloud sync from the settings (Menu->Tools->Settings->Cloud Sync-> change status to "disabled"). 
 Then restart symphytum and start the sync process over again.</p>
 <br /><br />
 
 <pre>
-CHANGELOG
+Complete Changelog
+
+Version 2.2
+===========
+
+[New Features]
+- New preference setting for font size in form view
+- Highlight search results in form view, closes #34
+- New setting to allow more than one line in table view for each row
+- New setting to cache images in table view, fixes #37
+- Allow custom database directory in settings, closes #38
+
+[Improvements]
+- Show taskbar progress on windows during sync
+- Update dropbox python sdk, fixes #35
+
+[Bug Fixes]
+- Enable high DPI support on windows and linux, fixes #18
+- Disable completely editing, including layout changes, when read only sync session is active, fixes #36
+- Fix font issue where characters overlap when printing on windows
+- Fix missing svg dependency windows setup script
+- Add missing dependencies and langauges to windows installer, fixes #39
+- Fix dependencies in PKGBUILD
+- Windows, fix wrong text color in table view of selected rows (white on light blue)
+- Allow removing items in combo box fields, fixes #42
+- Escape single and double quotes characters for combobox fields, should also prevent SQL injections, fixes #40
+- Hide progress dialog on optimize database size when finished, fixes #32
+- Select correct collection when a collection is added or deleted, fixes #43
+- Escape double quotes in field names correctly, fixes #29
+
 
 Version 2.1
 ===========
