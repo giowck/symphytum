@@ -3384,7 +3384,7 @@ Dateiarchiv reduziert um %2 MiB</translation>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="365"/>
         <source>Row size:</source>
-        <translation>Zeilengröße:</translation>
+        <translation>Reihengröße:</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="372"/>
