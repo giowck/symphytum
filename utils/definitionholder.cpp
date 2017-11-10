@@ -25,6 +25,7 @@ QString DefinitionHolder::DOWNLOAD_URL = "https://giowck.github.io/symphytum/upd
 int DefinitionHolder::SOFTWARE_BUILD = 7;
 int DefinitionHolder::DATABASE_VERSION = 2;
 bool DefinitionHolder::APP_STORE = false;
+bool DefinitionHolder::APPIMAGE_LINUX = false;
 QString DefinitionHolder::COPYRIGHT =
         QString("Copyright &copy; 2014-%1 Symphytum Developers"
                 "<br />Copyright &copy; 2012-2014 GIOWISYS Software UG (haftungsbeschr%2nkt)")

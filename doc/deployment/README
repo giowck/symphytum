@@ -47,5 +47,18 @@ Archlinux:
 1. Adjust PKGBUILD script from the installers directory
 2. copy source tarball to current build directory
 3. run updpkgsums to update checksums for source tarball
-4. run makepkg -i to build pacman package and to install it
+4. makepkg --printsrcinfo > .SRCINFO 
+5. run makepkg -i to build pacman package and to install it
 
+AppImage:
+1. Use Ubuntu 14.04 LTS
+2. Install missing deps:
+   sudo apt install build-essentials mesa-common-dev libglu1-mesa-dev libmysqlclient18 libpq5 libodbc1 libsybdb5
+3. Download Qt installer from qt.io/download
+4. Set APPIMAGE_LINUX to true in DefinitionHolder and then compile project in release mode
+5. Download linuxdeployqt from https://github.com/probonopd/linuxdeployqt
+6. Create myappimg folder on desktop and place files from stuff/deb/ here:
+   copy the compiled symphytum binary to myappimg/usr/bin
+   copy the whole usr/share folder from stuff/deb to myappimg/usr/share
+7. Create appimage with:
+   ./linuxdeployqt-continuous-x86_64.AppImage /home/user/Desktop/myappimg/usr/share/applications/symphytum.desktop  -bundle-non-qt-libs -no-translations -appimage -qmake=/home/user/Qt/5.9.2/gcc_64/bin/qmake

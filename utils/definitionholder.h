@@ -33,6 +33,7 @@ public:
     static int SOFTWARE_BUILD;     /**< Build no. of the software          */
     static int DATABASE_VERSION;   /**< Version no. of the database        */
     static bool APP_STORE;         /**< Deployment target is an app store  */
+    static bool APPIMAGE_LINUX;    /**< Deployment target is an AppImage   */
 
 private:
     DefinitionHolder() {} //static only

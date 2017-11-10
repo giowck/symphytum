@@ -8,6 +8,7 @@
 
 #include "dropboxsyncdriver.h"
 #include "../settingsmanager.h"
+#include "../../utils/definitionholder.h"
 
 #include <QtCore/QFileInfo>
 #include <QtWidgets/QApplication>
@@ -342,7 +343,10 @@ void DropboxSyncDriver::startRequest()
 #endif
 #ifdef Q_OS_LINUX
     pythonInterpreterPath = "python3";
-    args.append("/usr/share/symphytum/sync/dropbox_client.py");
+    if(DefinitionHolder::APPIMAGE_LINUX)
+        args.append(QCoreApplication::applicationDirPath() + "/../share/symphytum/sync/dropbox_client.py");
+    else
+        args.append("/usr/share/symphytum/sync/dropbox_client.py");
 #endif
 
     //decode access token
