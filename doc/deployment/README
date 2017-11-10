@@ -51,14 +51,32 @@ Archlinux:
 5. run makepkg -i to build pacman package and to install it
 
 AppImage:
-1. Use Ubuntu 14.04 LTS
-2. Install missing deps:
+-> Create or reuse from a previous AppImage (see --appimage-extract command) the pyinstaller package for linux
+   on for example Ubuntu 16.04 LTS (did not work on 14.04):
+   sudo apt install python-pip
+   pip install pyinstaller
+   pip install dropbox
+-> Copy the dropbox_client.py file to a work directory
+-> Build pyinstaller package:
+   pyinstaller dropbox_client.py
+-> Copy the dist/dropbox_client directory for later use.
+-> Use Ubuntu 14.04 LTS for the AppImage creation
+-> Install missing deps:
    sudo apt install build-essentials mesa-common-dev libglu1-mesa-dev libmysqlclient18 libpq5 libodbc1 libsybdb5
-3. Download Qt installer from qt.io/download
-4. Set APPIMAGE_LINUX to true in DefinitionHolder and then compile project in release mode
-5. Download linuxdeployqt from https://github.com/probonopd/linuxdeployqt
-6. Create myappimg folder on desktop and place files from stuff/deb/ here:
+-> Download Qt installer from qt.io/download
+-> Set APPIMAGE_LINUX to true in DefinitionHolder and then compile project in release mode
+-> Download linuxdeployqt from https://github.com/probonopd/linuxdeployqt
+-> Download AppImageKit from https://github.com/AppImage/AppImageKit:
+   wget "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
+   chmod a+x appimagetool-x86_64.AppImage
+-> Create myappimg folder on desktop and place files from stuff/deb/ here:
    copy the compiled symphytum binary to myappimg/usr/bin
    copy the whole usr/share folder from stuff/deb to myappimg/usr/share
-7. Create appimage with:
-   ./linuxdeployqt-continuous-x86_64.AppImage /home/user/Desktop/myappimg/usr/share/applications/symphytum.desktop  -bundle-non-qt-libs -no-translations -appimage -qmake=/home/user/Qt/5.9.2/gcc_64/bin/qmake
+   remove dropbox folder and dropbox_client.py from myappimg/usr/share/symphytum/sync/
+-> Create the AppDir with:
+   ./linuxdeployqt-continuous-x86_64.AppImage /home/user/Desktop/myappimg/usr/share/applications/symphytum.desktop  -bundle-non-qt-libs -no-translations -qmake=/home/user/Qt/5.9.2/gcc_64/bin/qmake
+-> Integrate the pyinstaller package from above (after step above to avoid missing lib errors, pyinstaller is already self contained):
+   move the previously created pyinstaller package (dropbox_client folder from above) to myappimg/usr/share/symphytum/sync/
+   now the dropbox driver executable should be at myappimg/usr/share/symphytum/sync/dropbox_client/dropbox_client
+-> Create the final AppImage with:
+   ./appimagetool-x86_64.AppImage /home/user/Desktop/myappimg

@@ -342,11 +342,13 @@ void DropboxSyncDriver::startRequest()
     args.append(path);
 #endif
 #ifdef Q_OS_LINUX
-    pythonInterpreterPath = "python3";
-    if(DefinitionHolder::APPIMAGE_LINUX)
-        args.append(QCoreApplication::applicationDirPath() + "/../share/symphytum/sync/dropbox_client.py");
-    else
+    if(DefinitionHolder::APPIMAGE_LINUX) {
+        pythonInterpreterPath = QCoreApplication::applicationDirPath()
+                + "/../share/symphytum/sync/dropbox_client/dropbox_client";
+    } else {
+        pythonInterpreterPath = "python3";
         args.append("/usr/share/symphytum/sync/dropbox_client.py");
+    }
 #endif
 
     //decode access token
