@@ -372,8 +372,8 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
                 notDecimal = ',';
             else
                 notDecimal = '.';
-            //create data
-            data = l->text().remove(notDecimal).toDouble();
+            //create data depending on locale for decimal point
+            data = locale.toDouble(l->text().remove(notDecimal));
         }
     }
         break;

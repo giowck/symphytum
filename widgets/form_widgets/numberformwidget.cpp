@@ -114,7 +114,7 @@ QVariant NumberFormWidget::getData() const
     //toDouble handles automagically (LOL)
     //all conversions between the different formats
     bool ok;
-    double d = s.toDouble(&ok);
+    double d = locale.toDouble(s, &ok);
     if (ok)
         return d;
     else
@@ -179,7 +179,7 @@ void NumberFormWidget::validateData()
     FormWidgetValidator validator(editMetadata, MetadataEngine::NumericType);
     QString errorMessage;
 
-    valid = validator.validate(m_lineEdit->text(), errorMessage);
+    valid = validator.validate(this->getData(), errorMessage);
 
     if (valid) {
         emit dataEdited();
