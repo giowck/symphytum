@@ -179,7 +179,8 @@ void CollectionListView::deleteCollection()
 
 void CollectionListView::duplicateCollection()
 {
-    int collectionId = MetadataEngine::getInstance().getCurrentCollectionId();
+    MetadataEngine *m = &MetadataEngine::getInstance();
+    int collectionId = m->getCurrentCollectionId();
 
     if ((collectionId == 0) || SyncSession::IS_READ_ONLY) return; //0 stands for invalid
 
@@ -198,19 +199,26 @@ void CollectionListView::duplicateCollection()
     box.setWindowModality(Qt::WindowModal);
     box.exec();
 
+    bool copyOnlyStructureData;
     if (box.clickedButton() == onlyStructureButton) {
-        //TODO
-    } else if (box.clickedButton() == (QAbstractButton*) fullDataButton) {
-        //TODO
+        copyOnlyStructureData = true;
+    } else if (box.clickedButton() == fullDataButton) {
+        copyOnlyStructureData = false;
     } else {
         return;
     }
 
+    //copy collection metadata (structure)
+    m->duplicateCollection(collectionId, copyOnlyStructureData);
 
+    //get newly created collection id
+    int duplicatedCollectionId = m->getAllCollections().last().toInt();
 
-    //clear undo stack since this action is not undoable
-    //QUndoStack *stack = MainWindow::getUndoStack();
-    //if (stack) stack->clear(); //TODO manage undo like new collection
+    //copy settings about collection's column positions in TableView
+    SettingsManager s;
+    QString settingsKey = QString("collection_") + QString::number(collectionId);
+    QString settingsKeyDup = QString("collection_") + QString::number(duplicatedCollectionId);
+    s.duplicateObjectProperties(settingsKey, settingsKeyDup);
 
     //FIXME: temporary workaround for listview not updating the items
     //needs investigation, caused by migration from Qt4 to Qt5
@@ -218,6 +226,10 @@ void CollectionListView::duplicateCollection()
     //this is a bug in the model or something changed in MVC Qt5
     this->detachModel();
     this->attachModel();
+
+    //set new collection as current
+    QModelIndex index = m_model->index(m_model->rowCount() - 1, 1);
+    setCurrentIndex(index);
 
     //set local data changed
     SyncSession::LOCAL_DATA_CHANGED = true;

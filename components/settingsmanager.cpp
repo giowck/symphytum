@@ -97,6 +97,13 @@ void SettingsManager::deleteObjectProperties(const QString &objectName)
     m_settings->remove(objectName);
 }
 
+void SettingsManager::duplicateObjectProperties(const QString &originalObjectName,
+                                                const QString &duplicateObjectName)
+{
+    //TODO: duplicate object with all properties
+    //m_settings->
+}
+
 void SettingsManager::saveSoftwareBuild()
 {
     m_settings->beginGroup(DefinitionHolder::NAME.toLower());

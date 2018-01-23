@@ -462,6 +462,12 @@ void MetadataEngine::deleteCollection(int collectionId)
     db.commit();
 }
 
+void MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
+{
+    //TODO: metadata, content, files, alarms, files metadata
+    //TODO: name of duplicate is oldname + " copy"
+}
+
 void MetadataEngine::deleteAllRecords(int collectionId)
 {
     QString table = getTableName(collectionId);
