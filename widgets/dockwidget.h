@@ -41,6 +41,9 @@ public:
     /** Create a new collection */
     void createNewCollection();
 
+    /** Duplicate selected collection */
+    void duplicateCollection();
+
     /** Delete selected collection */
     void deleteCollection();
 
