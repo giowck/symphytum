@@ -100,8 +100,20 @@ void SettingsManager::deleteObjectProperties(const QString &objectName)
 void SettingsManager::duplicateObjectProperties(const QString &originalObjectName,
                                                 const QString &duplicateObjectName)
 {
-    //TODO: duplicate object with all properties
-    //m_settings->
+    QHash<QString, QVariant> originalProperties;
+    m_settings->beginGroup(originalObjectName);
+    QStringList originalKeys = m_settings->allKeys();
+    foreach (QString key, originalKeys) {
+        originalProperties.insert(key, m_settings->value(key));
+    }
+    m_settings->endGroup();
+
+    m_settings->beginGroup(duplicateObjectName);
+    QHash<QString, QVariant>::const_iterator it;
+    for (it = originalProperties.begin(); it != originalProperties.end(); ++it) {
+        m_settings->setValue(it.key(), it.value());
+    }
+    m_settings->endGroup();
 }
 
 void SettingsManager::saveSoftwareBuild()
