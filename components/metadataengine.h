@@ -232,8 +232,9 @@ public:
      * @brief Duplicate a collection including metadata, contents, alarms, files and so on.
      * @param collectionId - collection to duplicate
      * @param copyMetadataOnly - whether content data should be excluded, ie. copy structure only (metadata)
+     * @return id - the newly created collection id
      */
-    void duplicateCollection(int collectionId, bool copyMetadataOnly);
+    int duplicateCollection(int collectionId, bool copyMetadataOnly);
 
     /** Delete all records from the specified collection */
     void deleteAllRecords(int collectionId);

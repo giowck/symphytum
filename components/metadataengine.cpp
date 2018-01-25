@@ -16,6 +16,8 @@
 #include <QtCore/QStringList>
 #include <QtCore/QDateTime>
 #include <QtCore/QCryptographicHash>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QApplication>
 
 
 //-----------------------------------------------------------------------------
@@ -462,10 +464,78 @@ void MetadataEngine::deleteCollection(int collectionId)
     db.commit();
 }
 
-void MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
+int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
 {
-    //TODO: metadata, content, files, alarms, files metadata
-    //TODO: name of duplicate is oldname + " copy"
+    int id = 0;
+
+    CollectionType type = StandardCollection; //for now the only supported type
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+
+    //since a new entry in the collection table
+    //is added by the CollectionListView
+    //get last created collection
+    query.exec("SELECT _id FROM collections ORDER BY _id DESC");
+
+    if (query.next()) {
+        //get the first, which is the last created collection
+        id = query.value(0).toInt();
+    }
+
+    //create table name hash
+    QByteArray dateArray = QDateTime::currentDateTime().toString().toUtf8();
+    QByteArray hash = QCryptographicHash::hash(dateArray,
+                                               QCryptographicHash::Md5);
+    QString tableName("c" + hash.toHex());
+    QString metadataTableName = tableName + "_metadata";
+
+    //start transaction to speed up writes
+    db.transaction();
+
+    //update collection meta info
+    query.prepare("UPDATE collections SET type=:type, table_name=:table_name WHERE _id=:id");
+    query.bindValue(":type", (int) type);
+    query.bindValue(":table_name", tableName);
+    query.bindValue(":id", id);
+    query.exec();
+
+    //copy collection structure
+    QString originalTableName = getTableName(collectionId);
+    QString originalTableMetadataName = originalTableName + "_metadata";
+    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+               .arg(tableName).arg(originalTableName));
+
+    //copy metadata table
+    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+               .arg(metadataTableName).arg(originalTableMetadataName));
+
+    query.exec(QString("INSERT INTO '%1' SELECT * FROM '%2'")
+               .arg(metadataTableName).arg(originalTableMetadataName));
+
+    //copy content data
+    if (!copyMetadataOnly) {
+
+        //TODO: content, files, alarms, files metadata
+
+        QProgressDialog *pd = new QProgressDialog(0);
+        int progressSteps = 1;
+        pd->setWindowModality(Qt::ApplicationModal);
+        pd->setWindowTitle(tr("Progress"));
+        pd->setLabelText(tr("Duplicating collection structure... Please wait!"));
+        pd->setRange(0, progressSteps);
+        pd->setValue(1);
+        pd->show();
+        qApp->processEvents();
+
+        //delete since no parent
+        pd->deleteLater();
+    }
+
+    //commit transaction
+    db.commit();
+
+    return id;
 }
 
 void MetadataEngine::deleteAllRecords(int collectionId)

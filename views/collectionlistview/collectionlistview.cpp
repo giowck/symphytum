@@ -208,11 +208,11 @@ void CollectionListView::duplicateCollection()
         return;
     }
 
-    //copy collection metadata (structure)
-    m->duplicateCollection(collectionId, copyOnlyStructureData);
+    //add item
+    m_model->addCollection(m->getCollectionName(collectionId).append(tr(" Copy")));
 
-    //get newly created collection id
-    int duplicatedCollectionId = m->getAllCollections().last().toInt();
+    //copy collection metadata (structure)
+    int duplicatedCollectionId = m->duplicateCollection(collectionId, copyOnlyStructureData);
 
     //copy settings about collection's column positions in TableView
     SettingsManager s;
