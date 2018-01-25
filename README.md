@@ -26,5 +26,5 @@ Symphytum became open source software after the original founder company, GIOWIS
 The software is now licensed under the BSD license.
 Contributions are welcome.    
 
-Copyright (c) 2014-2017 Symphytum Developers
+Copyright (c) 2014-2018 Symphytum Developers
 
