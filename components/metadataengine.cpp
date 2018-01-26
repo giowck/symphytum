@@ -8,6 +8,7 @@
 
 #include "metadataengine.h"
 #include "databasemanager.h"
+#include "alarmmanager.h"
 #include "../models/standardmodel.h"
 
 #include <QtSql/QSqlQuery>
@@ -472,7 +473,6 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
     QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
     QSqlQuery query(db);
 
-
     //since a new entry in the collection table
     //is added by the CollectionListView
     //get last created collection
@@ -516,17 +516,39 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
     //copy content data
     if (!copyMetadataOnly) {
 
-        //TODO: content, files, alarms, files metadata
+        //TODO: content, files (use file amanager to add because of syc session need to upload ew files), files metadata
 
         QProgressDialog *pd = new QProgressDialog(0);
-        int progressSteps = 1;
+        int progressSteps = 4;
         pd->setWindowModality(Qt::ApplicationModal);
         pd->setWindowTitle(tr("Progress"));
-        pd->setLabelText(tr("Duplicating collection structure... Please wait!"));
+        pd->setLabelText(tr("Duplicating collection data... Please wait!"));
         pd->setRange(0, progressSteps);
-        pd->setValue(1);
+        pd->setValue(progressSteps++);
         pd->show();
         qApp->processEvents();
+
+        //copy collection data
+        query.exec(QString("INSERT INTO '%1' SELECT * FROM '%2'")
+                   .arg(tableName).arg(originalTableName));
+        pd->setValue(progressSteps++);
+        qApp->processEvents();
+
+        //copy alarms
+        AlarmManager am(this);
+        QList<AlarmManager::Alarm> alarmList = am.getAllAlarms(collectionId);
+        foreach (AlarmManager::Alarm a, alarmList) {
+            am.addOrUpdateAlarm(id, a.alarmFieldId, a.alarmRecordId, a.alarmDateTime);
+        }
+        pd->setValue(progressSteps++);
+        qApp->processEvents();
+
+        //copy files metadata
+        pd->setValue(progressSteps++);
+        qApp->processEvents();
+
+        //copy files
+        //TODO: use file manager to handle uploads cloud list
 
         //delete since no parent
         pd->deleteLater();

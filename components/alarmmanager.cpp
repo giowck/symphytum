@@ -240,6 +240,34 @@ AlarmManager::Alarm AlarmManager::getAlarm(const int alarmId) const
     return a;
 }
 
+QList<AlarmManager::Alarm> AlarmManager::getAllAlarms(const int collectionId)
+{
+    QList<Alarm> alarmList;
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    if (collectionId == -1) {
+        QString sql = QString("SELECT * FROM \"alarms\"");
+        query.exec(sql);
+    } else {
+        query.prepare("SELECT * FROM \"alarms\" WHERE \"collection_id\"=:collectionId");
+        query.bindValue(":collectionId", collectionId);
+        query.exec();
+    }
+
+    while (query.next()) {
+        Alarm a;
+        a.alarmId = query.value(0).toInt();
+        a.alarmCollectionId = query.value(1).toInt();
+        a.alarmFieldId = query.value(2).toInt();
+        a.alarmRecordId = query.value(3).toInt();
+        a.alarmDateTime = query.value(4).toDateTime();
+        alarmList.append(a);
+    }
+
+    return alarmList;
+}
+
 
 //-----------------------------------------------------------------------------
 // Private

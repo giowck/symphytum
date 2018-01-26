@@ -97,6 +97,13 @@ public:
     /** Get specified alarm */
     Alarm getAlarm(const int alarmId) const;
 
+    /**
+     * @brief Get all alarms
+     * @param collectionId - optional filter for colelction id, if -1 all alarms are returned
+     * @return list of all alarms, optinally restricted by collection id
+     */
+    QList<Alarm> getAllAlarms(const int collectionId = -1);
+
 private:
 
     MetadataEngine *m_metadatEngine;
