@@ -9,6 +9,7 @@
 #include "metadataengine.h"
 #include "databasemanager.h"
 #include "alarmmanager.h"
+#include "filemanager.h"
 #include "../models/standardmodel.h"
 
 #include <QtSql/QSqlQuery>
@@ -515,11 +516,8 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
 
     //copy content data
     if (!copyMetadataOnly) {
-
-        //TODO: content, files (use file amanager to add because of syc session need to upload ew files), files metadata
-
         QProgressDialog *pd = new QProgressDialog(0);
-        int progressSteps = 4;
+        int progressSteps = 3;
         pd->setWindowModality(Qt::ApplicationModal);
         pd->setWindowTitle(tr("Progress"));
         pd->setLabelText(tr("Duplicating collection data... Please wait!"));
@@ -543,12 +541,63 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
         pd->setValue(progressSteps++);
         qApp->processEvents();
 
-        //copy files metadata
-        pd->setValue(progressSteps++);
-        qApp->processEvents();
-
         //copy files
-        //TODO: use file manager to handle uploads cloud list
+        FileManager fm(this);
+        QString filesDirPath = fm.getFilesDirectory();
+        QStringList fileIdsToCopyList = getAllCollectionContentFiles(collectionId);
+        pd->setRange(0, fileIdsToCopyList.size());
+        progressSteps = 0;
+        pd->setValue(progressSteps);
+        qApp->processEvents();
+        foreach (QString f, fileIdsToCopyList) {
+            pd->setValue(++progressSteps);
+            qApp->processEvents();
+            QString filePath, fileHashName, fileName;
+            QDateTime date;
+            int id = f.toInt();
+            bool s = getContentFile(id, fileName, fileHashName, date);
+            if (s) {
+                filePath = filesDirPath + fileHashName;
+                //add file and wait until copy task complete
+                {
+                    QEventLoop loop;
+                    loop.connect(&fm, SIGNAL(addFileCompletedSignal(QString)), SLOT(quit()));
+                    loop.connect(&fm, SIGNAL(fileOpFailed()), SLOT(quit()));
+                    fm.startAddFile(filePath);
+                    loop.exec();
+                }
+
+                //update file metadata
+
+                //get new file duplicate id from original hash which is temporary used as file name
+                int duplicateFileId = 0;
+                query.prepare("SELECT _id FROM files WHERE name=:hashName");
+                query.bindValue(":hashName", fileHashName);
+                query.exec();
+                if (query.next()) {
+                    duplicateFileId = query.value(0).toInt();
+                }
+
+                //update duplicate collection data to use new duplicate file id instead of original file id
+                //TODO: what if file id list like when file type field??
+                /*query.prepare("UPDATE collections SET type=:type, table_name=:table_name WHERE _id=:id");
+                query.bindValue(":type", (int) type);
+                query.bindValue(":table_name", tableName);
+                query.bindValue(":id", id);
+                query.exec();*/
+                //FIXME: possible solution could be a map to bridge old id to new id and then for all field types
+                //check if image or file type and then get raw data and just replace old ids with new ids from map
+
+
+
+
+
+                //TODO: get new added file id (by using hash) and with it set it on new table where old id (original file id), but howo handle file list type?
+                //TODO: update hashname to real name in files table
+                //TODO update date to original
+
+            }
+        }
 
         //delete since no parent
         pd->deleteLater();
@@ -855,6 +904,23 @@ void MetadataEngine::removeContentFile(int fileId)
     db.commit();
 }
 
+void MetadataEngine::removeContentFile(const QStringList &fileIdList)
+{
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    //start transaction to speed up writes
+    db.transaction();
+
+    //rm files
+    QString sql = QString("DELETE FROM files WHERE _id IN (%1)")
+            .arg(fileIdList.join(","));
+    query.exec(sql);
+
+    //commit transaction
+    db.commit();
+}
+
 void MetadataEngine::updateContentFile(int fileId,
                                        const QString &fileName,
                                        const QString &hashName,
@@ -934,6 +1000,54 @@ int MetadataEngine::getContentFileId(const QString &hashName)
 
     return id;
 }
+
+QStringList MetadataEngine::getAllCollectionContentFiles(const int collectionId,
+                                                         const int fieldId)
+{
+    QStringList fileIdList;
+    QList<int> fileFieldList;
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    if (fieldId == -1) { //process all fields of type content file
+        int fieldsCount = getFieldCount(collectionId);
+        for (int i = 1; i < fieldsCount; i++) { //1 because of _id
+            switch (getFieldType(i, collectionId)) {
+            case MetadataEngine::ImageType:
+            case MetadataEngine::FilesType:
+                fileFieldList.append(i);
+                break;
+            default:
+                break;
+            }
+        }
+    } else { //process only specified field id
+        fileFieldList.append(fieldId);
+    }
+
+    //get all file ids
+    QString tableName = getTableName(collectionId);
+    foreach (int f, fileFieldList) {
+        QString sql = QString("SELECT \"%1\" FROM \"%2\"")
+                .arg(QString::number(f)).arg(tableName);
+        query.exec(sql);
+
+        while (query.next()) {
+            QString rawData = query.value(0).toString();
+            if (!rawData.isEmpty()) {
+                if (rawData.contains(",")) { //file list type has comma separated ids
+                    fileIdList.append(rawData.split(',',
+                                                    QString::SkipEmptyParts));
+                } else {
+                    fileIdList.append(rawData); //img type has only one id
+                }
+            }
+        }
+    }
+
+    return fileIdList;
+}
+
 
 void MetadataEngine::setDirtyCurrentColleectionId()
 {

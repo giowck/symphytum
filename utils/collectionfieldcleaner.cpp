@@ -8,10 +8,8 @@
 
 #include "collectionfieldcleaner.h"
 #include "../components/metadataengine.h"
-#include "../components/databasemanager.h"
 #include "../components/alarmmanager.h"
 
-#include <QtSql/QSqlQuery>
 #include <QtCore/QVariant>
 #include <QtCore/QStringList>
 
@@ -33,38 +31,10 @@ void CollectionFieldCleaner::cleanField(int collectionId, int fieldId)
     case MetadataEngine::FilesType:
     {
         //delete all files
-        QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
-        QSqlQuery query(db);
-
-        //start transaction to speed up writes
-        db.transaction();
-
         //get all file ids
-        QStringList fileIdList;
-        QString tableName = m_metadataEngine->getTableName(collectionId);
-        QString sql = QString("SELECT \"%1\" FROM \"%2\"")
-                             .arg(QString::number(fieldId)).arg(tableName);
-        query.exec(sql);
-
-        while (query.next()) {
-            QString rawData = query.value(0).toString();
-            if (!rawData.isEmpty()) {
-                if (rawData.contains(",")) { //file list type has comma separated ids
-                    fileIdList.append(rawData.split(',',
-                                                    QString::SkipEmptyParts));
-                } else {
-                    fileIdList.append(rawData); //img type has only one id
-                }
-            }
-        }
-
+        QStringList fileIdList = m_metadataEngine->getAllCollectionContentFiles(collectionId, fieldId);
         //rm files
-        sql = QString("DELETE FROM files WHERE _id IN (%1)")
-                .arg(fileIdList.join(","));
-        query.exec(sql);
-
-        //commit transaction
-        db.commit();
+        m_metadataEngine->removeContentFile(fileIdList);
     }
         break;
     case MetadataEngine::DateType:
