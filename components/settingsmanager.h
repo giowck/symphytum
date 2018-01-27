@@ -79,6 +79,14 @@ public:
     /** Delete group/object including all keys/properties */
     void deleteObjectProperties(const QString &objectName);
 
+    /**
+     * @brief Duplicate all properties
+     * @param originalObjectName - object to duplicate
+     * @param duplicateObjectName - new name for duplicate
+     */
+    void duplicateObjectProperties(const QString &originalObjectName,
+                                   const QString &duplicateObjectName);
+
     /** Store the current software version (build) */
     void saveSoftwareBuild();
 

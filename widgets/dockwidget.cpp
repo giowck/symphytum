@@ -45,6 +45,11 @@ void DockWidget::createNewCollection()
     m_collectionListView->createNewCollection();
 }
 
+void DockWidget::duplicateCollection()
+{
+    m_collectionListView->duplicateCollection();
+}
+
 void DockWidget::deleteCollection()
 {
     m_collectionListView->deleteCollection();

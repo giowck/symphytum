@@ -46,6 +46,9 @@ public:
     /** Delete the selected collection */
     void deleteCollection();
 
+    /** Duplicate the selected collection */
+    void duplicateCollection();
+
     /** Attach collection model to view */
     void attachModel();
 
@@ -73,6 +76,9 @@ private slots:
     /** Called on delete collection click from context menu */
     void deleteCollectionActionTriggered();
 
+    /** Called on duplicate collection context menu click */
+    void duplicateCollectionActionTriggered();
+
     /** Called on collection change */
     void currentCollectionIdChanged(int collectionId);
 
@@ -83,6 +89,7 @@ private:
     CollectionListModel *m_model;
     QAction *m_deleteCollectionAction;
     QAction *m_newCollectionAction;
+    QAction *m_duplicateCollectionAction;
     int m_currentCollectionId;
 };
 

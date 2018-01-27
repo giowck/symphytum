@@ -16,4 +16,6 @@ When adding a new field type, the following code locations need to be updated:
 - StandardModel::duplicateRecord() if field doesn't support value duplication
 - StandardModel::addRecord() if field has a default init value
 - CollectionFieldCleaner if field needs some extra deletion triggers
+- MetadataEngine::duplicateCollection() if part of field data is not saved in db file
+- MetadataEngine::getAllCollectionContentFiles if part of field data is not saved in db file
 

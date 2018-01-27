@@ -43,7 +43,7 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role);
 
     /** Add an empty collection to the end */
-    void addCollection();
+    void addCollection(const QString &name = tr("New Collection"));
     
 private:
     

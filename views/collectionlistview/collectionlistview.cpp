@@ -21,6 +21,7 @@
 #include <QtGui/QContextMenuEvent>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QUndoStack>
+#include <QtWidgets/QPushButton>
 
 
 //-----------------------------------------------------------------------------
@@ -74,11 +75,14 @@ CollectionListView::CollectionListView(QWidget *parent) :
 
     //contect menu actions
     m_newCollectionAction = new QAction(tr("New"), this);
+    m_duplicateCollectionAction = new QAction(tr("Duplicate"), this);
     m_deleteCollectionAction = new QAction(tr("Delete"), this);
 
     //context menu connections
     connect(m_deleteCollectionAction, SIGNAL(triggered()),
             this, SLOT(deleteCollectionActionTriggered()));
+    connect(m_duplicateCollectionAction, SIGNAL(triggered()),
+            this, SLOT(duplicateCollectionActionTriggered()));
     connect(m_newCollectionAction, SIGNAL(triggered()),
             this, SLOT(newCollectionActionTriggered()));
 
@@ -173,6 +177,64 @@ void CollectionListView::deleteCollection()
     SyncSession::LOCAL_DATA_CHANGED = true;
 }
 
+void CollectionListView::duplicateCollection()
+{
+    MetadataEngine *m = &MetadataEngine::getInstance();
+    int collectionId = m->getCurrentCollectionId();
+
+    if ((collectionId == 0) || SyncSession::IS_READ_ONLY) return; //0 stands for invalid
+
+    //ask for content or only structure copy
+    QMessageBox box(this);
+    box.setIcon(QMessageBox::Question);
+    box.setWindowTitle(tr("Duplicate Collection"));
+    box.setText("A new collection is being created as a duplicate of the selected collection."
+                "<br /><b>Which data should be taken over?</b> ");
+    QPushButton *onlyStructureButton = box.addButton(tr("Data structure only"),
+                                                     QMessageBox::NoRole);
+    QPushButton *fullDataButton = box.addButton(tr("All data, including contents"),
+                                                     QMessageBox::YesRole);
+    box.addButton(QMessageBox::Abort);
+    box.setDefaultButton(onlyStructureButton);
+    box.setWindowModality(Qt::WindowModal);
+    box.exec();
+
+    bool copyOnlyStructureData;
+    if (box.clickedButton() == onlyStructureButton) {
+        copyOnlyStructureData = true;
+    } else if (box.clickedButton() == fullDataButton) {
+        copyOnlyStructureData = false;
+    } else {
+        return;
+    }
+
+    //add item
+    m_model->addCollection(m->getCollectionName(collectionId).append(tr(" Copy")));
+
+    //copy collection metadata (structure)
+    int duplicatedCollectionId = m->duplicateCollection(collectionId, copyOnlyStructureData);
+
+    //copy settings about collection's column positions in TableView
+    SettingsManager s;
+    QString settingsKey = QString("collection_") + QString::number(collectionId);
+    QString settingsKeyDup = QString("collection_") + QString::number(duplicatedCollectionId);
+    s.duplicateObjectProperties(settingsKey, settingsKeyDup);
+
+    //FIXME: temporary workaround for listview not updating the items
+    //needs investigation, caused by migration from Qt4 to Qt5
+    //NOTE: without this m_model->rowCount() returns 1 even if empty (no collections)
+    //this is a bug in the model or something changed in MVC Qt5
+    this->detachModel();
+    this->attachModel();
+
+    //set new collection as current
+    QModelIndex index = m_model->index(m_model->rowCount() - 1, 1);
+    setCurrentIndex(index);
+
+    //set local data changed
+    SyncSession::LOCAL_DATA_CHANGED = true;
+}
+
 void CollectionListView::attachModel()
 {
     //setup model
@@ -220,8 +282,10 @@ void CollectionListView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu(this);
     menu.addAction(m_newCollectionAction);
-    if (MetadataEngine::getInstance().getCurrentCollectionId() != 0)
+    if (MetadataEngine::getInstance().getCurrentCollectionId() != 0) {
+        menu.addAction(m_duplicateCollectionAction);
         menu.addAction(m_deleteCollectionAction);
+    }
     menu.exec(event->globalPos());
 }
 
@@ -263,6 +327,11 @@ void CollectionListView::newCollectionActionTriggered()
 void CollectionListView::deleteCollectionActionTriggered()
 {
     deleteCollection();
+}
+
+void CollectionListView::duplicateCollectionActionTriggered()
+{
+    duplicateCollection();
 }
 
 void CollectionListView::currentCollectionIdChanged(int collectionId)

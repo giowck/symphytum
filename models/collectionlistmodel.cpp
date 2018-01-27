@@ -52,10 +52,10 @@ bool CollectionListModel::setData(const QModelIndex &index,
     }
 }
 
-void CollectionListModel::addCollection()
+void CollectionListModel::addCollection(const QString &name)
 {
     QSqlRecord r = record();
-    r.setValue(1, tr("New Collection"));
+    r.setValue(1, name);
     insertRecord(-1, r);
 
     //changes are not applied even with on field change strategy

@@ -8,6 +8,8 @@
 
 #include "metadataengine.h"
 #include "databasemanager.h"
+#include "alarmmanager.h"
+#include "filemanager.h"
 #include "../models/standardmodel.h"
 
 #include <QtSql/QSqlQuery>
@@ -16,6 +18,8 @@
 #include <QtCore/QStringList>
 #include <QtCore/QDateTime>
 #include <QtCore/QCryptographicHash>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QApplication>
 
 
 //-----------------------------------------------------------------------------
@@ -462,6 +466,196 @@ void MetadataEngine::deleteCollection(int collectionId)
     db.commit();
 }
 
+int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
+{
+    int id = 0;
+
+    CollectionType type = StandardCollection; //for now the only supported type
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    //since a new entry in the collection table
+    //is added by the CollectionListView
+    //get last created collection
+    query.exec("SELECT _id FROM collections ORDER BY _id DESC");
+
+    if (query.next()) {
+        //get the first, which is the last created collection
+        id = query.value(0).toInt();
+    }
+
+    //create table name hash
+    QByteArray dateArray = QDateTime::currentDateTime().toString().toUtf8();
+    QByteArray hash = QCryptographicHash::hash(dateArray,
+                                               QCryptographicHash::Md5);
+    QString tableName("c" + hash.toHex());
+    QString metadataTableName = tableName + "_metadata";
+
+    //start transaction to speed up writes
+    db.transaction();
+
+    //update collection meta info
+    query.prepare("UPDATE collections SET type=:type, table_name=:table_name WHERE _id=:id");
+    query.bindValue(":type", (int) type);
+    query.bindValue(":table_name", tableName);
+    query.bindValue(":id", id);
+    query.exec();
+
+    //copy collection structure
+    QString originalTableName = getTableName(collectionId);
+    QString originalTableMetadataName = originalTableName + "_metadata";
+    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+               .arg(tableName).arg(originalTableName));
+
+    //copy metadata table
+    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+               .arg(metadataTableName).arg(originalTableMetadataName));
+
+    query.exec(QString("INSERT INTO '%1' SELECT * FROM '%2'")
+               .arg(metadataTableName).arg(originalTableMetadataName));
+
+    //copy content data
+    if (!copyMetadataOnly) {
+        QProgressDialog *pd = new QProgressDialog(0);
+        int progressSteps = 3;
+        pd->setWindowModality(Qt::ApplicationModal);
+        pd->setWindowTitle(tr("Progress"));
+        pd->setLabelText(tr("Duplicating collection data... Please wait!"));
+        pd->setRange(0, progressSteps);
+        pd->setValue(progressSteps++);
+        pd->setCancelButton(0);
+        pd->show();
+        qApp->processEvents();
+
+        //copy collection data
+        query.exec(QString("INSERT INTO '%1' SELECT * FROM '%2'")
+                   .arg(tableName).arg(originalTableName));
+        pd->setValue(progressSteps++);
+        qApp->processEvents();
+
+        //copy alarms
+        AlarmManager am(this);
+        QList<AlarmManager::Alarm> alarmList = am.getAllAlarms(collectionId);
+        foreach (AlarmManager::Alarm a, alarmList) {
+            am.addOrUpdateAlarm(id, a.alarmFieldId, a.alarmRecordId, a.alarmDateTime);
+        }
+        pd->setValue(progressSteps++);
+        qApp->processEvents();
+
+        //copy files
+        FileManager fm(this);
+        QString filesDirPath = fm.getFilesDirectory();
+        QStringList fileIdsToCopyList = getAllCollectionContentFiles(collectionId);
+        QHash<int, int> originalFileIdToDuplicateIdBridge;
+        pd->setRange(0, fileIdsToCopyList.size());
+        progressSteps = 0;
+        pd->setValue(progressSteps);
+        pd->setLabelText(tr("Duplicating collection files... Please wait!"));
+        qApp->processEvents();
+        foreach (QString f, fileIdsToCopyList) {
+            pd->setValue(++progressSteps);
+            qApp->processEvents();
+            QString filePath, fileHashName, fileName;
+            QDateTime date;
+            int id = f.toInt();
+            bool s = getContentFile(id, fileName, fileHashName, date);
+            if (s) {
+                filePath = filesDirPath + fileHashName;
+                //add file and wait until copy task complete
+                {
+                    QEventLoop loop;
+                    loop.connect(&fm, SIGNAL(addFileCompletedSignal(QString)), SLOT(quit()));
+                    loop.connect(&fm, SIGNAL(fileOpFailed()), SLOT(quit()));
+                    fm.startAddFile(filePath);
+                    loop.exec();
+                }
+
+                //update file metadata
+
+                //get new file duplicate id from original hash which is temporary used as file name
+                int duplicateFileId = 0;
+                query.prepare("SELECT _id FROM files WHERE name=:hashName");
+                query.bindValue(":hashName", fileHashName);
+                query.exec();
+                if (query.next()) {
+                    duplicateFileId = query.value(0).toInt();
+                    //associate old id to new id
+                    originalFileIdToDuplicateIdBridge.insert(id, duplicateFileId);
+                }
+
+                //update duplicate file metadata (file name and date) to match original
+                query.prepare("UPDATE files SET name=:name, date_added=:date_added WHERE name=:hashName");
+                query.bindValue(":name", fileName);
+                query.bindValue(":date_added", date);
+                query.bindValue(":hashName", fileHashName);
+                query.exec();
+            }
+        }
+
+        //update duplicate collection data to use new duplicate file ids instead of original file ids
+        //for each field type that has content files
+        pd->setRange(0, 0);
+        progressSteps = 0;
+        pd->setValue(progressSteps);
+        pd->setLabelText(tr("Updating files metadata... Please wait!"));
+        qApp->processEvents();
+        int count = getFieldCount(collectionId);
+        for (int i = 1; i < count; i++) { //1 because of _id
+            MetadataEngine::FieldType fieldType = getFieldType(i, collectionId);
+            if (fieldType == MetadataEngine::ImageType) {
+                auto list = getAllCollectionContentFiles(collectionId, i);
+                foreach (QString is, list) {
+                    //just update file id since only a single value in database
+                    int oid = is.toInt();
+                    int did = originalFileIdToDuplicateIdBridge.value(oid);
+                    QString sql = QString("UPDATE \"%1\" SET \"%2\"=:dupId WHERE \"%2\"=:originalId")
+                            .arg(tableName).arg(i);
+                    query.prepare(sql);
+                    query.bindValue(":dupId", did);
+                    query.bindValue(":originalId", oid);
+                    query.exec();
+                }
+            } else if (fieldType == MetadataEngine::FilesType) {
+                //get raw file list data (simple file ids separated by comma)
+                QStringList fileIdsRawList;
+                query.exec(QString("SELECT \"%1\" FROM \"%2\"").arg(i).arg(tableName));
+                while (query.next()) {
+                    fileIdsRawList.append(query.value(0).toString());
+                }
+                //replace each value in list with duplicate id and
+                //build new raw file id string to push into the duplicate collection
+                foreach (QString originalRawString, fileIdsRawList) {
+                    QString duplicateRawString;
+                    foreach (QString t, originalRawString.split(',', QString::SkipEmptyParts)) {
+                        int d_id = originalFileIdToDuplicateIdBridge.value(t.toInt()) ;
+                        if (d_id)
+                            duplicateRawString.append(QString::number(d_id) + ",");
+                    }
+                    if (!duplicateRawString.isEmpty()) {
+                        QString sql = QString("UPDATE \"%1\" SET \"%2\"=:dupId WHERE \"%2\"=:originalId")
+                                .arg(tableName).arg(i);
+                        query.prepare(sql);
+                        query.bindValue(":dupId", duplicateRawString);
+                        query.bindValue(":originalId", originalRawString);
+                        query.exec();
+                    }
+                }
+            } else {
+                //not a content file field type
+            }
+            qApp->processEvents();
+        }
+
+        //delete since no parent
+        pd->deleteLater();
+    }
+
+    //commit transaction
+    db.commit();
+
+    return id;
+}
+
 void MetadataEngine::deleteAllRecords(int collectionId)
 {
     QString table = getTableName(collectionId);
@@ -757,6 +951,23 @@ void MetadataEngine::removeContentFile(int fileId)
     db.commit();
 }
 
+void MetadataEngine::removeContentFile(const QStringList &fileIdList)
+{
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    //start transaction to speed up writes
+    db.transaction();
+
+    //rm files
+    QString sql = QString("DELETE FROM files WHERE _id IN (%1)")
+            .arg(fileIdList.join(","));
+    query.exec(sql);
+
+    //commit transaction
+    db.commit();
+}
+
 void MetadataEngine::updateContentFile(int fileId,
                                        const QString &fileName,
                                        const QString &hashName,
@@ -836,6 +1047,54 @@ int MetadataEngine::getContentFileId(const QString &hashName)
 
     return id;
 }
+
+QStringList MetadataEngine::getAllCollectionContentFiles(const int collectionId,
+                                                         const int fieldId)
+{
+    QStringList fileIdList;
+    QList<int> fileFieldList;
+    QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
+    QSqlQuery query(db);
+
+    if (fieldId == -1) { //process all fields of type content file
+        int fieldsCount = getFieldCount(collectionId);
+        for (int i = 1; i < fieldsCount; i++) { //1 because of _id
+            switch (getFieldType(i, collectionId)) {
+            case MetadataEngine::ImageType:
+            case MetadataEngine::FilesType:
+                fileFieldList.append(i);
+                break;
+            default:
+                break;
+            }
+        }
+    } else { //process only specified field id
+        fileFieldList.append(fieldId);
+    }
+
+    //get all file ids
+    QString tableName = getTableName(collectionId);
+    foreach (int f, fileFieldList) {
+        QString sql = QString("SELECT \"%1\" FROM \"%2\"")
+                .arg(QString::number(f)).arg(tableName);
+        query.exec(sql);
+
+        while (query.next()) {
+            QString rawData = query.value(0).toString();
+            if (!rawData.isEmpty()) {
+                if (rawData.contains(",")) { //file list type has comma separated ids
+                    fileIdList.append(rawData.split(',',
+                                                    QString::SkipEmptyParts));
+                } else {
+                    fileIdList.append(rawData); //img type has only one id
+                }
+            }
+        }
+    }
+
+    return fileIdList;
+}
+
 
 void MetadataEngine::setDirtyCurrentColleectionId()
 {

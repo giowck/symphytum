@@ -36,5 +36,6 @@
         <file>images/icons/mail.png</file>
         <file>languages/qt_pl.qm</file>
         <file>languages/symphytum_pl.qm</file>
+        <file>images/icons/duplicatecollection.png</file>
     </qresource>
 </RCC>

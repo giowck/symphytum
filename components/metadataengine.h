@@ -228,6 +228,14 @@ public:
      */
     void deleteCollection(int collectionId);
 
+    /**
+     * @brief Duplicate a collection including metadata, contents, alarms, files and so on.
+     * @param collectionId - collection to duplicate
+     * @param copyMetadataOnly - whether content data should be excluded, ie. copy structure only (metadata)
+     * @return id - the newly created collection id
+     */
+    int duplicateCollection(int collectionId, bool copyMetadataOnly);
+
     /** Delete all records from the specified collection */
     void deleteAllRecords(int collectionId);
 
@@ -281,6 +289,13 @@ public:
     void removeContentFile(int fileId);
 
     /**
+     * @overload
+     * @brief Remove file metadata for the specified file id list
+     * @param fileIdList - list of file ids
+     */
+    void removeContentFile(const QStringList &fileIdList);
+
+    /**
      * Update a content file
      * @param fileId - the id of the file
      * @param fileName - new file name
@@ -312,6 +327,15 @@ public:
 
     /** Return the id of the specified file hash name */
     int getContentFileId(const QString &hashName);
+
+    /**
+     * @brief Get all content files for a specified collection and optional field id
+     * @param collectionId - the collection id which reference the content files
+     * @param fieldId - optional field id filter, if -1, all files for a collection are returned
+     * @return string list of file ids, string instead of int for convenience
+     */
+    QStringList getAllCollectionContentFiles(const int collectionId,
+                                             const int fieldId = -1);
 
     /**
      * Set cached current collection id dirty

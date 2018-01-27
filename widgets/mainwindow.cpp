@@ -834,6 +834,11 @@ void MainWindow::syncReadOnlyActionTriggered()
     m_undoStack->clear();
 }
 
+void MainWindow::duplicateCollectionActionTriggered()
+{
+    m_dockWidget->duplicateCollection();
+}
+
 void MainWindow::deleteCollectionActionTriggered()
 {
     m_dockWidget->deleteCollection();
@@ -1589,6 +1594,10 @@ void MainWindow::createActions()
     m_newCollectionAction->setIcon(QIcon(":/images/icons/newcollection.png"));
     m_newCollectionAction->setStatusTip(tr("Create a new collection"));
 
+    m_duplicateCollectionAction = new QAction(tr("Duplicate Collection"), this);
+    m_duplicateCollectionAction->setIcon(QIcon(":/images/icons/duplicatecollection.png"));
+    m_duplicateCollectionAction->setStatusTip(tr("Duplicate current collection"));
+
     m_deleteCollectionAction = new QAction(tr("Delete Collection"), this);
     m_deleteCollectionAction->setIcon(QIcon(":/images/icons/deletecollection.png"));
     m_deleteCollectionAction->setStatusTip(tr("Delete current collection"));
@@ -1702,6 +1711,7 @@ void MainWindow::createToolBar()
     m_toolBar->setMovable(false);
 
     m_toolBar->addAction(m_newCollectionAction);
+    m_toolBar->addAction(m_duplicateCollectionAction);
     m_toolBar->addAction(m_deleteCollectionAction);
     m_toolBar->addSeparator();
     m_toolBar->addAction(m_syncAction);
@@ -1955,6 +1965,8 @@ void MainWindow::createConnections()
     //collection actions
     connect(m_newCollectionAction, SIGNAL(triggered()),
             this, SLOT(newCollectionActionTriggered()));
+    connect(m_duplicateCollectionAction, SIGNAL(triggered()),
+            this, SLOT(duplicateCollectionActionTriggered()));
     connect(m_deleteCollectionAction, SIGNAL(triggered()),
             this, SLOT(deleteCollectionActionTriggered()));
 

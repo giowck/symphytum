@@ -98,6 +98,7 @@ private slots:
     void deleteRecordActionTriggered();
     void newCollectionActionTriggered();
     void syncReadOnlyActionTriggered();
+    void duplicateCollectionActionTriggered();
     void deleteCollectionActionTriggered();
     void deleteAllRecordsActionTriggered();
     void optimizeDbSizeActionTriggered();
@@ -203,6 +204,7 @@ private:
     QAction *m_aboutAction;
     QAction *m_aboutQtAction;
     QAction *m_newCollectionAction;
+    QAction *m_duplicateCollectionAction;
     QAction *m_deleteCollectionAction;
     QAction *m_newRecordAction;
     QAction *m_newFieldAction;

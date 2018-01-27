@@ -97,6 +97,25 @@ void SettingsManager::deleteObjectProperties(const QString &objectName)
     m_settings->remove(objectName);
 }
 
+void SettingsManager::duplicateObjectProperties(const QString &originalObjectName,
+                                                const QString &duplicateObjectName)
+{
+    QHash<QString, QVariant> originalProperties;
+    m_settings->beginGroup(originalObjectName);
+    QStringList originalKeys = m_settings->allKeys();
+    foreach (QString key, originalKeys) {
+        originalProperties.insert(key, m_settings->value(key));
+    }
+    m_settings->endGroup();
+
+    m_settings->beginGroup(duplicateObjectName);
+    QHash<QString, QVariant>::const_iterator it;
+    for (it = originalProperties.begin(); it != originalProperties.end(); ++it) {
+        m_settings->setValue(it.key(), it.value());
+    }
+    m_settings->endGroup();
+}
+
 void SettingsManager::saveSoftwareBuild()
 {
     m_settings->beginGroup(DefinitionHolder::NAME.toLower());
