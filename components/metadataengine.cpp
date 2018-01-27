@@ -523,6 +523,7 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
         pd->setLabelText(tr("Duplicating collection data... Please wait!"));
         pd->setRange(0, progressSteps);
         pd->setValue(progressSteps++);
+        pd->setCancelButton(0);
         pd->show();
         qApp->processEvents();
 
@@ -545,9 +546,11 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
         FileManager fm(this);
         QString filesDirPath = fm.getFilesDirectory();
         QStringList fileIdsToCopyList = getAllCollectionContentFiles(collectionId);
+        QHash<int, int> originalFileIdToDuplicateIdBridge;
         pd->setRange(0, fileIdsToCopyList.size());
         progressSteps = 0;
         pd->setValue(progressSteps);
+        pd->setLabelText(tr("Duplicating collection files... Please wait!"));
         qApp->processEvents();
         foreach (QString f, fileIdsToCopyList) {
             pd->setValue(++progressSteps);
@@ -576,27 +579,71 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
                 query.exec();
                 if (query.next()) {
                     duplicateFileId = query.value(0).toInt();
+                    //associate old id to new id
+                    originalFileIdToDuplicateIdBridge.insert(id, duplicateFileId);
                 }
 
-                //update duplicate collection data to use new duplicate file id instead of original file id
-                //TODO: what if file id list like when file type field??
-                /*query.prepare("UPDATE collections SET type=:type, table_name=:table_name WHERE _id=:id");
-                query.bindValue(":type", (int) type);
-                query.bindValue(":table_name", tableName);
-                query.bindValue(":id", id);
-                query.exec();*/
-                //FIXME: possible solution could be a map to bridge old id to new id and then for all field types
-                //check if image or file type and then get raw data and just replace old ids with new ids from map
-
-
-
-
-
-                //TODO: get new added file id (by using hash) and with it set it on new table where old id (original file id), but howo handle file list type?
-                //TODO: update hashname to real name in files table
-                //TODO update date to original
-
+                //update duplicate file metadata (file name and date) to match original
+                query.prepare("UPDATE files SET name=:name, date_added=:date_added WHERE name=:hashName");
+                query.bindValue(":name", fileName);
+                query.bindValue(":date_added", date);
+                query.bindValue(":hashName", fileHashName);
+                query.exec();
             }
+        }
+
+        //update duplicate collection data to use new duplicate file ids instead of original file ids
+        //for each field type that has content files
+        pd->setRange(0, 0);
+        progressSteps = 0;
+        pd->setValue(progressSteps);
+        pd->setLabelText(tr("Updating files metadata... Please wait!"));
+        qApp->processEvents();
+        int count = getFieldCount(collectionId);
+        for (int i = 1; i < count; i++) { //1 because of _id
+            MetadataEngine::FieldType fieldType = getFieldType(i, collectionId);
+            if (fieldType == MetadataEngine::ImageType) {
+                auto list = getAllCollectionContentFiles(collectionId, i);
+                foreach (QString is, list) {
+                    //just update file id since only a single value in database
+                    int oid = is.toInt();
+                    int did = originalFileIdToDuplicateIdBridge.value(oid);
+                    QString sql = QString("UPDATE \"%1\" SET \"%2\"=:dupId WHERE \"%2\"=:originalId")
+                            .arg(tableName).arg(i);
+                    query.prepare(sql);
+                    query.bindValue(":dupId", did);
+                    query.bindValue(":originalId", oid);
+                    query.exec();
+                }
+            } else if (fieldType == MetadataEngine::FilesType) {
+                //get raw file list data (simple file ids separated by comma)
+                QStringList fileIdsRawList;
+                query.exec(QString("SELECT \"%1\" FROM \"%2\"").arg(i).arg(tableName));
+                while (query.next()) {
+                    fileIdsRawList.append(query.value(0).toString());
+                }
+                //replace each value in list with duplicate id and
+                //build new raw file id string to push into the duplicate collection
+                foreach (QString originalRawString, fileIdsRawList) {
+                    QString duplicateRawString;
+                    foreach (QString t, originalRawString.split(',', QString::SkipEmptyParts)) {
+                        int d_id = originalFileIdToDuplicateIdBridge.value(t.toInt()) ;
+                        if (d_id)
+                            duplicateRawString.append(QString::number(d_id) + ",");
+                    }
+                    if (!duplicateRawString.isEmpty()) {
+                        QString sql = QString("UPDATE \"%1\" SET \"%2\"=:dupId WHERE \"%2\"=:originalId")
+                                .arg(tableName).arg(i);
+                        query.prepare(sql);
+                        query.bindValue(":dupId", duplicateRawString);
+                        query.bindValue(":originalId", originalRawString);
+                        query.exec();
+                    }
+                }
+            } else {
+                //not a content file field type
+            }
+            qApp->processEvents();
         }
 
         //delete since no parent
