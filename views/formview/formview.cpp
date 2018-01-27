@@ -289,9 +289,10 @@ void FormView::updateLastModified(int startRow, int endRow)
         for (int i = 0; i < fieldCount; i++) {
             column = m_modFieldList.at(i);
             index = model()->index(r, column);
-            model()->setData(index, QDateTime::currentDateTime());
+            model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));
         }
     }
+
 }
 
 
