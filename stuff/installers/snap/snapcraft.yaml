@@ -1,0 +1,21 @@
+name: symphytum
+version: '2.2'
+summary: Easy-to-use personal database software
+description: |
+  Symphytum is a personal database software for everyone 
+  who desires to manage and organize data in an easy and intuitive way, 
+  without having to study complex database languages and software user interfaces.
+
+grade: devel
+confinement: devmode
+
+#apps:
+
+parts:
+  symphytum:
+    source: https://github.com/giowck/symphytum.git
+    source-tag: v2.2
+    plugin: qmake
+    qt-version: qt5
+    after: [desktop-qt5]
+
