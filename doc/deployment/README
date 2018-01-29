@@ -43,7 +43,7 @@ Ubuntu:
    sudo chmod -R 0755 deb/
    dpkg -b deb/ symphytum-1.0-x86_64.deb
 
-Archlinux:
+Arch Linux:
 1. Adjust PKGBUILD script from the installers directory
 2. copy source tarball to current build directory
 3. run updpkgsums to update checksums for source tarball
@@ -82,3 +82,6 @@ AppImage:
    sed -i -e 's|1.0.1e|1.0.0\x00|g' /home/user/Desktop/myappimg/usr/lib/libQt5Network.so.5 
 -> Create the final AppImage with:
    ./appimagetool-x86_64.AppImage /home/user/Desktop/myappimg
+
+Snap:
+1. TODO: add doc
