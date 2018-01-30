@@ -9,7 +9,9 @@ description: |
 grade: devel
 confinement: devmode
 
-#apps:
+apps:
+  symphytum:
+    command: desktop-launch symphytum
 
 parts:
   symphytum:
@@ -17,5 +19,30 @@ parts:
     source-tag: v2.2
     plugin: qmake
     qt-version: qt5
+    options:
+      - CONFIG+=release
+    install: |
+      mkdir $SNAPCRAFT_PART_INSTALL/bin
+      cp -R symphytum $SNAPCRAFT_PART_INSTALL/bin
+    build-packages:
+      - libqt5svg5-dev
+    stage-packages:
+      - qttranslations5-l10n
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5network5
+      - libqt5sql5-sqlite
+      - libqt5svg5
+      - libqt5printsupport5
     after: [desktop-qt5]
-
+  desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
+    stage-packages:
+      - libxkbcommon0
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - shared-mime-info
+      - libqt5gui5
+      - libgdk-pixbuf2.0-0
+      - libqt5svg5 # for loading icon themes which are svg
+      - locales-all
