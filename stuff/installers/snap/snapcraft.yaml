@@ -23,7 +23,8 @@ parts:
       - CONFIG+=release
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
-      cp -R symphytum $SNAPCRAFT_PART_INSTALL/bin
+      cp symphytum $SNAPCRAFT_PART_INSTALL/bin
+      cp -R stuff/installers/deb/usr/share/symphytum $SNAPCRAFT_PART_INSTALL/usr/share/symphytum
     build-packages:
       - libqt5svg5-dev
     stage-packages:
@@ -34,6 +35,8 @@ parts:
       - libqt5sql5-sqlite
       - libqt5svg5
       - libqt5printsupport5
+      - zlib1g
+      - dbus
     after: [desktop-qt5]
   desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
     stage-packages:
