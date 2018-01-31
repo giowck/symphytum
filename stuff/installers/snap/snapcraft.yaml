@@ -26,7 +26,7 @@ parts:
       sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
       sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
       sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
-      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropboxx python sync script TODO find out how to use relative path inside snap
+      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script TODO find out how to use relative path inside snap
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp symphytum $SNAPCRAFT_PART_INSTALL/bin
@@ -48,14 +48,22 @@ parts:
   dropbox-sync:
     plugin: python
     python-version: python3
-    stage-packages: #try this if doesn't work try using python-packages: (using PyPi)
-    - python3-setuptools
-    - python3-six
-    - python3-certifi
-    - python3-chardet
-    - python3-idna
-    - python3-requests
-    - python3-urllib3
+#    stage-packages: #try this if python-packages (uses PyPi) fails
+#      - python3-setuptools
+#      - python3-six
+#      - python3-certifi
+#      - python3-chardet
+#      - python3-idna
+#      - python3-requests
+#      - python3-urllib3
+    python-packages:
+      - setuptools
+      - six
+      - certifi
+      - chardet
+      - idna
+      - requests
+      - urllib3
     
   desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
     stage-packages:
