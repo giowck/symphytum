@@ -1,5 +1,5 @@
 name: symphytum
-version: '2.2'
+version: '2.3'
 summary: Easy-to-use personal database software
 description: |
   Symphytum is a personal database software for everyone 
@@ -17,11 +17,16 @@ apps:
 parts:
   symphytum:
     source: https://github.com/giowck/symphytum.git
-    source-tag: v2.2
+#    source-tag: v2.3 #activate this once 2.3 is out
     plugin: qmake
     qt-version: qt5
     options:
       - CONFIG+=release
+    prepare: | #remove features until 18.04 is released with QT >= 5.8
+      sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
+      sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
+      sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
+      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropboxx python sync script TODO find out how to use relative path inside snap
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp symphytum $SNAPCRAFT_PART_INSTALL/bin
