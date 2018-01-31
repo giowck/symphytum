@@ -6,6 +6,7 @@ description: |
   who desires to manage and organize data in an easy and intuitive way, 
   without having to study complex database languages and software user interfaces.
 
+#icon: /usr/share/pixmaps/symphytum.png #not needed because of gui auto icon?
 grade: devel
 confinement: devmode
 
@@ -38,6 +39,19 @@ parts:
       - zlib1g
       - dbus
     after: [desktop-qt5]
+    
+  dropbox-sync:
+    plugin: python
+    python-version: python3
+    stage-packages: #try this if doesn't work try using python-packages: (using PyPi)
+    - python3-setuptools
+    - python3-six
+    - python3-certifi
+    - python3-chardet
+    - python3-idna
+    - python3-requests
+    - python3-urllib3
+    
   desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
     stage-packages:
       - libxkbcommon0

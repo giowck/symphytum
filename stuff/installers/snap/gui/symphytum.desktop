@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Name=Symphytum
+GenericName=Symphytum
+Exec=symphytum
+Icon=symphytum
+Type=Application
+StartupNotify=false
+Terminal=false
+Categories=Office;
