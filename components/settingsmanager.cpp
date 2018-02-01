@@ -24,6 +24,10 @@
 SettingsManager::SettingsManager()
 {
     m_settings = new QSettings();
+
+    if (DefinitionHolder::WIN_PORTABLE) {
+        m_settings->setPath(QSettings::IniFormat, QSettings::UserScope, "portable_data");
+    }
 }
 
 SettingsManager::~SettingsManager()

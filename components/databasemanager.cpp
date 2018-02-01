@@ -131,8 +131,12 @@ DatabaseManager::DatabaseManager()
     SettingsManager sm;
     QString dataDir = sm.restoreCustomDatabaseDir();
     if (dataDir.isEmpty()) { //use default
-        dataDir = QStandardPaths::standardLocations(
-                    QStandardPaths::DataLocation).at(0);
+        if (DefinitionHolder::WIN_PORTABLE) {
+            dataDir = "portable_data";
+        } else {
+            dataDir = QStandardPaths::standardLocations(
+                        QStandardPaths::DataLocation).at(0);
+        }
     }
     m_databaseName = "data.db";
     m_databasePath = dataDir.append("/");
