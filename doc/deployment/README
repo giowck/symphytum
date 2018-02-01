@@ -22,9 +22,14 @@ Prepare Dropbox SDK
 5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
 
 Windows:
-1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto"
+1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto" or reuse from previous deployment (setup.exe)
 2. Open and compile symphytum.iss after review
 3. The missing .DLL files can be copied from the Qt install or use windeployqt
+
+Windows Portable:
+1. Follow similar steps as above
+2. Enable DefinitionHolder::WIN_PORTABLE before compiling to use local and portable storage directories
+3. Instead of running installer, just create a zip
 
 macOS:
 1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile

@@ -23,7 +23,11 @@
 
 SettingsManager::SettingsManager()
 {
-    m_settings = new QSettings();
+    if (DefinitionHolder::WIN_PORTABLE) {
+        m_settings = new QSettings("portable_data/settings.ini", QSettings::IniFormat);
+    } else {
+        m_settings = new QSettings();
+    }
 }
 
 SettingsManager::~SettingsManager()

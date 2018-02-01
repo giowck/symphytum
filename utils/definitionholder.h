@@ -34,6 +34,7 @@ public:
     static int DATABASE_VERSION;   /**< Version no. of the database        */
     static bool APP_STORE;         /**< Deployment target is an app store  */
     static bool APPIMAGE_LINUX;    /**< Deployment target is an AppImage   */
+    static bool WIN_PORTABLE;      /**< Deployment is portable Windows app */
 
 private:
     DefinitionHolder() {} //static only
