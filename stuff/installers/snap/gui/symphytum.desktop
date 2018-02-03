@@ -3,7 +3,7 @@
 Name=Symphytum
 GenericName=Symphytum
 Exec=symphytum
-Icon=symphytum
+Icon=${SNAP}/meta/gui/symphytum.png
 Type=Application
 StartupNotify=false
 Terminal=false

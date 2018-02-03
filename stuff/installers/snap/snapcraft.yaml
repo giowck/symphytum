@@ -1,18 +1,28 @@
 name: symphytum
-version: '2.3'
+version: '2.2'
 summary: Easy-to-use personal database software
 description: |
   Symphytum is a personal database software for everyone 
   who desires to manage and organize data in an easy and intuitive way, 
   without having to study complex database languages and software user interfaces.
 
-#icon: /usr/share/pixmaps/symphytum.png #not needed because of gui auto icon?
-grade: devel
-confinement: devmode
+icon: gui/symphytum.png
+grade: stable
+confinement: strict
 
 apps:
   symphytum:
     command: desktop-launch symphytum
+    desktop: usr/share/applications/symphytum.desktop
+    plugs:
+      - home
+      - network
+      - opengl
+      - removable-media
+      - unity7
+      - x11
+      - desktop
+      - desktop-legacy
 
 parts:
   symphytum:
@@ -26,11 +36,12 @@ parts:
       sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
       sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
       sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
-      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script TODO find out how to use relative path inside snap
+      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp symphytum $SNAPCRAFT_PART_INSTALL/bin
-      cp -R stuff/installers/deb/usr/share/symphytum $SNAPCRAFT_PART_INSTALL/usr/share/symphytum
+      cp -R stuff/installers/deb/usr $SNAPCRAFT_PART_INSTALL/
+      sed -i 's|Icon=symphytum|Icon=${SNAP}/usr/share/pixmaps/symphytum.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/symphytum.desktop
     build-packages:
       - libqt5svg5-dev
     stage-packages:
