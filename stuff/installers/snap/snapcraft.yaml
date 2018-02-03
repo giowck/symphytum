@@ -1,0 +1,89 @@
+name: symphytum
+version: '2.2'
+summary: Easy-to-use personal database software
+description: |
+  Symphytum is a personal database software for everyone 
+  who desires to manage and organize data in an easy and intuitive way, 
+  without having to study complex database languages and software user interfaces.
+
+icon: gui/symphytum.png
+grade: stable
+confinement: strict
+
+apps:
+  symphytum:
+    command: desktop-launch symphytum
+    desktop: usr/share/applications/symphytum.desktop
+    plugs:
+      - home
+      - network
+      - opengl
+      - removable-media
+      - unity7
+      - x11
+      - desktop
+      - desktop-legacy
+
+parts:
+  symphytum:
+    source: https://github.com/giowck/symphytum.git
+#    source-tag: v2.3 #activate this once 2.3 is out
+    plugin: qmake
+    qt-version: qt5
+    options:
+      - CONFIG+=release
+    prepare: | #remove features until 18.04 is released with QT >= 5.8
+      sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
+      sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
+      sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
+      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script
+    install: |
+      mkdir $SNAPCRAFT_PART_INSTALL/bin
+      cp symphytum $SNAPCRAFT_PART_INSTALL/bin
+      cp -R stuff/installers/deb/usr $SNAPCRAFT_PART_INSTALL/
+      sed -i 's|Icon=symphytum|Icon=${SNAP}/usr/share/pixmaps/symphytum.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/symphytum.desktop
+    build-packages:
+      - libqt5svg5-dev
+    stage-packages:
+      - qttranslations5-l10n
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5network5
+      - libqt5sql5-sqlite
+      - libqt5svg5
+      - libqt5printsupport5
+      - zlib1g
+      - dbus
+    after: [desktop-qt5]
+    
+  dropbox-sync:
+    plugin: python
+    python-version: python3
+#    stage-packages: #try this if python-packages (uses PyPi) fails
+#      - python3-setuptools
+#      - python3-six
+#      - python3-certifi
+#      - python3-chardet
+#      - python3-idna
+#      - python3-requests
+#      - python3-urllib3
+    python-packages:
+      - setuptools
+      - six
+      - certifi
+      - chardet
+      - idna
+      - requests
+      - urllib3
+    
+  desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
+    stage-packages:
+      - libxkbcommon0
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - shared-mime-info
+      - libqt5gui5
+      - libgdk-pixbuf2.0-0
+      - libqt5svg5 # for loading icon themes which are svg
+      - locales-all
