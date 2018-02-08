@@ -104,7 +104,8 @@ SOURCES += main.cpp\
     widgets/form_widgets/urlformwidget.cpp \
     widgets/field_widgets/urlfieldwizard.cpp \
     widgets/field_widgets/emailfieldwizard.cpp \
-    widgets/form_widgets/emailformwidget.cpp
+    widgets/form_widgets/emailformwidget.cpp \
+    components/sync_framework/megasyncdriver.cpp
 
 HEADERS  += widgets/mainwindow.h \
     utils/definitionholder.h \
@@ -185,7 +186,8 @@ HEADERS  += widgets/mainwindow.h \
     widgets/form_widgets/urlformwidget.h \
     widgets/field_widgets/urlfieldwizard.h \
     widgets/field_widgets/emailfieldwizard.h \
-    widgets/form_widgets/emailformwidget.h
+    widgets/form_widgets/emailformwidget.h \
+    components/sync_framework/megasyncdriver.h
 
 RESOURCES += \
     resources/resources.qrc

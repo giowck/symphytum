@@ -15,6 +15,8 @@
 
 #include <QtWidgets/QDialog>
 
+#include "../components/sync_framework/syncengine.h"
+
 
 //-----------------------------------------------------------------------------
 // Forward declarations
@@ -79,7 +81,7 @@ private:
     void createSyncConnections();
 
     Ui::SyncConfigDialog *ui;
-    int m_syncService;
+    SyncEngine::SyncService m_syncService;
     AbstractSyncDriver *m_syncDriver;
 };
 

@@ -9,7 +9,6 @@
 #include "syncconfigdialog.h"
 #include "ui_syncconfigdialog.h"
 #include "../components/sync_framework/abstractsyncdriver.h"
-#include "../components/sync_framework/syncengine.h"
 #include "../components/sync_framework/syncsession.h"
 #include "../components/settingsmanager.h"
 
@@ -23,7 +22,7 @@
 
 SyncConfigDialog::SyncConfigDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::SyncConfigDialog), m_syncService(-1),
+    ui(new Ui::SyncConfigDialog), m_syncService(SyncEngine::DropboxSync),
     m_syncDriver(0)
 {
     ui->setupUi(this);
@@ -53,12 +52,24 @@ void SyncConfigDialog::reauthenticateSyncService()
 
 void SyncConfigDialog::loginButtonClicked()
 {
-    m_syncService = ui->serviceComboBox->currentIndex();
-    ui->stackedWidget->setCurrentIndex(1);
+    m_syncService = (SyncEngine::SyncService) ui->serviceComboBox->currentIndex();
+    int configPage;
+
+    switch (m_syncService) {
+    case SyncEngine::DropboxSync:
+        configPage = 1;
+        break;
+    case SyncEngine::MegaSync:
+        configPage = 3;
+        break;
+    default:
+        configPage = 0;
+        break;
+    }
+    ui->stackedWidget->setCurrentIndex(configPage);
 
     //create driver
-    m_syncDriver = SyncEngine::createSyncDriver(
-                (SyncEngine::SyncService) m_syncService, this);
+    m_syncDriver = SyncEngine::createSyncDriver(m_syncService, this);
     createSyncConnections();
 
     m_syncDriver->startAuthenticationRequest();
@@ -174,6 +185,8 @@ void SyncConfigDialog::init()
     ui->codeLineEdit->setVisible(false);
     ui->serviceComboBox->addItem(QIcon(":/images/icons/dropbox.png"),
                                  tr("Dropbox"));
+    ui->serviceComboBox->addItem(QIcon(":/images/icons/megasync.png"),
+                                 tr("MEGA"));
     ui->loginButton->setDefault(true);
 }
 

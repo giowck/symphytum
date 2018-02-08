@@ -41,7 +41,8 @@ class SyncEngine : public QObject
 public:
     /** Enum of supported sync services */
     enum SyncService {
-        DropboxSync = 0
+        DropboxSync = 0,
+        MegaSync = 1
     };
 
     /** Structure of the metadata file */

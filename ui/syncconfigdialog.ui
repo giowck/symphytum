@@ -138,7 +138,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page_2">
+     <widget class="QWidget" name="oauthConfig">
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QLabel" name="urlLabelOK">
@@ -198,7 +198,7 @@
          <item>
           <widget class="QLabel" name="codeLabel">
            <property name="text">
-            <string>Code:</string>
+            <string>&amp;Code:</string>
            </property>
            <property name="buddy">
             <cstring>codeLineEdit</cstring>
@@ -374,6 +374,131 @@
            </property>
            <property name="text">
             <string>&amp;Finish</string>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="megaConfig">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="megaConfLabel">
+         <property name="styleSheet">
+          <string notr="true">font-size: 16px;</string>
+         </property>
+         <property name="text">
+          <string>Please authorize access to your MEGA account</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>MEGA email:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="megaEmailLineEdit">
+           <property name="placeholderText">
+            <string>name@example.com</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>MEGA password:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="megaPassLineEdit">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>58</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="Line" name="line_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancelMegaButton">
+           <property name="text">
+            <string>&amp;Cancel</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="okMegaButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>&amp;OK</string>
            </property>
            <property name="default">
             <bool>true</bool>
