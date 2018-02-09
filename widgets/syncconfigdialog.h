@@ -51,9 +51,11 @@ public:
 private slots:
     void loginButtonClicked();
     void okButtonClicked();
+    void okMegaButtonClicked();
     void finishButtonClicked();
     void retryButtonClicked();
     void codeLineEditTextEdited();
+    void megaCredentialsInputEdited();
 
     //sync slots
     /** Called if an error occurred */

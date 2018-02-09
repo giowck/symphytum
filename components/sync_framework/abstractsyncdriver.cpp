@@ -18,6 +18,12 @@ AbstractSyncDriver::AbstractSyncDriver(QObject *parent) :
 {
 }
 
+void AbstractSyncDriver::startAuthenticationRequest()
+{
+    QStringList empty;
+    startAuthenticationRequest(empty);
+}
+
 AbstractSyncDriver::~AbstractSyncDriver()
 {
 

@@ -55,24 +55,25 @@ void SyncConfigDialog::loginButtonClicked()
     m_syncService = (SyncEngine::SyncService) ui->serviceComboBox->currentIndex();
     int configPage;
 
+    //create driver
+    m_syncDriver = SyncEngine::createSyncDriver(m_syncService, this);
+    createSyncConnections();
+
     switch (m_syncService) {
     case SyncEngine::DropboxSync:
         configPage = 1;
+        m_syncDriver->startAuthenticationRequest();
         break;
     case SyncEngine::MegaSync:
         configPage = 3;
+        //start auth req only later after email and pass prompt
         break;
     default:
         configPage = 0;
         break;
     }
+
     ui->stackedWidget->setCurrentIndex(configPage);
-
-    //create driver
-    m_syncDriver = SyncEngine::createSyncDriver(m_syncService, this);
-    createSyncConnections();
-
-    m_syncDriver->startAuthenticationRequest();
 }
 
 void SyncConfigDialog::okButtonClicked()
@@ -81,6 +82,16 @@ void SyncConfigDialog::okButtonClicked()
 
     QString authToken = ui->codeLineEdit->text().trimmed();
     m_syncDriver->startAuthenticationValidationRequest(authToken);
+}
+
+void SyncConfigDialog::okMegaButtonClicked()
+{
+    QStringList megaCredentials;
+    megaCredentials.append(ui->megaEmailLineEdit->text().trimmed());
+    megaCredentials.append(ui->megaPassLineEdit->text().trimmed());
+    m_syncDriver->startAuthenticationRequest(megaCredentials);
+
+    ui->stackedWidget->setCurrentIndex(2);
 }
 
 void SyncConfigDialog::finishButtonClicked()
@@ -120,6 +131,13 @@ void SyncConfigDialog::codeLineEditTextEdited()
     ui->okButton->setEnabled(!ui->codeLineEdit->text().trimmed().isEmpty());
 }
 
+void SyncConfigDialog::megaCredentialsInputEdited()
+{
+    ui->okMegaButton->setEnabled(!ui->megaEmailLineEdit->text().trimmed().isEmpty() &&
+                                 ui->megaEmailLineEdit->text().contains("@") &&
+                                 !ui->megaPassLineEdit->text().trimmed().isEmpty());
+}
+
 void SyncConfigDialog::syncError(const QString &message)
 {
     if (ui->stackedWidget->currentIndex() == 2) {
@@ -146,16 +164,21 @@ void SyncConfigDialog::syncErrorConnectionFailed()
 
 void SyncConfigDialog::syncUrlAuth(const QString &url)
 {
-    ui->urlLabelResult->hide();
-    ui->urlProgressBar->hide();
-    ui->urlLabel->hide();
-    ui->urlLabelOK->show();
-    ui->codeLabel->setVisible(true);
-    ui->codeLineEdit->setVisible(true);
-    ui->codeLineEdit->setFocus();
+    if (m_syncService == SyncEngine::MegaSync) {
+        //start validation directly since no URL auth is needed
+        this->okButtonClicked();
+    } else {
+        ui->urlLabelResult->hide();
+        ui->urlProgressBar->hide();
+        ui->urlLabel->hide();
+        ui->urlLabelOK->show();
+        ui->codeLabel->setVisible(true);
+        ui->codeLineEdit->setVisible(true);
+        ui->codeLineEdit->setFocus();
 
-    //open browser with url
-    QDesktopServices::openUrl(QUrl(url));
+        //open browser with url
+        QDesktopServices::openUrl(QUrl(url));
+    }
 }
 
 void SyncConfigDialog::syncAuthValidated()
@@ -198,16 +221,28 @@ void SyncConfigDialog::createConnections()
             this, SLOT(reject()));
     connect(ui->loginButton, SIGNAL(clicked()),
             this, SLOT(loginButtonClicked()));
-    connect(ui->okButton, SIGNAL(clicked()),
-            this, SLOT(okButtonClicked()));
-    connect(ui->cancelUrlButton, SIGNAL(clicked()),
-            this, SLOT(reject()));
     connect(ui->finishButton, SIGNAL(clicked()),
             this, SLOT(finishButtonClicked()));
     connect(ui->retryButton, SIGNAL(clicked()),
             this, SLOT(retryButtonClicked()));
+
+    //OAuth based like dropbox
+    connect(ui->okButton, SIGNAL(clicked()),
+            this, SLOT(okButtonClicked()));
+    connect(ui->cancelUrlButton, SIGNAL(clicked()),
+            this, SLOT(reject()));
     connect(ui->codeLineEdit, SIGNAL(textEdited(QString)),
             this, SLOT(codeLineEditTextEdited()));
+
+    //mega
+    connect(ui->okMegaButton, &QPushButton::clicked,
+            this, &SyncConfigDialog::okMegaButtonClicked);
+    connect(ui->cancelMegaButton, &QPushButton::clicked,
+            this, &QDialog::reject);
+    connect(ui->megaEmailLineEdit, &QLineEdit::textEdited,
+            this, &SyncConfigDialog::megaCredentialsInputEdited);
+    connect(ui->megaPassLineEdit, &QLineEdit::textEdited,
+            this, &SyncConfigDialog::megaCredentialsInputEdited);
 }
 
 void SyncConfigDialog::updateFinishButton(bool enabled)

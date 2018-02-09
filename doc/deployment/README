@@ -13,13 +13,16 @@ Build Symphytum:
 7. Uncompress and open project with release config
 8. Compile
 
-Prepare Dropbox SDK
+Prepare Dropbox SDK:
 1. Edit components/sync_framework/scripts/dropbox_client.py
    and set correct app key
 2. Download latest Dropbox python SDK:
    https://www.dropbox.com/developers/
 4. Go to dropbox folder in the sdk folder
 5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
+
+Prepare MEGAcmd:
+1. TODO
 
 Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto" or reuse from previous deployment (setup.exe)
@@ -92,4 +95,3 @@ Snap:
 1. Use Ubuntu 16.04 or the latest supported LTS by snapcraft
 2. Run snapcraft in the stuff/installers/snap directory after reviewing the yaml file
 3. Upload new snap to snap store
-

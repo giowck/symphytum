@@ -12,7 +12,8 @@
 
 #include <QtCore/QFileInfo>
 #include <QtWidgets/QApplication>
-
+//FIXME debug rm
+#include <QDebug>
 
 //-----------------------------------------------------------------------------
 // Public
@@ -41,13 +42,20 @@ MegaSyncDriver::~MegaSyncDriver()
     stopAllRequests();
 }
 
-void MegaSyncDriver::startAuthenticationRequest()
+void MegaSyncDriver::startAuthenticationRequest(const QStringList &megaCredentials)
 {
     m_currentRequest = AuthRequest;
+
+    //mega email and pass as args
+    if (megaCredentials.size() == 2) {
+        m_requestArgs.append(megaCredentials.at(0));
+        m_requestArgs.append(megaCredentials.at(1));
+    }
+
     startRequest();
 }
 
-void MegaSyncDriver::startAuthenticationValidationRequest(QString &authToken)
+void MegaSyncDriver::startAuthenticationValidationRequest(const QString &authToken)
 {
     m_currentRequest = AuthValidationRequest;
     m_requestArgs.append(authToken);
@@ -142,9 +150,8 @@ void MegaSyncDriver::processError(QProcess::ProcessError error)
 }
 
 void MegaSyncDriver::processFinished(int exitCode,
-                                        QProcess::ExitStatus exitStatus)
+                                     QProcess::ExitStatus exitStatus)
 {
-    /*
     Q_UNUSED(exitCode);
     bool error = false;
 
@@ -158,36 +165,30 @@ void MegaSyncDriver::processFinished(int exitCode,
         switch (m_currentRequest) {
         case AuthRequest:
         {
-            QString url;
-            if (result.contains("URL:")) {
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "URL") {
-                        if ((i + 2) < list.size()) {
-                            url = list.at(i + 1);
-                            //since https:// contains ':'
-                            url.append(":").append(list.at(i + 2));
-                        }
-                    }
-                }
-                emit authenticationUrlReady(url);
+            if (result.contains("100.00 %")) {
+                emit authenticationUrlReady("skip");
+            } else if (result.contains("Already logged in")) {
+                //logout and redo request
+                m_currentRequest = LogOutRequest;
+                m_requestArgs = requestArgs;
+                startRequest();
             } else {
                 error = true;
+
+                //clean errors a bit up
+                if (result.contains("invalid email or password"))
+                    result = tr("Login failed: invalid email or password\n");
             }
         }
             break;
         case AuthValidationRequest:
         {
-            if (result.contains("Access token:")) {
+            if (result.contains("Your (secret) session is:")) {
                 QString token;
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "Access token") {
-                        if ((i + 1) < list.size())
-                            token = list.at(i + 1);
-                    }
+                QStringList list = result.split("session is: ", QString::SkipEmptyParts);
+                if (list.size() >= 2) {
+                    token = list.at(1);
+                    token.remove("\n");
                 }
                 QString encodedToken = QString(token.toLatin1().toBase64());
                 m_accessTokenEncoded = encodedToken;
@@ -201,15 +202,12 @@ void MegaSyncDriver::processFinished(int exitCode,
             break;
         case UserNameRequest:
         {
-            if (result.contains("User:")) {
+            if (result.contains("Account e-mail:")) {
                 QString user;
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "User") {
-                        if ((i + 1) < list.size())
-                            user = list.at(i + 1);
-                    }
+                QStringList list = result.split("e-mail: ", QString::SkipEmptyParts);
+                if (list.size() >= 2) {
+                    user = list.at(1);
+                    user.remove("\n");
                 }
                 emit userNameResultReady(user);
             } else {
@@ -245,6 +243,16 @@ void MegaSyncDriver::processFinished(int exitCode,
             }
         }
             break;
+        case LogOutRequest:
+        {
+            if (result.contains("Logging out")) {
+                //OK now do login
+                startAuthenticationRequest(requestArgs);
+            } else {
+                error = true;
+            }
+        }
+            break;
         case RemoveRequest:
         {
             QString file;
@@ -263,7 +271,7 @@ void MegaSyncDriver::processFinished(int exitCode,
 
         //inform about errors with signals
         if (error) {
-            if (result.contains("invalid_access_token"))
+            if (result.contains("Not logged in")) //FIXME: todo
                 emit authTokenExpired();
             else if (result.contains("Failed to establish a new connection"))
                 emit connectionFailed();
@@ -274,30 +282,32 @@ void MegaSyncDriver::processFinished(int exitCode,
             else
                 emit errorSignal(result);
         }
-    }*/
+    }
 }
 
 void MegaSyncDriver::processReadyReadOutput()
 {
-    /*
     QString newOutput;
     newOutput.append(m_process->readAllStandardError());
     newOutput.append(m_process->readAllStandardOutput());
     m_processOutput.append(newOutput);
 
+    //FIXME: debug
+    qDebug() << m_processOutput;
+
     switch (m_currentRequest) {
     case UploadRequest:
-        if (m_totUploadChunks) {
+        /*if (m_totUploadChunks) {
             if (m_processOutput.contains("Uploading:")) {
                 emit uploadedChunkReady(m_chunksUploaded, m_totUploadChunks);
                 m_chunksUploaded++;
             }
-        }
+        }*/
         break;
     default:
         break;
     }
-    */
+
 }
 
 //-----------------------------------------------------------------------------
@@ -306,31 +316,17 @@ void MegaSyncDriver::processReadyReadOutput()
 
 void MegaSyncDriver::initSecrets()
 {
-    /*
-    //init app secret
-    //app secret is a base64 encoded string
-    //where on the base64 string the second half part
-    //is moved ahead, and the original first half becomes the second one:
-    //1. Encode app secret in base64
-    //2. Result is: firstHalf+secondHalf
-    //3. Now switch first and second half
-    //4. Result is: secondHalf+firstHalf
-    //to decode apply reverse algorithm
-    m_appSecretEncoded = "J6d2x2MXR1aHptamhhcD";
-
-    //load encoded access token from settings
-    //access token is saved just as base64 encoded string
+    //load session key from settings
+    //session token is saved just as base64 encoded string
     SettingsManager s;
     m_accessTokenEncoded = s.restoreEncodedAccessToken();
-    */
 }
 
 void MegaSyncDriver::startRequest()
 {
-    /*QStringList args;
-    QString pythonInterpreterPath;
-    QString appSecret;
-    QString accessToken;
+    QStringList args;
+    QString megaCmdPath;
+    QString sessionKey;
     QString command;
 
 #ifdef Q_OS_WIN
@@ -348,30 +344,17 @@ void MegaSyncDriver::startRequest()
 #endif
 #ifdef Q_OS_LINUX
     if(DefinitionHolder::APPIMAGE_LINUX) {
-        pythonInterpreterPath = QCoreApplication::applicationDirPath()
+        megaCmdPath = QCoreApplication::applicationDirPath()
                 + "/../share/symphytum/sync/dropbox_client/dropbox_client";
     } else {
-        pythonInterpreterPath = "python3";
-        args.append("/usr/share/symphytum/sync/dropbox_client.py");
+        megaCmdPath = "mega-exec"; //FIXME
+        //args.append("/usr/share/symphytum/sync/dropbox_client.py");
     }
 #endif
 
-    //decode access token
-    accessToken = QString(
+    //decode session token
+    sessionKey = QString(
                 QByteArray::fromBase64(m_accessTokenEncoded.toLatin1()));
-
-    //decode app secret
-    QString s2;
-    QString s1;
-    for (int i = 0; i < m_appSecretEncoded.size()/2; i++) {
-        s2.append(m_appSecretEncoded.at(i));
-    }
-    for (int i = m_appSecretEncoded.size()/2;
-         i < m_appSecretEncoded.size(); i++) {
-        s1.append(m_appSecretEncoded.at(i));
-    }
-    QString e = s1 + s2;
-    appSecret = QString(QByteArray::fromBase64(e.toLatin1()));
 
     //init command and etra args
     QStringList extraArgs; //extra arguments for specific command
@@ -380,16 +363,16 @@ void MegaSyncDriver::startRequest()
         //skip
         break;
     case AuthRequest:
-        command = "authorize_url";
-        accessToken = "none";
+        megaCmdPath.replace("mega-exec", "mega-cmd"); //use interactive mega shell
         break;
-    case AuthValidationRequest  :
-        command = "create_access_token";
-        accessToken = "none";
-        extraArgs = m_requestArgs;
+    case LogOutRequest:
+        command = "logout";
+        break;
+    case AuthValidationRequest:
+        command = "session";
         break;
     case UserNameRequest:
-        command = "user_name";
+        command = "whoami";
         break;
     case DownloadRequest:
         command = "download_file";
@@ -425,15 +408,27 @@ void MegaSyncDriver::startRequest()
     }
 
     //init args
-    args.append(appSecret);
-    args.append(accessToken);
     args.append(command);
     args.append(extraArgs);
 
     m_processOutput.clear();
-    m_process->start(pythonInterpreterPath, args);
+    m_process->start(megaCmdPath, args);
+
+    //if login command, use interactive command to avoid pass leak
+    //instead of command line args
+    if (m_currentRequest == AuthRequest) {
+        QString megaEmail;
+        QString megaPass;
+        if (m_requestArgs.size() >= 2) {
+            megaEmail = m_requestArgs.at(0);
+            megaPass = m_requestArgs.at(1);
+        }
+        m_process->waitForReadyRead();
+        m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1());
+        m_process->waitForBytesWritten();
+    }
 
     //close write channel to allow
     //ready output signals, see docs
-    m_process->closeWriteChannel();*/
+    m_process->closeWriteChannel();
 }

@@ -36,8 +36,8 @@ public:
     explicit DropboxSyncDriver(QObject *parent = 0);
     ~DropboxSyncDriver();
 
-    void startAuthenticationRequest();
-    void startAuthenticationValidationRequest(QString &authToken);
+    void startAuthenticationRequest(const QStringList &args);
+    void startAuthenticationValidationRequest(const QString &authToken);
     void startUserNameRequest();
     void startDownloadRequest(const QString &srcFilePath,
                               const QString &destFilePath);

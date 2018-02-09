@@ -36,8 +36,8 @@ public:
     explicit MegaSyncDriver(QObject *parent = 0);
     ~MegaSyncDriver();
 
-    void startAuthenticationRequest();
-    void startAuthenticationValidationRequest(QString &authToken);
+    void startAuthenticationRequest(const QStringList &megaCredentials);
+    void startAuthenticationValidationRequest(const QString &authToken);
     void startUserNameRequest();
     void startDownloadRequest(const QString &srcFilePath,
                               const QString &destFilePath);
@@ -61,7 +61,8 @@ private:
         UserNameRequest,
         DownloadRequest,
         UploadRequest,
-        RemoveRequest
+        RemoveRequest,
+        LogOutRequest
     };
 
     void initSecrets();
@@ -70,7 +71,6 @@ private:
     QProcess *m_process;
     SyncRequest m_currentRequest;
     QString m_accessTokenEncoded;
-    QString m_appSecretEncoded;
     QStringList m_requestArgs;
     QString m_processOutput;
     int m_totUploadChunks;

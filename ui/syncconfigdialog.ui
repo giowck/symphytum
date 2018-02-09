@@ -531,12 +531,44 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>145</y>
+     <x>176</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>338</x>
      <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>megaPassLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>okMegaButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>megaEmailLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>okMegaButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>225</y>
     </hint>
    </hints>
   </connection>

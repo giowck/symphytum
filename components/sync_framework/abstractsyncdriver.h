@@ -42,8 +42,12 @@ public:
      * This method starts the authentication process (OAuth)
      * and emits the authenticationUrlReady() signal with
      * the URL to be visited by the user
+     * @param authArgs - optional arguments list if needed by the implementation
      */
-    virtual void startAuthenticationRequest() = 0;
+    virtual void startAuthenticationRequest(const QStringList &authArgs) = 0;
+
+    /** @overload */
+    void startAuthenticationRequest();
 
     /**
      * This method validates the authentication request done
@@ -55,7 +59,7 @@ public:
      * created and stored.
      * @param authToken - the OAuth auth token required to create the access token
      */
-    virtual void startAuthenticationValidationRequest(QString &authToken) = 0;
+    virtual void startAuthenticationValidationRequest(const QString &authToken) = 0;
 
     /**
      * Start a request to get the user name of the cloud service account
