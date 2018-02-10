@@ -12,6 +12,7 @@
 
 #include <QtCore/QFileInfo>
 #include <QtWidgets/QApplication>
+#include <QtCore/QFile>
 //FIXME debug rm
 #include <QDebug>
 
@@ -21,10 +22,10 @@
 
 MegaSyncDriver::MegaSyncDriver(QObject *parent) :
     AbstractSyncDriver(parent),
-    m_process(0), m_currentRequest(NoRequest),
-    m_totUploadChunks(0), m_chunksUploaded(0)
+    m_process(0), m_currentRequest(NoRequest)
 {
     initSecrets();
+    m_megaFolderPath = DefinitionHolder::NAME + "/";
 
     m_process = new QProcess(this);
     connect(m_process, SIGNAL(readyReadStandardOutput()),
@@ -72,24 +73,24 @@ void MegaSyncDriver::startDownloadRequest(const QString &srcFilePath,
                                              const QString &destFilePath)
 {
     m_currentRequest = DownloadRequest;
-    m_requestArgs.append(srcFilePath);
-    m_requestArgs.append(destFilePath);
+    m_requestArgs.append(m_megaFolderPath + srcFilePath);
+    m_requestArgs.append(destFilePath + "_tmp"); //temp file because downloads are not overwritten by megacmd
     startRequest();
 }
 
 void MegaSyncDriver::startUploadRequest(const QString &srcFilePath,
                                            const QString &destFilePath)
 {
-    m_currentRequest = UploadRequest;
+    m_currentRequest = UploadRequestTmpStep;
     m_requestArgs.append(srcFilePath);
-    m_requestArgs.append(destFilePath);
+    m_requestArgs.append(m_megaFolderPath + destFilePath);
     startRequest();
 }
 
 void MegaSyncDriver::startRemoveRequest(const QString &cloudFilePath)
 {
     m_currentRequest = RemoveRequest;
-    m_requestArgs.append(cloudFilePath);
+    m_requestArgs.append(m_megaFolderPath + cloudFilePath);
     startRequest();
 }
 
@@ -217,20 +218,32 @@ void MegaSyncDriver::processFinished(int exitCode,
             break;
         case DownloadRequest:
         {
-            QString src, dest;
+            QString src, dest, orig;
             src = requestArgs.at(0);
             dest = requestArgs.at(1);
+            orig = QString(dest).remove("_tmp"); //get original name
 
-            if (result.contains("Download:OK")) {
-                emit downloadReady(src, dest);
-            } else if (result.contains("not_found")) {
-                emit downloadFileNotFound(src);
-            } else {
+            //since downloaded files are not overwritten
+            //rename temporary download file to original name
+            bool mvok = false;
+            QFile::remove(orig);
+            mvok = QFile::rename(dest, orig);
+            if (!mvok) {
+                result.prepend(tr("Failed to replace temporary downloaded file: %1\n")
+                               .arg(orig));
                 error = true;
+            } else {
+                if (!result.contains("[err:")) {
+                    emit downloadReady(src, orig);
+                } else if (result.contains("Couldn't find")) {
+                    emit downloadFileNotFound(src);
+                } else {
+                    error = true;
+                }
             }
         }
             break;
-        case UploadRequest:
+        case UploadRequestTmpStep:
         {
             QString src, dest;
             src = requestArgs.at(0);
@@ -296,7 +309,7 @@ void MegaSyncDriver::processReadyReadOutput()
     qDebug() << m_processOutput;
 
     switch (m_currentRequest) {
-    case UploadRequest:
+    case UploadRequestTmpStep:
         /*if (m_totUploadChunks) {
             if (m_processOutput.contains("Uploading:")) {
                 emit uploadedChunkReady(m_chunksUploaded, m_totUploadChunks);
@@ -375,34 +388,36 @@ void MegaSyncDriver::startRequest()
         command = "whoami";
         break;
     case DownloadRequest:
-        command = "download_file";
+        command = "get";
         extraArgs = m_requestArgs;
         break;
     case RemoveRequest:
         command = "delete_file";
         extraArgs = m_requestArgs;
         break;
-    case UploadRequest:
-        //files bigger 4MiB are uploaded in chunks
-        //FIXME: since there's a timeout bug in python v2 SDK for Dropbox
-        //reduce to 1 MiB chunks
-        QFileInfo file(m_requestArgs.at(0));
-        qint64 size = file.size();
-        //qint64 _4MiB = 4194304; //using 1MB to avoid timeouts
-        qint64 _1MiB = 1048576;
-        if (size <= _1MiB) {
-            command = "upload_file";
-            m_totUploadChunks = 0;
-            m_chunksUploaded = 0;
-        } else {
-            command = "upload_file_chunked";
-            m_chunksUploaded = 0;
-            m_totUploadChunks = size / _1MiB;
 
-            //if rest, add smaller chunk
-            if (size % _1MiB)
-                m_totUploadChunks++;
-        }
+    //MEGAcmd doesn't support upload progress at this point
+    //so uploading is a 3 step process
+    case UploadRequestTmpStep:
+        //MEGAcmd doesn't support upload progress at this point
+        command = "upload_file";
+        //FIXME: because files are not overwritten
+        //upload first to a temp file then delete original
+        //and finally move temp to original name
+        extraArgs = m_requestArgs;
+        break;
+    case UploadRequestRmStep:
+        command = "upload_file";
+        //FIXME: because files are not overwritten
+        //upload first to a temp file then delete original
+        //and finally move temp to original name
+        extraArgs = m_requestArgs;
+        break;
+    case UploadRequestMvStep:
+        command = "upload_file";
+        //FIXME: because files are not overwritten
+        //upload first to a temp file then delete original
+        //and finally move temp to original name
         extraArgs = m_requestArgs;
         break;
     }

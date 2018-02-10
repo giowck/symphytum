@@ -60,7 +60,12 @@ private:
         AuthValidationRequest,
         UserNameRequest,
         DownloadRequest,
-        UploadRequest,
+
+        //uploading happens in 3 steps, since files are not overwritten
+        UploadRequestTmpStep, //upload to a temporary name
+        UploadRequestRmStep, //delete original file
+        UploadRequestMvStep, //rename temp file to original name
+
         RemoveRequest,
         LogOutRequest
     };
@@ -73,8 +78,7 @@ private:
     QString m_accessTokenEncoded;
     QStringList m_requestArgs;
     QString m_processOutput;
-    int m_totUploadChunks;
-    int m_chunksUploaded;
+    QString m_megaFolderPath;
 };
 
 #endif // MEGASYNCDRIVER_H
