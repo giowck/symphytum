@@ -67,6 +67,7 @@ private:
         UploadRequestMvStep, //rename temp file to original name
 
         RemoveRequest,
+        RemoveTmpCloudFileRequest, //delete a leftover _tmp file
         LogOutRequest
     };
 

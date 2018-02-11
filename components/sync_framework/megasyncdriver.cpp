@@ -13,8 +13,7 @@
 #include <QtCore/QFileInfo>
 #include <QtWidgets/QApplication>
 #include <QtCore/QFile>
-//FIXME debug rm
-#include <QDebug>
+
 
 //-----------------------------------------------------------------------------
 // Public
@@ -83,7 +82,7 @@ void MegaSyncDriver::startUploadRequest(const QString &srcFilePath,
 {
     m_currentRequest = UploadRequestTmpStep;
     m_requestArgs.append(srcFilePath);
-    m_requestArgs.append(m_megaFolderPath + destFilePath);
+    m_requestArgs.append(m_megaFolderPath + destFilePath + "_tmp");
     startRequest();
 }
 
@@ -220,36 +219,78 @@ void MegaSyncDriver::processFinished(int exitCode,
         {
             QString src, dest, orig;
             src = requestArgs.at(0);
+            src.remove(m_megaFolderPath);
             dest = requestArgs.at(1);
             orig = QString(dest).remove("_tmp"); //get original name
 
-            //since downloaded files are not overwritten
-            //rename temporary download file to original name
-            bool mvok = false;
-            QFile::remove(orig);
-            mvok = QFile::rename(dest, orig);
-            if (!mvok) {
-                result.prepend(tr("Failed to replace temporary downloaded file: %1\n")
-                               .arg(orig));
-                error = true;
-            } else {
-                if (!result.contains("[err:")) {
-                    emit downloadReady(src, orig);
-                } else if (result.contains("Couldn't find")) {
-                    emit downloadFileNotFound(src);
-                } else {
-                    error = true;
+            //file found?
+            bool notFound = result.contains("Couldn't find");
+
+            if (!result.contains("[err:")) {
+                if (!notFound) {
+                    //since downloaded files are not overwritten
+                    //rename temporary download file to original name
+                    bool mvok = false;
+                    QFile::remove(orig);
+                    mvok = QFile::rename(dest, orig);
+                    if (!mvok) {
+                        result.prepend(tr("Failed to replace temporary downloaded file: %1\n")
+                                       .arg(orig));
+                        error = true;
+                    }
                 }
+                if (!error)
+                    emit downloadReady(src, orig);
+            } else if (notFound) {
+                emit downloadFileNotFound(src);
+            } else {
+                error = true;
             }
         }
             break;
         case UploadRequestTmpStep:
         {
+            //NOTE: if the user is logged out or session expired
+            //megacmd says fail not found when really it should
+            //say not logged in
+            //see bug https://github.com/meganz/MEGAcmd/issues/19
+            if (!result.contains("[err:")) {
+                //do next step
+                m_currentRequest = UploadRequestRmStep;
+                m_requestArgs = requestArgs;
+                startRequest();
+            } else if (result.contains("Destination is not valid")) {
+                //probably an orphan _tmp file was left over
+                //rm _tmp file and redo request
+                m_currentRequest = RemoveTmpCloudFileRequest;
+                m_requestArgs = requestArgs;
+                startRequest();
+            } else {
+                error = true;
+            }
+        }
+            break;
+        case UploadRequestRmStep:
+        {
+            if (!result.contains("[err:") || result.contains("No such file or directory")) {
+                //do next step
+                m_currentRequest = UploadRequestMvStep;
+                m_requestArgs = requestArgs;
+                startRequest();
+            } else {
+                error = true;
+            }
+        }
+            break;
+        case UploadRequestMvStep:
+        {
             QString src, dest;
             src = requestArgs.at(0);
             dest = requestArgs.at(1);
+            dest.remove(m_megaFolderPath);
+            dest.remove("_tmp");
 
-            if (result.contains("Upload:OK")) {
+            if (!result.contains("[err:")) {
                 emit uploadReady(src, dest);
             } else {
                 error = true;
@@ -268,11 +309,22 @@ void MegaSyncDriver::processFinished(int exitCode,
             break;
         case RemoveRequest:
         {
-            QString file;
-            file = requestArgs.at(0);
-
-            if (result.contains("Delete:OK") || result.contains("not_found")) {
+            QString file = requestArgs.at(0);
+            file.remove(m_megaFolderPath);
+            if (!result.contains("[err:") || result.contains("No such file or directory")) {
                 emit removeReady(file);
+            } else {
+                error = true;
+            }
+        }
+            break;
+        case RemoveTmpCloudFileRequest:
+        {
+            if (!result.contains("[err:")) {
+                //redo upload tmp request
+                m_currentRequest = UploadRequestTmpStep;
+                m_requestArgs = requestArgs;
+                startRequest();
             } else {
                 error = true;
             }
@@ -284,13 +336,13 @@ void MegaSyncDriver::processFinished(int exitCode,
 
         //inform about errors with signals
         if (error) {
-            if (result.contains("Not logged in")) //FIXME: todo
+            if (result.contains("Not logged in"))
                 emit authTokenExpired();
-            else if (result.contains("Failed to establish a new connection"))
+            else if (result.contains("Failed to establish a new connection")) //FIXME: test this for mega
                 emit connectionFailed();
-            else if (result.contains("503")) //this was never tested
-                                             //check the output when storage full
-                                             //for the correct err code
+            else if (result.contains("quota")) //this was never tested
+                                               //check the output when storage/bandwidth full
+                                               //for the correct err code
                 emit storageQuotaExceeded();
             else
                 emit errorSignal(result);
@@ -305,21 +357,19 @@ void MegaSyncDriver::processReadyReadOutput()
     newOutput.append(m_process->readAllStandardOutput());
     m_processOutput.append(newOutput);
 
-    //FIXME: debug
-    qDebug() << m_processOutput;
-
-    switch (m_currentRequest) {
+    //NOTE: megacmd currently has no progress status output
+    /*switch (m_currentRequest) {
     case UploadRequestTmpStep:
-        /*if (m_totUploadChunks) {
+        if (m_totUploadChunks) {
             if (m_processOutput.contains("Uploading:")) {
                 emit uploadedChunkReady(m_chunksUploaded, m_totUploadChunks);
                 m_chunksUploaded++;
             }
-        }*/
+        }
         break;
     default:
         break;
-    }
+    }*/
 
 }
 
@@ -392,33 +442,40 @@ void MegaSyncDriver::startRequest()
         extraArgs = m_requestArgs;
         break;
     case RemoveRequest:
-        command = "delete_file";
+        command = "rm";
         extraArgs = m_requestArgs;
+        break;
+    case RemoveTmpCloudFileRequest:
+        command = "rm";
+        extraArgs = m_requestArgs;
+        if (extraArgs.size() >= 2) {
+            extraArgs.removeFirst(); // remove local file path arg
+        }
         break;
 
     //MEGAcmd doesn't support upload progress at this point
     //so uploading is a 3 step process
     case UploadRequestTmpStep:
         //MEGAcmd doesn't support upload progress at this point
-        command = "upload_file";
-        //FIXME: because files are not overwritten
-        //upload first to a temp file then delete original
-        //and finally move temp to original name
+        command = "put";
         extraArgs = m_requestArgs;
+        extraArgs.append("-c"); //create path if needed
         break;
     case UploadRequestRmStep:
-        command = "upload_file";
-        //FIXME: because files are not overwritten
-        //upload first to a temp file then delete original
-        //and finally move temp to original name
+        command = "rm";
         extraArgs = m_requestArgs;
+        if (extraArgs.size() >= 2) {
+            extraArgs.removeFirst(); // remove local file path arg
+            extraArgs.replace(0, QString(extraArgs.at(0)).remove("_tmp")); //rm original file
+        }
         break;
     case UploadRequestMvStep:
-        command = "upload_file";
-        //FIXME: because files are not overwritten
-        //upload first to a temp file then delete original
-        //and finally move temp to original name
+        command = "mv";
         extraArgs = m_requestArgs;
+        if (extraArgs.size() >= 2) {
+            extraArgs.replace(0, extraArgs.at(1)); //replace local path with cloud tmp file
+            extraArgs.replace(1, QString(extraArgs.at(1)).remove("_tmp")); //rename to original
+        }
         break;
     }
 
