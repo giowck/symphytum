@@ -338,7 +338,7 @@ void MegaSyncDriver::processFinished(int exitCode,
         if (error) {
             if (result.contains("Not logged in"))
                 emit authTokenExpired();
-            else if (result.contains("Failed to establish a new connection")) //FIXME: test this for mega
+            else if (result.contains("connection")) //megacmd doesn't report network fails
                 emit connectionFailed();
             else if (result.contains("quota")) //this was never tested
                                                //check the output when storage/bandwidth full
@@ -393,25 +393,19 @@ void MegaSyncDriver::startRequest()
     QString command;
 
 #ifdef Q_OS_WIN
-    pythonInterpreterPath = QApplication::applicationDirPath()
-            .append("/sync/").append("dropbox_client.exe");
+    megaCmdPath = QApplication::applicationDirPath()
+            .append("/sync/megacmd/").append("mega-exec.exe");
 #endif
 #ifdef Q_OS_OSX
-    if (QSysInfo::MacintoshVersion <= QSysInfo::MV_10_6)
-        pythonInterpreterPath = "python2.6";
-    else
-        pythonInterpreterPath = "python2.7"; //python3 not yet available
-    QString path = QApplication::applicationDirPath().append("/sync/");
-    path.append("dropbox_client.py");
-    args.append(path);
+    megaCmdPath = QApplication::applicationDirPath().append("/sync/megacmd/");
+    megaCmdPath.append("mega-exec");
 #endif
 #ifdef Q_OS_LINUX
     if(DefinitionHolder::APPIMAGE_LINUX) {
         megaCmdPath = QCoreApplication::applicationDirPath()
-                + "/../share/symphytum/sync/dropbox_client/dropbox_client";
+                + "/../share/symphytum/sync/megacmd/mega-exec";
     } else {
-        megaCmdPath = "mega-exec"; //FIXME
-        //args.append("/usr/share/symphytum/sync/dropbox_client.py");
+        megaCmdPath = "/usr/share/symphytum/sync/megacmd/mega-exec";
     }
 #endif
 
