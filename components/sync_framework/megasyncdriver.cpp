@@ -13,6 +13,7 @@
 #include <QtCore/QFileInfo>
 #include <QtWidgets/QApplication>
 #include <QtCore/QFile>
+#include <QtCore/QStandardPaths>
 
 
 //-----------------------------------------------------------------------------
@@ -167,7 +168,12 @@ void MegaSyncDriver::processFinished(int exitCode,
         switch (m_currentRequest) {
         case AuthRequest:
         {
+#ifdef Q_OS_WIN
+            if (!result.contains("[err:")) { //windows not using interactive cmd shell,
+                                             //just login command, see startRequest()
+#else
             if (result.contains("100.00 %")) {
+#endif
                 emit authenticationUrlReady("skip");
             } else if (result.contains("Already logged in")) {
                 //logout and redo request
@@ -395,8 +401,10 @@ void MegaSyncDriver::startRequest()
     QString command;
 
 #ifdef Q_OS_WIN
-    megaCmdPath = QApplication::applicationDirPath()
-            .append("/sync/megacmd/").append("mega-exec.exe");
+    //megacmd is installed to C:\Users\user\AppData\Local\MEGAcmd
+    megaCmdPath =  QString(QStandardPaths::standardLocations(
+                               QStandardPaths::GenericDataLocation).at(0))
+            .append("/MEGAcmd/").append("MEGAclient.exe");
 #endif
 #ifdef Q_OS_OSX
     megaCmdPath = QApplication::applicationDirPath().append("/sync/megacmd/");
@@ -422,7 +430,16 @@ void MegaSyncDriver::startRequest()
         //skip
         break;
     case AuthRequest:
+#ifdef Q_OS_WIN
+        //FIXME: output reading from the mega-cmd shell doesn't work on windows
+        //so use login command as a workaround, issue with this is that the password is leaked
+        //as a command line argument, not the best solution
+        //megaCmdPath.replace("MEGAclient.exe", "MEGAcmdShell.exe"); //use interactive mega shell
+        command = "login";
+        extraArgs = m_requestArgs;
+#else
         megaCmdPath.replace("mega-exec", "mega-cmd"); //use interactive mega shell
+#endif
         break;
     case LogOutRequest:
         command = "logout";
@@ -482,6 +499,7 @@ void MegaSyncDriver::startRequest()
     m_processOutput.clear();
     m_process->start(megaCmdPath, args);
 
+#ifndef Q_OS_WIN //see above, mega-cmd shell doesn't work with QProcess on windows
     //if login command, use interactive command to avoid pass leak
     //instead of command line args
     if (m_currentRequest == AuthRequest) {
@@ -495,6 +513,7 @@ void MegaSyncDriver::startRequest()
         m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1());
         m_process->waitForBytesWritten();
     }
+#endif
 
     //close write channel to allow
     //ready output signals, see docs
