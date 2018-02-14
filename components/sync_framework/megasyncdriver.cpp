@@ -123,7 +123,9 @@ void MegaSyncDriver::processError(QProcess::ProcessError error)
 
     switch (error) {
     case QProcess::FailedToStart:
-        errorMessage = tr("MEGA sync process failed to start");
+        errorMessage = tr("MEGA sync process failed to start.<br /><br />"
+                          "Please <b>install</b> MEGAcmd by visiting "
+                          "<a href='https://mega.nz/cmd'>mega.nz/cmd</a>.<br />");
         break;
     case QProcess::Crashed:
         errorMessage = tr("MEGA sync process crashed");

@@ -140,15 +140,16 @@ void SyncConfigDialog::megaCredentialsInputEdited()
 
 void SyncConfigDialog::syncError(const QString &message)
 {
-    if (ui->stackedWidget->currentIndex() == 2) {
+    if (ui->stackedWidget->currentIndex() == 1) {
+        ui->urlLabelResult->setText(message);
+        ui->urlLabel->hide();
+        ui->urlProgressBar->hide();
+    } else {
+        ui->stackedWidget->setCurrentIndex(2);
         ui->authLabel->hide();
         ui->authProgressBar->hide();
         ui->resultLabel->setText(tr("%1 Please try again.").arg(message));
         ui->retryButton->setVisible(true);
-    } else if (ui->stackedWidget->currentIndex() == 1) {
-        ui->urlLabelResult->setText(message);
-        ui->urlLabel->hide();
-        ui->urlProgressBar->hide();
     }
 }
 
