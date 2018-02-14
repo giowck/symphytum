@@ -85,7 +85,32 @@ Source: "C:\Users\giowck\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: 
 Source: "C:\Users\giowck\Desktop\Qt5WinExtras.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\giowck\Desktop\MEGAcmdSetup.exe"; DestDir: "{tmp}"; Check: InstallMEGAcmd; Flags: deleteafterinstall ignoreversion uninsremovereadonly
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Code]
+var
+  InstallMEGAcmdCheckbox: TNewCheckBox;
+
+procedure InitializeWizard;
+var    
+  MainPage: TWizardPage;    
+begin
+  MainPage := CreateCustomPage(wpWelcome, '{#MyAppName}', 'Installer');
+
+  InstallMEGAcmdCheckbox := TNewCheckBox.Create(MainPage);
+  InstallMEGAcmdCheckbox.Parent := MainPage.Surface;
+  InstallMEGAcmdCheckbox.Top := ScaleY(20);
+  InstallMEGAcmdCheckbox.Left := ScaleX(10);
+  InstallMEGAcmdCheckbox.Width := ScaleX(400);
+  InstallMEGAcmdCheckbox.Caption := 'Install MEGA sync support (MEGAcmd)';
+  InstallMEGAcmdCheckbox.Checked := true;
+end;
+
+function InstallMEGAcmd: Boolean;
+begin
+  Result := InstallMEGAcmdCheckbox.Checked;
+end;
     
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -94,5 +119,7 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
+Filename: "{tmp}\MEGAcmdSetup.exe"; Parameters: "/S"; Flags: waituntilterminated skipifdoesntexist; StatusMsg: "Install MEGA sync driver (by MEGAcmd)"; Check: InstallMEGAcmd
+
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
