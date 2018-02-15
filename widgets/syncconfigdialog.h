@@ -15,6 +15,8 @@
 
 #include <QtWidgets/QDialog>
 
+#include "../components/sync_framework/syncengine.h"
+
 
 //-----------------------------------------------------------------------------
 // Forward declarations
@@ -49,9 +51,11 @@ public:
 private slots:
     void loginButtonClicked();
     void okButtonClicked();
+    void okMegaButtonClicked();
     void finishButtonClicked();
     void retryButtonClicked();
     void codeLineEditTextEdited();
+    void megaCredentialsInputEdited();
 
     //sync slots
     /** Called if an error occurred */
@@ -79,7 +83,7 @@ private:
     void createSyncConnections();
 
     Ui::SyncConfigDialog *ui;
-    int m_syncService;
+    SyncEngine::SyncService m_syncService;
     AbstractSyncDriver *m_syncDriver;
 };
 

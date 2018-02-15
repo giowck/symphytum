@@ -37,5 +37,6 @@
         <file>languages/qt_pl.qm</file>
         <file>languages/symphytum_pl.qm</file>
         <file>images/icons/duplicatecollection.png</file>
+        <file>images/icons/megasync.png</file>
     </qresource>
 </RCC>

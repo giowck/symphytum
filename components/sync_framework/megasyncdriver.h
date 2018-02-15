@@ -1,13 +1,13 @@
 /**
-  * \class DropboxSyncDriver
-  * \brief This class implements the sync driver for the Dropbox service
-  *        by using the Dropbox Python SDK package.
-  * \author Giorgio Wicklein - GIOWISYS Software
-  * \date 10/08/2012
+  * \class MegaSyncDriver
+  * \brief This class implements the sync driver for the MEGA service
+  *        by using the MEGAcmd command line tools.
+  * \author Oirio Joshi (joshirio)
+  * \date 2018-02-08
   */
 
-#ifndef DROPBOXSYNCDRIVER_H
-#define DROPBOXSYNCDRIVER_H
+#ifndef MEGASYNCDRIVER_H
+#define MEGASYNCDRIVER_H
 
 
 //-----------------------------------------------------------------------------
@@ -25,18 +25,18 @@
 
 
 //-----------------------------------------------------------------------------
-// DropboxSyncDriver
+// MegaSyncDriver
 //-----------------------------------------------------------------------------
 
-class DropboxSyncDriver : public AbstractSyncDriver
+class MegaSyncDriver : public AbstractSyncDriver
 {
     Q_OBJECT
 
 public:
-    explicit DropboxSyncDriver(QObject *parent = 0);
-    ~DropboxSyncDriver();
+    explicit MegaSyncDriver(QObject *parent = 0);
+    ~MegaSyncDriver();
 
-    void startAuthenticationRequest(const QStringList &args);
+    void startAuthenticationRequest(const QStringList &megaCredentials);
     void startAuthenticationValidationRequest(const QString &authToken);
     void startUserNameRequest();
     void startDownloadRequest(const QString &srcFilePath,
@@ -60,8 +60,15 @@ private:
         AuthValidationRequest,
         UserNameRequest,
         DownloadRequest,
-        UploadRequest,
-        RemoveRequest
+
+        //uploading happens in 3 steps, since files are not overwritten
+        UploadRequestTmpStep, //upload to a temporary name
+        UploadRequestRmStep, //delete original file
+        UploadRequestMvStep, //rename temp file to original name
+
+        RemoveRequest,
+        RemoveTmpCloudFileRequest, //delete a leftover _tmp file
+        LogOutRequest
     };
 
     void initSecrets();
@@ -70,11 +77,9 @@ private:
     QProcess *m_process;
     SyncRequest m_currentRequest;
     QString m_accessTokenEncoded;
-    QString m_appSecretEncoded;
     QStringList m_requestArgs;
     QString m_processOutput;
-    int m_totUploadChunks;
-    int m_chunksUploaded;
+    QString m_megaFolderPath;
 };
 
-#endif // DROPBOXSYNCDRIVER_H
+#endif // MEGASYNCDRIVER_H

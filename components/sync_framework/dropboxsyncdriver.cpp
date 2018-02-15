@@ -41,13 +41,14 @@ DropboxSyncDriver::~DropboxSyncDriver()
     stopAllRequests();
 }
 
-void DropboxSyncDriver::startAuthenticationRequest()
+void DropboxSyncDriver::startAuthenticationRequest(const QStringList &args)
 {
+    Q_UNUSED(args);
     m_currentRequest = AuthRequest;
     startRequest();
 }
 
-void DropboxSyncDriver::startAuthenticationValidationRequest(QString &authToken)
+void DropboxSyncDriver::startAuthenticationValidationRequest(const QString &authToken)
 {
     m_currentRequest = AuthValidationRequest;
     m_requestArgs.append(authToken);
@@ -378,7 +379,7 @@ void DropboxSyncDriver::startRequest()
         command = "authorize_url";
         accessToken = "none";
         break;
-    case AuthValidationRequest  :
+    case AuthValidationRequest:
         command = "create_access_token";
         accessToken = "none";
         extraArgs = m_requestArgs;
