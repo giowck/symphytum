@@ -407,7 +407,7 @@ void MegaSyncDriver::startRequest()
             .append("/MEGAcmd/").append("MEGAclient.exe");
 #endif
 #ifdef Q_OS_OSX
-    megaCmdPath = QApplication::applicationDirPath().append("/sync/megacmd/");
+    megaCmdPath = QString("/Applications/MEGAcmd.app/Contents/MacOS/");
     megaCmdPath.append("mega-exec");
 #endif
 #ifdef Q_OS_LINUX
@@ -437,6 +437,8 @@ void MegaSyncDriver::startRequest()
         //megaCmdPath.replace("MEGAclient.exe", "MEGAcmdShell.exe"); //use interactive mega shell
         command = "login";
         extraArgs = m_requestArgs;
+#elif defined(Q_OS_MACOS)
+        megaCmdPath.replace("mega-exec", "MEGAcmdShell"); //use interactive mega shell
 #else
         megaCmdPath.replace("mega-exec", "mega-cmd"); //use interactive mega shell
 #endif
