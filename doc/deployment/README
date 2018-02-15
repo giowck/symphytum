@@ -21,13 +21,11 @@ Prepare Dropbox SDK:
 4. Go to dropbox folder in the sdk folder
 5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
 
-Prepare MEGAcmd:
-1. TODO
-
 Windows:
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto" or reuse from previous deployment (setup.exe)
-2. Open and compile symphytum.iss after review
-3. The missing .DLL files can be copied from the Qt install or use windeployqt
+2. Download MEGAcmd installer for windows from https://mega.nz/cmd, which is used by the installer (.iss) script
+3. Open and compile symphytum.iss after review
+4. The missing .DLL files can be copied from the Qt install or use windeployqt
 
 Windows Portable:
 1. Follow similar steps as above
