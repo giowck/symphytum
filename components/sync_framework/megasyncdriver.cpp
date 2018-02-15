@@ -74,7 +74,7 @@ void MegaSyncDriver::startDownloadRequest(const QString &srcFilePath,
 {
     m_currentRequest = DownloadRequest;
     m_requestArgs.append(m_megaFolderPath + srcFilePath);
-    m_requestArgs.append(destFilePath + "_tmp"); //temp file because downloads are not overwritten by megacmd
+    m_requestArgs.append(destFilePath + ".tmp"); //temp file because downloads are not overwritten by megacmd
     startRequest();
 }
 
@@ -83,7 +83,7 @@ void MegaSyncDriver::startUploadRequest(const QString &srcFilePath,
 {
     m_currentRequest = UploadRequestTmpStep;
     m_requestArgs.append(srcFilePath);
-    m_requestArgs.append(m_megaFolderPath + destFilePath + "_tmp");
+    m_requestArgs.append(m_megaFolderPath + destFilePath + ".tmp");
     startRequest();
 }
 
@@ -229,7 +229,7 @@ void MegaSyncDriver::processFinished(int exitCode,
             src = requestArgs.at(0);
             src.remove(m_megaFolderPath);
             dest = requestArgs.at(1);
-            orig = QString(dest).remove("_tmp"); //get original name
+            orig = QString(dest).remove(".tmp"); //get original name
 
             //file found?
             bool notFound = result.contains("Couldn't find");
@@ -268,8 +268,8 @@ void MegaSyncDriver::processFinished(int exitCode,
                 m_requestArgs = requestArgs;
                 startRequest();
             } else if (result.contains("Destination is not valid")) {
-                //probably an orphan _tmp file was left over
-                //rm _tmp file and redo request
+                //probably an orphan .tmp file was left over
+                //rm .tmp file and redo request
                 m_currentRequest = RemoveTmpCloudFileRequest;
                 m_requestArgs = requestArgs;
                 startRequest();
@@ -296,7 +296,7 @@ void MegaSyncDriver::processFinished(int exitCode,
             src = requestArgs.at(0);
             dest = requestArgs.at(1);
             dest.remove(m_megaFolderPath);
-            dest.remove("_tmp");
+            dest.remove(".tmp");
 
             if (!result.contains("[err:")) {
                 emit uploadReady(src, dest);
@@ -479,7 +479,7 @@ void MegaSyncDriver::startRequest()
         extraArgs = m_requestArgs;
         if (extraArgs.size() >= 2) {
             extraArgs.removeFirst(); // remove local file path arg
-            extraArgs.replace(0, QString(extraArgs.at(0)).remove("_tmp")); //rm original file
+            extraArgs.replace(0, QString(extraArgs.at(0)).remove(".tmp")); //rm original file
         }
         break;
     case UploadRequestMvStep:
@@ -487,7 +487,7 @@ void MegaSyncDriver::startRequest()
         extraArgs = m_requestArgs;
         if (extraArgs.size() >= 2) {
             extraArgs.replace(0, extraArgs.at(1)); //replace local path with cloud tmp file
-            extraArgs.replace(1, QString(extraArgs.at(1)).remove("_tmp")); //rename to original
+            extraArgs.replace(1, QString(extraArgs.at(1)).remove(".tmp")); //rename to original
         }
         break;
     }
