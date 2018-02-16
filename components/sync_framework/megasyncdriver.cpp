@@ -411,12 +411,7 @@ void MegaSyncDriver::startRequest()
     megaCmdPath.append("mega-exec");
 #endif
 #ifdef Q_OS_LINUX
-    if(DefinitionHolder::APPIMAGE_LINUX) {
-        megaCmdPath = QCoreApplication::applicationDirPath()
-                + "/../share/symphytum/sync/megacmd/mega-exec";
-    } else {
-        megaCmdPath = "/usr/share/symphytum/sync/megacmd/mega-exec";
-    }
+    megaCmdPath = "/usr/bin/mega-exec";
 #endif
 
     //decode session token
