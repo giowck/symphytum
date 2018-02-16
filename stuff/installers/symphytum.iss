@@ -68,6 +68,7 @@ Source: "C:\Users\giowck\Desktop\sqldrivers\*"; DestDir: "{app}\sqldrivers"; Fla
 Source: "C:\Users\giowck\Desktop\bearer\*"; DestDir: "{app}\bearer"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\iconengines\*"; DestDir: "{app}\iconengines"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\printsupport\*"; DestDir: "{app}\printsupport"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\giowck\Desktop\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\giowck\Desktop\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libstdc++-6.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\giowck\Desktop\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
