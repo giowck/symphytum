@@ -6,7 +6,7 @@ __all__ = [
 
 # This should always be 0.0.0 in master. Only update this after tagging
 # before release.
-__version__ = '8.4.1'
+__version__ = '8.7.1'
 
 import contextlib
 import json
@@ -22,6 +22,11 @@ from .auth import (
     AuthError_validator,
     RateLimitError_validator,
 )
+from .common import (
+    PathRoot,
+    PathRoot_validator,
+    PathRootError_validator
+)
 from .base import DropboxBase
 from .base_team import DropboxTeamBase
 from .exceptions import (
@@ -29,6 +34,7 @@ from .exceptions import (
     AuthError,
     BadInputError,
     HttpError,
+    PathRootError,
     InternalServerError,
     RateLimitError,
 )
@@ -41,6 +47,9 @@ from .session import (
     HOST_NOTIFY,
     pinned_session,
 )
+
+PATH_ROOT_HEADER = 'Dropbox-API-Path-Root'
+HTTP_STATUS_INVALID_PATH_ROOT = 422
 
 class RouteResult(object):
     """The successful result of a call to a route."""
@@ -181,6 +190,35 @@ class _DropboxTransport(object):
                           HOST_NOTIFY: API_NOTIFICATION_HOST}
 
         self._timeout = timeout
+
+    def clone(
+            self,
+            oauth2_access_token=None,
+            max_retries_on_error=None,
+            max_retries_on_rate_limit=None,
+            user_agent=None,
+            session=None,
+            headers=None,
+            timeout=None):
+        """
+        Creates a new copy of the Dropbox client with the same defaults unless modified by
+        arguments to clone()
+
+        See constructor for original parameter descriptions.
+
+        :return: New instance of Dropbox clent
+        :rtype: Dropbox
+        """
+
+        return self.__class__(
+            oauth2_access_token or self._oauth2_access_token,
+            max_retries_on_error or self._max_retries_on_error,
+            max_retries_on_rate_limit or self._max_retries_on_rate_limit,
+            user_agent or self._user_agent,
+            session or self._session,
+            headers or self._headers,
+            timeout or self._timeout
+        )
 
     def request(self,
                 route,
@@ -421,6 +459,10 @@ class _DropboxTransport(object):
             err = stone_serializers.json_compat_obj_decode(
                 AuthError_validator, r.json()['error'])
             raise AuthError(request_id, err)
+        elif r.status_code == HTTP_STATUS_INVALID_PATH_ROOT:
+            err = stone_serializers.json_compat_obj_decode(
+                PathRootError_validator, r.json()['error'])
+            raise PathRootError(request_id, err)
         elif r.status_code == 429:
             err = None
             if r.headers.get('content-type') == 'application/json':
@@ -479,6 +521,28 @@ class _DropboxTransport(object):
                 for c in http_resp.iter_content(chunksize):
                     f.write(c)
 
+    def with_path_root(self, path_root):
+        """
+        Creates a clone of the Dropbox instance with the Dropbox-API-Path-Root header
+        as the appropriate serialized instance of PathRoot.
+
+        For more information, see
+        https://www.dropbox.com/developers/reference/namespace-guide#pathrootmodes
+
+        :param PathRoot path_root: instance of PathRoot to serialize into the headers field
+        :return: A :class: `Dropbox`
+        :rtype: Dropbox
+        """
+
+        if not isinstance(path_root, PathRoot):
+            raise ValueError("path_root must be an instance of PathRoot")
+
+        return self.clone(
+            headers={
+                PATH_ROOT_HEADER: stone_serializers.json_encode(PathRoot_validator, path_root)
+            }
+        )
+
 class Dropbox(_DropboxTransport, DropboxBase):
     """
     Use this class to make requests to the Dropbox API using a user's access
@@ -493,22 +557,50 @@ class DropboxTeam(_DropboxTransport, DropboxTeamBase):
     token. Methods of this class are meant to act on the team, but there is
     also an :meth:`as_user` method for assuming a team member's identity.
     """
+    def as_admin(self, team_member_id):
+        """
+        Allows a team credential to assume the identity of an administrator on the team
+        and perform operations on any team-owned content.
+
+        :param str team_member_id: team member id of administrator to perform actions with
+        :return: A :class:`Dropbox` object that can be used to query on behalf
+            of this admin of the team.
+        :rtype: Dropbox
+        """
+        return self._get_dropbox_client_with_select_header('Dropbox-API-Select-Admin',
+                                                           team_member_id)
 
     def as_user(self, team_member_id):
         """
         Allows a team credential to assume the identity of a member of the
         team.
 
+        :param str team_member_id: team member id of team member to perform actions with
         :return: A :class:`Dropbox` object that can be used to query on behalf
             of this member of the team.
         :rtype: Dropbox
         """
+        return self._get_dropbox_client_with_select_header('Dropbox-API-Select-User',
+                                                           team_member_id)
+
+    def _get_dropbox_client_with_select_header(self, select_header_name, team_member_id):
+        """
+        Get Dropbox client with modified headers
+
+        :param str select_header_name: Header name used to select users
+        :param str team_member_id: team member id of team member to perform actions with
+        :return: A :class:`Dropbox` object that can be used to query on behalf
+            of a member or admin of the team
+        :rtype: Dropbox
+        """
+
         new_headers = self._headers.copy() if self._headers else {}
-        new_headers['Dropbox-API-Select-User'] = team_member_id
+        new_headers[select_header_name] = team_member_id
         return Dropbox(
             self._oauth2_access_token,
             max_retries_on_error=self._max_retries_on_error,
             max_retries_on_rate_limit=self._max_retries_on_rate_limit,
+            timeout=self._timeout,
             user_agent=self._raw_user_agent,
             session=self._session,
             headers=new_headers,

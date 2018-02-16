@@ -41,7 +41,10 @@ def get_access_token(auth_flow, auth_token):
 # Get user name
 def get_user_name(dbx):
     account = dbx.users_get_current_account()
-    return account.name.display_name
+    username = account.name.display_name;
+    if sys.version_info < (3, 0): # python2.7 default encoding is ASCII
+        username = username.encode('utf-8') # in case user name contains non ASCII characters
+    return username
     
 # Delete file, returns file metadata
 def delete_file(dbx, file_name):
