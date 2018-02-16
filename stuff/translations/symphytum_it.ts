@@ -141,10 +141,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;deleterecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;draghere.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;dropbox.png - Copyright (c) Dropbox, Inc. www.dropbox.com&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicatecollection.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicatefield.png - Copyright (c)  Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicaterecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;export.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;initConflict.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;megasync.png - Copyright (c) Mega Limited, www.mega.nz&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;nextrecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;newcollection.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;newfield.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt;
@@ -1030,11 +1032,46 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;MEGAcmd&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 2013, Mega Limited&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;All rights reserved.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;modification, are permitted provided that the following conditions are&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;met:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. Redistributions of source code must retain the above copyright&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;   notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;   notice, this list of conditions and the following disclaimer in the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;   documentation and/or other materials provided with the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;   distribution.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The previous applies to all sources and binaries save&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;those explicitly distributed under the terms of the GNU General Public&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;License (see http://www.gnu.org/copyleft/gpl.txt for details), and the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;interactive MEGAcmdShell executables (mega-cmd in linux, MEGAcmdShell&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;in MAC and MEGAcmdShell.exe in Windows), distributed under the &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;aforementioned GNU General Public License. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/aboutdialog.ui" line="1205"/>
+        <location filename="../../ui/aboutdialog.ui" line="1242"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1492,7 +1529,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>CollectionListModel</name>
     <message>
-        <location filename="../../models/collectionlistmodel.cpp" line="58"/>
+        <location filename="../../models/collectionlistmodel.h" line="46"/>
         <source>New Collection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1500,23 +1537,48 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>CollectionListView</name>
     <message>
-        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="76"/>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="77"/>
         <source>New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="77"/>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="78"/>
+        <source>Duplicate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="79"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="124"/>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="128"/>
         <source>Delete Collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="125"/>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="129"/>
         <source>Are you sure you want to delete the selected collection?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="190"/>
+        <source>Duplicate Collection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="193"/>
+        <source>Data structure only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="195"/>
+        <source>All data, including contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/collectionlistview/collectionlistview.cpp" line="212"/>
+        <source> Copy</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1693,32 +1755,32 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>DropboxSyncDriver</name>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="117"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="119"/>
         <source>Dropbox sync process failed to start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="120"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="122"/>
         <source>Dropbox sync process crashed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="123"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="125"/>
         <source>Dropbox sync process write error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="126"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="128"/>
         <source>Dropbox sync process read error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="129"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="131"/>
         <source>Unknown error during Dropbox sync process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="132"/>
+        <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="134"/>
         <source>Unknown error during Dropbox sync process (in switch default)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2167,37 +2229,37 @@ Additional sections can be configured:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1577"/>
+        <location filename="../../views/formview/formview.cpp" line="1578"/>
         <source>New field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1578"/>
+        <location filename="../../views/formview/formview.cpp" line="1579"/>
         <source>Duplicate field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1579"/>
+        <location filename="../../views/formview/formview.cpp" line="1580"/>
         <source>Delete field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1580"/>
+        <location filename="../../views/formview/formview.cpp" line="1581"/>
         <source>Modify field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1581"/>
+        <location filename="../../views/formview/formview.cpp" line="1582"/>
         <source>New record</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1582"/>
+        <location filename="../../views/formview/formview.cpp" line="1583"/>
         <source>Duplicate record</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/formview/formview.cpp" line="1583"/>
+        <location filename="../../views/formview/formview.cpp" line="1584"/>
         <source>Delete record</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2475,14 +2537,14 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="237"/>
         <location filename="../../widgets/mainwindow.cpp" line="313"/>
-        <location filename="../../widgets/mainwindow.cpp" line="1198"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1203"/>
         <source>Closing Session</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="238"/>
         <location filename="../../widgets/mainwindow.cpp" line="314"/>
-        <location filename="../../widgets/mainwindow.cpp" line="1199"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1204"/>
         <source>Closing sync session... Please wait!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2490,7 +2552,7 @@ Additional sections can be configured:</source>
         <location filename="../../widgets/mainwindow.cpp" line="253"/>
         <location filename="../../widgets/mainwindow.cpp" line="589"/>
         <location filename="../../widgets/mainwindow.cpp" line="732"/>
-        <location filename="../../widgets/mainwindow.cpp" line="905"/>
+        <location filename="../../widgets/mainwindow.cpp" line="910"/>
         <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2567,7 +2629,7 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="586"/>
         <location filename="../../widgets/mainwindow.cpp" line="729"/>
-        <location filename="../../widgets/mainwindow.cpp" line="902"/>
+        <location filename="../../widgets/mainwindow.cpp" line="907"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2644,430 +2706,508 @@ Additional sections can be configured:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="847"/>
+        <location filename="../../widgets/mainwindow.cpp" line="852"/>
         <source>Delete All Records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="848"/>
+        <location filename="../../widgets/mainwindow.cpp" line="853"/>
         <source>Are you sure you want to delete all records from the current collection?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="867"/>
+        <location filename="../../widgets/mainwindow.cpp" line="872"/>
         <source>All records successfully deleted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="901"/>
+        <location filename="../../widgets/mainwindow.cpp" line="906"/>
         <source>Removing obsolete data...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="941"/>
+        <location filename="../../widgets/mainwindow.cpp" line="946"/>
         <source>Database Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="942"/>
+        <location filename="../../widgets/mainwindow.cpp" line="947"/>
         <source>Database size reduced by %1 KiB
 Files archive reduced by %2 MiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="986"/>
-        <location filename="../../widgets/mainwindow.cpp" line="1030"/>
+        <location filename="../../widgets/mainwindow.cpp" line="991"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1035"/>
         <source>Missing Field Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="987"/>
+        <location filename="../../widgets/mainwindow.cpp" line="992"/>
         <source>Select a field to duplicate first!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1031"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1036"/>
         <source>Select a field to delete first!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1039"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1044"/>
         <source>Field Deletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1040"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1045"/>
         <source>Are you sure you want to delete the selected collection field with all data related?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1218"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1223"/>
         <source>Software Restart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1219"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1224"/>
         <source>Software restart required! Please restart %1 manually.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1236"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1241"/>
         <source>Printing aborted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1237"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1242"/>
         <source>There are no records to print!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1294"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1299"/>
         <source>Export aborted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1295"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1300"/>
         <source>There are no records to export!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1352"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1357"/>
         <source>Import not available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1353"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1358"/>
         <source>Import is disabled due read-only session!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1442"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1447"/>
         <source>Sync Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1443"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1448"/>
         <source>Cloud sync error: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1456"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1461"/>
         <source>Sync Session</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1457"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1462"/>
         <source>Sync session is already open. This happens when another client is running in online mode. Please continue in read-only mode until the first client exits. It is also possible to force  write access by taking ownership of the session. This is useful for cases where the connection was accidentaly interrupted, leaving the session open.&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Forcing access could lead to data loss!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1474"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1479"/>
         <source>force access</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1475"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1480"/>
         <source>read-only access</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1556"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1561"/>
         <source>Checking for updates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1562"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1567"/>
         <source>Your software version is up to date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1567"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1572"/>
         <source>Error while checking for software updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1577"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1582"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1578"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1583"/>
         <source>Exit from this application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1582"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1587"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1585"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1590"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1588"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1593"/>
         <source>New Collection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1590"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1595"/>
         <source>Create a new collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1592"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1597"/>
+        <source>Duplicate Collection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../widgets/mainwindow.cpp" line="1599"/>
+        <source>Duplicate current collection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../widgets/mainwindow.cpp" line="1601"/>
         <source>Delete Collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1594"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1603"/>
         <source>Delete current collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1596"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1605"/>
         <source>New Record</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1600"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1609"/>
         <source>New Field...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1603"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1612"/>
         <source>Backup...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1604"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1613"/>
         <source>Backup or restore a database file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1606"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1615"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1609"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1618"/>
         <source>Change application settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1611"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1620"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1614"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1623"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1617"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1626"/>
         <source>Select all records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1619"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1628"/>
         <source>Find</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1622"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1631"/>
         <source>Form View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1624"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1633"/>
         <source>Change current view mode to a form-like view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1628"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1637"/>
         <source>Table View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1630"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1639"/>
         <source>Change current view mode to a table-like view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1633"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1642"/>
         <source>View Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1641"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1650"/>
         <source>Minimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1644"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1653"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1648"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1657"/>
         <source>Fullscreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1653"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1662"/>
         <source>Hide collection sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1657"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1666"/>
         <source>Delete all records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1659"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1668"/>
         <source>Remove all records from current collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1661"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1670"/>
         <source>Free unused space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1662"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1671"/>
         <source>Optimize size of database file by freeing unused resources</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1665"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1674"/>
         <source>Cloud synchronization...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1666"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1675"/>
         <source>Synchronize your database with a cloud service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1670"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1679"/>
         <source>Read-only mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1671"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1680"/>
         <source>Toggle read-only mode. If enabled, other clients can access and write to the database.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1676"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1685"/>
         <source>Check for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1677"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1686"/>
         <source>Check for %1 updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1681"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1690"/>
         <source>Date reminder list...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1683"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1692"/>
         <source>Print...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1684"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1693"/>
         <source>Print records or export them as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1687"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1696"/>
         <source>Import...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1688"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1697"/>
         <source>Import existing records to the database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1690"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1699"/>
         <source>Export...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1691"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1700"/>
         <source>Export all or only selected records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1696"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1705"/>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1728"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1738"/>
         <source>COLLECTIONS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1756"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1766"/>
         <source>New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1761"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1771"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1773"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1783"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1781"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1791"/>
         <source>&amp;View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1790"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1800"/>
         <source>Cloud</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1793"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1803"/>
         <source>Records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1796"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1806"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1799"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1809"/>
         <source>&amp;Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1809"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1819"/>
         <source>&amp;Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1814"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1824"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/mainwindow.cpp" line="1825"/>
+        <location filename="../../widgets/mainwindow.cpp" line="1835"/>
         <source> Ready </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MegaSyncDriver</name>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="127"/>
+        <source>MEGA sync process failed to start.&lt;br /&gt;&lt;br /&gt;Please &lt;b&gt;install&lt;/b&gt; MEGAcmd by visiting &lt;a href=&apos;https://mega.nz/cmd&apos;&gt;mega.nz/cmd&lt;/a&gt;.&lt;br /&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="132"/>
+        <source>MEGA sync process crashed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="135"/>
+        <source>MEGA sync process write error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="138"/>
+        <source>MEGA sync process read error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="141"/>
+        <source>Unknown error during MEGA sync process</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="144"/>
+        <source>Unknown error during MEGA sync process (in switch default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="188"/>
+        <source>Login failed: invalid email or password
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/sync_framework/megasyncdriver.cpp" line="245"/>
+        <source>Failed to replace temporary downloaded file: %1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MetadataEngine</name>
+    <message>
+        <location filename="../../components/metadataengine.cpp" line="522"/>
+        <source>Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/metadataengine.cpp" line="523"/>
+        <source>Duplicating collection data... Please wait!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/metadataengine.cpp" line="553"/>
+        <source>Duplicating collection files... Please wait!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../components/metadataengine.cpp" line="600"/>
+        <source>Updating files metadata... Please wait!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3612,28 +3752,28 @@ Files archive reduced by %2 MiB</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../components/databasemanager.cpp" line="168"/>
-        <location filename="../../components/databasemanager.cpp" line="301"/>
+        <location filename="../../components/databasemanager.cpp" line="172"/>
+        <location filename="../../components/databasemanager.cpp" line="305"/>
         <source>Database Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/databasemanager.cpp" line="169"/>
+        <location filename="../../components/databasemanager.cpp" line="173"/>
         <source>Failed to open the database file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/databasemanager.cpp" line="185"/>
+        <location filename="../../components/databasemanager.cpp" line="189"/>
         <source>Database Version Incompatible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/databasemanager.cpp" line="186"/>
+        <location filename="../../components/databasemanager.cpp" line="190"/>
         <source>Failed to open the database file: db_version %1.  Please upgrade %2 to a newer version and then try again!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/databasemanager.cpp" line="302"/>
+        <location filename="../../components/databasemanager.cpp" line="306"/>
         <source>Failed to initialize the database: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3767,7 +3907,8 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="120"/>
         <location filename="../../ui/syncconfigdialog.ui" line="255"/>
-        <location filename="../../ui/syncconfigdialog.ui" line="356"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="359"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="491"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3784,8 +3925,8 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="165"/>
         <location filename="../../ui/syncconfigdialog.ui" line="287"/>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="95"/>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="103"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="117"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="125"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3796,7 +3937,32 @@ Files archive reduced by %2 MiB</source>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="201"/>
-        <source>Code:</source>
+        <source>&amp;Code:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="398"/>
+        <source>Please authorize access to your MEGA account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="413"/>
+        <source>MEGA email:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="420"/>
+        <source>name@example.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="427"/>
+        <source>MEGA password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="446"/>
+        <source>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3806,85 +3972,91 @@ Files archive reduced by %2 MiB</source>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="268"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="504"/>
         <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="302"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="305"/>
         <source>Authorizing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="366"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="369"/>
         <source>&amp;Retry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="376"/>
+        <location filename="../../ui/syncconfigdialog.ui" line="379"/>
         <source>&amp;Finish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="117"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="151"/>
         <source>%1 Please try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="128"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="158"/>
         <source>The authentication token is invalid or expired.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="133"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="163"/>
         <source>Connection to cloud service failed, check your connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="152"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="187"/>
         <source>Accessing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="160"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="195"/>
         <source>Logged in as %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../widgets/syncconfigdialog.cpp" line="176"/>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="211"/>
         <source>Dropbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../widgets/syncconfigdialog.cpp" line="213"/>
+        <source>MEGA</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SyncEngine</name>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="154"/>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="195"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="159"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="200"/>
         <source>Failed to access metadata file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="164"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="169"/>
         <source>Failed to parse metadata file: missing content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="183"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="188"/>
         <source>Failed to parse metadata file: invalid content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="227"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="232"/>
         <source>Failed to write metadata file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="350"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="355"/>
         <source>Incompatible database format version. The database on the cloud service is not compatible with this software version. Please upgrade %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../components/sync_framework/syncengine.cpp" line="464"/>
+        <location filename="../../components/sync_framework/syncengine.cpp" line="469"/>
         <source>Storage quota on cloud service exceeded. Please visit %1 to get more space.</source>
         <translation type="unfinished"></translation>
     </message>
