@@ -1,20 +1,36 @@
 CHANGELOG
 
+Version 2.3
+===========
+
+### New Features
+- Duplicate collections, with or without contents
+- MEGA cloud sync support
+- New deployment methods: Windows portable, AppImage, Snap
+
+### Improvements
+- Updated Qt to 5.10.1 (User interface library) for better operating system compatibility
+
+### Bug Fixes
+- Fix decimal point handling for numeric field type depending on system locale, fixes #46
+- Handle unicode user names in dropbox sync client, fixes #31
+
+
 Version 2.2
 ===========
 
-[New Features]
+### New Features
 - New preference setting for font size in form view
 - Highlight search results in form view, closes #34
 - New setting to allow more than one line in table view for each row
 - New setting to cache images in table view, fixes #37
 - Allow custom database directory in settings, closes #38
 
-[Improvements]
+### Improvements
 - Show taskbar progress on windows during sync
 - Update dropbox python sdk, fixes #35
 
-[Bug Fixes]
+### Bug Fixes
 - Enable high DPI support on windows and linux, fixes #18
 - Disable completely editing, including layout changes, when read only sync session is active, fixes #36
 - Fix font issue where characters overlap when printing on windows
@@ -32,15 +48,15 @@ Version 2.2
 Version 2.1
 ===========
 
-[New Features]
+### New Features
 - Ability to hide the collection sidebar from the view menu
 - Polish traslation added (thanks to MCbx)
 
-[Improvements]
+### Improvements
 - Dropbox API migration to v2 (v1 will stop working by 2017-06-28)
 - Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS Sierra
 
-[Bug Fixes]
+### Bug Fixes
 - Fixed crash when adding a new collection
 - Collection list is not updated correctly when a new collection is added or deleted
 
@@ -48,32 +64,32 @@ Version 2.1
 Version 2.0
 ===========
 
-[New Features]
+### New Features
 - #11 #12 #16 New fields for web links and email addresses
 
-[Improvements]
+### Improvements
 - Migration from Qt4 to Qt5 (User interface library)
 - Updated Dropbox certificates (Old ones are valid until August 2016)
 - Implemented database version checking and upgrading on format change
 - Updated about dialog to include github project link
 - Compiler warning fixes
 
-[Bug Fixes]
+### Bug Fixes
 - #19 Unable to restore from backup on windows caused by improper sample image file permissions
 
 
 Version 1.2
 ===========
 
-[New Features]
+### New Features
 - Symphytum is now open source
 - Proprietary artwork replaced with permissive icons and images
 - German translation added
 
-[Improvements]
+### Improvements
 - Source code translation and localization capabilities for future interface translation work
 
-[Bug Fixes]
+### Bug Fixes
 - #1 OS X 10.6 error, python .pyc files have bad magic number
 - #7 Display correct text string of progress data in table view
 
@@ -81,17 +97,17 @@ Version 1.2
 Version 1.1
 ===========
 
-[New Features]
+### New Features
 - New appearance option for dark toolbar (Ambiance theme) on Linux
 
-[Improvements]
+### Improvements
 - Last used record is now saved and restored when changing between collections
 - Performance of form view has been noticeably improved
 - Selection of a field in the form view can now be cleared by pressing the escape key
 - The clean database menu action "Menu->Tools->Database->Free unused space" now includes the removal
   of obsolete files, which are no longer linked to any specific record
 
-[Bug Fixes]
+### Bug Fixes
 - Fields with identical names are now correctly identified and handled by form view
 - CSV exporting generates no longer an invalid column/content structure when records contain multiple new lines
 - Form view is no longer disabled when adding a new record after a search operation with no results
