@@ -1,5 +1,5 @@
 name: symphytum
-version: '2.2'
+version: '2.3'
 summary: Easy-to-use personal database software
 description: |
   Symphytum is a personal database software for everyone 
@@ -27,7 +27,7 @@ apps:
 parts:
   symphytum:
     source: https://github.com/giowck/symphytum.git
-#    source-tag: v2.3 #activate this once 2.3 is out
+    source-tag: v2.3
     plugin: qmake
     qt-version: qt5
     options:
