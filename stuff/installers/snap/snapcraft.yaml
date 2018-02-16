@@ -37,6 +37,7 @@ parts:
       sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
       sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
       sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script
+      sed -i 's#megaCmdPath = "/usr/bin/mega-exec";#megaCmdPath = "/snap/symphytum/current/usr/bin/mega-exec";#' components/sync_framework/megasyncdriver.cpp #relocate absolute path of megacmd sync command
     install: |
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp symphytum $SNAPCRAFT_PART_INSTALL/bin
@@ -75,6 +76,24 @@ parts:
       - idna
       - requests
       - urllib3
+      
+  megacmd-sync:
+    source: https://mega.nz/linux/MEGAsync/xUbuntu_16.04/amd64/megacmd-xUbuntu_16.04_amd64.deb
+    plugin: dump
+    stage:
+      - usr/*
+    stage-packages:
+      - libc-ares2
+      - libc6
+      - libcrypto++9v5
+      - libgcc1
+      - libmediainfo0v5
+      - libpcre3
+      - libpcrecpp0v5
+      - libssl1.0.0
+      - libstdc++6
+      - libzen0v5
+      - zlib1g
     
   desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
     stage-packages:
