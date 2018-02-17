@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Symphytum by giowck</title>
+    <title>Symphytum Project</title>
   </head>
 
   <body>
@@ -32,7 +32,7 @@
 <a name="symphytum" class="anchor" href="#symphytum"><span class="octicon octicon-link"></span></a>Symphytum Update</h1>   
 
 <p>
-<h2>New Version: 2.2</h2><br />
+<h2>New Version: 2.3</h2><br />
 A new software version is available.
 <br />
 Updating Symphytum is save, all your data and files won't be deleted or altered.
@@ -42,80 +42,64 @@ What's new?
 <h3 id="newfeatures">New Features</h3>
 
 <ul>
-<li>New preference setting for font size in form view</li>
+<li>Duplicate collections, with or without contents</li>
 
-<li>Highlight search results in form view, closes #34</li>
+<li>MEGA cloud sync support</li>
 
-<li>New setting to allow more than one line in table view for each row</li>
-
-<li>New setting to cache images in table view, fixes #37</li>
-
-<li>Allow custom database directory in settings, closes #38</li>
+<li>New deployment methods: Windows portable, AppImage, Snap</li>
 </ul>
 
 <h3 id="improvements">Improvements</h3>
 
 <ul>
-<li>Show taskbar progress on windows during sync</li>
-
-<li>Update dropbox python sdk, fixes #35</li>
+<li>Updated Qt to 5.10.1 (User interface library) for better operating system compatibility</li>
 </ul>
 
 <h3 id="bugfixes">Bug Fixes</h3>
 
 <ul>
-<li>Enable high DPI support on windows and linux, fixes #18</li>
+<li>Fix decimal point handling for numeric field type depending on system locale, fixes #46</li>
 
-<li>Disable completely editing, including layout changes, when read only sync session is active, fixes #36</li>
-
-<li>Fix font issue where characters overlap when printing on windows</li>
-
-<li>Fix missing svg dependency windows setup script</li>
-
-<li>Add missing dependencies and langauges to windows installer, fixes #39</li>
-
-<li>Fix dependencies in PKGBUILD</li>
-
-<li>Windows, fix wrong text color in table view of selected rows (white on light blue)</li>
-
-<li>Allow removing items in combo box fields, fixes #42</li>
-
-<li>Escape single and double quotes characters for combobox fields, should also prevent SQL injections, fixes #40</li>
-
-<li>Hide progress dialog on optimize database size when finished, fixes #32</li>
-
-<li>Select correct collection when a collection is added or deleted, fixes #43</li>
-
-<li>Escape double quotes in field names correctly, fixes #29</li>
+<li>Handle unicode user names in dropbox sync client, fixes #31</li>
 </ul>
 <br />
 <h2>WARNING: Please create a backup (File->Backup) before upgrading to be on the safe side.</h2>
-<h2>WARNING: Dropbox users please read the following:</h2>
-<p>
-With the migration to the Dropbox API v2 (since v2.1) the old access token (Dropbox v1 API) is recognized as invalid and an error is shown "Internal Server Error".
-
-As a workaround it is necessary to disable the cloud sync from the settings (Menu->Tools->Settings->Cloud Sync-> change status to "disabled"). 
-Then restart symphytum and start the sync process over again.</p>
 <br /><br />
 
 <pre>
 Complete Changelog
 
+Version 2.3
+===========
+
+### New Features
+- Duplicate collections, with or without contents
+- MEGA cloud sync support
+- New deployment methods: Windows portable, AppImage, Snap
+
+### Improvements
+- Updated Qt to 5.10.1 (User interface library) for better operating system compatibility
+
+### Bug Fixes
+- Fix decimal point handling for numeric field type depending on system locale, fixes #46
+- Handle unicode user names in dropbox sync client, fixes #31
+
+
 Version 2.2
 ===========
 
-[New Features]
+### New Features
 - New preference setting for font size in form view
 - Highlight search results in form view, closes #34
 - New setting to allow more than one line in table view for each row
 - New setting to cache images in table view, fixes #37
 - Allow custom database directory in settings, closes #38
 
-[Improvements]
+### Improvements
 - Show taskbar progress on windows during sync
 - Update dropbox python sdk, fixes #35
 
-[Bug Fixes]
+### Bug Fixes
 - Enable high DPI support on windows and linux, fixes #18
 - Disable completely editing, including layout changes, when read only sync session is active, fixes #36
 - Fix font issue where characters overlap when printing on windows
@@ -133,15 +117,15 @@ Version 2.2
 Version 2.1
 ===========
 
-[New Features]
+### New Features
 - Ability to hide the collection sidebar from the view menu
 - Polish traslation added (thanks to MCbx)
 
-[Improvements]
+### Improvements
 - Dropbox API migration to v2 (v1 will stop working by 2017-06-28)
 - Updated Qt to 5.9 (User interface library) for better compatibility with Windows 10 and macOS Sierra
 
-[Bug Fixes]
+### Bug Fixes
 - Fixed crash when adding a new collection
 - Collection list is not updated correctly when a new collection is added or deleted
 
@@ -149,32 +133,32 @@ Version 2.1
 Version 2.0
 ===========
 
-[New Features]
+### New Features
 - #11 #12 #16 New fields for web links and email addresses
 
-[Improvements]
+### Improvements
 - Migration from Qt4 to Qt5 (User interface library)
 - Updated Dropbox certificates (Old ones are valid until August 2016)
 - Implemented database version checking and upgrading on format change
 - Updated about dialog to include github project link
 - Compiler warning fixes
 
-[Bug Fixes]
+### Bug Fixes
 - #19 Unable to restore from backup on windows caused by improper sample image file permissions
 
 
 Version 1.2
 ===========
 
-[New Features]
+### New Features
 - Symphytum is now open source
 - Proprietary artwork replaced with permissive icons and images
 - German translation added
 
-[Improvements]
+### Improvements
 - Source code translation and localization capabilities for future interface translation work
 
-[Bug Fixes]
+### Bug Fixes
 - #1 OS X 10.6 error, python .pyc files have bad magic number
 - #7 Display correct text string of progress data in table view
 
@@ -182,17 +166,17 @@ Version 1.2
 Version 1.1
 ===========
 
-[New Features]
+### New Features
 - New appearance option for dark toolbar (Ambiance theme) on Linux
 
-[Improvements]
+### Improvements
 - Last used record is now saved and restored when changing between collections
 - Performance of form view has been noticeably improved
 - Selection of a field in the form view can now be cleared by pressing the escape key
 - The clean database menu action "Menu->Tools->Database->Free unused space" now includes the removal
   of obsolete files, which are no longer linked to any specific record
 
-[Bug Fixes]
+### Bug Fixes
 - Fields with identical names are now correctly identified and handled by form view
 - CSV exporting generates no longer an invalid column/content structure when records contain multiple new lines
 - Form view is no longer disabled when adding a new record after a search operation with no results
@@ -239,19 +223,6 @@ Please visit the <a href="index.html">download page</a> and install Symphytum ag
         </aside>
       </div>
     </div>
-
-  <!-- begin analytics -->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-49363649-1', 'giowck.github.io');
-  ga('send', 'pageview');
-  
-  </script>
-  <!-- end analytics -->  
 
   </body>
 </html>
