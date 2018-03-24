@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -94,6 +94,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../ui/aboutdialog.ui" line="230"/>
+        <source>License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../ui/aboutdialog.ui" line="239"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -112,6 +117,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/aboutdialog.ui" line="263"/>
+        <source>Third-party licenses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -713,16 +723,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;interactive MEGAcmdShell executables (mega-cmd in linux, MEGAcmdShell&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;in MAC and MEGAcmdShell.exe in Windows), distributed under the &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;aforementioned GNU General Public License. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/aboutdialog.ui" line="230"/>
-        <source>License</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/aboutdialog.ui" line="263"/>
-        <source>Third-party licenses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1529,11 +1529,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/exportdialog.ui" line="96"/>
-        <source>Format:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../ui/exportdialog.ui" line="74"/>
         <source>All &amp;records</source>
         <translation type="unfinished"></translation>
@@ -1541,6 +1536,11 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/exportdialog.ui" line="84"/>
         <source>Selected records (&amp;0 items)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/exportdialog.ui" line="96"/>
+        <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3596,31 +3596,6 @@ Files archive reduced by %2 MiB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="398"/>
-        <source>Please authorize access to your MEGA account</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="413"/>
-        <source>MEGA email:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="420"/>
-        <source>name@example.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="427"/>
-        <source>MEGA password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/syncconfigdialog.ui" line="446"/>
-        <source>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../ui/syncconfigdialog.ui" line="211"/>
         <source>Paste here the code from the browser window</source>
         <translation type="unfinished"></translation>
@@ -3644,6 +3619,31 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="379"/>
         <source>&amp;Finish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="398"/>
+        <source>Please authorize access to your MEGA account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="413"/>
+        <source>MEGA email:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="420"/>
+        <source>name@example.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="427"/>
+        <source>MEGA password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/syncconfigdialog.ui" line="446"/>
+        <source>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
