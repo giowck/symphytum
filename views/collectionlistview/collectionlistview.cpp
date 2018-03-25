@@ -188,8 +188,8 @@ void CollectionListView::duplicateCollection()
     QMessageBox box(this);
     box.setIcon(QMessageBox::Question);
     box.setWindowTitle(tr("Duplicate Collection"));
-    box.setText("A new collection is being created as a duplicate of the selected collection."
-                "<br /><b>Which data should be taken over?</b> ");
+    box.setText(tr("A new collection is being created as a duplicate of the selected collection."
+                "<br /><b>Which data should be taken over?</b> "));
     QPushButton *onlyStructureButton = box.addButton(tr("Data structure only"),
                                                      QMessageBox::NoRole);
     QPushButton *fullDataButton = box.addButton(tr("All data, including contents"),
