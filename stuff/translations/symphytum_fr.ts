@@ -6,57 +6,57 @@
     <message>
         <location filename="../../ui/aboutdialog.ui" line="17"/>
         <source>About Symphytum</source>
-        <translation type="unfinished"></translation>
+        <translation>Au sujet de Symphytum</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="26"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Au sujet de</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="43"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Infos</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="87"/>
         <source>&lt;b&gt;Symphytum&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Symphytum&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="96"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="103"/>
         <source>version</source>
-        <translation type="unfinished"></translation>
+        <translation>version</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="110"/>
         <source>Build:</source>
-        <translation type="unfinished"></translation>
+        <translation>Build:</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="117"/>
         <source>build</source>
-        <translation type="unfinished"></translation>
+        <translation>build</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="156"/>
         <source>&lt;a href=&quot;https://giowck.github.io/symphytum&quot;&gt;Symphytum on GitHub&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;https://giowck.github.io/symphytum&quot;&gt;Symphytum chez GitHub&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="166"/>
         <source>copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>copyright</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="183"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteurs</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="192"/>
@@ -91,12 +91,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Germany&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2012-2014&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Symphytum Developers&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Giorgio Wicklein&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Lead developer and designer&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;giowckln@gmail.com&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;GPG-Key 0xA84EC958&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2014-2017&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Oirio Joshi&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Contributor&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;https://github.com/joshirio&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2017 - 2018&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Translations&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Polish: MCbx &amp;lt;coronzon88@gmail.com&amp;gt; 2017&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Origin&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;GIOWISYS Software UG (haftungsbeschränkt)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Founder&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;www.giowisys.com&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Germany&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2012-2014&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="230"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="239"/>
@@ -117,12 +117,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;The BSD 2-Clause License&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (c) 2012-2014, GIOWISYS Software UG (haftungsbeschränkt)&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (c) 2014, Symphytum Developers&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All rights reserved.&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="263"/>
         <source>Third-party licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licences programmes tiers</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="272"/>
@@ -723,12 +723,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;interactive MEGAcmdShell executables (mega-cmd in linux, MEGAcmdShell&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;in MAC and MEGAcmdShell.exe in Windows), distributed under the &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;aforementioned GNU General Public License. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Symphytum has been only possible thanks to the following third party components. &lt;/p&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Icons and Sample Images&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This software contains icons and sample images licensed under the following conditions: &lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;add.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;alarm.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;collectionlistitem.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;deletecollection.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;deletefield.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;deleterecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;draghere.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;dropbox.png - Copyright (c) Dropbox, Inc. www.dropbox.com&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicatecollection.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicatefield.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;duplicaterecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;export.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;initConflict.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;megasync.png - Copyright (c) Mega Limited, www.mega.nz&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;nextrecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;newcollection.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;newfield.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;newrecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;previousrecord.png - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;remove.png - Copyright (c) Everaldo Coelho, Crystal Clear commons.wikimedia.org/wiki/Crystal_Clear, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;revConflict - Copyright (c) Oxygen Icons 4.3.1 (KDE) www.oxygen-icons.org, license: CC-BY-SA 3.0, LGPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;searchline_clear.png - Copyright (c) 2012 Giorgio Wicklein, license: CC BY 4.0&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;searchline_icon.png - Copyright (c) 2012 Giorgio Wicklein, license: CC BY 4.0&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;settings_advanced.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;settings_appearance.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;settings_general.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;sync.png - Copyright (c) nuoveXT2 nuovext.pwsp.net, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;browser.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;mail.png - Copyright (c) 2008 Alessandro Rei www.mentalrey.it, license: GPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;symphytum.png - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;symphytum.ico - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;symphytum.icns - Copyright (c) Everaldo Coelho, Crystal Project everaldo.com, license: LGPL-2.1&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;symphytum.jpg - Copyright (c) 2006 Agnieszka Kwiecień, license: GFDL, CC-BY-2.5&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;coffea.jpg - Copyright (c) 2005 Marcelo Corrêa, license: GFDL, CC BY-SA 3.0&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;calendula.jpg - Copyright (c) 2006 Bogdan Giuşcă, license: GFDL, CC BY-SA 3.0, CC BY-SA 2.5&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt Framework&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Qt is available under the GNU Lesser General Public License version 3. The Qt Toolkit is Copyright (C) 2016 The Qt Company Ltd. and other contributors. Contact: http://www.qt.io/licensing/ &lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; GNU LESSER GENERAL PUBLIC LICENSE&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Version 3, 29 June 2007&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Copyright (C) 2007 Free Software Foundation, Inc. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Everyone is permitted to copy and distribute verbatim copies&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; of this license document, but changing it is not allowed.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; This version of the GNU Lesser General Public License incorporates&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;the terms and conditions of version 3 of the GNU General Public&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;License, supplemented by the additional permissions listed below.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 0. Additional Definitions.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; As used herein, &amp;quot;this License&amp;quot; refers to version 3 of the GNU Lesser&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;General Public License, and the &amp;quot;GNU GPL&amp;quot; refers to version 3 of the GNU&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;General Public License.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; &amp;quot;The Library&amp;quot; refers to a covered work governed by this License,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;other than an Application or a Combined Work as defined below.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; An &amp;quot;Application&amp;quot; is any work that makes use of an interface provided&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;by the Library, but which is not otherwise based on the Library.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Defining a subclass of a class defined by the Library is deemed a mode&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;of using an interface provided by the Library.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; A &amp;quot;Combined Work&amp;quot; is a work produced by combining or linking an&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Application with the Library. The particular version of the Library&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;with which the Combined Work was made is also called the &amp;quot;Linked&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Version&amp;quot;.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; The &amp;quot;Minimal Corresponding Source&amp;quot; for a Combined Work means the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Corresponding Source for the Combined Work, excluding any source code&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;for portions of the Combined Work that, considered in isolation, are&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;based on the Application, and not on the Linked Version.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; The &amp;quot;Corresponding Application Code&amp;quot; for a Combined Work means the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;object code and/or source code for the Application, including any data&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;and utility programs needed for reproducing the Combined Work from the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Application, but excluding the System Libraries of the Combined Work.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 1. Exception to Section 3 of the GNU GPL.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; You may convey a covered work under sections 3 and 4 of this License&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;without being bound by section 3 of the GNU GPL.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 2. Conveying Modified Versions.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; If you modify a copy of the Library, and, in your modifications, a&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;facility refers to a function or data to be supplied by an Application&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;that uses the facility (other than as an argument passed when the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;facility is invoked), then you may convey a copy of the modified&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;version:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a) under this License, provided that you make a good faith effort to&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; ensure that, in the event an Application does not supply the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; function or data, the facility still operates, and performs&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; whatever part of its purpose remains meaningful, or&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; b) under the GNU GPL, with none of the additional permissions of&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; this License applicable to that copy.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 3. Object Code Incorporating Material from Library Header Files.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; The object code form of an Application may incorporate material from&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;a header file that is part of the Library. You may convey such object&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;code under terms of your choice, provided that, if the incorporated&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;material is not limited to numerical parameters, data structure&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;layouts and accessors, or small macros, inline functions and templates&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(ten or fewer lines in length), you do both of the following:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a) Give prominent notice with each copy of the object code that the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Library is used in it and that the Library and its use are&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; covered by this License.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; b) Accompany the object code with a copy of the GNU GPL and this license&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; document.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 4. Combined Works.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; You may convey a Combined Work under terms of your choice that,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;taken together, effectively do not restrict modification of the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;portions of the Library contained in the Combined Work and reverse&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;engineering for debugging such modifications, if you also do each of&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;the following:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a) Give prominent notice with each copy of the Combined Work that&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; the Library is used in it and that the Library and its use are&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; covered by this License.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; b) Accompany the Combined Work with a copy of the GNU GPL and this license&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; document.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; c) For a Combined Work that displays copyright notices during&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; execution, include the copyright notice for the Library among&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; these notices, as well as a reference directing the user to the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; copies of the GNU GPL and this license document.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; d) Do one of the following:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 0) Convey the Minimal Corresponding Source under the terms of this&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; License, and the Corresponding Application Code in a form&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; suitable for, and under terms that permit, the user to&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; recombine or relink the Application with a modified version of&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; the Linked Version to produce a modified Combined Work, in the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; manner specified by section 6 of the GNU GPL for conveying&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Corresponding Source.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 1) Use a suitable shared library mechanism for linking with the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Library. A suitable mechanism is one that (a) uses at run time&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a copy of the Library already present on the user&apos;s computer&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; system, and (b) will operate properly with a modified version&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; of the Library that is interface-compatible with the Linked&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Version.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; e) Provide Installation Information, but only if you would otherwise&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; be required to provide such information under section 6 of the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; GNU GPL, and only to the extent that such information is&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; necessary to install and execute a modified version of the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Combined Work produced by recombining or relinking the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Application with a modified version of the Linked Version. (If&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; you use option 4d0, the Installation Information must accompany&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; the Minimal Corresponding Source and Corresponding Application&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Code. If you use option 4d1, you must provide the Installation&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Information in the manner specified by section 6 of the GNU GPL&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; for conveying Corresponding Source.)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 5. Combined Libraries.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; You may place library facilities that are a work based on the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Library side by side in a single library together with other library&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;facilities that are not Applications and are not covered by this&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;License, and convey such a combined library under terms of your&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;choice, if you do both of the following:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a) Accompany the combined library with a copy of the same work based&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; on the Library, uncombined with any other library facilities,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; conveyed under the terms of this License.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; b) Give prominent notice with the combined library that part of it&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; is a work based on the Library, and explaining where to find the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; accompanying uncombined form of the same work.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; 6. Revised Versions of the GNU Lesser General Public License.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; The Free Software Foundation may publish revised and/or new versions&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;of the GNU Lesser General Public License from time to time. Such new&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;versions will be similar in spirit to the present version, but may&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;differ in detail to address new problems or concerns.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Each version is given a distinguishing version number. If the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Library as you received it specifies that a certain numbered version&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;of the GNU Lesser General Public License &amp;quot;or any later version&amp;quot;&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;applies to it, you have the option of following the terms and&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;conditions either of that published version or of any later version&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;published by the Free Software Foundation. If the Library as you&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;received it does not specify a version number of the GNU Lesser&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;General Public License, you may choose any version of the GNU Lesser&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;General Public License ever published by the Free Software Foundation.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; If the Library as you received it specifies that a proxy can decide&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;whether future versions of the GNU Lesser General Public License shall&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;apply, that proxy&apos;s public statement of acceptance of any version is&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;permanent authorization for you to choose that version for the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Library. &lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;QtSignleApplication&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Contact: http://www.qt-project.org/legal&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;This file is part of the Qt Solutions component.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;You may use this file under the terms of the BSD license as follows:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;&amp;quot;Redistribution and use in source and binary forms, with or without&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;modification, are permitted provided that the following conditions are&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Redistributions of source code must retain the above copyright&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Redistributions in binary form must reproduce the above copyright&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; notice, this list of conditions and the following disclaimer in&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; the documentation and/or other materials provided with the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; of its contributors may be used to endorse or promote products derived&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;&amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&amp;quot; &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Easing Equations by Robert Penner&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Copyright (c) 2001 Robert Penner&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Redistribution and use in source and binary forms, with or without modification,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Redistributions of source code must retain the above copyright notice,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Redistributions in binary form must reproduce the above copyright notice,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; this list of conditions and the following disclaimer in the documentation&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; * Neither the name of the author nor the names of contributors may be used&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; to endorse or promote products derived from this software without specific&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Big5-HKSCS Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2000 Ming-Che Chuang &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2001, 2002 James Su, Turbolinux Inc. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2002 WU Yi, HancomLinux Inc. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2001, 2002 Anthony Fok, ThizLinux Laboratory Ltd.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Big5 Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2000 Ming-Che Chuang &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2002 James Su, Turbolinux Inc. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2002 Anthony Fok, ThizLinux Laboratory Ltd.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;EUC-JP Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1999 Serika Kurusugawa. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot;. ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;EUC-KR Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1999-2000 Mizi Research Inc. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;GBK Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2000 TurboLinux, Inc. Written by Justin Yu and Sean Chen. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2001, 2002 Turbolinux, Inc. Written by James Su. &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2001, 2002 ThizLinux Laboratory Ltd. Written by Anthony Fok.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;ISO 2022-JP (JIS) Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1999 Serika Kurusugawa. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot;. ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;TSCII Text Codec&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 2000 Hans Petter Bieker. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: Contributions to the Following QtGui Files: qapplication_cocoa_p.h, qapplication_mac.mm, qdesktopwidget_mac.mm qeventdispatcher_mac.mm qeventdispatcher_mac_p.h qmacincludes_mac.h qt_cocoa_helpers.mm qt_cocoa_helpers_p.h qwidget_mac.mm qsystemtrayicon_mac.mm&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2007-2008, Apple, Inc.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Neither the name of Apple, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: QRegion&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1987 X Consortium&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Except as contained in this notice, the name of the X Consortium shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from the X Consortium. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: QDate::weekNumber()&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1989 The Regents of the University of California. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms are permitted provided that the above copyright notice and this paragraph are duplicated in all such forms and that any documentation, advertising materials, and other materials related to such distribution and use acknowledge that the software was developed by the University of California, Berkeley. The name of the University may not be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: QLocale&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1991 by AT&amp;amp;T.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, and distribute this software for any purpose without fee is hereby granted, provided that this entire notice is included in all copies of any software which is or includes a copy or modification of this software and in all copies of the supporting documentation for such software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS BEING PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT ANY EXPRESS OR IMPLIED WARRANTY. IN PARTICULAR, NEITHER THE AUTHOR NOR AT&amp;amp;T MAKES ANY REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;This product includes software developed by the University of California, Berkeley and its contributors.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1992, 1993&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The Regents of the University of California. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 3. All advertising materials mentioning features or use of this software must display the following acknowledgment: This product includes software developed by the University of California, Berkeley and its contributors. 4. Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: Drag and Drop&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright 1996 Daniel Dardailler. Copyright 1999 Matt Koss&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, distribute, and sell this software for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Daniel Dardailler not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission. Daniel Dardailler makes no representations about the suitability of this software for any purpose. It is provided &amp;quot;as is&amp;quot; without express or implied warranty. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: SVG module&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright 2002 USC/Information Sciences Institute&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Information Sciences Institute not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission. Information Sciences Institute makes no representations about the suitability of this software for any purpose. It is provided &amp;quot;as is&amp;quot; without express or implied warranty.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;INFORMATION SCIENCES INSTITUTE DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL INFORMATION SCIENCES INSTITUTE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Qt: QUrl&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) Research In Motion Limited 2009. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;* Neither the name of Research In Motion Limited nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY Research In Motion Limited &apos;&apos;AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Research In Motion Limited BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Parts of the FreeType library&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2005, 2007, 2008 by George Williams&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;The Independent JPEG Group&apos;s JPEG Software (libjpeg)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This software is based in part on the work of the Independent JPEG Group. &lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The authors make NO WARRANTY or representation, either express or implied, with respect to this software, its quality, accuracy, merchantability, or fitness for a particular purpose. This software is provided &amp;quot;AS IS&amp;quot;, and you, its user, assume the entire risk as to its quality and accuracy.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;This software is copyright (C) 1991-2010, Thomas G. Lane, Guido Vollbeding. All Rights Reserved except as specified below.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission is hereby granted to use, copy, modify, and distribute this software (or portions thereof) for any purpose, without fee, subject to these conditions:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(1) If any part of the source code for this software is distributed, then this README file must be included, with this copyright and no-warranty notice unaltered; and any additions, deletions, or changes to the original files must be clearly indicated in accompanying documentation.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(2) If only executable code is distributed, then the accompanying documentation must state that &amp;quot;this software is based in part on the work of the Independent JPEG Group&amp;quot;.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(3) Permission for use of this software is granted only if the user accepts full responsibility for any undesirable consequences; the authors accept NO LIABILITY for damages of any kind.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;These conditions apply to any software derived from or based on the IJG code, not just to the unmodified library. If you use our work, you ought to acknowledge us.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission is NOT granted for the use of any IJG author&apos;s name or company name in advertising or publicity relating to this software or products derived from it. This software may be referred to only as &amp;quot;the Independent JPEG Group&apos;s software&amp;quot;.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;We specifically permit and encourage the use of this software as the basis of commercial products, provided that all warranty or liability claims are assumed by the product vendor.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Graphics Interchange Format(c) is the Copyright property of CompuServe Incorporated. GIF(sm) is a Service Mark property of CompuServe Incorporated. &lt;br /&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;PNG Reference Library (libpng)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;libpng versions 1.2.6, August 15, 2004, through 1.5.1, February 3, 2011, are Copyright (c) 2004, 2006-2011 Glenn Randers-Pehrson, and are distributed according to the same disclaimer and license as libpng-1.2.5 with the following individual added to the list of Contributing Authors&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Cosmin Truta&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;libpng versions 1.0.7, July 1, 2000, through 1.2.5 - October 3, 2002, are Copyright (c) 2000-2002 Glenn Randers-Pehrson, and are distributed according to the same disclaimer and license as libpng-1.0.6 with the following individuals added to the list of Contributing Authors&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Simon-Pierre Cadieux&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Eric S. Raymond&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Gilles Vollant&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;and with the following additions to the disclaimer:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;There is no warranty against interference with your enjoyment of the library or against infringement. There is no warranty that our efforts or the library will fulfill any of your particular purposes or needs. This library is provided with all faults, and the entire risk of satisfactory quality, performance, accuracy, and effort is with the user.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are Copyright (c) 1998, 1999 Glenn Randers-Pehrson, and are distributed according to the same disclaimer and license as libpng-0.96, with the following individuals added to the list of Contributing Authors:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Tom Lane&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Glenn Randers-Pehrson&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Willem van Schaik&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;libpng versions 0.89, June 1996, through 0.96, May 1997, are Copyright (c) 1996, 1997 Andreas Dilger Distributed according to the same disclaimer and license as libpng-0.88, with the following individuals added to the list of Contributing Authors:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;John Bowler&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Kevin Bracey&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Sam Bushell&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Magnus Holmgren&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Greg Roelofs&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Tom Tanner&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;libpng versions 0.5, May 1995, through 0.88, January 1996, are Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;For the purposes of this copyright and license, &amp;quot;Contributing Authors&amp;quot; is defined as the following set of individuals:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Andreas Dilger&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Dave Martindale&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Guy Eric Schalnat&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Paul Schmidt&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Tim Wegner&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The PNG Reference Library is supplied &amp;quot;AS IS&amp;quot;. The Contributing Authors and Group 42, Inc. disclaim all warranties, expressed or implied, including, without limitation, the warranties of merchantability and of fitness for any purpose. The Contributing Authors and Group 42, Inc. assume no liability for direct, indirect, incidental, special, exemplary, or consequential damages, which may result from the use of the PNG Reference Library, even if advised of the possibility of such damage.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission is hereby granted to use, copy, modify, and distribute this source code, or portions hereof, for any purpose, without fee, subject to the following restrictions:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. The origin of this source code must not be misrepresented.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Altered versions must be plainly marked as such and must not be misrepresented as being the original source.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;3. This Copyright notice may not be removed or altered from any source or altered source distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The Contributing Authors and Group 42, Inc. specifically permit, without fee, and encourage the use of this source code as a component to supporting the PNG file format in commercial products. If you use this source code in a product, acknowledgment is not required but would be appreciated. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;The ptmalloc memory allocator (ptmalloc3)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 2001-2006 Wolfram Gloger&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the name of Wolfram Gloger may not be used in any advertising or publicity relating to the software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS-IS&amp;quot; AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;IN NO EVENT SHALL WOLFRAM GLOGER BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;SQLite version 3&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;All of the deliverable code in SQLite has been dedicated to the public domain by the authors. All code authors, and representatives of the companies they work for, have signed affidavits dedicating their contributions to the public domain and originals of those signed affidavits are stored in a firesafe at the main offices of Hwaci. Anyone is free to copy, modify, publish, use, compile, sell, or distribute the original SQLite code, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;TIFF Software Distribution (libtiff)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1987, 1993, 1994&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The Regents of the University of California. All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;3. Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1988-1997 Sam Leffler&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1991-1997 Silicon Graphics, Inc.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) Joris Van Damme &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) AWare Systems &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1985-1987, 1990 Regents of the University of California&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1990, 1991 Digital Equipment Corporation&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1990 Sun Microsystems, Inc.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1990, 1995 Frank D. Cringle&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1996 BancTec AB&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1996 Mike Johnson&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1996 Pixar&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 1997 Greg Ward Larson&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Portions Copyright (C) 2000 Frank Warmerdam&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 2004, Andrey Kiselev &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c( 1996 USAF Phillips Laboratory&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Additions (c) Richard Nolde 2006-2009&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Sam Leffler and Silicon Graphics.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS-IS&amp;quot; AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1985, 1986 The Regents of the University of California.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;This code is derived from software contributed to Berkeley by James A. Woods, derived from original work by Spencer Thomas and Joseph Orost.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms are permitted provided that the above copyright notice and this paragraph are duplicated in all such forms and that any documentation, advertising materials, and other materials related to such distribution and use acknowledge that the software was developed by the University of California, Berkeley. The name of the University may not be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED ``AS IS&apos;&apos; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1996-1997 Sam Leffler&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 1996 Pixar&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Pixar, Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Pixar, Sam Leffler and Silicon Graphics.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS-IS&amp;quot; AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;IN NO EVENT SHALL PIXAR, SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Data Compression Library (zlib)&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (C) 1995-2010 Jean-loup Gailly and Mark Adler&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;This software is provided &apos;as-is&apos;, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;3. This notice may not be removed or altered from any source distribution. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Symphytum for Windows: Python version 2.7.3&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;--------------------------------------------&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. This LICENSE AGREEMENT is between the Python Software Foundation&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(&amp;quot;PSF&amp;quot;), and the Individual or Organization (&amp;quot;Licensee&amp;quot;) accessing and&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;otherwise using this software (&amp;quot;Python&amp;quot;) in source or binary form and&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;its associated documentation.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Subject to the terms and conditions of this License Agreement, PSF hereby&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;analyze, test, perform and/or display publicly, prepare derivative works,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;distribute, and otherwise use Python alone or in any derivative version,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;provided, however, that PSF&apos;s License Agreement and PSF&apos;s notice of copyright,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;i.e., &amp;quot;Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2011, 2012 Python Software Foundation; All Rights Reserved&amp;quot; are retained in Python&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;alone or in any derivative version prepared by Licensee.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;3. In the event Licensee prepares a derivative work that is based on&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;or incorporates Python or any part thereof, and wants to make&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;the derivative work available to others as provided herein, then&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Licensee hereby agrees to include in any such work a brief summary of&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;the changes made to Python.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;4. PSF is making Python available to Licensee on an &amp;quot;AS IS&amp;quot;&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;basis. PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;INFRINGE ANY THIRD PARTY RIGHTS.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;6. This License Agreement will automatically terminate upon a material&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;breach of its terms and conditions.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;7. Nothing in this License Agreement shall be deemed to create any&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;relationship of agency, partnership, or joint venture between PSF and&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Licensee. This License Agreement does not grant permission to use PSF&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;trademarks or trade name in a trademark sense to endorse or promote&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;products or services of Licensee, or any third party.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;8. By copying, installing or otherwise using Python, Licensee&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;agrees to be bound by the terms and conditions of this License&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Agreement. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Dropbox SDK&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 2015-2017 Dropbox Inc., http://www.dropbox.com/&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; Permission is hereby granted, free of charge, to any person obtaining&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; a copy of this software and associated documentation files (the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; &amp;quot;Software&amp;quot;), to deal in the Software without restriction, including&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; without limitation the rights to use, copy, modify, merge, publish,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; distribute, sublicense, and/or sell copies of the Software, and to&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; permit persons to whom the Software is furnished to do so, subject to&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; the following conditions:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; The above copyright notice and this permission notice shall be&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; included in all copies or substantial portions of the Software.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt; &lt;hr /&gt; &lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;MEGAcmd&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Copyright (c) 2013, Mega Limited&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;All rights reserved.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;Redistribution and use in source and binary forms, with or without&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;modification, are permitted provided that the following conditions are&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;met:&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;1. Redistributions of source code must retain the above copyright&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; notice, this list of conditions and the following disclaimer.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; notice, this list of conditions and the following disclaimer in the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; documentation and/or other materials provided with the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt; distribution.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Noto Mono&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;The previous applies to all sources and binaries save&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;those explicitly distributed under the terms of the GNU General Public&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;License (see http://www.gnu.org/copyleft/gpl.txt for details), and the&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;interactive MEGAcmdShell executables (mega-cmd in linux, MEGAcmdShell&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;in MAC and MEGAcmdShell.exe in Windows), distributed under the &lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Mono&apos;;&quot;&gt;aforementioned GNU General Public License. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="897"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Clore</translation>
     </message>
 </context>
 <context>
@@ -736,184 +736,184 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/addfielddialog.ui" line="14"/>
         <source>Field Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Assistant champ</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="57"/>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="54"/>
         <source>Create Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un champ</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="84"/>
         <source>1. Choose a field type</source>
-        <translation type="unfinished"></translation>
+        <translation>1. Choisir un type de champ</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="121"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="127"/>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="243"/>
         <source>Select a field type from the list on the left</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner un type de champ depuis la liste sur la gauche</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="158"/>
         <source>2. Set field name</source>
-        <translation type="unfinished"></translation>
+        <translation>2. Nommerle champ</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="204"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/addfielddialog.ui" line="214"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suivant</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="60"/>
         <source>Duplicate Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ à dupliquer</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="67"/>
         <source>Modify Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ à modifier</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="174"/>
         <source>Generic input field for all kind of data. Text Fields can be resized to create multi-lined text areas.</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ générique pour toute sorte de data. Les champs Texte peuvent être redimensionnés pour créer des zones de textes multi-lignes.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="180"/>
         <source>Input field for numbers with support for decimal and scientific notation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ pour saisir les nombres avec décimales et notation scientifique.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="185"/>
         <source>Input and display field for date and time values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ pour la saisie et l&apos;affichage de valeurs de type Date et Heure.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="190"/>
         <source>Display field for record creation date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage de la date de création de l&apos;enregistrement.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="194"/>
         <source>Display field for record modification date.</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage de la date de modification de l&apos;enregistrement.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="198"/>
         <source>Status field with two possible values: checked (yes) and unchecked (no). Checkboxes are generally used to answer simple yes/no questions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce champ possède deux valeurs possibles :coché (oui) et non coché (non). Les cases à cocher servent généralement à répondre à des questions simples  du genre oui/non.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="205"/>
         <source>Drop-down list which allows to choose one value from a predefined list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste déroulante permettant de choisir une valeur depuis une liste prédéfinie.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="210"/>
         <source>A progressbar to indicate the current progress state of a task.</source>
-        <translation type="unfinished"></translation>
+        <translation>La barre de progression indique la progression courante d&apos;une tâche.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="215"/>
         <source>Display field for image files. Supported file formats: PNG, JPG/JPEG, GIF, TIFF, BMP, SVG.</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ pour afficher ldes images.Formats supportés: PNG, JPG/JPEG, GIF, TIFF, BMP, SVG.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="221"/>
         <source>File management. This field allows you to link files to a specific record. Added files are copied to the database and can be opened/modified later on.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestion des fichiers. Ce champ permet d&apos;associer des fichiers à un enregistrement particulier. Les fichiers ajoutés sont copiés dans la base et pourront être ouverts/modifiés par la suite.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="229"/>
         <source>URL text links. Input field for web links.Each link can be opened with one click on the inline open link button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Liens URL. Champ pour saisie des liens vers le Net. Tout lien peut être ouvert en cliquant sur le bouton Ouvrir lien.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="236"/>
         <source>Email address. Input field for email adresses. New email can be written with one click on the inline email button</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse Email. Champ de saisie de l&apos;adresse email. Une nouvelle adresse email peut être saisie en cliquant sur le bouton email en ligne.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="286"/>
         <source>Created on</source>
-        <translation type="unfinished"></translation>
+        <translation>Créé le</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="289"/>
         <source>Modified on</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifié le</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="301"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="302"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="303"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="304"/>
         <source>Creation Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date de création</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="305"/>
         <source>Modification Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification de date</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="306"/>
         <source>Checkbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Case à cocher</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="307"/>
         <source>Combobox</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste déroulante</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="308"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="309"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Image</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="310"/>
         <source>File list</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste des fichiers</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="311"/>
         <source>Web Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Lien Web</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="312"/>
         <source>Email Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse Email</translation>
     </message>
 </context>
 <context>
@@ -921,42 +921,42 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="17"/>
         <source>Date Reminder</source>
-        <translation type="unfinished"></translation>
+        <translation>Rappel de date</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="53"/>
         <source>The following dates need your attention</source>
-        <translation type="unfinished"></translation>
+        <translation>Les dates suivantes sont importantes</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="74"/>
         <source>&lt;i&gt;There are no open reminders&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Aucun rappel ouvert&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/alarmlistdialog.ui" line="122"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Clore</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="167"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="168"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="169"/>
         <source>Show affected record</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher l&apos;enregistrement affecté</translation>
     </message>
     <message>
         <location filename="../../widgets/alarmlistdialog.cpp" line="170"/>
         <source>Remove reminder from list</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le rappel de la liste</translation>
     </message>
 </context>
 <context>
@@ -964,157 +964,157 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/backupdialog.ui" line="17"/>
         <source>Database Backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde de la base de données</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="36"/>
         <source>Create or restore a backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer ou restaurer une sauvegarde</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="46"/>
         <source>A backup file contains all your data, including all files, making it easy to export and restore database backups across different installations</source>
-        <translation type="unfinished"></translation>
+        <translation>Un fichier de sauvegarde contient toutes vos données, y compris tous les fichiers, ce qui facilite l&apos;exportation et la restauration des sauvegardes de bases de données sur différentes installations</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="56"/>
         <source>Operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Opération</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="62"/>
         <source>Create backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer une sauvegarde</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="72"/>
         <source>Restore backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Restauration de la sauvegarde</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="117"/>
         <location filename="../../ui/backupdialog.ui" line="432"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="127"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suivant</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="146"/>
         <source>Create a new backup file</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un nouveau fichier de sauvegarde</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="156"/>
         <source>Save as</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver sous</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="162"/>
         <location filename="../../ui/backupdialog.ui" line="269"/>
         <source>Backup file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier de sauvegarde:</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="169"/>
         <source>Please select destination...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez sélectionner la destination...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="176"/>
         <location filename="../../ui/backupdialog.ui" line="283"/>
         <source>B&amp;rowse...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Naviguer...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="221"/>
         <location filename="../../ui/backupdialog.ui" line="328"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="234"/>
         <source>B&amp;ackup</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;auvegarder</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="253"/>
         <source>Restore an existing backup file</source>
-        <translation type="unfinished"></translation>
+        <translation>REstaurer une sauvegarde existante</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="263"/>
         <source>Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurer</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="276"/>
         <source>Please select a backup file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez sélectionner un fichier de sauvegarde...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="341"/>
         <source>Res&amp;tore</source>
-        <translation type="unfinished"></translation>
+        <translation>Res&amp;taurer</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="360"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez patienter...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="375"/>
         <source>Initializing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Initialisation...</translation>
     </message>
     <message>
         <location filename="../../ui/backupdialog.ui" line="442"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Finir</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="125"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier sauvé</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="127"/>
         <location filename="../../widgets/backupdialog.cpp" line="141"/>
         <source>Symphytum Backup(*.syb)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde Symphytum (*.syb)</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="139"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="162"/>
         <source>Exporting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportation...</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="170"/>
         <source>Importing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation...</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="183"/>
         <source>Backup operation failed: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;opération de sauvegarde a échoué: %1</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="191"/>
         <source>Backup completed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde réussie !</translation>
     </message>
     <message>
         <location filename="../../widgets/backupdialog.cpp" line="200"/>
         <source>Backup restored successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde restaurée avec succès !</translation>
     </message>
 </context>
 <context>
@@ -1122,7 +1122,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/backupmanager.cpp" line="89"/>
         <source>Failed to open create file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec à ouvrir le fichier créé %1: %2</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="105"/>
@@ -1130,27 +1130,27 @@ p, li { white-space: pre-wrap; }
         <location filename="../../components/backupmanager.cpp" line="165"/>
         <location filename="../../components/backupmanager.cpp" line="256"/>
         <source>Failed to open file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec à ouvrir le fichier %1: %2</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="177"/>
         <source>The selected file is not a valid backup file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier sélectionné n&apos;est pas un fichier de sauvegarde valide!</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="181"/>
         <source>The selected backup file is not compatible with this software version. Please upgrade to a newer version and then try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier de sauvegarde sélectionné n&apos;est pas compatible avec cette version du logiciel. Veuillez mettre à niveau avec une version plus récente, puis réessayez.</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="215"/>
         <source>Failed to remove current database file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec à supprimer le fichier courant de la base de données!</translation>
     </message>
     <message>
         <location filename="../../components/backupmanager.cpp" line="224"/>
         <source>Failed to remove file %1!</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec à supprimer le fichier %1!</translation>
     </message>
 </context>
 <context>
@@ -1158,27 +1158,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="31"/>
         <source>&lt;i&gt;No field properties available&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Aucun champ propriétés disponible&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="76"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/checkboxfieldwizard.ui" line="83"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1186,7 +1186,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../models/collectionlistmodel.h" line="46"/>
         <source>New Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle collection</translation>
     </message>
 </context>
 <context>
@@ -1194,47 +1194,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="77"/>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="78"/>
         <source>Duplicate</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="79"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="128"/>
         <source>Delete Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer la collection</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="129"/>
         <source>Are you sure you want to delete the selected collection?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir supprimer la collection sélectionnée?&lt;br&gt;&lt;br&gt;&lt;b&gt;ATTENTION:&lt;/b&gt; Pas de retour en arrière!</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="190"/>
         <source>Duplicate Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer la collection</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="193"/>
         <source>Data structure only</source>
-        <translation type="unfinished"></translation>
+        <translation>Uniquement la structure des datas</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="195"/>
         <source>All data, including contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Toutes les datas, avec leurs contenus</translation>
     </message>
     <message>
         <location filename="../../views/collectionlistview/collectionlistview.cpp" line="212"/>
         <source> Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier</translation>
     </message>
 </context>
 <context>
@@ -1242,88 +1242,88 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="53"/>
         <source>Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Items</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="64"/>
         <source>Add at least one item to your drop-down list by using the &quot;Add&quot; button on the right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajoutez au moins un élément à votre liste déroulante en utilisant le bouton &quot;Ajouter&quot; sur la droite</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="76"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ajouter</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="89"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Renommer</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="99"/>
         <source>Rem&amp;ove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="125"/>
         <location filename="../../ui/comboboxfieldwizard.ui" line="135"/>
         <source>Select the default item if desired. To be able to choose an item, add some to the items list above first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez l&apos;élément par défaut si vous le souhaitez. Pour pouvoir choisir un article, ajoutez le d&apos;abord à la liste ci-dessus.</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="128"/>
         <source>Default item (optional):</source>
-        <translation type="unfinished"></translation>
+        <translation>Item par défaut (facultatif):</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="142"/>
         <source>Clear default item selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;item sélectionné par défaut</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="145"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Vider</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="205"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/comboboxfieldwizard.ui" line="215"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/comboboxfieldwizard.cpp" line="160"/>
         <source>New item</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel item</translation>
     </message>
 </context>
 <context>
@@ -1331,32 +1331,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="102"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/creationdatefieldwizard.ui" line="109"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1364,47 +1364,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="67"/>
         <source>Reminder</source>
-        <translation type="unfinished"></translation>
+        <translation>Rappel</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="73"/>
         <source>Show an alert message when the specified date is reached (saved date equals to today&apos;s date) at program start</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher un message d&apos;alerte lorsque la date spécifiée est atteinte (date enregistrée égale la date du jour) au démarrage du programme</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="76"/>
         <source>Show alert when date is reached</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher une alerte lorsque la date est atteinte</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="121"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/datefieldwizard.ui" line="128"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1412,32 +1412,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="119"/>
         <source>Dropbox sync process failed to start</source>
-        <translation type="unfinished"></translation>
+        <translation>Le processus de synchronisation Dropbox n&apos;a pas pu démarrer</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="122"/>
         <source>Dropbox sync process crashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Le processus de synchronisation Dropbox s&apos;est bloqué</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="125"/>
         <source>Dropbox sync process write error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;écriture du processus de synchronisation Dropbox</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="128"/>
         <source>Dropbox sync process read error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de lecture du processus de synchronisation Dropbox</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="131"/>
         <source>Unknown error during Dropbox sync process</source>
-        <translation type="unfinished"></translation>
+        <translation>Une erreur inconnue est survenue  lors du processus de synchronisation Dropbox</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/dropboxsyncdriver.cpp" line="134"/>
         <source>Unknown error during Dropbox sync process (in switch default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Une erreur inconnue est survenue lors du processus de synchronisation Dropbox (dans le commutateur par défaut)</translation>
     </message>
 </context>
 <context>
@@ -1445,37 +1445,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="88"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/emailfieldwizard.ui" line="95"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1483,7 +1483,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/form_widgets/emailformwidget.cpp" line="36"/>
         <source>Write new email</source>
-        <translation type="unfinished"></translation>
+        <translation>Rédiger un nouvel email</translation>
     </message>
 </context>
 <context>
@@ -1491,27 +1491,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="54"/>
         <source>Get Ready!</source>
-        <translation type="unfinished"></translation>
+        <translation>Prêt !</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="147"/>
         <source>Add a field to your empty collection so you can begin to add new records</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajoutez à votre collection un champ vide pour pouvoir commencer à ajouter de nouveaux enregistrements</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="154"/>
         <source>Create at least one new collection using the apropriate toolbar button or menu entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Créez au moins une nouvelle collection en utilisant le bouton de la barre d&apos;outils ou l&apos;entrée du menu appropriée</translation>
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="161"/>
         <source>Now you are ready! Start by adding new records to your empty collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Maintenant vous êtes prêt! Commencez par ajouter de nouveaux enregistrements à votre collection vide</translation>
     </message>
 </context>
 <context>
@@ -1521,123 +1521,123 @@ p, li { white-space: pre-wrap; }
         <location filename="../../ui/exportdialog.ui" line="45"/>
         <location filename="../../ui/exportdialog.ui" line="68"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="58"/>
         <source>Symphytum&apos;s data can be exported to other applications by choosing an apropriate file format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les données Symphytum peuvent être exportées vers d&apos;autres applications en choisissant un format de fichier approprié.</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="74"/>
         <source>All &amp;records</source>
-        <translation type="unfinished"></translation>
+        <translation>Tous les en&amp;registrements</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="84"/>
         <source>Selected records (&amp;0 items)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrements sélectionnés  (&amp;0 items)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="96"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="107"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="165"/>
         <location filename="../../ui/exportdialog.ui" line="375"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="175"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Suiva&amp;nt</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="193"/>
         <source>Text encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Encodage du texte:</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="216"/>
         <source>Field separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur de champ:</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="227"/>
         <source>, (comma)</source>
-        <translation type="unfinished"></translation>
+        <translation>, (virgule)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="232"/>
         <source>; (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>; (point-virgule)</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="290"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="300"/>
         <source>&amp;Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Exporter</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="321"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez patienter...</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="49"/>
         <source>item</source>
-        <translation type="unfinished"></translation>
+        <translation>item</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="49"/>
         <source>items</source>
-        <translation type="unfinished"></translation>
+        <translation>items</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="50"/>
         <source>Selected records (%1 %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrements sélectionnés (%1 %2)</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="116"/>
         <source>Save CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver comme fichier CSV</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="118"/>
         <source>CSV file(*.csv)</source>
-        <translation type="unfinished"></translation>
+        <translation>fichier CSV (*.csv)</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="468"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Oui</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="470"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="560"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="561"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichiers</translation>
     </message>
 </context>
 <context>
@@ -1645,7 +1645,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/filemanager.cpp" line="403"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur fichier</translation>
     </message>
 </context>
 <context>
@@ -1653,12 +1653,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../components/filemanager.cpp" line="61"/>
         <source>Failed to copy %1 to %2: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur à copier %1 vers %2: %3</translation>
     </message>
     <message>
         <location filename="../../components/filemanager.cpp" line="69"/>
         <source>Failed to remove %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur à supprimer %1: %2</translation>
     </message>
 </context>
 <context>
@@ -1666,48 +1666,49 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="31"/>
         <source>Visible sections</source>
-        <translation type="unfinished"></translation>
+        <translation>Sections visibles</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="40"/>
         <source>File list fields display the file icon and file name as default sections.&lt;br&gt;
 Additional sections can be configured:</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs de liste de fichiers affichent l&apos;icône du fichier et le nom du fichier en tant que sections par défaut. &lt;br&gt; 
+Des sections supplémentaires peuvent être configurées:</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="51"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="54"/>
         <source>Show file type</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le type de fichier</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="61"/>
         <source>Show date</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la date</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="106"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="113"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1715,120 +1716,120 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="129"/>
         <source>&lt;i&gt;No files present&lt;br&gt;Drag files here to import  them or click the add button&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt; Aucun fichier présent &lt;br&gt; Faites glisser les fichiers ici pour les importer ou cliquez sur le bouton Ajouter &lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="141"/>
         <source>Add file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="144"/>
         <source>Remove file</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="147"/>
         <source>Export file</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter le fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="176"/>
         <source>Add files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter des fichiers...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="177"/>
         <source>Delete files</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer les fichiers</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="178"/>
         <source>Export files to...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter les fichiers vers ...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="179"/>
         <source>Open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouverture du fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="346"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="420"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="448"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisie invalide</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="347"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="421"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="449"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>La data saisie n&apos;est pas valide!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="431"/>
         <source>Import Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer les fichiers</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="459"/>
         <source>Delete Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer les fichiers</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="460"/>
         <source>Are you sure you want to delete the selected files?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Êtes-vous sûr de vouloir supprimer les fichiers sélectionnés? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Pas de retour en arrière!</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="488"/>
         <source>Removing file 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression du fichier 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="490"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="560"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="685"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="493"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="563"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="688"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="506"/>
         <source>Removing file %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression du fichier %1 sur %2</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="541"/>
         <source>Export selected files to</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter les fichiers sélectionnés vers</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="558"/>
         <source>Copying file 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Copie du fichier 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="576"/>
         <source>Copying file %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Coppie du fichier %1 sur %2</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="683"/>
         <source>Importing file 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer le fichier 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="701"/>
         <source>Importing file %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer le fichier %1 sur %2</translation>
     </message>
 </context>
 <context>
@@ -1836,42 +1837,42 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="34"/>
         <source>Add files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter des fichiers</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="92"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisie invalide</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="93"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>La data saisie n&apos;est pas valide!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="103"/>
         <source>Import Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer des fichiers</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="133"/>
         <source>Importing file 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation du fichier 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="135"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandonner</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="138"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="151"/>
         <source>Importing file %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation du fichier %1 sur %2</translation>
     </message>
 </context>
 <context>
@@ -1881,42 +1882,42 @@ Additional sections can be configured:</source>
         <location filename="../../views/formview/formview.cpp" line="254"/>
         <location filename="../../views/formview/formview.cpp" line="273"/>
         <source>Record %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement %1 sur %2</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1578"/>
         <source>New field</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau champ</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1579"/>
         <source>Duplicate field</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer le champ</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1580"/>
         <source>Delete field</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer le champ</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1581"/>
         <source>Modify field</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier le champ</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1582"/>
         <source>New record</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1583"/>
         <source>Duplicate record</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../views/formview/formview.cpp" line="1584"/>
         <source>Delete record</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;enregistrement</translation>
     </message>
 </context>
 <context>
@@ -1924,27 +1925,27 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="31"/>
         <source>&lt;i&gt;No field properties available&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;Aucune propriété disponible pour ce champ&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="76"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/imagefieldwizard.ui" line="83"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -1952,89 +1953,89 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="66"/>
         <source>Drag your image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites glisser votre image ici</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="82"/>
         <source>or click here...</source>
-        <translation type="unfinished"></translation>
+        <translation>ou cliquez ici...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="116"/>
         <source>Select image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectione d&apos;une image...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="117"/>
         <source>Delete image</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;image</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="118"/>
         <source>Save image as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvez l&apos;image sous ...</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="119"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir une image</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="343"/>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="411"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisie invalide</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="344"/>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="412"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>La data entrée n&apos;est pas valide!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="422"/>
         <source>Import Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer une image</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="424"/>
         <source>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="454"/>
         <source>Export Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter l&apos; image</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="465"/>
         <source>Delete Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;image</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="466"/>
         <source>Are you sure you want to delete the selected image?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir effacer l&apos;image sélectionnée?&lt;br&gt;&lt;br&gt;&lt;b&gt;Attention:&lt;/b&gt; Ceci est irréversible!</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="480"/>
         <source>Deleting file</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement du fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="481"/>
         <source>Deleting image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement du fichier image en cours ... Veuillez patienter !</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="571"/>
         <source>Importing file</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation du fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="572"/>
         <source>Copying image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Copie du fichier image en cours ... Veuillez patienter !</translation>
     </message>
 </context>
 <context>
@@ -2042,37 +2043,37 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="33"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="87"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisie invalide</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="88"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>La data saisie n&apos;est pas valide !&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="98"/>
         <source>Import Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer une image</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="100"/>
         <source>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Images (*.png *.jpeg *.jpg *.tiff *.gif *.bmp *.svg)</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="112"/>
         <source>Importing file</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation du fichier en cours</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="113"/>
         <source>Copying image file... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Copie du fichier image en cours ... Veuillez patienter !</translation>
     </message>
 </context>
 <context>
@@ -2081,94 +2082,94 @@ Additional sections can be configured:</source>
         <location filename="../../ui/importdialog.ui" line="17"/>
         <location filename="../../ui/importdialog.ui" line="36"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="49"/>
         <source>External data can be imported to Symphytum by choosing the apropriate file format and its properties. A new collection is created for each imported dataset.</source>
-        <translation type="unfinished"></translation>
+        <translation>Des données externes peuvent être importées dans Symphytum en choisissant le format de fichier approprié et ses propriétés. Une nouvelle collection est créée pour chaque ensemble de données importé.</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="61"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="72"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="130"/>
         <location filename="../../ui/importdialog.ui" line="379"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="140"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suivant</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="158"/>
         <location filename="../../ui/importdialog.ui" line="168"/>
         <source>A new collection will be created with contents from the CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>Une nouvelle collection sera créée avec le contenu du fichier CSV</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="161"/>
         <source>Collection name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de la collection :</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="180"/>
         <source>CSV Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés CSV</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="188"/>
         <source>Field separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur de champ:</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="212"/>
         <source>, (comma)</source>
-        <translation type="unfinished"></translation>
+        <translation>, (virgule)</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="217"/>
         <source>; (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>; (point virgule)</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="241"/>
         <source>Text encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Encodage du texte :</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="288"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="301"/>
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importer</translation>
     </message>
     <message>
         <location filename="../../ui/importdialog.ui" line="325"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez patienter ...</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="104"/>
         <source>Open CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouverture du fichier CSV</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="106"/>
         <source>CSV file(*.csv)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier CSV (*.csv)</translation>
     </message>
 </context>
 <context>
@@ -2176,32 +2177,32 @@ Additional sections can be configured:</source>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="96"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="221"/>
         <location filename="../../widgets/mainwindow.cpp" line="290"/>
         <source>Software Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialisation du logiciel</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="222"/>
         <source>Are you sure you want to delete all data from the database including all files and settings?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir supprimer toutes les données de la base de données, y compris tous les fichiers et paramètres? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Ceci est irréversible !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="237"/>
         <location filename="../../widgets/mainwindow.cpp" line="313"/>
         <location filename="../../widgets/mainwindow.cpp" line="1203"/>
         <source>Closing Session</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermeture de session</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="238"/>
         <location filename="../../widgets/mainwindow.cpp" line="314"/>
         <location filename="../../widgets/mainwindow.cpp" line="1204"/>
         <source>Closing sync session... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermeture de la session de syncrhonisation ... Veuillez patienter !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="253"/>
@@ -2209,593 +2210,594 @@ Additional sections can be configured:</source>
         <location filename="../../widgets/mainwindow.cpp" line="732"/>
         <location filename="../../widgets/mainwindow.cpp" line="910"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="254"/>
         <source>Deleting files... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement des fichiers en cours ... Veuillez patienter !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="291"/>
         <source>Software successfully resetted. Terminating now.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logiciel réinstallé avec succès. Terminer maintenant.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="300"/>
         <source>Database Directory Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification du dossier de la base de données</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="301"/>
         <source>The database directory change will not take effect until software restart.&lt;br /&gt;Use the backup function to export and import your data to the new location.&lt;br /&gt;If the selected directory is empty, a new database file will be created.</source>
-        <translation type="unfinished"></translation>
+        <translation>La modification du répertoire de base de données ne prendra effet qu&apos;au redémarrage du logiciel. &lt;br /&gt; Utilisez la fonction de sauvegarde pour exporter et importer vos données vers le nouvel emplacement. &lt;br /&gt; Si le répertoire sélectionné est vide, un nouveau fichier de base de données sera créé.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="458"/>
         <source>No Fields</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun champ</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="459"/>
         <source>Failed to create new record!&lt;br&gt;Add some fields first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de créer un nouvel enregistrement! &lt;br&gt; Ajoutez d&apos;abord des champs.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="495"/>
         <source>New record created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement créé</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="514"/>
         <source>Duplication Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>La duplication a échoué</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="515"/>
         <source>Failed to duplicate record!&lt;br&gt;Add some records first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de dupliquer l&apos;enregistrement! &lt;br&gt; Ajoutez d&apos;abord des enregistrements.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="542"/>
         <source>Record %1 duplicated</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement %1 dupliqué</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="566"/>
         <source>Duplicate Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication d&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="567"/>
         <source>Are you sure you want to duplicate all selected records?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir dupliquer tous les enregistrements sélectionnés? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Ceci est irréversible !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="578"/>
         <source>record duplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication d&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="584"/>
         <source>Duplicating record 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication de l&apos;enregistrement 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="586"/>
         <location filename="../../widgets/mainwindow.cpp" line="729"/>
         <location filename="../../widgets/mainwindow.cpp" line="907"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="604"/>
         <source>Duplicating record %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication de l&apos;enregistrement %1 sur %2</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="629"/>
         <source>%1 record(s) duplicated</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 enregistrement(s) dupliqués</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="645"/>
         <source>Deletion Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>La suppression a échoué</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="646"/>
         <source>Failed to delete record!&lt;br&gt;The collection is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de supprimer l&apos;enregistrement ! &lt;br&gt; La collection est vide.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="657"/>
         <location filename="../../widgets/mainwindow.cpp" line="702"/>
         <location filename="../../widgets/mainwindow.cpp" line="712"/>
         <source>Delete Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression d&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="658"/>
         <source>Delete current record?</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;enregistrement courant ?</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="684"/>
         <source>Record %1 deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement %1 effacé</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="703"/>
         <source>Delete selected records?</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer les enregistrements sélectionnés ?</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="713"/>
         <source>Are you sure you want to delete all selected records?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir supprimer tous les enregistrements sélectionnés? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Ceci est irréversible !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="724"/>
         <source>record deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement de l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="727"/>
         <source>Deleting record 0 of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement de l&apos;enregistrement 0 sur %1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="756"/>
         <source>Deleting record %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacement de l&apos;enregistrement %1 sur %2</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="783"/>
         <source>%1 record(s) deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 enregistrement(s) effacé</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="810"/>
         <source>Cloud not connected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de connection au Cloud.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="852"/>
         <source>Delete All Records</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer tous les enregistrements</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="853"/>
         <source>Are you sure you want to delete all records from the current collection?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir supprimer tous les enregistrements de la collection actuelle? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Ceci est irréversible !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="872"/>
         <source>All records successfully deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Tous les enregistrements ont été supprimés avec succès</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="906"/>
         <source>Removing obsolete data...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression des données obsolètes ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="946"/>
         <source>Database Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille de la base de données</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="947"/>
         <source>Database size reduced by %1 KiB
 Files archive reduced by %2 MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille de la base de données réduite de %1 KiB 
+Fichiers archives  réduits de %2 MiB</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="991"/>
         <location filename="../../widgets/mainwindow.cpp" line="1035"/>
         <source>Missing Field Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun champ sélectionné</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="992"/>
         <source>Select a field to duplicate first!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez d&apos;abord le champ à dupliquer !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1036"/>
         <source>Select a field to delete first!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez d&apos;abord le champ à supprimer !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1044"/>
         <source>Field Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Supression du champ</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1045"/>
         <source>Are you sure you want to delete the selected collection field with all data related?&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; This cannot be undone!</source>
-        <translation type="unfinished"></translation>
+        <translation>Certain de vouloir supprimer le champ de collection sélectionné avec toutes les données liées? &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Ceci est irréversible !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1223"/>
         <source>Software Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrage du logiciel</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1224"/>
         <source>Software restart required! Please restart %1 manually.</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrage logiciel requis! Veuillez le redémarrer%1 manuellement.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1241"/>
         <source>Printing aborted</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon de l&apos;impression</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1242"/>
         <source>There are no records to print!</source>
-        <translation type="unfinished"></translation>
+        <translation>Il n&apos;ya aucun enregistrement à imprimer !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1299"/>
         <source>Export aborted</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon de l&apos;exportation</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1300"/>
         <source>There are no records to export!</source>
-        <translation type="unfinished"></translation>
+        <translation>Il n&apos;ya aucun enregistrements à exporter !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1357"/>
         <source>Import not available</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation non disponible</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1358"/>
         <source>Import is disabled due read-only session!</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;importation est désactivée en raison d&apos;une session en lecture seule !</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1447"/>
         <source>Sync Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de synchronisation</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1448"/>
         <source>Cloud sync error: </source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de synchronisation du Cloud : </translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1461"/>
         <source>Sync Session</source>
-        <translation type="unfinished"></translation>
+        <translation>Session de synchronisation</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1462"/>
         <source>Sync session is already open. This happens when another client is running in online mode. Please continue in read-only mode until the first client exits. It is also possible to force  write access by taking ownership of the session. This is useful for cases where the connection was accidentaly interrupted, leaving the session open.&lt;br&gt;&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Forcing access could lead to data loss!</source>
-        <translation type="unfinished"></translation>
+        <translation>La session de synchronisation est déjà ouverte. Cela se produit lorsqu&apos;un autre utilisateur s&apos;exécute en mode en ligne. Veuillez continuer en mode lecture seule jusqu&apos;à la sortie du premier client. Il est également possible de forcer l&apos;accès en écriture en prenant possession de la session. Ceci est utile dans les cas où la connexion a été accidentellement interrompue, laissant la session ouverte. &lt;br&gt; &lt;br&gt; &lt;b&gt; Attention: &lt;/b&gt; Forcer l&apos;accès pourrait conduire à une perte de données!</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1479"/>
         <source>force access</source>
-        <translation type="unfinished"></translation>
+        <translation>Forçage de l&apos;accès</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1480"/>
         <source>read-only access</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès en lecture seule</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1561"/>
         <source>Checking for updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifications des mises à jour ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1567"/>
         <source>Your software version is up to date</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre version du logiciel est à jour</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1572"/>
         <source>Error while checking for software updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur lors de la vérification des mises à jour du logiciel</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1582"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1583"/>
         <source>Exit from this application</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitter l&apos;application</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1587"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Au sujet de %1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1590"/>
         <source>About Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Au sujet de Qt</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1593"/>
         <source>New Collection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle collection...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1595"/>
         <source>Create a new collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer une nouvelle collection</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1597"/>
         <source>Duplicate Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer une collection</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1599"/>
         <source>Duplicate current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer la collection courante</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1601"/>
         <source>Delete Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer une collection</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1603"/>
         <source>Delete current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer la collection courante</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1605"/>
         <source>New Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1609"/>
         <source>New Field...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau champ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1612"/>
         <source>Backup...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1613"/>
         <source>Backup or restore a database file</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder ou restaurer une base de données</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1615"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1618"/>
         <source>Change application settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier les paramètres de l&apos;application</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1620"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1623"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler les modifications</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1626"/>
         <source>Select all records</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner tous les enregistrements</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1628"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouver</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1631"/>
         <source>Form View</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage en mode Formulaire</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1633"/>
         <source>Change current view mode to a form-like view</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier l&apos;affichage courant en mode Formulaire</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1637"/>
         <source>Table View</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage en mode Tableau</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1639"/>
         <source>Change current view mode to a table-like view</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier l&apos;affichage courant en mode Tableau</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1642"/>
         <source>View Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode d&apos;affichage</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1650"/>
         <source>Minimize</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimiser</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1653"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1657"/>
         <source>Fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Plein écran</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1662"/>
         <source>Hide collection sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Masquer la barre latérale de la collection</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1666"/>
         <source>Delete all records</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression de tous les enregistrements</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1668"/>
         <source>Remove all records from current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression de tous les enregistrements de la collection courante</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1670"/>
         <source>Free unused space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espace libre inutilisé</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1671"/>
         <source>Optimize size of database file by freeing unused resources</source>
-        <translation type="unfinished"></translation>
+        <translation>Optimiser la taille du fichier de la base de données en libérant les ressources inutilisées</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1674"/>
         <source>Cloud synchronization...</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisation du Cloud ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1675"/>
         <source>Synchronize your database with a cloud service</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisez votre base de données avec un service Cloud</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1679"/>
         <source>Read-only mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode en lecture seule</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1680"/>
         <source>Toggle read-only mode. If enabled, other clients can access and write to the database.</source>
-        <translation type="unfinished"></translation>
+        <translation>Basculer en mode lecture seule. Si cette option est activée, les autres clients peuvent accéder à la base de données et y écrire.</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1685"/>
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifier les mises à jour</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1686"/>
         <source>Check for %1 updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifier les mises à jour %1</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1690"/>
         <source>Date reminder list...</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste de rappel de date ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1692"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1693"/>
         <source>Print records or export them as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer des enregistrements ou les exporter en PDF</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1696"/>
         <source>Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1697"/>
         <source>Import existing records to the database</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer des enregistrements existants dans la base de données</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1699"/>
         <source>Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter ...</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1700"/>
         <source>Export all or only selected records</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter tous ou uniquement les enregistrements sélectionnés</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1705"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1738"/>
         <source>COLLECTIONS</source>
-        <translation type="unfinished"></translation>
+        <translation>COLLECTIONS</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1766"/>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1771"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1783"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Editer</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1791"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Visualiser</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1800"/>
         <source>Cloud</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1803"/>
         <source>Records</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrements</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1806"/>
         <source>Database</source>
-        <translation type="unfinished"></translation>
+        <translation>Base de données</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1809"/>
         <source>&amp;Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ou&amp;tils</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1819"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fenêtre</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1824"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1835"/>
         <source> Ready </source>
-        <translation type="unfinished"></translation>
+        <translation> Prêt </translation>
     </message>
 </context>
 <context>
@@ -2803,44 +2805,46 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="127"/>
         <source>MEGA sync process failed to start.&lt;br /&gt;&lt;br /&gt;Please &lt;b&gt;install&lt;/b&gt; MEGAcmd by visiting &lt;a href=&apos;https://mega.nz/cmd&apos;&gt;mega.nz/cmd&lt;/a&gt;.&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Le processus de synchronisation MEGA n&apos;a pas pu démarrer. &lt;br /&gt; &lt;br /&gt; Veuillez &lt;b&gt; installer &lt;/b&gt; MEGAcmd via ce lien&lt;a href=&apos;https://mega.nz/cmd&apos;&gt; mega.nz/cmd&lt;/a&gt;. &lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="132"/>
         <source>MEGA sync process crashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Le processus de synchronisation MEGA s&apos;est bloqué</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="135"/>
         <source>MEGA sync process write error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;écriture du processus de synchronisation MEGA</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="138"/>
         <source>MEGA sync process read error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de lecture du processus de synchronisation MEGA</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="141"/>
         <source>Unknown error during MEGA sync process</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur inconnue lors du processus de synchronisation MEGA</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="144"/>
         <source>Unknown error during MEGA sync process (in switch default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur inconnue lors du processus de synchronisation MEGA (dans le commutateur par défaut)</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="188"/>
         <source>Login failed: invalid email or password
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de la connexion: email ou mot de passe invalide
+</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/megasyncdriver.cpp" line="245"/>
         <source>Failed to replace temporary downloaded file: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Échec du remplacement du fichier téléchargé temporaire:%1
+</translation>
     </message>
 </context>
 <context>
@@ -2848,22 +2852,22 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../components/metadataengine.cpp" line="522"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../../components/metadataengine.cpp" line="523"/>
         <source>Duplicating collection data... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication des données de la collection ... Veuillez patienter !</translation>
     </message>
     <message>
         <location filename="../../components/metadataengine.cpp" line="553"/>
         <source>Duplicating collection files... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication des fichiers de la collection ... Veuillez patienter !</translation>
     </message>
     <message>
         <location filename="../../components/metadataengine.cpp" line="600"/>
         <source>Updating files metadata... Please wait!</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour des métadonnées des fichiers ... Veuillez patienter !</translation>
     </message>
 </context>
 <context>
@@ -2871,32 +2875,32 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configutation des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="31"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Date</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="39"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="102"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/moddatefieldwizard.ui" line="109"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -2904,42 +2908,42 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="33"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="42"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="45"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="55"/>
         <source>Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeurs</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="61"/>
         <source>Show negative values in red</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les valeurs négatives en rouge</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="64"/>
         <source>Mark negative values</source>
-        <translation type="unfinished"></translation>
+        <translation>Marquer les valeurs négatives</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="78"/>
@@ -2949,12 +2953,17 @@ Files archive reduced by %2 MiB</source>
 &lt;b&gt;Decimal:&lt;/b&gt; Common display format for numbers. Precision of decimal places must be specified manually in the next field.
 &lt;br/&gt;&lt;br/&gt;
 &lt;b&gt;Scientific:&lt;/b&gt;  Usually for numbers that are too big or too small to be conveniently written. Precision of decimal places must be specified manually in the next field.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez ici un mode de notation &lt;br/&gt; &lt;br/&gt;
+ &lt;b&gt; Automatique: &lt;/b&gt; La précision des décimales est calculée automatiquement. La notation par défaut est décimale, cependant la notation scientifique sera utilisée pour des valeurs vraiment grandes ou petites. 
+&lt;br/&gt; &lt;br/&gt; 
+&lt;b&gt; Décimal: &lt;/b&gt; Format d&apos;affichage commun pour les nombres. La précision des décimales doit être spécifiée manuellement dans le champ suivant. 
+&lt;br/&gt; &lt;br/&gt;
+ &lt;b&gt; Scientifique: &lt;/b&gt; Habituellement, il s&apos;agit de chiffres trop grands ou trop petits pour être commodément écrits. La précision des décimales doit être spécifiée manuellement dans le champ suivant.</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="86"/>
         <source>Notation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Notation :</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="93"/>
@@ -2964,49 +2973,54 @@ Files archive reduced by %2 MiB</source>
 &lt;b&gt;Decimal:&lt;/b&gt; Common display format for numbers. Precision of decimal places after decimal point must be specified manually in the next field.
 &lt;br/&gt;&lt;br/&gt;
 &lt;b&gt;Scientific:&lt;/b&gt;  Usually for numbers that are too big or too small to be conveniently written. Precision of decimal places after decimal point must be specified manually in the next field.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez ici un mode de notation &lt;br/&gt; &lt;br/&gt;
+ &lt;b&gt; Automatique: &lt;/b&gt; La précision des décimales est calculée automatiquement. La notation par défaut est décimale, cependant la notation scientifique sera utilisée pour des valeurs vraiment grandes ou petites. 
+&lt;br/&gt; &lt;br/&gt; 
+&lt;b&gt; Décimal: &lt;/b&gt; Format d&apos;affichage commun pour les nombres. La précision des décimales doit être spécifiée manuellement dans le champ suivant. 
+&lt;br/&gt; &lt;br/&gt;
+ &lt;b&gt; Scientifique: &lt;/b&gt; Habituellement, il s&apos;agit de chiffres trop grands ou trop petits pour être commodément écrits. La précision des décimales doit être spécifiée manuellement dans le champ suivant.</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="102"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatique</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="107"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Décimale</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="112"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Scientifique</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="138"/>
         <location filename="../../ui/numberfieldwizard.ui" line="147"/>
         <location filename="../../ui/numberfieldwizard.ui" line="157"/>
         <source>Specify the precision of decimal places after the decimal point, unless &apos;Notation&apos; is set to &apos;Automatic&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Précisez la précision des décimales après la virgule décimale, sauf si «Notation» est défini sur «Automatique».</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="141"/>
         <source>Precision</source>
-        <translation type="unfinished"></translation>
+        <translation>Précision</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="150"/>
         <source>Number of digits after the decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de chiffres après le séparateur décimal :</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="218"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/numberfieldwizard.ui" line="225"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -3014,257 +3028,257 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="28"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="58"/>
         <location filename="../../ui/preferencesdialog.ui" line="113"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="67"/>
         <location filename="../../ui/preferencesdialog.ui" line="236"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Apparence</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="76"/>
         <source>Cloud Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisation Cloud</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="85"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Avancés</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="120"/>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Mises à jour</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="128"/>
         <source>Check for updates:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérification des mises à jour :</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="139"/>
         <source>At startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Au démarrage</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="144"/>
         <source>Manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuellement</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="170"/>
         <source>Database Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier de la base de données</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="199"/>
         <source>&amp;Browse...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Naviguer ...</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="206"/>
         <source>&amp;Restore default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Restaurer par défaut</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="243"/>
         <source>Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenêtre principale</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="249"/>
         <source>Use the dark Ambiance theme from Ubuntu for the main toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser le thème Dark Ambiance d&apos;Ubuntu pour la barre d&apos;outils principale</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="252"/>
         <source>Dark toolbar (Ambiance theme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils sombre (thème Ambiance)</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="262"/>
         <source>Form View</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage Formulaire</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="268"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur du fond :</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="279"/>
         <location filename="../../ui/preferencesdialog.ui" line="298"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Défaut</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="287"/>
         <source>Font size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille de la police :</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="303"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Système</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="308"/>
         <source>16px</source>
-        <translation type="unfinished"></translation>
+        <translation>16px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="313"/>
         <source>15px</source>
-        <translation type="unfinished"></translation>
+        <translation>15px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="318"/>
         <source>14px</source>
-        <translation type="unfinished"></translation>
+        <translation>14px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="323"/>
         <source>13px</source>
-        <translation type="unfinished"></translation>
+        <translation>13px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="328"/>
         <source>12px</source>
-        <translation type="unfinished"></translation>
+        <translation>12px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="333"/>
         <source>11px</source>
-        <translation type="unfinished"></translation>
+        <translation>11px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="338"/>
         <source>10px</source>
-        <translation type="unfinished"></translation>
+        <translation>10px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="343"/>
         <source>9px</source>
-        <translation type="unfinished"></translation>
+        <translation>9px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="348"/>
         <source>8px</source>
-        <translation type="unfinished"></translation>
+        <translation>8px</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="359"/>
         <source>Table View</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage Tableau</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="365"/>
         <source>Row size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hauteur de la ligne:</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="372"/>
         <source>Number of lines of text that are shown for each row in table view</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de lignes de texte affichées pour chaque ligne de l&apos;affichage en mode Tableau</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="375"/>
         <source> line(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> ligne(s)</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="411"/>
         <source>Cloud Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisation Cloud</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="420"/>
         <source>Status:</source>
-        <translation type="unfinished"></translation>
+        <translation>Statut :</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="428"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Désactivé</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="433"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Activé</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="456"/>
         <location filename="../../ui/preferencesdialog.ui" line="529"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Outils</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="464"/>
         <source>&lt;b&gt;Cloud Unlink&lt;/b&gt;:&lt;br&gt;Unlink this client from cloud service</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt; Cloud Unlink &lt;/b&gt;: &lt;br&gt; Dissocier ce client du service Cloud</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="474"/>
         <source>Unlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Dissocier</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="522"/>
         <source>Adanced Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés avancées</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="537"/>
         <source>&lt;b&gt;Software Reset&lt;/b&gt;:&lt;br&gt;Reset all settings and delete all data from local database</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt; Réinitialiser le logiciel &lt;/b&gt;: &lt;br&gt; Réinitialiser tous les paramètres et supprimer toutes les données de la base de données locale</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="547"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialiser</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="575"/>
         <source>Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Performance</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="589"/>
         <location filename="../../ui/preferencesdialog.ui" line="599"/>
         <source>Images that are loaded from disk in table view can cause a poor scrolling experience. &lt;br /&gt;Caching images into memory allows a smooth scrolling experience after the first disk read.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les images chargées à partir du disque en mode Tableau peuvent provoquer un défilement inégal. &lt;br /&gt; La mise en cache des images dans la mémoire permet un défilement fluide après la première lecture du disque.</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="602"/>
         <source>Improve scrolling in table view by caching images. Increases RAM usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Améliorez le défilement dans l&apos;affichage en Tableau en mettant en cache les images. Mais cela augmente l&apos;utilisation de la RAM.</translation>
     </message>
     <message>
         <location filename="../../ui/preferencesdialog.ui" line="651"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Clore</translation>
     </message>
     <message>
         <location filename="../../widgets/preferencesdialog.cpp" line="240"/>
         <source>Restart required!</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrage nécessaire !</translation>
     </message>
     <message>
         <location filename="../../widgets/preferencesdialog.cpp" line="241"/>
         <source>A restart is required for this setting to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un redémarrage est nécessaire pour la prise en compte de ce paramètre.</translation>
     </message>
     <message>
         <location filename="../../widgets/preferencesdialog.cpp" line="256"/>
         <source>Select database directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez le dossier de la base de données</translation>
     </message>
 </context>
 <context>
@@ -3273,83 +3287,83 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/printdialog.ui" line="17"/>
         <location filename="../../ui/printdialog.ui" line="33"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="39"/>
         <source>All records</source>
-        <translation type="unfinished"></translation>
+        <translation>Tous les enregistrements</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="49"/>
         <source>Selected records (0 items)</source>
-        <translation type="unfinished"></translation>
+        <translation>Les enregistrements sélectionnées (0 items)</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="94"/>
         <location filename="../../ui/printdialog.ui" line="189"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="104"/>
         <source>&amp;Save PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sauver en PDF</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="114"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Im&amp;primer</translation>
     </message>
     <message>
         <location filename="../../ui/printdialog.ui" line="135"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez patienter ...</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="49"/>
         <source>item</source>
-        <translation type="unfinished"></translation>
+        <translation>item</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="49"/>
         <source>items</source>
-        <translation type="unfinished"></translation>
+        <translation>items</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="50"/>
         <source>Selected records (%1 %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrements sélectionnés (%1 %2)</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="89"/>
         <source>Save PDF file</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver comme fichier PDF</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="91"/>
         <source>PDF file(*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier PDF (*.pdf)</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="375"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Oui</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="377"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="496"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichier</translation>
     </message>
     <message>
         <location filename="../../widgets/printdialog.cpp" line="497"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichiers</translation>
     </message>
 </context>
 <context>
@@ -3357,43 +3371,43 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="31"/>
         <source>Progress Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau de progression</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="40"/>
         <location filename="../../ui/progressfieldwizard.ui" line="50"/>
         <source>The maximum value for the progress. In other words when this value is met, 100% progress is achieved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur maximale pour la progression. En d&apos;autres termes, lorsque cette valeur est atteinte, 100% de la progression sont réalisés.</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="43"/>
         <source>Total progress steps:</source>
-        <translation type="unfinished"></translation>
+        <translation>Total de la progression :</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="56"/>
         <source> steps</source>
-        <translation type="unfinished"></translation>
+        <translation> étapes</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="110"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/progressfieldwizard.ui" line="117"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -3401,7 +3415,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/form_widgets/progressformwidget.cpp" line="116"/>
         <source> of %1</source>
-        <translation type="unfinished"></translation>
+        <translation> de %1</translation>
     </message>
 </context>
 <context>
@@ -3410,77 +3424,77 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../components/databasemanager.cpp" line="172"/>
         <location filename="../../components/databasemanager.cpp" line="305"/>
         <source>Database Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de la base de données</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="173"/>
         <source>Failed to open the database file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le fichier de la base de données:%1</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="189"/>
         <source>Database Version Incompatible</source>
-        <translation type="unfinished"></translation>
+        <translation>Version de la base de données incompatible</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="190"/>
         <source>Failed to open the database file: db_version %1.  Please upgrade %2 to a newer version and then try again!</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le fichier de la base de données: db_version %1. Veuillez mettre à jour %2 vers une version plus récente, puis réessayez!</translation>
     </message>
     <message>
         <location filename="../../components/databasemanager.cpp" line="306"/>
         <source>Failed to initialize the database: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de l&apos;initialisation de la base de données: %1</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="30"/>
         <source>collection change</source>
-        <translation type="unfinished"></translation>
+        <translation>changement de collection</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="70"/>
         <source>collection edit</source>
-        <translation type="unfinished"></translation>
+        <translation>modifier la collection</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="122"/>
         <source>field creation</source>
-        <translation type="unfinished"></translation>
+        <translation>création d&apos;un champ</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="125"/>
         <source>field duplication</source>
-        <translation type="unfinished"></translation>
+        <translation>duplication d&apos;un champ</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="184"/>
         <source>field modification</source>
-        <translation type="unfinished"></translation>
+        <translation>modification d&apos;un champ</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="267"/>
         <source>record edit</source>
-        <translation type="unfinished"></translation>
+        <translation>modification d&apos;un enregistrement</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="349"/>
         <source>record creation</source>
-        <translation type="unfinished"></translation>
+        <translation>création d&apos;un enregistrement</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="401"/>
         <source>record deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>suppression d&apos;un enregistrement</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="475"/>
         <source>record duplication</source>
-        <translation type="unfinished"></translation>
+        <translation>duplication d&apos;un enregistrement</translation>
     </message>
     <message>
         <location filename="../../components/undocommands.cpp" line="527"/>
         <source>field layout change</source>
-        <translation type="unfinished"></translation>
+        <translation>modification de la disposition du champ</translation>
     </message>
     <message>
         <location filename="../../utils/formwidgetvalidator.cpp" line="43"/>
@@ -3492,40 +3506,41 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="340"/>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="408"/>
         <source>Read-only mode: Editing is not allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode lecture seule: l&apos;édition n&apos;est pas autorisée.</translation>
     </message>
     <message>
         <location filename="../../utils/formwidgetvalidator.cpp" line="89"/>
         <location filename="../../utils/formwidgetvalidator.cpp" line="114"/>
         <source>Required field: empty values not allowed
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire:  les valeurs vides ne sont pas autorisées
+</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="142"/>
         <source>Error in CSV export</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur dans l&apos;exportation CSV</translation>
     </message>
     <message>
         <location filename="../../widgets/exportdialog.cpp" line="143"/>
         <source>Unable to create CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Création du fichier CSV impossible !</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="125"/>
         <location filename="../../widgets/importdialog.cpp" line="144"/>
         <source>Error in CSV import</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur lors de l&apos;importation du fichier CSV</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="126"/>
         <source>Unable to open CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouverture du fichier CSV impossible !</translation>
     </message>
     <message>
         <location filename="../../widgets/importdialog.cpp" line="145"/>
         <source>Invalid CSV file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier CSV invalide !</translation>
     </message>
 </context>
 <context>
@@ -3534,12 +3549,12 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/searchlineedit.cpp" line="37"/>
         <location filename="../../widgets/searchlineedit.cpp" line="87"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechercher</translation>
     </message>
     <message>
         <location filename="../../widgets/searchlineedit.cpp" line="52"/>
         <source>Clears the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer le texte</translation>
     </message>
 </context>
 <context>
@@ -3547,17 +3562,17 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="17"/>
         <source>Sync Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration de la synchronisation</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="45"/>
         <source>Symphytum is able to synchronize your database including all data with a cloud service, allowing you to keep data safe and available everywhere on all devices.</source>
-        <translation type="unfinished"></translation>
+        <translation>Symphytum est capable de synchroniser votre base de données, y compris toutes les données avec un service Cloud, ce qui vous permet de conserver les données en sécurité et disponibles partout sur tous les appareils.</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="80"/>
         <source>Cloud service:</source>
-        <translation type="unfinished"></translation>
+        <translation>Service Cloud :</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="120"/>
@@ -3565,17 +3580,17 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/syncconfigdialog.ui" line="359"/>
         <location filename="../../ui/syncconfigdialog.ui" line="491"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="130"/>
         <source>&amp;Login</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Login</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="149"/>
         <source>Please authorize access to your cloud service: &lt;br /&gt; copy the code from the opened browser window and paste it below</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez autoriser l&apos;accès à votre service Cloud: &lt;br /&gt; copiez le code dans la fenêtre du navigateur ouverte et collez-le ci-dessous</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="165"/>
@@ -3583,103 +3598,103 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/syncconfigdialog.cpp" line="117"/>
         <location filename="../../widgets/syncconfigdialog.cpp" line="125"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez patienter ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="180"/>
         <source>Requesting URL...</source>
-        <translation type="unfinished"></translation>
+        <translation>Demande d&apos;URL ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="201"/>
         <source>&amp;Code:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Code :</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="211"/>
         <source>Paste here the code from the browser window</source>
-        <translation type="unfinished"></translation>
+        <translation>Collez ici le code de la fenêtre du navigateur</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="268"/>
         <location filename="../../ui/syncconfigdialog.ui" line="504"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="305"/>
         <source>Authorizing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorisation ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="369"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Réessayer</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="379"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="398"/>
         <source>Please authorize access to your MEGA account</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez autoriser l&apos;accès à votre compte MEGA</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="413"/>
         <source>MEGA email:</source>
-        <translation type="unfinished"></translation>
+        <translation>Email MEGA :</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="420"/>
         <source>name@example.com</source>
-        <translation type="unfinished"></translation>
+        <translation>nom@exemple.com</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="427"/>
         <source>MEGA password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe MEGA :</translation>
     </message>
     <message>
         <location filename="../../ui/syncconfigdialog.ui" line="446"/>
         <source>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;I&gt; Votre mot de passe ne sera pas stocké, uniquementt une clé pour la session &lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="151"/>
         <source>%1 Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Veuillez réessayer.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="158"/>
         <source>The authentication token is invalid or expired.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le jeton d&apos;authentification n&apos;est pas valide ou a expiré.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="163"/>
         <source>Connection to cloud service failed, check your connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>La connexion au service cloud a échoué, vérifiez votre connexion.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="187"/>
         <source>Accessing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Accession en cours ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="195"/>
         <source>Logged in as %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Connecté en tant que %1</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="211"/>
         <source>Dropbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Dropbox</translation>
     </message>
     <message>
         <location filename="../../widgets/syncconfigdialog.cpp" line="213"/>
         <source>MEGA</source>
-        <translation type="unfinished"></translation>
+        <translation>MEGA</translation>
     </message>
 </context>
 <context>
@@ -3688,32 +3703,32 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../components/sync_framework/syncengine.cpp" line="159"/>
         <location filename="../../components/sync_framework/syncengine.cpp" line="200"/>
         <source>Failed to access metadata file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;accéder au fichier de métadonnées: %1</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/syncengine.cpp" line="169"/>
         <source>Failed to parse metadata file: missing content</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de l&apos;analyse du fichier de métadonnées: contenu manquant</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/syncengine.cpp" line="188"/>
         <source>Failed to parse metadata file: invalid content</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de l&apos;analyse du fichier de métadonnées: contenu non valide</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/syncengine.cpp" line="232"/>
         <source>Failed to write metadata file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;écrire dans le fichier de métadonnées: %1</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/syncengine.cpp" line="355"/>
         <source>Incompatible database format version. The database on the cloud service is not compatible with this software version. Please upgrade %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Version de format de base de données incompatible. La base de données sur le service Cloud n&apos;est pas compatible avec cette version du logiciel. Veuillez mettre à jour %1.</translation>
     </message>
     <message>
         <location filename="../../components/sync_framework/syncengine.cpp" line="469"/>
         <source>Storage quota on cloud service exceeded. Please visit %1 to get more space.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le quota de stockage sur le service Cloud a été dépassé. Veuillez consultez %1 pour obtenir davantage d&apos;espace.</translation>
     </message>
 </context>
 <context>
@@ -3721,35 +3736,35 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="17"/>
         <source>Cloud Sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisation Cloud</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="45"/>
         <source>Initialization conflicts with previous one</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;initialisation est en conflit avec la précédente</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="85"/>
         <source>The cloud service has been configured by another client.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le service de cloud a été configuré par un autre client.</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="97"/>
         <location filename="../../ui/syncprocessdialog.ui" line="587"/>
         <source>Please choose a procedure</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez choisir une procédure</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="103"/>
         <location filename="../../ui/syncprocessdialog.ui" line="593"/>
         <source>Overwrite local database with data from the cloud</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer la base de données locale par des données du Cloud</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="113"/>
         <location filename="../../ui/syncprocessdialog.ui" line="603"/>
         <source>Upload and overwrite cloud data with local data</source>
-        <translation type="unfinished"></translation>
+        <translation>Télécharger et remplacer les données de Cloud avec des données locales</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="158"/>
@@ -3759,87 +3774,87 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../ui/syncprocessdialog.ui" line="648"/>
         <location filename="../../ui/syncprocessdialog.ui" line="746"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abandonner</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="168"/>
         <location filename="../../ui/syncprocessdialog.ui" line="658"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="187"/>
         <source>Configuring cloud service...</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration du service Cloud ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="202"/>
         <location filename="../../ui/syncprocessdialog.ui" line="419"/>
         <location filename="../../ui/syncprocessdialog.ui" line="692"/>
         <source>Checking...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérification ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="269"/>
         <location filename="../../ui/syncprocessdialog.ui" line="385"/>
         <location filename="../../ui/syncprocessdialog.ui" line="759"/>
         <source>&amp;Sync now</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Synchroniser maintenant</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="288"/>
         <source>New revision available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle révision disponible</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="328"/>
         <source>A newer version of the database is available.&lt;br&gt;Please synchronize your local database.</source>
-        <translation type="unfinished"></translation>
+        <translation>Une version plus récente de la base de données est disponible. &lt;br&gt; Veuillez synchroniser votre base de données locale.</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="404"/>
         <source>Synchronizing with cloud...</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisation avec le  Cloud ...</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="436"/>
         <source>Current task</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâche courante</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="516"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="535"/>
         <source>Synchronization conflict</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflit lors de la synchronisation</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="575"/>
         <source>The local database is in conflict with data from the cloud. This is usually caused by modifications in offline mode during an open session started by another client in online mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>La base de données locale est en conflit avec les données du Cloud. Ceci est généralement provoqué par des modifications en mode hors ligne lors d&apos;une session ouverte lancée par un autre client en mode en ligne.</translation>
     </message>
     <message>
         <location filename="../../ui/syncprocessdialog.ui" line="677"/>
         <source>Resolving revision conflict...</source>
-        <translation type="unfinished"></translation>
+        <translation>Résolution du conflit de révision ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="99"/>
         <source>Connection to cloud service failed, check your connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>La connexion au service Cloud a échoué, vérifiez votre connexion.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="113"/>
         <source>The authentication token for your cloud service is invalid or expired.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le jeton d&apos;authentification pour votre service Cloud n&apos;est pas valide ou a expiré.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="142"/>
         <source>Starting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Démarrage ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="147"/>
@@ -3848,68 +3863,68 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../widgets/syncprocessdialog.cpp" line="677"/>
         <location filename="../../widgets/syncprocessdialog.cpp" line="719"/>
         <source>Uploading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Téléchargement ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="153"/>
         <source>Your database is already up to date. There are no changes to synchronize.</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre base de données est déjà à jour. Il n&apos;y a aucun changement à synchroniser.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="167"/>
         <source>Another client already opened a sync session to the cloud service. Please retry later or restart %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un autre client a déjà ouvert une session de synchronisation sur le service Cloud. Veuillez réessayer plus tard ou redémarrer %1.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="180"/>
         <source>Cloud service successfully configured!</source>
-        <translation type="unfinished"></translation>
+        <translation>Le service Cloud a été configuré avec succès !</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="187"/>
         <source>Revision conflict resolved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflit de révision résolu !</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="294"/>
         <source>Download error. The following file was not found on the cloud service: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de téléchargement. Le fichier suivant n&apos;a pu être trouvé sur le service Cloud: %1</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="309"/>
         <source>Replacing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacement ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="312"/>
         <source>Error: Failed to delete old database file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur: Impossible de supprimer l&apos;ancien fichier de base de données.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="565"/>
         <source>Sync process could not be started: unexpected case.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le processus de synchronisation n&apos;a pas pu être démarré: cas inattendu.</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="608"/>
         <location filename="../../widgets/syncprocessdialog.cpp" line="685"/>
         <source>Downloading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Téléchargement ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="693"/>
         <source>Removing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="708"/>
         <source>Removing from cloud...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression sur le Cloud ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncprocessdialog.cpp" line="738"/>
         <source>Your database has been successfully synchronized.</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre base de données a été synchronisée avec succès .</translation>
     </message>
 </context>
 <context>
@@ -3917,58 +3932,58 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="42"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>en lecture seule</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="45"/>
         <source>online</source>
-        <translation type="unfinished"></translation>
+        <translation>en ligne</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="48"/>
         <source>offline</source>
-        <translation type="unfinished"></translation>
+        <translation>hors ligne</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="51"/>
         <location filename="../../widgets/syncstatuswidget.cpp" line="110"/>
         <source>undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>indéfini</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="63"/>
         <source>Authenticating...</source>
-        <translation type="unfinished"></translation>
+        <translation>Authentification ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="68"/>
         <source>Opening session...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouverture de session ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="73"/>
         <source>Closing session...</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermeture de session ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="78"/>
         <source>Accessing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Accession à ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="83"/>
         <source>Downloading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Téléchargement ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="88"/>
         <source>Uploading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Téléchargement ...</translation>
     </message>
     <message>
         <location filename="../../widgets/syncstatuswidget.cpp" line="109"/>
         <source>Cloud:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud :</translation>
     </message>
 </context>
 <context>
@@ -3976,37 +3991,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="270"/>
         <source>New field</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau champ</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="271"/>
         <source>Duplicate field</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication de champ</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="272"/>
         <source>Delete field</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression de champ</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="273"/>
         <source>Modify field</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification de champ</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="274"/>
         <source>New record</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="275"/>
         <source>Duplicate record</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplication d&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableview.cpp" line="276"/>
         <source>Delete record</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression d&apos;enregistrement</translation>
     </message>
 </context>
 <context>
@@ -4015,38 +4030,38 @@ Files archive reduced by %2 MiB</source>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="134"/>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="675"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="135"/>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="675"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Oui</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="186"/>
         <source> of %1</source>
-        <translation type="unfinished"></translation>
+        <translation> de %1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="519"/>
         <source>Invalid Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisie invalide</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="520"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Les données saisies ne sontt pas valides ! &lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="856"/>
         <source>%1 file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichier</translation>
     </message>
     <message>
         <location filename="../../views/tableview/tableviewdelegate.cpp" line="857"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 fichiers</translation>
     </message>
 </context>
 <context>
@@ -4054,37 +4069,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="88"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/textfieldwizard.ui" line="95"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -4092,37 +4107,37 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="24"/>
         <source>3. Configure field properties</source>
-        <translation type="unfinished"></translation>
+        <translation>3. Configuration des propriétés du champ</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="40"/>
         <source>Required fields have to be filled out</source>
-        <translation type="unfinished"></translation>
+        <translation>Les champs obligatoires doivent être remplis</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="43"/>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Champ obligatoire</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="88"/>
         <source>&amp;Back</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Précédent</translation>
     </message>
     <message>
         <location filename="../../ui/urlfieldwizard.ui" line="95"/>
         <source>&amp;Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terminer</translation>
     </message>
 </context>
 <context>
@@ -4130,7 +4145,7 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/form_widgets/urlformwidget.cpp" line="36"/>
         <source>Open web link</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouverture d&apos;un lien Web</translation>
     </message>
 </context>
 <context>
@@ -4138,12 +4153,12 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../components/updatemanager.cpp" line="76"/>
         <source>New Software Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle version du logiciel</translation>
     </message>
     <message>
         <location filename="../../components/updatemanager.cpp" line="77"/>
         <source>A new version of %1 is available!&lt;br&gt;Do you want to download the new version?</source>
-        <translation type="unfinished"></translation>
+        <translation>Une nouvelle version de %1 est disponible ! &lt;br&gt; Voulez-vous télécharger la nouvelle version ?</translation>
     </message>
 </context>
 <context>
@@ -4151,142 +4166,142 @@ Files archive reduced by %2 MiB</source>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="33"/>
         <source>New Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="34"/>
         <source>New Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvel enregistrement (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="36"/>
         <source>Create a new empty record in the current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un nouvel enregistrement vide dans la collection courante</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="44"/>
         <source>Duplicate Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="45"/>
         <source>Duplicate Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer l&apos;enregistrement (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="47"/>
         <source>Duplicate current record and add it to the same collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer l&apos;enregistrement actuel et l&apos;ajouter à la même collection</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="60"/>
         <source>Delete Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="61"/>
         <source>Delete Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer l&apos;enregistrement (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="63"/>
         <source>Removes permanently current record from the collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer définitivement de la collection l&apos;enregistrement courant</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="79"/>
         <source>New Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau champ</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="80"/>
         <source>New Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau champ (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="82"/>
         <source>Add a new field to the current collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un nouveau champ dans la collection courante</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="91"/>
         <source>Duplicate Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer un champ</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="92"/>
         <source>Duplicate Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer le champ (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="94"/>
         <source>Duplicate the selected field to the same collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer le champ sélectionné dans la même collection</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="107"/>
         <source>Delete Field</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer un champ</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="108"/>
         <source>Delete Field (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le champ (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="110"/>
         <source>Remove permanently the selected field from the collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer définitivement de la collection le champ sélectionné</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="125"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="126"/>
         <source>Change current view mode to a form-like view</source>
-        <translation type="unfinished"></translation>
+        <translation>Changer le mode d&apos;affichage actuel en mode Formulaire</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="133"/>
         <source>Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Tableau</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="134"/>
         <source>Change current view mode to a table-like view</source>
-        <translation type="unfinished"></translation>
+        <translation>Changer le Changer le mode d&apos;affichage actuel en mode Tableau</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="154"/>
         <source>Previous Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement précédent</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="155"/>
         <source>Previous Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement précédent (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="157"/>
         <source>Navigate to the previous record</source>
-        <translation type="unfinished"></translation>
+        <translation>Accéder à l&apos;enregistrement précédent</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="167"/>
         <source>Next Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement suivant</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="168"/>
         <source>Next Record (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement suivant (%1)</translation>
     </message>
     <message>
         <location filename="../../widgets/viewtoolbarwidget.cpp" line="170"/>
         <source>Navigate to the next record</source>
-        <translation type="unfinished"></translation>
+        <translation>Accéder à l&apos;enregistrement suivant</translation>
     </message>
 </context>
 </TS>
