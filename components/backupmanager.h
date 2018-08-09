@@ -31,7 +31,7 @@ public:
     };
     BackupTask(const QString &filesDir,
                const QString &databasePath,
-               QObject *parent = 0);
+               QObject *parent = nullptr);
     ~BackupTask();
     void configureTask(const QString &path,
                        BackupOp operation = ExportOp);
@@ -50,6 +50,7 @@ private:
     int m_currentProgress;
     BackupOp m_currentOp;
     QString m_path;
+    QStringList m_contentFileList;
     int m_magicNumber;
     int m_fileBufSize;
 };
@@ -64,7 +65,7 @@ class BackupManager : public QObject
     Q_OBJECT
 
 public:
-    explicit BackupManager(QObject *parent = 0);
+    explicit BackupManager(QObject *parent = nullptr);
     ~BackupManager();
 
     /**

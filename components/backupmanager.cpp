@@ -41,8 +41,13 @@ BackupTask::~BackupTask()
 
 void BackupTask::configureTask(const QString &path, BackupOp operation)
 {
+    m_contentFileList.clear();
     m_path = path;
     m_currentOp = operation;
+    if (m_currentOp == BackupOp::ExportOp) {
+        m_contentFileList = MetadataEngine::getInstance()
+                .getAllContentFiles().values();
+    }
 }
 
 void BackupTask::startBackupTask()
@@ -75,13 +80,10 @@ bool BackupTask::fullExport(const QString &destPath,
     int dbVersion = DefinitionHolder::DATABASE_VERSION;
     qint64 metadataOffset = 0;
     QMap<qint64, QString> fileOffset;
-    QStringList contentFileList = MetadataEngine::getInstance()
-            .getAllContentFiles().values();
-
     //calc progress
     int progress = 0;
     int totalSteps = 0;
-    totalSteps = 1 + contentFileList.size();
+    totalSteps = 1 + m_contentFileList.size();
     emit progressSignal(progress, totalSteps);
 
     QFile destFile(destPath);
@@ -115,7 +117,7 @@ bool BackupTask::fullExport(const QString &destPath,
     emit progressSignal(++progress, totalSteps);
 
     //write content files
-    foreach (QString s, contentFileList) {
+    foreach (QString s, m_contentFileList) {
         fileOffset.insert(destFile.pos(), s);
         QFile file(m_filesDir + s);
         if (!file.open(QIODevice::ReadOnly)) {
@@ -287,7 +289,7 @@ bool BackupTask::fullImport(const QString &filePath,
 //-----------------------------------------------------------------------------
 
 BackupManager::BackupManager(QObject *parent) :
-    QObject(parent), m_backupTaskThread(0)
+    QObject(parent), m_backupTaskThread(nullptr)
 {
     FileManager fm(this);
     m_fileDirPath = fm.getFilesDirectory();
@@ -308,7 +310,10 @@ void BackupManager::startExport(const QString &destFilePath)
     m_backupTaskThread = new QThread;
     BackupTask *backupTask = new BackupTask(m_fileDirPath, m_databasePath);
 
-    //config task
+    //call config task before moving to thread
+    //because getting content files from sql database
+    //requires to be managed by the same thread that opened
+    //the sql database connection (MetadataEngine on main tread)
     backupTask->configureTask(destFilePath);
 
     backupTask->moveToThread(m_backupTaskThread);
