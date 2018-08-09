@@ -41,6 +41,5 @@
         <file>images/icons/megasync.png</file>
         <file>languages/qt_it.qm</file>
         <file>languages/qt_fr.qm</file>
-        <file>languages/symphytum_fr.qm</file>
     </qresource>
 </RCC>

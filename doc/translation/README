@@ -19,5 +19,5 @@ _________________________________________________
 4. To create the QM language file, run 'lrelease-qt5 Symphytum.pro'
 5. Move the QM files to the resources/languages directory
 6. If needed, update the resources.qrc file in the resources directory
-7. Optionally, to improve and fully complete the translation, a qt_xx.qm file is also needed in your local language. The Qt framework provides some of them which are translated and compiled TS files. Copy the appropriate qt_xx.qm file to the resources/languages directory and update the resources.qrc file.
+7. Optionally, to improve and fully complete the translation, a qt_xx.qm file is also needed in your local language. The Qt framework provides some of them which are translated and compiled TS files. Copy the appropriate qt_xx.qm file to the resources/languages directory and update the resources.qrc file. Since Qt5 the qt specific translations are split across different QM files reflecting the organisation of the Qt modules. To combine those file into one monolithic QM file use the command: "lconvert -o qt_fr.qm qtbase_fr.qm qtquick1_fr.qm qtxmlpatterns_fr.qm qtmultimedia_fr.qm qtscript_fr.qm", for french (example), more info under https://doc.qt.io/qt-5/linguist-programmers.html.
 
