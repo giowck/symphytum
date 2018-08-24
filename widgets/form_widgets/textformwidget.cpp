@@ -104,6 +104,13 @@ bool TextFormWidget::showHighlightSearchResults(const QString &searchString)
         if (!currentStyleSheet.contains(highLightCSS))
             this->setStyleSheet(currentStyleSheet.append(highLightCSS));
 
+        //save and restore original char format of the text area
+        //after each search
+        //this is needed because of BUG #64
+        //see https://github.com/giowck/symphytum/issues/64
+        static QTextCharFormat defaultFormat = m_textArea->currentCharFormat();
+        m_textArea->setCurrentCharFormat(defaultFormat);
+
         //highlight text area
         QTextDocument *document = m_textArea->document();
         QTextCursor highlightCursor(document);
