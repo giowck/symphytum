@@ -59,7 +59,6 @@ private slots:
     void softwareResetButtonClicked();
     void formViewColorComboChanged();
     void formViewFontSizeComboChanged();
-    void darkToolbarAmbianceCheckChanged();
     void tableViewRowSizeSpinChanged();
     void cacheImagesTableViewCheckBoxChanged();
     void browseDbPathButtonClicked();

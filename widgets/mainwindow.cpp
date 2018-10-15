@@ -189,17 +189,6 @@ void MainWindow::preferenceActionTriggered()
             m_formView->reloadAppearanceSettings();
         if (m_tableView)
             m_tableView->reloadRowSize();
-#ifdef Q_OS_LINUX
-        //update toolbar style
-        if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())
-            m_toolBar->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad,"
-                                     " x1:0.5, y1:0.01, x2:0.5, y2:0.99, stop:0 rgba(65, 64, "
-                                     "59, 255), stop:0.01 rgba(56, 55, 52, 255), stop:0.99 "
-                                     "rgba(84, 82, 74, 255), stop:1 rgba(66, 65, 60, 255));} "
-                                     "QToolBar:!active {background-color: rgb(60, 59, 55);}");
-        else
-            m_toolBar->setStyleSheet("");
-#endif //Q_OS_LINUX
     }
     if (dialog.cloudSyncChanged()) {
         if (m_settingsManager->isCloudSyncActive()) {

@@ -66,8 +66,6 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(formViewColorComboChanged()));
     connect(ui->formViewFontSizeComboBox, SIGNAL(activated(int)),
             this, SLOT(formViewFontSizeComboChanged()));
-    connect(ui->darkToolbarAmbianceCheckBox, SIGNAL(clicked()),
-            this, SLOT(darkToolbarAmbianceCheckChanged()));
     connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
             this, SLOT(tableViewRowSizeSpinChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
@@ -81,13 +79,6 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
         //disable updates
         ui->updateGroupBox->setEnabled(false);
     }
-
-#ifndef Q_OS_LINUX
-    //if not running linux, hide dark toolbar (ambiance) option
-    //NOTE: if more option are added to the main window group box
-    //      update this, else valid option are hidden
-    ui->mainWindowGroupBox->setVisible(false);
-#endif //Q_OS_LINUX
 }
 
 PreferencesDialog::~PreferencesDialog()
@@ -213,15 +204,6 @@ void PreferencesDialog::formViewFontSizeComboChanged()
     m_appearanceChanged = true;
 }
 
-void PreferencesDialog::darkToolbarAmbianceCheckChanged()
-{
-    bool checked = ui->darkToolbarAmbianceCheckBox->isChecked();
-
-    m_settingsManager->saveProperty("linuxDarkAmbianceToolbar", "mainWindow", checked);
-
-    m_appearanceChanged = true;
-}
-
 void PreferencesDialog::tableViewRowSizeSpinChanged()
 {
     int rows = ui->tableRowSizeSpinBox->value();
@@ -318,7 +300,6 @@ void PreferencesDialog::loadSettings()
         ui->cloudStatusComboBox->setCurrentIndex(1);
 
     //database path
-    //TODO: load path from setting or db manager?mhh
     QString dbPath = m_settingsManager->restoreCustomDatabaseDir();
     if (dbPath.isEmpty()) {
         dbPath = QFileInfo(DatabaseManager::getInstance()
@@ -347,12 +328,6 @@ void PreferencesDialog::loadSettings()
     bool cacheImg =  m_settingsManager->restoreProperty(
                 "cacheImages", "tableView").toBool();
     ui->cacheImagesTableViewCheckBox->setChecked(cacheImg);
-
-#ifdef Q_OS_LINUX
-    //dark toolbar ambiance style
-    if (m_settingsManager->restoreProperty("linuxDarkAmbianceToolbar", "mainWindow").toBool())
-        ui->darkToolbarAmbianceCheckBox->setChecked(true);
-#endif //Q_OS_LINUX
 }
 
 void PreferencesDialog::updateDatabasePath()
