@@ -191,6 +191,16 @@ void PreferencesDialog::formViewColorComboChanged()
     m_settingsManager->saveProperty("backgroundColorIndex", "formView", colorIndex);
 
     m_appearanceChanged = true;
+
+#ifdef Q_OS_WIN
+    static bool messageShown = false;
+    if (!messageShown) { //show only once until restart
+        QMessageBox::information(this, tr("Restart Required"),
+                                 tr("Please restart %1 to apply the new background color")
+                                 .arg(DefinitionHolder::NAME));
+        messageShown = true;
+    }
+#endif
 }
 
 void PreferencesDialog::formViewFontSizeComboChanged()
