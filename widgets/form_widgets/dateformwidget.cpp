@@ -31,6 +31,7 @@ DateFormWidget::DateFormWidget(QWidget *parent) :
 {
     m_fieldNameLabel = new QLabel("Invalid Name", this);
     m_dateTimeEdit = new QDateTimeEdit(this);
+    m_dateTimeEdit->setMinimumDate(QDate(100, 1, 1));
     m_mainLayout = new QVBoxLayout(this);
     m_lastValidDateTime = new QDateTime();
 
@@ -86,8 +87,11 @@ QString DateFormWidget::getFieldName() const
 
 void DateFormWidget::clearData()
 {
-    m_dateTimeEdit->setDateTime(QDateTime(QDate(2000, 01, 01), QTime(00, 00)));
-    *m_lastValidDateTime = (QDateTime(QDate(2000, 01, 01), QTime(00, 00)));
+    *m_lastValidDateTime = (QDateTime(QDate(0100, 01, 01), QTime(00, 00)));
+    //display empty date by using trick (date is below minimum)
+    //by using special case value
+    m_dateTimeEdit->setSpecialValueText(" ");
+    m_dateTimeEdit->setDate(QDate::fromString("01/01/0001", "dd/MM/yyyy"));
 }
 
 void DateFormWidget::setData(const QVariant &data)
@@ -167,7 +171,7 @@ void DateFormWidget::editingFinishedSlot()
     //Get current field id (column) and record id
     int fieldId = -1;
     int recordId = -1;
-    FormView *view = 0;
+    FormView *view = nullptr;
     QWidget *parent = parentWidget();
     if (parent)
         view = qobject_cast<FormView*>(parent->parentWidget());
