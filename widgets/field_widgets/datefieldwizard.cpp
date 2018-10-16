@@ -65,14 +65,14 @@ void DateFieldWizard::getFieldProperties(QString &displayProperties,
     displayProperties.append(QString("dateFormat:%1;").arg(formatCode));
 
     //create edit properties metadata string
-    //nothing for now
-    Q_UNUSED(editProperties);
+    int ed = ui->currentDateCheckBox->isChecked() ? 0 : 1;
+    editProperties.append(QString("initWithEmptyDateTime:%1;").arg(ed));
 
     //create trigger properties metadata string
     int alarmOnDate = 0;
     if (ui->reminderCheckBox->isChecked())
         alarmOnDate = 1;
-    triggerProperties.append(QString("alarmOnDate:%1")
+    triggerProperties.append(QString("alarmOnDate:%1;")
                              .arg(QString::number(alarmOnDate)));
 }
 
@@ -91,6 +91,14 @@ void DateFieldWizard::loadField(const int fieldId, const int collectionId)
         int f = displayParser.getValue("dateFormat").toInt();
         if (f)
             ui->dateFormatBox->setCurrentIndex(f-1);
+    }
+
+    //edit properties
+    QString editProperties = meta->getFieldProperties(meta->EditProperty,
+                                                      fieldId, collectionId);
+    MetadataPropertiesParser editParser(editProperties);
+    if (editParser.size()) {
+        ui->currentDateCheckBox->setChecked(!editParser.getValue("initWithEmptyDateTime").toInt());
     }
 
     //trigger properties

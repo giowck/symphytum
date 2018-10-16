@@ -72,8 +72,15 @@ void StandardModel::addRecord()
                 nowDateTime.setTime(QTime(0, 0));
             }
 
-            //set current date & time
-            newRecord.setValue(i, nowDateTime);
+            //set current date & time if the edit property is set
+            MetadataPropertiesParser eParser(m_metadataEngine->getFieldProperties(
+                                                 MetadataEngine::EditProperty,
+                                                 i));
+            if (!eParser.getValue("initWithEmptyDateTime").toInt()) {
+                //init new record with current date/time
+                //if appropriate edit trigger is set
+                newRecord.setValue(i, nowDateTime);
+            }
         }
             break;
         default:

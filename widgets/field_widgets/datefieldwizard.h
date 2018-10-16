@@ -35,7 +35,7 @@ class DateFieldWizard : public AbstractFieldWizard
 
 public:
     explicit DateFieldWizard(const QString &fieldName,
-                               QWidget *parent = 0,
+                               QWidget *parent = nullptr,
                                AbstractFieldWizard::EditMode editMode
                                = AbstractFieldWizard::NewEditMode);
     ~DateFieldWizard();

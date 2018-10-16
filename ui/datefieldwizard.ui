@@ -58,6 +58,19 @@ font-weight: bold;</string>
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="QCheckBox" name="currentDateCheckBox">
+        <property name="toolTip">
+         <string>Set current date and time as default value for new records</string>
+        </property>
+        <property name="text">
+         <string>Use current date and time as default value</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
