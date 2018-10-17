@@ -35,6 +35,7 @@ class StandardModel : public QSqlTableModel
 
 public:
     explicit StandardModel(MetadataEngine *meta, QObject *parent = nullptr);
+    ~StandardModel();
 
     /**
      * Reimplemented headerData because the column names are queried from metadata

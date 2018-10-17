@@ -28,6 +28,11 @@ StandardModel::StandardModel(MetadataEngine *meta, QObject *parent) :
     setEditStrategy(QSqlTableModel::OnFieldChange);
 }
 
+StandardModel::~StandardModel()
+{
+
+}
+
 QVariant StandardModel::headerData(int section, Qt::Orientation orientation,
                                    int role) const
 {
