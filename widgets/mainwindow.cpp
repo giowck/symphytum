@@ -396,8 +396,7 @@ void MainWindow::currentCollectionIdChanged(int collectionId)
         }
     }
 
-    detachModelFromViews();
-    attachModelToViews(collectionId);
+    reattachModelToViews(collectionId);
 
     //restore last active record id (row) if previously saved
     if (m_formView && m_currentModel) {
@@ -425,8 +424,7 @@ void MainWindow::currentCollectionChanged()
         currentFilter = sModel->filter();
     }
 
-    detachModelFromViews();
-    attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+    reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
     //restore search filter, in order to restore correct record and index
     if (sModel && (!currentFilter.isEmpty())) {
@@ -473,6 +471,7 @@ void MainWindow::newRecordActionTriggered()
             m_formView->setEnabled(true);
 
         sModel->addRecord(); //add e new empty record
+        int realRowCount = sModel->realRowCount();
 
         //set local data changed
         SyncSession::LOCAL_DATA_CHANGED = true;
@@ -487,11 +486,11 @@ void MainWindow::newRecordActionTriggered()
         //views should atomatically update but don't
         //needs investigation
         //update views (hard way)
-        attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+        reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
         //select newly created record
         m_formView->selectionModel()->setCurrentIndex(
-                    m_currentModel->index(sModel->realRowCount() - 1, 1),
+                    m_currentModel->index(realRowCount - 1, 1),
                     QItemSelectionModel::SelectCurrent);
     }
 }
@@ -528,16 +527,17 @@ void MainWindow::duplicateRecordActionTriggered()
             m_undoStack->push(cmd);
 
             sModel->duplicateRecord(row); //add duplicated record of row
+            int realRowCount = sModel->realRowCount();
             statusBar()->showMessage(tr("Record %1 duplicated").arg(row+1));
 
             //FIXME: temporary workaround for Qt5
             //views should atomatically update but don't
             //needs investigation
             //update views (hard way)
-            attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+            reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
             m_formView->selectionModel()->setCurrentIndex(
-                        m_currentModel->index(sModel->realRowCount() - 1, 1),
+                        m_currentModel->index(realRowCount - 1, 1),
                         QItemSelectionModel::SelectCurrent);
         }
     } else { //table view
@@ -612,14 +612,15 @@ void MainWindow::duplicateRecordActionTriggered()
             m_undoStack->clear();
         }
 
+        int realRowCount = sModel->realRowCount(); //call before reattach because Smodel gets deleted
         //update views (hard way)
-        attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+        reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
         statusBar()->showMessage(tr("%1 record(s) duplicated").arg(progress));
 
         //select first duplicate
         m_formView->selectionModel()->setCurrentIndex(
-                    m_currentModel->index(sModel->realRowCount() - rows.size(), 1),
+                    m_currentModel->index(realRowCount - rows.size(), 1),
                     QItemSelectionModel::SelectCurrent);
     }
 
@@ -668,7 +669,8 @@ void MainWindow::deleteRecordActionTriggered()
             //views should atomatically update but don't
             //needs investigation
             //update views (hard way)
-            attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+            //reattachModelToViews(); //no longer needed because StandardModel::rowsDeleted
+                                      //gets connected in attachModelToViews
 
             statusBar()->showMessage(tr("Record %1 deleted").arg(index.row()+1));
         }
@@ -766,7 +768,7 @@ void MainWindow::deleteRecordActionTriggered()
         }
 
         //update views (hard way)
-        attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+        reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
         //status message
         statusBar()->showMessage(tr("%1 record(s) deleted").arg(progress));
@@ -853,7 +855,7 @@ void MainWindow::deleteAllRecordsActionTriggered()
     m_metadataEngine->deleteAllRecords(id);
 
     //update views (hard way)
-    attachModelToViews(m_metadataEngine->getCurrentCollectionId());
+    reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
 
     //set local data changed
     SyncSession::LOCAL_DATA_CHANGED = true;
@@ -1561,6 +1563,12 @@ void MainWindow::updateErrorSlot()
     statusBar()->showMessage(tr("Error while checking for software updates"));
 }
 
+void MainWindow::reattachModelToViewsSlot()
+{
+    //reattach model with current collection id
+    reattachModelToViews(m_metadataEngine->getCurrentCollectionId());
+}
+
 
 //-----------------------------------------------------------------------------
 // Private
@@ -2004,7 +2012,7 @@ void MainWindow::restoreSettings()
     restoreState(m_settingsManager->restoreState("mainWindow"));
 
     //restore view mode
-    m_currentViewMode = (ViewMode) m_settingsManager->restoreViewMode();
+    m_currentViewMode = static_cast<ViewMode>(m_settingsManager->restoreViewMode());
     if(m_currentViewMode == TableViewMode)
         tableViewModeTriggered();
 
@@ -2076,8 +2084,8 @@ void MainWindow::init()
 void MainWindow::attachModelToViews(const int collectionId)
 {
     if (!collectionId) { //0 stands for invalid
-        m_formView->setModel(0);
-        m_tableView->setModel(0);
+        m_formView->setModel(nullptr);
+        m_tableView->setModel(nullptr);
         return;
     }
 
@@ -2093,6 +2101,11 @@ void MainWindow::attachModelToViews(const int collectionId)
     //fetch all data from model (avoid lazy loading at startup)
     while(m_currentModel->canFetchMore(QModelIndex()))
         m_currentModel->fetchMore(QModelIndex());
+
+    //create connections
+    StandardModel *sModel = qobject_cast<StandardModel*>(m_currentModel);
+    connect(sModel, &StandardModel::rowsDeleted, //needed to detect undo of record deletions
+            this, &MainWindow::reattachModelToViewsSlot);
 
     //set model on views
     m_formView->setModel(m_currentModel);
@@ -2117,12 +2130,20 @@ void MainWindow::detachModelFromViews()
     setFocus();
 
     //content data views
-    m_formView->setModel(0);
-    m_tableView->setModel(0);
+    m_formView->setModel(nullptr);
+    m_tableView->setModel(nullptr);
     if (m_currentModel) {
+        //connected signals are deleted too with the object
         delete m_currentModel;
-        m_currentModel = 0;
+        m_currentModel = nullptr;
     }
+}
+
+void MainWindow::reattachModelToViews(const int collectionId)
+{
+    //detach and attach models to views to reload the model and views (hard way)
+    detachModelFromViews();
+    attachModelToViews(collectionId);
 }
 
 void MainWindow::attachCollectionModelView()
@@ -2211,8 +2232,8 @@ void MainWindow::createSyncConnections()
 void MainWindow::removeSyncConnections()
 {
     //sync engine
-    disconnect(m_syncEngine, 0, m_dockWidget, 0);
-    disconnect(m_syncEngine, 0, this, 0);
+    disconnect(m_syncEngine, nullptr, m_dockWidget, nullptr);
+    disconnect(m_syncEngine, nullptr, this, nullptr);
 }
 
 void MainWindow::checkAlarmTriggers()

@@ -136,6 +136,9 @@ private slots:
     void noUpdateFoundSlot();
     void updateErrorSlot();
 
+    //model
+    void reattachModelToViewsSlot();
+
 private:
     void createActions();
     void createToolBar();
@@ -160,6 +163,11 @@ private:
      * collection from the views. Then the model is deleted.
      */
     void detachModelFromViews();
+
+    /** Detach and attach model to views, convenience function
+     * @param collectionId - the collection id to attach
+     */
+    void reattachModelToViews(const int collectionId);
 
     /** Set model on collection list view */
     void attachCollectionModelView();
