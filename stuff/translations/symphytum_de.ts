@@ -1511,7 +1511,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="161"/>
         <source>Now you are ready! Start by adding new records to your empty collection</source>
-        <translation>Nun sind Sie bereit! Starten SIe indem Sie neue Einträge zu Ihrer leeren Sammlung hinzufügen</translation>
+        <translation>Nun sind Sie bereit! Starten Sie indem Sie neue Einträge zu Ihrer leeren Sammlung hinzufügen</translation>
     </message>
 </context>
 <context>
