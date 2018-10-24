@@ -35,7 +35,8 @@ TableView::TableView(QWidget *parent) :
             this, SLOT(editingFinished()));
     
 #ifdef Q_OS_WIN
-    setStyleSheet("QTableView { selection-color: palette(text); }"); //fix wrong text color
+    //fix wrong text color and improve default font
+    setStyleSheet("QTableView { selection-color: palette(text); font-family: Segoe UI; }");
 #endif
 }
 

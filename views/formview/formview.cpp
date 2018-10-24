@@ -1632,16 +1632,35 @@ void FormView::setupViewFonts()
     SettingsManager sm;
     QString fontSizeString = sm.restoreProperty("fontSize", "formView").toString();
     int fontSizeIndex = sm.restoreProperty("fontSizeIndex", "formView").toInt();
+    QString fontFamily = sm.restoreProperty("fontFamily", "formView").toString();
+    static QString defaultSystemFont = QApplication::font().family();
+    QString styleSheet;
 
+    //font size
     if (fontSizeIndex == 0) { //auto mode
 #ifdef Q_OS_WIN
-        setStyleSheet("font-size: 13px;"); //make font bigger only on windows
+        styleSheet.append("font-size: 13px;"); //make font bigger only on windows
 #else
-        setStyleSheet(""); //clear, use system's default on other systems
+        styleSheet.clear(); //clear, use system's default on other systems
 #endif
     } else if (fontSizeIndex == 1) { //system
-        setStyleSheet(""); //clear, use system's default
+        styleSheet.clear(); //clear, use system's default
     } else {
-        setStyleSheet(QString("font-size: %1;").arg(fontSizeString));
+        styleSheet.append(QString("font-size: %1;").arg(fontSizeString));
     }
+
+    //font style
+    if (fontFamily.isEmpty() || (fontFamily == "Default")) {
+        //use default
+#ifdef Q_OS_WIN
+        //but on windows use different default font to make it better
+        styleSheet.append(" font-family: Segoe UI;");
+#else
+        styleSheet.append(QString(" font-family: %1;").arg(defaultSystemFont));
+#endif
+    } else {
+        styleSheet.append(QString(" font-family: %1;").arg(fontFamily));
+    }
+
+    setStyleSheet(styleSheet);
 }

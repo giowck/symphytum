@@ -22,6 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QFileDialog>
+#include <QtWidgets/QFontComboBox>
 
 
 //-----------------------------------------------------------------------------
@@ -31,7 +32,7 @@
 PreferencesDialog::PreferencesDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::PreferencesDialog),
-    m_settingsManager(0),
+    m_settingsManager(nullptr),
     m_cloudChanged(false),
     m_softwareReset(false),
     m_appearanceChanged(false),
@@ -66,6 +67,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(formViewColorComboChanged()));
     connect(ui->formViewFontSizeComboBox, SIGNAL(activated(int)),
             this, SLOT(formViewFontSizeComboChanged()));
+    connect(ui->formViewFontCombo, &QFontComboBox::currentTextChanged,
+            this, &PreferencesDialog::formViewFontComboChanged);
     connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
             this, SLOT(tableViewRowSizeSpinChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
@@ -214,6 +217,14 @@ void PreferencesDialog::formViewFontSizeComboChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::formViewFontComboChanged()
+{
+    QString fontString = ui->formViewFontCombo->currentText();
+    m_settingsManager->saveProperty("fontFamily", "formView", fontString);
+
+    m_appearanceChanged = true;
+}
+
 void PreferencesDialog::tableViewRowSizeSpinChanged()
 {
     int rows = ui->tableRowSizeSpinBox->value();
@@ -300,6 +311,8 @@ void PreferencesDialog::initSettings()
                                         i.value());
         ++i;
     }
+
+    ui->formViewFontCombo->setCurrentText("Default");
 }
 
 void PreferencesDialog::loadSettings()
@@ -326,6 +339,13 @@ void PreferencesDialog::loadSettings()
     int fontSizeIndex = m_settingsManager->restoreProperty(
                 "fontSizeIndex", "formView").toInt();
     ui->formViewFontSizeComboBox->setCurrentIndex(fontSizeIndex);
+
+    //form view font family
+    QString fontFamily = m_settingsManager->restoreProperty(
+                "fontFamily", "formView").toString();
+    if (!fontFamily.isEmpty()) {
+        ui->formViewFontCombo->setCurrentText(fontFamily);
+    }
 
     //table view row size
     int tableRowSize =  m_settingsManager->restoreProperty(
