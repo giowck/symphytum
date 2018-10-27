@@ -902,7 +902,8 @@ void MetadataEngine::deleteField(const int fieldId, int collectionId)
 }
 
 int MetadataEngine::addContentFile(const QString &fileName,
-                                    const QString &hashName)
+                                    const QString &hashName,
+                                   const QString &originalDirPath)
 {
     QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
     QSqlQuery query(db);
@@ -912,11 +913,12 @@ int MetadataEngine::addContentFile(const QString &fileName,
     db.transaction();
 
     //add file
-    query.prepare("INSERT INTO files (\"name\",\"hash_name\",\"date_added\")"
-                  " VALUES (:name, :hash_name, :date_added)");
+    query.prepare("INSERT INTO files (\"name\",\"hash_name\",\"date_added\",\"original_dir_path\")"
+                  " VALUES (:name, :hash_name, :date_added, :original_dir_path)");
     query.bindValue(":name", fileName);
     query.bindValue(":hash_name", hashName);
     query.bindValue(":date_added", QDateTime::currentDateTime());
+    query.bindValue(":original_dir_path", originalDirPath);
     query.exec();
 
     //get id

@@ -281,9 +281,11 @@ public:
      * only a reference is saved here.
      * @param fileName - the external file name as defined by the user
      * @param hashName - the name given by the FileManager to store the file
-     * @param int - the id of the newly added file
+     * @param originalDirPath - the original directory path from which the files was imported
+     * @return int - the id of the newly added file
      */
-    int addContentFile(const QString &fileName, const QString &hashName);
+    int addContentFile(const QString &fileName, const QString &hashName,
+                       const QString &originalDirPath);
 
     /** Remove file metadata for the specified file */
     void removeContentFile(int fileId);

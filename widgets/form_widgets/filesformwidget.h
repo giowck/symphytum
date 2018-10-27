@@ -31,7 +31,7 @@ class FilesTableWidget : public QTableWidget
 {
     Q_OBJECT
 public:
-    FilesTableWidget(QWidget *parent = 0);
+    FilesTableWidget(QWidget *parent = nullptr);
     ~FilesTableWidget();
 protected:
     void startDrag(Qt::DropActions supportedActions);
@@ -47,7 +47,7 @@ class FilesFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    explicit FilesFormWidget(QWidget *parent = 0);
+    explicit FilesFormWidget(QWidget *parent = nullptr);
     ~FilesFormWidget();
 
     void setFieldName(const QString &name);

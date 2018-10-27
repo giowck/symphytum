@@ -34,7 +34,7 @@
     " TEXT, \"value\" TEXT)"
 #define SQL_CREATE_TABLE_FILES \
     "CREATE TABLE \"files\" (\"_id\" INTEGER PRIMARY KEY, \"name\" TEXT," \
-    " \"hash_name\" TEXT, \"date_added\" TEXT)"
+    " \"hash_name\" TEXT, \"date_added\" TEXT, \"original_dir_path\" TEXT)"
 
 #define SQL_CREATE_TABLE_ALARMS \
     "CREATE TABLE \"alarms\" (\"_id\" INTEGER PRIMARY KEY, \"collection_id\" INTEGER," \
@@ -45,7 +45,7 @@
 // Static init
 //-----------------------------------------------------------------------------
 
-DatabaseManager* DatabaseManager::m_instance = 0;
+DatabaseManager* DatabaseManager::m_instance = nullptr;
 
 //-----------------------------------------------------------------------------
 // Public
@@ -62,7 +62,7 @@ void DatabaseManager::destroy()
 {
     if (m_instance)
         delete m_instance;
-    m_instance = 0;
+    m_instance = nullptr;
 }
 
 QSqlDatabase DatabaseManager::getDatabase() const
@@ -169,7 +169,7 @@ void DatabaseManager::openDatabase()
 
     if (!open) {
         QString err = database.lastError().text();
-        QMessageBox::critical(0, QObject::tr("Database Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Database Error"),
                               QObject::tr("Failed to open the database file: %1")
                               .arg(err));
         return;
@@ -184,9 +184,15 @@ void DatabaseManager::openDatabase()
     //upgrade if possible
     int version = getDatabaseVersion();
     if (version < DefinitionHolder::DATABASE_VERSION) {
-        upgradeDatabase(version, DefinitionHolder::DATABASE_VERSION);
+        if (!upgradeDatabase(version)) {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Failed to upgrade the database file: db_version %1")
+                                  .arg(version));
+            closeDatabase();
+            return;
+        }
     } else if (version > DefinitionHolder::DATABASE_VERSION) {
-        QMessageBox::critical(0, QObject::tr("Database Version Incompatible"),
+        QMessageBox::critical(nullptr, QObject::tr("Database Version Incompatible"),
                               QObject::tr("Failed to open the database file: db_version %1. "
                                           " Please upgrade %2 to a newer version "
                                           "and then try again!")
@@ -295,14 +301,14 @@ void DatabaseManager::initDatabase(QSqlDatabase &database)
     query.exec("INSERT INTO \"cb92ee55f44577b584464c13f47fa3771_metadata\" VALUES (\"41\",\"col6_trigger\",\"\")");
     query.exec("INSERT INTO \"cb92ee55f44577b584464c13f47fa3771_metadata\" VALUES (\"42\",\"col6_name\",\"Photo\")");
     query.exec("INSERT INTO \"cb92ee55f44577b584464c13f47fa3771_metadata\" VALUES (\"43\",\"col6_type\",\"9\")");
-    query.exec("INSERT INTO \"files\" VALUES (\"1\",\"symphytum.jpg\",\"25993661ea0bdede9699836f9ba0956b.jpg\",\"2012-12-01T16:00:00\")");
-    query.exec("INSERT INTO \"files\" VALUES (\"2\",\"calendula.jpg\",\"81f87c38d8fd4cff00f35847e454e753.jpg\",\"2012-12-01T16:00:00\")");
-    query.exec("INSERT INTO \"files\" VALUES (\"3\",\"coffea.jpg\",\"fd461a1f28d6682993422d65dafa2ddf.jpg\",\"2012-12-01T16:00:00\")");
+    query.exec("INSERT INTO \"files\" VALUES (\"1\",\"symphytum.jpg\",\"25993661ea0bdede9699836f9ba0956b.jpg\",\"2012-12-01T16:00:00\", \"\")");
+    query.exec("INSERT INTO \"files\" VALUES (\"2\",\"calendula.jpg\",\"81f87c38d8fd4cff00f35847e454e753.jpg\",\"2012-12-01T16:00:00\", \"\")");
+    query.exec("INSERT INTO \"files\" VALUES (\"3\",\"coffea.jpg\",\"fd461a1f28d6682993422d65dafa2ddf.jpg\",\"2012-12-01T16:00:00\", \"\")");
     query.exec("INSERT INTO \"symphytum_info\" (\"key\",\"value\") VALUES (\"current_collection\",\"1\")");
 
     if (!database.commit()) {
         QString err = query.lastError().text();
-        QMessageBox::critical(0, QObject::tr("Database Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Database Error"),
                               QObject::tr("Failed to initialize "
                                           "the database: %1")
                               .arg(err));
@@ -346,21 +352,31 @@ int DatabaseManager::getDatabaseVersion()
     return v;
 }
 
-void DatabaseManager::upgradeDatabase(const int oldVersion, const int newVersion)
+bool DatabaseManager::upgradeDatabase(const int oldVersion)
 {
     //handle database version upgrades
+    int currentUpgradeVersion = oldVersion;
+    QSqlQuery query(getDatabase());
 
     //upgrade v1 -> v2
-    if ((oldVersion == 1) && (newVersion == 2)) {
+    if (currentUpgradeVersion == 1) {
         //no major change (only new field type URL and email)
+        currentUpgradeVersion = 2;
     }
-    //add new else if blocks on new versions here
+    //upgrade v2 -> v3
+    if (currentUpgradeVersion == 2) {
+        //TODO: add other stuff that changed before release of v2.4
+        //file type has a new column for original import dir path
+        //TODO: add column //FIXME: yup
+        if (!query.exec("ALTER TABLE \"files\" ADD \"original_dir_path\" TEXT;"))
+            return false;
+        currentUpgradeVersion = 3;
+    }
+    //add new blocks on new versions here
 
     //upgrade done
     //so upgrade version info
-    QSqlQuery query(getDatabase());
-
     query.prepare("UPDATE symphytum_info SET value=:version WHERE key='db_version'");
     query.bindValue(":version", DefinitionHolder::DATABASE_VERSION);
-    query.exec();
+    return query.exec();
 }

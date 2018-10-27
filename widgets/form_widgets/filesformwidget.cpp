@@ -177,6 +177,7 @@ FilesFormWidget::FilesFormWidget(QWidget *parent) :
     m_deleteAction = new QAction(tr("Delete files"), this);
     m_exportAction = new QAction(tr("Export files to..."), this);
     m_openAction = new QAction(tr("Open file"), this);
+    m_openOriginalDirAction = new QAction(tr("Open original directory path"), this);
 
     //context menu connections
     connect(m_addAction, SIGNAL(triggered()),
@@ -187,6 +188,8 @@ FilesFormWidget::FilesFormWidget(QWidget *parent) :
             this, SLOT(removeButtonClicked()));
     connect(m_openAction, SIGNAL(triggered()),
             this, SLOT(fileItemDoubleClicked()));
+    connect(m_openOriginalDirAction, SIGNAL(triggered()),
+            this, SLOT(openOriginalDirContextClicked()));
 
     //connections
     connect(m_filesTable, SIGNAL(itemSelectionChanged()),
@@ -243,7 +246,7 @@ void FilesFormWidget::setData(const QVariant &data)
         int rows = idList.size();
         int columns = 2;
         if (m_showType) columns++;
-        if (m_showDate) columns++;
+        if (m_showDate) columns++; //FIXME: add path
         m_filesTable->setRowCount(rows);
         m_filesTable->setColumnCount(columns);
         m_filesTable->setColumnHidden(0, true); //hide ID column
@@ -291,7 +294,7 @@ void FilesFormWidget::loadMetadataDisplayProperties(const QString &metadata)
     if (parser.getValue("showFileType") == "1")
         m_showType = true;
     if (parser.getValue("showAddedDate") == "1")
-        m_showDate = true;
+        m_showDate = true; //FIXME: add property
 }
 
 
