@@ -281,9 +281,11 @@ public:
      * only a reference is saved here.
      * @param fileName - the external file name as defined by the user
      * @param hashName - the name given by the FileManager to store the file
-     * @param int - the id of the newly added file
+     * @param originalDirPath - the original directory path from which the files was imported
+     * @return int - the id of the newly added file
      */
-    int addContentFile(const QString &fileName, const QString &hashName);
+    int addContentFile(const QString &fileName, const QString &hashName,
+                       const QString &originalDirPath);
 
     /** Remove file metadata for the specified file */
     void removeContentFile(int fileId);
@@ -301,6 +303,7 @@ public:
      * @param fileName - new file name
      * @param hashName - optionally, new hash name for the FileManager storage
      * @param dateAdded - optionally, new date for file add
+     * NOTE: origDirPath, the original file import directory path, cannot be changed
      */
     void updateContentFile(int fileId, const QString &fileName,
                            const QString &hashName = QString(),
@@ -312,12 +315,14 @@ public:
      * @param fileName - reference where the file name is saved
      * @param hashName - reference where hash name is saved
      * @param dateAdded - reference where added date is saved
+     * @param origDirPath - original directory path from which a file was imported
      * @return bool - whether the specified content file exists or not
      */
 
     bool getContentFile(int fileId, QString &fileName,
                         QString &hashName,
-                        QDateTime &dateAdded);
+                        QDateTime &dateAdded,
+                        QString &origDirPath);
 
     /**
      * Get a map of all content files

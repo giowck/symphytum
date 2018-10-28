@@ -88,7 +88,7 @@ void FileTask::startFileOp()
 //-----------------------------------------------------------------------------
 
 FileManager::FileManager(QObject *parent) :
-    QObject(parent), m_fileOpThread(0)
+    QObject(parent), m_fileOpThread(nullptr)
 {
     QString dataDir = QFileInfo(DatabaseManager::getInstance()
                                 .getDatabasePath()).dir().path();
@@ -361,13 +361,14 @@ QStringList FileManager::getAllLocalFiles()
 
 void FileManager::removeFileMetadata(const int fileId)
 {
-    QString hashName, fileName;
+    QString hashName, fileName, origDirPath;
     QDateTime dateTime;
 
     m_metadataEngine->getContentFile(fileId,
                                      fileName,
                                      hashName,
-                                     dateTime);
+                                     dateTime,
+                                     origDirPath);
 
     if (SyncSession::IS_ENABLED) {
         addFileToDeleteList(hashName);
@@ -399,8 +400,8 @@ void FileManager::stopFileOp()
 
 void FileManager::fileOperationErrorSlot(const QString &message)
 {
-    m_fileOpThread = 0;
-    QMessageBox::critical(0, tr("File Error"), message);
+    m_fileOpThread = nullptr;
+    QMessageBox::critical(nullptr, tr("File Error"), message);
 
     emit fileOpFailed();
 }
@@ -409,7 +410,7 @@ void FileManager::fileOperationFinishedSlot(const QString &srcFileName,
                                             const QString &destFileName,
                                             int op)
 {
-    m_fileOpThread = 0;
+    m_fileOpThread = nullptr;
 
     switch (op) {
     case FileTask::CopyOp:
@@ -420,7 +421,8 @@ void FileManager::fileOperationFinishedSlot(const QString &srcFileName,
         if (!info.suffix().isEmpty())
             fileName.append("." + info.completeSuffix());
 
-        m_metadataEngine->addContentFile(fileName, destFileName);
+        m_metadataEngine->addContentFile(fileName, destFileName,
+                                         info.absoluteDir().absolutePath());
         if (SyncSession::IS_ENABLED) {
             addFileToUploadList(destFileName);
         }

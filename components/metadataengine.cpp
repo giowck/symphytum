@@ -516,14 +516,14 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
 
     //copy content data
     if (!copyMetadataOnly) {
-        QProgressDialog *pd = new QProgressDialog(0);
+        QProgressDialog *pd = new QProgressDialog(nullptr);
         int progressSteps = 3;
         pd->setWindowModality(Qt::ApplicationModal);
         pd->setWindowTitle(tr("Progress"));
         pd->setLabelText(tr("Duplicating collection data... Please wait!"));
         pd->setRange(0, progressSteps);
         pd->setValue(progressSteps++);
-        pd->setCancelButton(0);
+        pd->setCancelButton(nullptr);
         pd->show();
         qApp->processEvents();
 
@@ -555,10 +555,10 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
         foreach (QString f, fileIdsToCopyList) {
             pd->setValue(++progressSteps);
             qApp->processEvents();
-            QString filePath, fileHashName, fileName;
+            QString filePath, fileHashName, fileName, origDirPath;
             QDateTime date;
             int id = f.toInt();
-            bool s = getContentFile(id, fileName, fileHashName, date);
+            bool s = getContentFile(id, fileName, fileHashName, date, origDirPath);
             if (s) {
                 filePath = filesDirPath + fileHashName;
                 //add file and wait until copy task complete
@@ -584,10 +584,12 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
                 }
 
                 //update duplicate file metadata (file name and date) to match original
-                query.prepare("UPDATE files SET name=:name, date_added=:date_added WHERE name=:hashName");
+                query.prepare("UPDATE files SET name=:name, date_added=:date_added, "
+                              "original_dir_path=:original_dir_path WHERE name=:hashName");
                 query.bindValue(":name", fileName);
                 query.bindValue(":date_added", date);
                 query.bindValue(":hashName", fileHashName);
+                query.bindValue(":original_dir_path", origDirPath);
                 query.exec();
             }
         }
@@ -902,7 +904,8 @@ void MetadataEngine::deleteField(const int fieldId, int collectionId)
 }
 
 int MetadataEngine::addContentFile(const QString &fileName,
-                                    const QString &hashName)
+                                    const QString &hashName,
+                                   const QString &originalDirPath)
 {
     QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
     QSqlQuery query(db);
@@ -912,11 +915,12 @@ int MetadataEngine::addContentFile(const QString &fileName,
     db.transaction();
 
     //add file
-    query.prepare("INSERT INTO files (\"name\",\"hash_name\",\"date_added\")"
-                  " VALUES (:name, :hash_name, :date_added)");
+    query.prepare("INSERT INTO files (\"name\",\"hash_name\",\"date_added\",\"original_dir_path\")"
+                  " VALUES (:name, :hash_name, :date_added, :original_dir_path)");
     query.bindValue(":name", fileName);
     query.bindValue(":hash_name", hashName);
     query.bindValue(":date_added", QDateTime::currentDateTime());
+    query.bindValue(":original_dir_path", originalDirPath);
     query.exec();
 
     //get id
@@ -981,7 +985,7 @@ void MetadataEngine::updateContentFile(int fileId,
 
     //update file
     query.prepare("UPDATE files SET name=:fileName, hash_name=:hashName"
-                  ", date_added=:dateAdded WHERE _id=:id");
+                  ", date_added=:dateAdded WHERE _id=:id"); //origDirPath should not be changed, so leave it out
     query.bindValue(":name", fileName);
     query.bindValue(":hash_name", hashName);
     query.bindValue(":date_added", dateAdded);
@@ -995,12 +999,13 @@ void MetadataEngine::updateContentFile(int fileId,
 bool MetadataEngine::getContentFile(int fileId,
                                     QString &fileName,
                                     QString &hashName,
-                                    QDateTime &dateAdded)
+                                    QDateTime &dateAdded,
+                                    QString &origDirPath)
 {
     QSqlDatabase db = DatabaseManager::getInstance().getDatabase();
     QSqlQuery query(db);
 
-    query.prepare("SELECT name,hash_name,date_added FROM "
+    query.prepare("SELECT name,hash_name,date_added,original_dir_path FROM "
                   "files WHERE _id=:fileId");
     query.bindValue(":fileId", fileId);
     query.exec();
@@ -1009,6 +1014,7 @@ bool MetadataEngine::getContentFile(int fileId,
         fileName = query.value(0).toString();
         hashName = query.value(1).toString();
         dateAdded = query.value(2).toDateTime();
+        origDirPath = query.value(3).toString();
         return true;
     } else {
         return false;

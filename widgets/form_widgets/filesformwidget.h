@@ -31,7 +31,7 @@ class FilesTableWidget : public QTableWidget
 {
     Q_OBJECT
 public:
-    FilesTableWidget(QWidget *parent = 0);
+    FilesTableWidget(QWidget *parent = nullptr);
     ~FilesTableWidget();
 protected:
     void startDrag(Qt::DropActions supportedActions);
@@ -47,7 +47,7 @@ class FilesFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    explicit FilesFormWidget(QWidget *parent = 0);
+    explicit FilesFormWidget(QWidget *parent = nullptr);
     ~FilesFormWidget();
 
     void setFieldName(const QString &name);
@@ -60,6 +60,7 @@ public:
      * Supported display properties are:
      * - showFileType: 1, 0
      * - showAddedDate: 1, 0
+     * - showOrigDirPath: 1, 0
      */
     void loadMetadataDisplayProperties(const QString &metadata);
 
@@ -81,6 +82,7 @@ private slots:
     void removeButtonClicked();
     void exportButtonClicked();
     void fileItemDoubleClicked();
+    void openOriginalDirContextClicked();
     void addHashNameToTable(const QString &hashName);
 
 private:
@@ -113,8 +115,9 @@ private:
     QAction *m_addAction;
     QAction *m_exportAction;
     QAction *m_openAction;
+    QAction *m_openOriginalDirAction;
     MetadataEngine *m_metadataEngine;
-    bool m_showType, m_showDate;
+    bool m_showType, m_showDate, m_showOrigDirPath;
 };
 
 #endif // FILESFORMWIDGET_H

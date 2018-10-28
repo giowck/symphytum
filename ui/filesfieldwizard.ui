@@ -48,7 +48,7 @@ Additional sections can be configured:</string>
       <item>
        <widget class="QCheckBox" name="fileTypeCheckBox">
         <property name="toolTip">
-         <string>Required fields have to be filled out</string>
+         <string>File extension such as .pdf</string>
         </property>
         <property name="text">
          <string>Show file type</string>
@@ -57,8 +57,21 @@ Additional sections can be configured:</string>
       </item>
       <item>
        <widget class="QCheckBox" name="dateCheckBox">
+        <property name="toolTip">
+         <string>date and time as the file was imported</string>
+        </property>
         <property name="text">
-         <string>Show date</string>
+         <string>Show date and time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="originalPathCheckBox">
+        <property name="toolTip">
+         <string>save the original directory path from which a file was imported</string>
+        </property>
+        <property name="text">
+         <string>Show originl import path</string>
         </property>
        </widget>
       </item>
