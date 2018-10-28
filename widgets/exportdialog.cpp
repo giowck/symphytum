@@ -540,11 +540,11 @@ QString ExportDialog::imageTypeItemText(const QVariant &data, int fieldId)
 {
     Q_UNUSED(fieldId);
 
-    QString fileName, hashName;
+    QString fileName, hashName, origDirPath;
     QDateTime dateTime;
     m_metadataEngine->getContentFile(data.toInt(),
                                      fileName,
-                                     hashName, dateTime);
+                                     hashName, dateTime, origDirPath);
     return fileName;
 }
 

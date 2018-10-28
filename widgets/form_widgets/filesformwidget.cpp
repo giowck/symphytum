@@ -79,9 +79,10 @@ void FilesTableWidget::startDrag(Qt::DropActions supportedActions)
         int id = this->item(row, 0)->text().toInt(&ok);
         if (!ok) continue;
 
-        QString fileName, hashName;
+        QString fileName, hashName, origDirPath;
         QDateTime dateAdded;
-        MetadataEngine::getInstance().getContentFile(id, fileName, hashName, dateAdded);
+        MetadataEngine::getInstance().getContentFile(id, fileName, hashName,
+                                                     dateAdded, origDirPath);
 
         QString filePath = fm.getFilesDirectory() + hashName;
         if (filePath.isEmpty()) continue;
@@ -116,7 +117,7 @@ void FilesTableWidget::startDrag(Qt::DropActions supportedActions)
 
 FilesFormWidget::FilesFormWidget(QWidget *parent) :
     AbstractFormWidget(parent),
-    m_showType(false), m_showDate(false)
+    m_showType(false), m_showDate(false), m_showOrigDirPath(false)
 {
     m_fieldNameLabel = new QLabel("Invalid Name", this);
 
@@ -188,8 +189,8 @@ FilesFormWidget::FilesFormWidget(QWidget *parent) :
             this, SLOT(removeButtonClicked()));
     connect(m_openAction, SIGNAL(triggered()),
             this, SLOT(fileItemDoubleClicked()));
-    connect(m_openOriginalDirAction, SIGNAL(triggered()),
-            this, SLOT(openOriginalDirContextClicked()));
+    connect(m_openOriginalDirAction, &QAction::triggered,
+            this, &FilesFormWidget::openOriginalDirContextClicked);
 
     //connections
     connect(m_filesTable, SIGNAL(itemSelectionChanged()),
@@ -246,7 +247,8 @@ void FilesFormWidget::setData(const QVariant &data)
         int rows = idList.size();
         int columns = 2;
         if (m_showType) columns++;
-        if (m_showDate) columns++; //FIXME: add path
+        if (m_showDate) columns++;
+        if (m_showOrigDirPath) columns++;
         m_filesTable->setRowCount(rows);
         m_filesTable->setColumnCount(columns);
         m_filesTable->setColumnHidden(0, true); //hide ID column
@@ -294,7 +296,9 @@ void FilesFormWidget::loadMetadataDisplayProperties(const QString &metadata)
     if (parser.getValue("showFileType") == "1")
         m_showType = true;
     if (parser.getValue("showAddedDate") == "1")
-        m_showDate = true; //FIXME: add property
+        m_showDate = true;
+    if (parser.getValue("showOrigDirPath") == "1")
+        m_showOrigDirPath = true;
 }
 
 
@@ -318,6 +322,10 @@ void FilesFormWidget::contextMenuEvent(QContextMenuEvent *event)
         menu.addAction(m_exportAction);
         if (!SyncSession::IS_READ_ONLY)
             menu.addAction(m_deleteAction);
+        if (m_showOrigDirPath) {
+            menu.addSeparator();
+            menu.addAction(m_openOriginalDirAction);
+        }
     }
     menu.exec(event->globalPos());
 }
@@ -515,9 +523,9 @@ void FilesFormWidget::removeButtonClicked()
         int id = m_filesTable->item(row, 0)->text().toInt(&ok);
         if (!ok) continue;
 
-        QString fileName, hashName;
+        QString fileName, hashName, origDirPath;
         QDateTime dateAdded;
-        m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded);
+        m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded, origDirPath);
 
         //remove file
         fm.startRemoveFile(hashName);
@@ -585,9 +593,9 @@ void FilesFormWidget::exportButtonClicked()
         int id = m_filesTable->item(row, 0)->text().toInt(&ok);
         if (!ok) continue;
 
-        QString fileName, hashName;
+        QString fileName, hashName, origDirPath;
         QDateTime dateAdded;
-        m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded);
+        m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded, origDirPath);
 
         //copy file
         QString outputFile = destDirPath + "/" + fileName;
@@ -606,14 +614,34 @@ void FilesFormWidget::fileItemDoubleClicked()
         bool ok;
         int id = m_filesTable->item(row, 0)->text().toInt(&ok);
         if (!ok) return;
-        QString fileName, hashName;
+        QString fileName, hashName, origDirPath;
         QDateTime dateAdded;
         m_metadataEngine->getContentFile(id,
                                          fileName,
                                          hashName,
-                                         dateAdded);
+                                         dateAdded,
+                                         origDirPath);
         FileManager fm(this);
         fm.openContentFile(hashName);
+    }
+}
+
+void FilesFormWidget::openOriginalDirContextClicked()
+{
+    //open original dir path
+    int row = m_filesTable->currentRow();
+    if (row >= 0) {
+        bool ok;
+        int id = m_filesTable->item(row, 0)->text().toInt(&ok);
+        if (!ok) return;
+        QString fileName, hashName, origDirPath;
+        QDateTime dateAdded;
+        m_metadataEngine->getContentFile(id,
+                                         fileName,
+                                         hashName,
+                                         dateAdded,
+                                         origDirPath);
+        QDesktopServices::openUrl(QUrl::fromLocalFile(origDirPath));
     }
 }
 
@@ -720,9 +748,9 @@ void FilesFormWidget::addFileToTable(int id, int row)
     QFileIconProvider iconProvider;
 
     //get file
-    QString fileName, hashName;
+    QString fileName, hashName, origDirPath;
     QDateTime dateAdded;
-    m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded);
+    m_metadataEngine->getContentFile(id, fileName, hashName, dateAdded, origDirPath);
 
     QFileInfo info(filesDir + hashName);
     QIcon icon = iconProvider.icon(info);
@@ -743,6 +771,13 @@ void FilesFormWidget::addFileToTable(int id, int row)
         if (m_showType) pos = 3;
         else pos = 2;
         m_filesTable->setItem(row, pos, dateItem);
+    }
+    if (m_showOrigDirPath) {
+        QTableWidgetItem *origDirItem = new QTableWidgetItem(origDirPath);
+        int pos = 2;
+        if (m_showType) pos++;
+        if (m_showDate) pos++;
+        m_filesTable->setItem(row, pos, origDirItem);
     }
 }
 

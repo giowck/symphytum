@@ -367,7 +367,6 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
     if (currentUpgradeVersion == 2) {
         //TODO: add other stuff that changed before release of v2.4
         //file type has a new column for original import dir path
-        //TODO: add column //FIXME: yup
         if (!query.exec("ALTER TABLE \"files\" ADD \"original_dir_path\" TEXT;"))
             return false;
         currentUpgradeVersion = 3;

@@ -47,6 +47,8 @@ void FilesFieldWizard::getFieldProperties(QString &displayProperties,
         displayProperties.append("showFileType:1;");
     if (ui->dateCheckBox->isChecked())
         displayProperties.append("showAddedDate:1;");
+    if (ui->originalPathCheckBox->isChecked())
+        displayProperties.append("showOrigDirPath:1;");
 
     //create edit properties metadata string
     //nothing for now
@@ -72,6 +74,8 @@ void FilesFieldWizard::loadField(const int fieldId, const int collectionId)
             ui->fileTypeCheckBox->setChecked(true);
         if (displayParser.getValue("showAddedDate") == "1")
             ui->dateCheckBox->setChecked(true);
+        if (displayParser.getValue("showOrigDirPath") == "1")
+            ui->originalPathCheckBox->setChecked(true);
     }
 }
 

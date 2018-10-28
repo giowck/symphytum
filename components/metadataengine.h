@@ -303,6 +303,7 @@ public:
      * @param fileName - new file name
      * @param hashName - optionally, new hash name for the FileManager storage
      * @param dateAdded - optionally, new date for file add
+     * NOTE: origDirPath, the original file import directory path, cannot be changed
      */
     void updateContentFile(int fileId, const QString &fileName,
                            const QString &hashName = QString(),
@@ -314,12 +315,14 @@ public:
      * @param fileName - reference where the file name is saved
      * @param hashName - reference where hash name is saved
      * @param dateAdded - reference where added date is saved
+     * @param origDirPath - original directory path from which a file was imported
      * @return bool - whether the specified content file exists or not
      */
 
     bool getContentFile(int fileId, QString &fileName,
                         QString &hashName,
-                        QDateTime &dateAdded);
+                        QDateTime &dateAdded,
+                        QString &origDirPath);
 
     /**
      * Get a map of all content files

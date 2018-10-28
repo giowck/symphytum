@@ -361,13 +361,14 @@ QStringList FileManager::getAllLocalFiles()
 
 void FileManager::removeFileMetadata(const int fileId)
 {
-    QString hashName, fileName;
+    QString hashName, fileName, origDirPath;
     QDateTime dateTime;
 
     m_metadataEngine->getContentFile(fileId,
                                      fileName,
                                      hashName,
-                                     dateTime);
+                                     dateTime,
+                                     origDirPath);
 
     if (SyncSession::IS_ENABLED) {
         addFileToDeleteList(hashName);
