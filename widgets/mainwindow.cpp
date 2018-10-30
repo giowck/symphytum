@@ -30,6 +30,7 @@
 #include "importdialog.h"
 #include "alarmlistdialog.h"
 #include "aboutdialog.h"
+#include "upgradesuccessdialog.h"
 #include "../components/updatemanager.h"
 #include "../components/alarmmanager.h"
 #include "../utils/collectionfieldcleaner.h"
@@ -1537,6 +1538,12 @@ void MainWindow::checkForUpdatesSlot()
     if (DefinitionHolder::APP_STORE ||
             (!m_settingsManager->restoreCheckUpdates()))
         return;
+
+    //check if current version has been just updated and inform user if so
+    if (m_settingsManager->restoreSoftwareBuild() < DefinitionHolder::SOFTWARE_BUILD) {
+        UpgradeSuccessDialog *ud = new UpgradeSuccessDialog(this);
+        ud->show();
+    }
 
     if (!m_updateManager) {
         m_updateManager = new UpdateManager(this);

@@ -1,0 +1,1 @@
+The updates file contains the latest software build version and is used by Symphytum to check for new software updates.
