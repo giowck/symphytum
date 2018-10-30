@@ -132,10 +132,11 @@ int SettingsManager::restoreSoftwareBuild() const
     int i;
 
     m_settings->beginGroup(DefinitionHolder::NAME.toLower());
-    i = m_settings->value("build", 0).toInt(); //0 means no previous version installed
+    i = m_settings->value("build", 0).toInt(); //0 means no previous software launch
     m_settings->endGroup();
 
-    return i;
+    //return current build if no build was saved
+    return (i > 0) ? i : DefinitionHolder::SOFTWARE_BUILD;
 }
 
 void SettingsManager::saveViewMode(int mode)
