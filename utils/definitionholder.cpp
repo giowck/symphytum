@@ -24,6 +24,7 @@ QString DefinitionHolder::UPDATE_URL = "https://raw.githubusercontent.com/giowck
                                        "/symphytum/master/doc/update/raw_check/latest";
 QString DefinitionHolder::DOWNLOAD_URL = "https://github.com/giowck/symphytum"
                                          "/blob/master/doc/update/update.md";
+QString DefinitionHolder::HELP_URL = "https://github.com/giowck/symphytum/wiki";
 int DefinitionHolder::SOFTWARE_BUILD = 8;
 int DefinitionHolder::DATABASE_VERSION = 3;
 bool DefinitionHolder::APP_STORE = false;

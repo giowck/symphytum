@@ -30,6 +30,7 @@ public:
     static QString DOMAIN_NAME;    /**< Domain name used in settings       */
     static QString UPDATE_URL;     /**< Url where to check for updates     */
     static QString DOWNLOAD_URL;   /**< Url where to download the software */
+    static QString HELP_URL;       /**< Url to help or wiki pages          */
     static int SOFTWARE_BUILD;     /**< Build no. of the software          */
     static int DATABASE_VERSION;   /**< Version no. of the database        */
     static bool APP_STORE;         /**< Deployment target is an app store  */

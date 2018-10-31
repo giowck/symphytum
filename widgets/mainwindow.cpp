@@ -179,6 +179,12 @@ void MainWindow::aboutQtActionTriggered()
     qApp->aboutQt();
 }
 
+void MainWindow::onlineDocActionTriggered()
+{
+    QUrl helpUrl(DefinitionHolder::HELP_URL);
+    QDesktopServices::openUrl(helpUrl);
+}
+
 void MainWindow::preferenceActionTriggered()
 {
     PreferencesDialog dialog(this);
@@ -1594,6 +1600,9 @@ void MainWindow::createActions()
     m_aboutQtAction = new QAction(tr("About Qt"), this);
     m_aboutQtAction->setMenuRole(QAction::AboutQtRole);
 
+    m_onlineDocAction = new QAction(tr("Online documentation"), this);
+    m_onlineDocAction->setStatusTip(tr("View the project wiki on GitHub"));
+
     m_newCollectionAction = new QAction(tr("New Collection..."), this);
     m_newCollectionAction->setIcon(QIcon(":/images/icons/newcollection.png"));
     m_newCollectionAction->setStatusTip(tr("Create a new collection"));
@@ -1829,6 +1838,8 @@ void MainWindow::createMenu()
     m_helpMenu->addAction(m_aboutAction);
     m_helpMenu->addAction(m_aboutQtAction);
     m_helpMenu->addSeparator();
+    m_helpMenu->addAction(m_onlineDocAction);
+    m_helpMenu->addSeparator();
     if (!DefinitionHolder::APP_STORE)
         m_helpMenu->addAction(m_checkUpdatesAction);
 }
@@ -1885,6 +1896,8 @@ void MainWindow::createConnections()
             this, SLOT(aboutActionTriggered()));
     connect(m_aboutQtAction, SIGNAL(triggered()),
             this, SLOT(aboutQtActionTriggered()));
+    connect(m_onlineDocAction, &QAction::triggered,
+            this, MainWindow::onlineDocActionTriggered);
     connect(m_settingsAction, SIGNAL(triggered()),
             this, SLOT(preferenceActionTriggered()));
     connect(m_findAction, SIGNAL(triggered()),
