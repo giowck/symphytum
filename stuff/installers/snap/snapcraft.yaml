@@ -32,7 +32,7 @@ parts:
     qt-version: qt5
     options:
       - CONFIG+=release
-    prepare: | #remove features until 18.04 is released with QT >= 5.8
+    prepare: | #remove features until 18.04 is released with QT >= 5.8 AND set APP_STORE to true
       sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
       sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
       sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp

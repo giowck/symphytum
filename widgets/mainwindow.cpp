@@ -1541,29 +1541,27 @@ void MainWindow::syncStatusChanged()
 
 void MainWindow::checkForUpdatesSlot()
 {
-    if (DefinitionHolder::APP_STORE ||
-            (!m_settingsManager->restoreCheckUpdates()))
-        return;
-
     //check if current version has been just updated and inform user if so
     if (m_settingsManager->restoreSoftwareBuild() < DefinitionHolder::SOFTWARE_BUILD) {
         UpgradeSuccessDialog *ud = new UpgradeSuccessDialog(this);
         ud->show();
     }
 
-    if (!m_updateManager) {
-        m_updateManager = new UpdateManager(this);
-        connect(m_updateManager, SIGNAL(noUpdateSignal()),
-                this, SLOT(noUpdateFoundSlot()));
-        connect(m_updateManager, SIGNAL(updateErrorSignal()),
-                this, SLOT(updateErrorSlot()));
-        connect(m_updateManager, SIGNAL(updatesAccepted()),
-                this, SLOT(close()));
-    }
+    if (!(DefinitionHolder::APP_STORE || (!m_settingsManager->restoreCheckUpdates()))) {
+        if (!m_updateManager) {
+            m_updateManager = new UpdateManager(this);
+            connect(m_updateManager, SIGNAL(noUpdateSignal()),
+                    this, SLOT(noUpdateFoundSlot()));
+            connect(m_updateManager, SIGNAL(updateErrorSignal()),
+                    this, SLOT(updateErrorSlot()));
+            connect(m_updateManager, SIGNAL(updatesAccepted()),
+                    this, SLOT(close()));
+        }
 
-    //start async update check
-    statusBar()->showMessage(tr("Checking for updates..."));
-    m_updateManager->checkForUpdates();
+        //start async update check
+        statusBar()->showMessage(tr("Checking for updates..."));
+        m_updateManager->checkForUpdates();
+    }
 }
 
 void MainWindow::noUpdateFoundSlot()
