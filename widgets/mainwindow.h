@@ -238,6 +238,7 @@ private:
     QAction *m_printAction;
     QAction *m_exportAction;
     QAction *m_importAction;
+    QAction *m_lockFormViewAction;
 #ifdef Q_OS_OSX
     QAction *m_minimizeAction;
     QAction *m_closeWindowAction;

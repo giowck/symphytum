@@ -1709,6 +1709,13 @@ void MainWindow::createActions()
 
     m_exportAction = new QAction(tr("Export..."), this);
     m_exportAction->setStatusTip(tr("Export all or only selected records"));
+
+    m_lockFormViewAction = new QAction(tr("Lock form view"), this);
+    m_lockFormViewAction->setCheckable(true);
+    m_lockFormViewAction->setShortcut(QString("CTRL+L"));
+    m_lockFormViewAction->setIcon(QIcon(":/images/icons/locked.png"));
+    m_lockFormViewAction->setStatusTip(tr("Lock the form view design to prevent "
+                                          "unwanted field movements"));
 }
 
 void MainWindow::createToolBar()
@@ -1724,6 +1731,8 @@ void MainWindow::createToolBar()
     m_toolBar->addAction(m_newCollectionAction);
     m_toolBar->addAction(m_duplicateCollectionAction);
     m_toolBar->addAction(m_deleteCollectionAction);
+    m_toolBar->addSeparator();
+    m_toolBar->addAction(m_lockFormViewAction);
     m_toolBar->addSeparator();
     m_toolBar->addAction(m_syncAction);
 
@@ -1796,6 +1805,8 @@ void MainWindow::createMenu()
     m_editMenu->addAction(m_redoAction);
     m_editMenu->addSeparator();
     m_editMenu->addAction(m_selectAllAction);
+    m_editMenu->addSeparator();
+    m_editMenu->addAction(m_lockFormViewAction);
     m_editMenu->addSeparator();
     m_editMenu->addAction(m_findAction);
 
