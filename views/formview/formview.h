@@ -104,6 +104,9 @@ public slots:
     /** Update all fields of type ModDateType to current time stamp (new mod date) */
     void updateLastModified(int startRow, int endRow);
 
+    /** Lock or unlock the dynamic layout engine. If locked, form widgets cannot be moved/resized */
+    void setLockFormLayout(const bool locked);
+
 protected slots:
      void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
                       const QVector<int> &roles);
@@ -383,6 +386,7 @@ private:
                                  of ModDateType are updated after
                                  changes to records */
     QList<int> m_modFieldList; /**< List of fields with ModDateType as type */
+    bool m_layoutIsLocked; /**< Whether the layout is locked or not (allow widget resizing/moving) */
 
     //context menu actions
     QAction *m_newFieldContextAction;

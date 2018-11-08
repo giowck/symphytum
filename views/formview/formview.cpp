@@ -55,7 +55,8 @@ FormView::FormView(QWidget *parent) :
     m_isAnimating(false), m_isMovingFW(false), m_dropRectWidget(0),
     m_isSelectedFW(false), m_selectRectWidget(0), m_horizontalResizeGrip(0),
     m_verticalResizeGrip(0), m_isResizingFW(false), m_currentRow(-1),
-    m_currentColumn(-1), m_emptyFormWidget(0), m_modifiedTrigger(false)
+    m_currentColumn(-1), m_emptyFormWidget(0), m_modifiedTrigger(false),
+    m_layoutIsLocked(false)
 {
     initFormView();
     createContextActions();
@@ -295,6 +296,15 @@ void FormView::updateLastModified(int startRow, int endRow)
 
 }
 
+void FormView::setLockFormLayout(const bool locked)
+{
+    m_layoutIsLocked = locked;
+    if (locked) {
+        //remove selection if any
+        clearFormWidgetSelection();
+    }
+}
+
 
 //-----------------------------------------------------------------------------
 // Protected slots
@@ -471,7 +481,7 @@ void FormView::resizeEvent(QResizeEvent *event)
 
 void FormView::mousePressEvent(QMouseEvent *event)
 {
-    if (SyncSession::IS_READ_ONLY)
+    if (SyncSession::IS_READ_ONLY || m_layoutIsLocked)
         return;
 
     //set start drag pos for a possible drag operation
@@ -525,7 +535,7 @@ void FormView::mousePressEvent(QMouseEvent *event)
 }
 void FormView::mouseMoveEvent(QMouseEvent *event)
 {
-    if(SyncSession::IS_READ_ONLY) {
+    if(SyncSession::IS_READ_ONLY || m_layoutIsLocked) {
         return QAbstractItemView::mouseMoveEvent(event);
     }
 

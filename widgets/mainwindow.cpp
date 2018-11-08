@@ -1373,6 +1373,11 @@ void MainWindow::importActionTriggered()
     this->activateWindow();
 }
 
+void MainWindow::lockFormViewActionToggled(const bool locked)
+{
+    m_formView->setLockFormLayout(locked);
+}
+
 void MainWindow::showAlarmListDialog()
 {
     if (!m_alarmListDialog) {
@@ -1906,7 +1911,7 @@ void MainWindow::createConnections()
     connect(m_aboutQtAction, SIGNAL(triggered()),
             this, SLOT(aboutQtActionTriggered()));
     connect(m_onlineDocAction, &QAction::triggered,
-            this, MainWindow::onlineDocActionTriggered);
+            this, &MainWindow::onlineDocActionTriggered);
     connect(m_settingsAction, SIGNAL(triggered()),
             this, SLOT(preferenceActionTriggered()));
     connect(m_findAction, SIGNAL(triggered()),
@@ -1935,6 +1940,8 @@ void MainWindow::createConnections()
             this, SLOT(exportActionTriggered()));
     connect(m_importAction, SIGNAL(triggered()),
             this, SLOT(importActionTriggered()));
+    connect(m_lockFormViewAction, &QAction::toggled,
+            this, &MainWindow::lockFormViewActionToggled);
 
     //record actions
     connect(m_newRecordAction, SIGNAL(triggered()),
@@ -2081,6 +2088,11 @@ void MainWindow::restoreSettings()
         m_toggleDockAction->setChecked(true);
     }
 
+    //restore layout locked status of formView
+    bool fwLock = m_settingsManager->restoreProperty("lockFormView", "mainWindow").toBool();
+    m_lockFormViewAction->setChecked(fwLock);
+    m_formView->setLockFormLayout(fwLock);
+
     //sync
     SyncSession::LOCAL_DATA_CHANGED = m_syncEngine->localDataChanged();
     SyncSession::IS_ENABLED = m_settingsManager->isCloudSyncActive();
@@ -2093,6 +2105,10 @@ void MainWindow::saveSettings()
     m_settingsManager->saveSoftwareBuild();
     m_settingsManager->saveViewMode(m_currentViewMode);
     m_settingsManager->saveLastUsedRecord(m_formView->getCurrentRow());
+
+    //save layout locked status of formView
+    m_settingsManager->saveProperty("lockFormView", "mainWindow",
+                                    m_lockFormViewAction->isChecked());
 
     //sync
     if (SyncSession::IS_ENABLED) {

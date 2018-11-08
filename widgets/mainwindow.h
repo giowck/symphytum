@@ -113,6 +113,7 @@ private slots:
     void printActionTriggered();
     void exportActionTriggered();
     void importActionTriggered();
+    void lockFormViewActionToggled(const bool locked);
 
     /** Create and show alarm list dialog */
     void showAlarmListDialog();
