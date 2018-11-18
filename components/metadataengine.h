@@ -351,6 +351,44 @@ public:
      */
     void setDirtyCurrentColleectionId();
 
+    /**
+     * @brief Get the collection order (c_order) which is used in CollectionListView
+     * for ordering
+     * @param collectionId - the id for which the position is requested
+     * @return the order int, 1 is smallest value and means top of list
+     */
+    int getCollectionOrder(const int collectionId);
+
+    /**
+     * @brief Move the specified collection up in the order list
+     * by updating also all other collections, only 1 step up at a time allowed
+     * @param collectionId
+     * @param currentOrder - the current order in the collection list,
+     * this is the old order, the new order will be currentOrder-1
+     * @return int - newOrder in collection list (oldOrder - 1)
+     */
+    int moveCollectionListOrderOneStepUp(const int collectionId,
+                                         const int currentOrder);
+
+    /**
+     * @brief Move the specified collection down in the order list
+     * by updating also all other collections, only 1 step down at a time allowed
+     * @param collectionId
+     * @param currentOrder - the current order in the collection list,
+     * this is the old order, the new order will be currentOrder+1
+     * @return int - newOrder in collection list (oldOrder + 1)
+     */
+    int moveCollectionListOrderOneStepDown(const int collectionId,
+                                           const int currentOrder);
+
+    /** Get the current maximum collection order int */
+    int getMaxCollectionOrderCount();
+
+    /** Get the maximum collection order position int currently in use + 1
+     *  to be used for a new collection that needs an initial order position
+     */
+    int getNewCollectionOrderCount();
+
 signals:
     /**
      * This signal is emitted whenever the currently active collection

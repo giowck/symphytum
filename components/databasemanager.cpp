@@ -28,7 +28,7 @@
 
 #define SQL_CREATE_TABLE_COLLECTIONS \
     "CREATE TABLE \"collections\" (\"_id\" INTEGER PRIMARY KEY, \"name\" TEXT," \
-    " \"type\" INTEGER, \"table_name\" TEXT)"
+    " \"type\" INTEGER, \"table_name\" TEXT, \"c_order\" INTEGER)"
 #define SQL_CREATE_TABLE_INFO \
     "CREATE TABLE \"symphytum_info\" (\"_id\" INTEGER PRIMARY KEY , \"key\"" \
     " TEXT, \"value\" TEXT)"
@@ -241,8 +241,8 @@ void DatabaseManager::initDatabase(QSqlDatabase &database)
     query.exec();
 
     //init example data
-    query.exec("INSERT INTO \"collections\" (\"name\",\"type\",\"table_name\")"
-               " VALUES (\"Medicinal Plants\",1,\"cb92ee55f44577b584464c13f47fa3771\")");
+    query.exec("INSERT INTO \"collections\" (\"name\",\"type\",\"table_name\", \"c_order\")"
+               " VALUES (\"Medicinal Plants\",1,\"cb92ee55f44577b584464c13f47fa3771\", 1)");
     query.exec("CREATE TABLE \"cb92ee55f44577b584464c13f47fa3771\" (\"_id\" "
                "INTEGER PRIMARY KEY , \"1\" TEXT, \"2\" TEXT, \"3\" TEXT, \"4\" INTEGER,"
                " \"5\" INTEGER, \"6\" INTEGER)");
@@ -365,10 +365,34 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
     }
     //upgrade v2 -> v3
     if (currentUpgradeVersion == 2) {
-        //TODO: add other stuff that changed before release of v2.4
         //file type has a new column for original import dir path
         if (!query.exec("ALTER TABLE \"files\" ADD \"original_dir_path\" TEXT;"))
             return false;
+
+        //add collection order info
+        if (!query.exec("ALTER TABLE \"collections\" ADD \"order\" INTEGER;"))
+            return false;
+
+        //get all collection IDs
+        QList<int> collectionIDs;
+        bool error = false;
+        error = !query.exec("SELECT \"_id\" FROM \"collections\"");
+        while (query.next()) {
+            collectionIDs.append(query.value(0).toInt());
+        }
+
+        //set order based on position in list
+        int currentOrder = 0;
+        foreach (int id, collectionIDs) {
+            currentOrder++;
+            query.prepare(QString("UPDATE \"collections\" "
+                                  "SET \"c_order\"=:newOrder WHERE \"_id\"=:collectionID"));
+            query.bindValue(":newOrder", currentOrder);
+            query.bindValue(":collectionID", id);
+            error |= (!query.exec());
+        }
+
+        if (error) return false;
         currentUpgradeVersion = 3;
     }
     //add new blocks on new versions here

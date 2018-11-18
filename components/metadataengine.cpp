@@ -1107,6 +1107,80 @@ void MetadataEngine::setDirtyCurrentColleectionId()
     m_currentCollectionId = 0;
 }
 
+int MetadataEngine::getCollectionOrder(const int collectionId)
+{
+    int order = 0;
+
+    QSqlQuery query(DatabaseManager::getInstance().getDatabase());
+    QString sql = QString("SELECT c_order FROM collections WHERE _id='%1'")
+            .arg(collectionId);
+    query.exec(sql);
+
+    if (query.next())
+        order = query.value(0).toInt();
+
+    return order;
+}
+
+int MetadataEngine::moveCollectionListOrderOneStepUp(const int collectionId,
+                                                        const int currentOrder)
+{
+    if (currentOrder <= 1) return 0;
+    QSqlQuery query(DatabaseManager::getInstance().getDatabase());
+
+    //move every collection up below current one
+    QString sql = QString("UPDATE collections SET c_order=c_order+1 WHERE "
+                          "c_order=(SELECT c_order-1 FROM collections WHERE _id='%1')")
+            .arg(collectionId);
+    query.exec(sql);
+
+    //update current collection to new order
+    sql = QString("UPDATE collections SET c_order=c_order-1 WHERE _id='%1'")
+            .arg(collectionId);
+    query.exec(sql);
+
+    return currentOrder - 1;
+}
+
+int MetadataEngine::moveCollectionListOrderOneStepDown(const int collectionId,
+                                                       const int currentOrder)
+{
+    if (currentOrder < 1) return 0;
+    QSqlQuery query(DatabaseManager::getInstance().getDatabase());
+
+    //move every collection down below current one
+    QString sql = QString("UPDATE collections SET c_order=c_order-1 WHERE "
+                          "c_order=(SELECT c_order+1 FROM collections WHERE _id='%1')")
+            .arg(collectionId);
+    query.exec(sql);
+
+    //update current collection to new order
+    sql = QString("UPDATE collections SET c_order=c_order+1 WHERE _id='%1'")
+            .arg(collectionId);
+    query.exec(sql);
+
+    return currentOrder + 1;
+}
+
+int MetadataEngine::getMaxCollectionOrderCount()
+{
+    int maxOrder = 0;
+
+    QSqlQuery query(DatabaseManager::getInstance().getDatabase());
+    QString sql = QString("SELECT c_order FROM collections ORDER BY c_order DESC");
+    query.exec(sql);
+
+    if (query.next())
+        maxOrder = query.value(0).toInt();
+
+    return maxOrder;
+}
+
+int MetadataEngine::getNewCollectionOrderCount()
+{
+    return getMaxCollectionOrderCount() + 1;
+}
+
 
 //-----------------------------------------------------------------------------
 // Private

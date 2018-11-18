@@ -34,7 +34,7 @@ class CollectionListModel : public QSqlTableModel
     Q_OBJECT
 
 public:
-    explicit CollectionListModel(QObject *parent = 0);
+    explicit CollectionListModel(QObject *parent = nullptr);
 
     /** Reimplemented for icons (decoration role) */
     QVariant data(const QModelIndex &idx, int role) const;
@@ -42,8 +42,11 @@ public:
     /** Reimplement to avoid empty data */
     bool setData(const QModelIndex &index, const QVariant &value, int role);
 
-    /** Add an empty collection to the end */
-    void addCollection(const QString &name = tr("New Collection"));
+    /** Add an empty collection to the end
+     * @param collectionOrder - order int for position in collection list
+     */
+    void addCollection(const int collectionOrder,
+                       const QString &name = tr("New Collection"));
     
 private:
     

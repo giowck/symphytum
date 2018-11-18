@@ -79,6 +79,12 @@ private slots:
     /** Called on duplicate collection context menu click */
     void duplicateCollectionActionTriggered();
 
+    /** Called on move collection up context menu click */
+    void moveUpActionTriggered();
+
+    /** Called on move collection down context menu click */
+    void moveDownActionTriggered();
+
     /** Called on collection change */
     void currentCollectionIdChanged(int collectionId);
 
@@ -90,6 +96,8 @@ private:
     QAction *m_deleteCollectionAction;
     QAction *m_newCollectionAction;
     QAction *m_duplicateCollectionAction;
+    QAction *m_moveCollectionUpInList;
+    QAction *m_moveCollectionDownInList;
     int m_currentCollectionId;
 };
 
