@@ -28,7 +28,7 @@
 
 #define SQL_CREATE_TABLE_COLLECTIONS \
     "CREATE TABLE \"collections\" (\"_id\" INTEGER PRIMARY KEY, \"name\" TEXT," \
-    " \"type\" INTEGER, \"table_name\" TEXT, \"order\"	INTEGER)"
+    " \"type\" INTEGER, \"table_name\" TEXT, \"c_order\" INTEGER)"
 #define SQL_CREATE_TABLE_INFO \
     "CREATE TABLE \"symphytum_info\" (\"_id\" INTEGER PRIMARY KEY , \"key\"" \
     " TEXT, \"value\" TEXT)"
@@ -241,7 +241,7 @@ void DatabaseManager::initDatabase(QSqlDatabase &database)
     query.exec();
 
     //init example data
-    query.exec("INSERT INTO \"collections\" (\"name\",\"type\",\"table_name\", \"order\")"
+    query.exec("INSERT INTO \"collections\" (\"name\",\"type\",\"table_name\", \"c_order\")"
                " VALUES (\"Medicinal Plants\",1,\"cb92ee55f44577b584464c13f47fa3771\", 1)");
     query.exec("CREATE TABLE \"cb92ee55f44577b584464c13f47fa3771\" (\"_id\" "
                "INTEGER PRIMARY KEY , \"1\" TEXT, \"2\" TEXT, \"3\" TEXT, \"4\" INTEGER,"
@@ -386,7 +386,7 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
         foreach (int id, collectionIDs) {
             currentOrder++;
             query.prepare(QString("UPDATE \"collections\" "
-                                  "SET \"order\"=:newOrder WHERE \"_id\"=:collectionID"));
+                                  "SET \"c_order\"=:newOrder WHERE \"_id\"=:collectionID"));
             query.bindValue(":newOrder", currentOrder);
             query.bindValue(":collectionID", id);
             error |= (!query.exec());

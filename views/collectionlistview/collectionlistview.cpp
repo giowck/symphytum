@@ -77,6 +77,12 @@ CollectionListView::CollectionListView(QWidget *parent) :
     m_newCollectionAction = new QAction(tr("New"), this);
     m_duplicateCollectionAction = new QAction(tr("Duplicate"), this);
     m_deleteCollectionAction = new QAction(tr("Delete"), this);
+    m_moveCollectionUpInList = new QAction(tr("Move up in list"), this);
+    m_moveCollectionUpInList->setIcon(QIcon(":/images/icons/up.png"));
+    m_moveCollectionUpInList->setStatusTip(tr("Move the selected collection up in the list"));
+    m_moveCollectionDownInList = new QAction(tr("Move down in list"), this);
+    m_moveCollectionDownInList->setIcon(QIcon(":/images/icons/down.png"));
+    m_moveCollectionDownInList->setStatusTip(tr("Move the selected collection down in the list"));
 
     //context menu connections
     connect(m_deleteCollectionAction, SIGNAL(triggered()),
@@ -85,6 +91,10 @@ CollectionListView::CollectionListView(QWidget *parent) :
             this, SLOT(duplicateCollectionActionTriggered()));
     connect(m_newCollectionAction, SIGNAL(triggered()),
             this, SLOT(newCollectionActionTriggered()));
+    connect(m_moveCollectionUpInList, &QAction::triggered,
+            this, &CollectionListView::moveUpActionTriggered);
+    connect(m_moveCollectionDownInList, &QAction::triggered,
+            this, &CollectionListView::moveDownActionTriggered);
 
     //connect collection change (if triggered from elsewhere)
     MetadataEngine *meta = &MetadataEngine::getInstance();
@@ -99,7 +109,7 @@ void CollectionListView::createNewCollection()
     if (SyncSession::IS_READ_ONLY) return;
 
     //add item
-    m_model->addCollection();
+    m_model->addCollection(MetadataEngine::getInstance().getNewCollectionOrderCount());
 
     //set local data changed
     SyncSession::LOCAL_DATA_CHANGED = true;
@@ -209,7 +219,8 @@ void CollectionListView::duplicateCollection()
     }
 
     //add item
-    m_model->addCollection(m->getCollectionName(collectionId).append(tr(" Copy")));
+    m_model->addCollection(m->getNewCollectionOrderCount(),
+                           m->getCollectionName(collectionId).append(tr(" Copy")));
 
     //copy collection metadata (structure)
     int duplicatedCollectionId = m->duplicateCollection(collectionId, copyOnlyStructureData);
@@ -285,6 +296,9 @@ void CollectionListView::contextMenuEvent(QContextMenuEvent *event)
     if (MetadataEngine::getInstance().getCurrentCollectionId() != 0) {
         menu.addAction(m_duplicateCollectionAction);
         menu.addAction(m_deleteCollectionAction);
+        menu.addSeparator();
+        menu.addAction(m_moveCollectionUpInList);
+        menu.addAction(m_moveCollectionDownInList);
     }
     menu.exec(event->globalPos());
 }
@@ -332,6 +346,45 @@ void CollectionListView::deleteCollectionActionTriggered()
 void CollectionListView::duplicateCollectionActionTriggered()
 {
     duplicateCollection();
+}
+
+void CollectionListView::moveUpActionTriggered()
+{
+    int collectionId = MetadataEngine::getInstance().getCurrentCollectionId();
+
+    if ((collectionId == 0) || SyncSession::IS_READ_ONLY) return; //0 stands for invalid
+
+    int order = MetadataEngine::getInstance().getCollectionOrder(collectionId);
+    if (order > 1) { //skip if already top element
+        MetadataEngine::getInstance().moveCollectionListOrderOneStepUp(collectionId, order);
+
+        //reload view
+        this->detachModel();
+        this->attachModel();
+
+        //set local data changed
+        SyncSession::LOCAL_DATA_CHANGED = true;
+    }
+}
+
+void CollectionListView::moveDownActionTriggered()
+{
+    int collectionId = MetadataEngine::getInstance().getCurrentCollectionId();
+
+    if ((collectionId == 0) || SyncSession::IS_READ_ONLY) return; //0 stands for invalid
+
+    int order = MetadataEngine::getInstance().getCollectionOrder(collectionId);
+    int maxOrder = MetadataEngine::getInstance().getMaxCollectionOrderCount();
+    if (order < maxOrder) { //skip if already bottom element
+        MetadataEngine::getInstance().moveCollectionListOrderOneStepDown(collectionId, order);
+
+        //reload view
+        this->detachModel();
+        this->attachModel();
+
+        //set local data changed
+        SyncSession::LOCAL_DATA_CHANGED = true;
+    }
 }
 
 void CollectionListView::currentCollectionIdChanged(int collectionId)
