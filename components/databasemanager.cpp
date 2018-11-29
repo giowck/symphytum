@@ -184,13 +184,34 @@ void DatabaseManager::openDatabase()
     //upgrade if possible
     int version = getDatabaseVersion();
     if (version < DefinitionHolder::DATABASE_VERSION) {
+        //create backup in case the upgrade fails
+        if (!QFile::copy(m_databasePath, m_databasePath + ".backup")) {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Failed to create database backup!"));
+            closeDatabase();
+            return;
+        }
+
         if (!upgradeDatabase(version)) {
             QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
                                   QObject::tr("Failed to upgrade the database file: db_version %1")
                                   .arg(version));
             closeDatabase();
+
+            //restore backup
+            if ((!QFile::remove(m_databasePath)) ||
+                    (!QFile::copy(m_databasePath + ".backup", m_databasePath))) {
+                QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                      QObject::tr("Failed to restore database backup"));
+            } else {
+                QFile::remove(m_databasePath + ".backup");
+            }
+
             return;
         }
+
+        //remove backup
+        QFile::remove(m_databasePath + ".backup");
     } else if (version > DefinitionHolder::DATABASE_VERSION) {
         QMessageBox::critical(nullptr, QObject::tr("Database Version Incompatible"),
                               QObject::tr("Failed to open the database file: db_version %1. "
@@ -366,12 +387,20 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
     //upgrade v2 -> v3
     if (currentUpgradeVersion == 2) {
         //file type has a new column for original import dir path
-        if (!query.exec("ALTER TABLE \"files\" ADD \"original_dir_path\" TEXT;"))
+        if (!query.exec("ALTER TABLE \"files\" ADD \"original_dir_path\" TEXT;")) {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Failed to execute %1. Error: %2")
+                                  .arg(query.lastQuery()).arg(query.lastError().text()));
             return false;
+        }
 
         //add collection order info
-        if (!query.exec("ALTER TABLE \"collections\" ADD \"order\" INTEGER;"))
+        if (!query.exec("ALTER TABLE \"collections\" ADD \"c_order\" INTEGER;")) {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Failed to execute %1. Error: %2")
+                                  .arg(query.lastQuery()).arg(query.lastError().text()));
             return false;
+        }
 
         //get all collection IDs
         QList<int> collectionIDs;
@@ -392,7 +421,12 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
             error |= (!query.exec());
         }
 
-        if (error) return false;
+        if (error)  {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Failed to execute %1. Error: %2")
+                                  .arg(query.lastQuery()).arg(query.lastError().text()));
+            return false;
+        }
         currentUpgradeVersion = 3;
     }
     //add new blocks on new versions here
