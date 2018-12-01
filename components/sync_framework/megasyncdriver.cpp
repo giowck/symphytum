@@ -22,7 +22,7 @@
 
 MegaSyncDriver::MegaSyncDriver(QObject *parent) :
     AbstractSyncDriver(parent),
-    m_process(0), m_currentRequest(NoRequest)
+    m_process(nullptr), m_currentRequest(NoRequest)
 {
     initSecrets();
     m_megaFolderPath = DefinitionHolder::NAME + "/";
@@ -168,7 +168,7 @@ void MegaSyncDriver::processFinished(int exitCode,
         switch (m_currentRequest) {
         case AuthRequest:
         {
-#ifdef Q_OS_WIN
+#ifdef Q_OS_WIN //FIXME: still needed windows custom?
             if (!result.contains("[API:err:")) { //windows not using interactive cmd shell,
                                              //just login command, see startRequest()
 #else
@@ -404,7 +404,7 @@ void MegaSyncDriver::startRequest()
     //megacmd is installed to C:\Users\user\AppData\Local\MEGAcmd
     megaCmdPath =  QString(QStandardPaths::standardLocations(
                                QStandardPaths::GenericDataLocation).at(0))
-            .append("/MEGAcmd/").append("MEGAclient.exe");
+            .append("/MEGAcmd/").append("MEGAclient.exe"); //FIXME: windows still custom? try using *.bat version
 #endif
 #ifdef Q_OS_OSX
     megaCmdPath = QString("/Applications/MEGAcmd.app/Contents/MacOS/");
@@ -495,8 +495,8 @@ void MegaSyncDriver::startRequest()
 
     m_processOutput.clear();
     m_process->start(megaCmdPath, args);
-
-#ifndef Q_OS_WIN //see above, mega-cmd shell doesn't work with QProcess on windows
+//TODO: win still needed?? //FIXME: xxx
+#ifndef Q_OS_WINxxxxxxxxxxxxxxxxx //see above, mega-cmd shell doesn't work with QProcess on windows
     //if login command, use interactive command to avoid pass leak
     //instead of command line args
     if (m_currentRequest == AuthRequest) {
@@ -509,6 +509,12 @@ void MegaSyncDriver::startRequest()
         m_process->waitForReadyRead();
         m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1());
         m_process->waitForBytesWritten();
+
+        //TODO: check for 2FA
+        //FIXME: test
+        /*m_process->waitForReadyRead();
+        m_process->write(mega2FACode);
+        m_process->waitForBytesWritten();*/
     }
 #endif
 
