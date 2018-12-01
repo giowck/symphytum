@@ -47,10 +47,11 @@ void MegaSyncDriver::startAuthenticationRequest(const QStringList &megaCredentia
 {
     m_currentRequest = AuthRequest;
 
-    //mega email and pass as args
-    if (megaCredentials.size() == 2) {
+    //mega email. pass and 2FA code as args
+    if (megaCredentials.size() == 3) {
         m_requestArgs.append(megaCredentials.at(0));
         m_requestArgs.append(megaCredentials.at(1));
+        m_requestArgs.append(megaCredentials.at(2));
     }
 
     startRequest();
@@ -404,7 +405,7 @@ void MegaSyncDriver::startRequest()
     //megacmd is installed to C:\Users\user\AppData\Local\MEGAcmd
     megaCmdPath =  QString(QStandardPaths::standardLocations(
                                QStandardPaths::GenericDataLocation).at(0))
-            .append("/MEGAcmd/").append("MEGAclient.exe"); //FIXME: windows still custom? try using *.bat version
+            .append("/MEGAcmd/").append("MEGAclient.exe");
 #endif
 #ifdef Q_OS_OSX
     megaCmdPath = QString("/Applications/MEGAcmd.app/Contents/MacOS/");
@@ -495,28 +496,30 @@ void MegaSyncDriver::startRequest()
 
     m_processOutput.clear();
     m_process->start(megaCmdPath, args);
-//TODO: win still needed?? //FIXME: xxx
-#ifndef Q_OS_WINxxxxxxxxxxxxxxxxx //see above, mega-cmd shell doesn't work with QProcess on windows
-    //if login command, use interactive command to avoid pass leak
-    //instead of command line args
+
     if (m_currentRequest == AuthRequest) {
         QString megaEmail;
         QString megaPass;
-        if (m_requestArgs.size() >= 2) {
+        QString mega2FACode;
+        if (m_requestArgs.size() >= 3) {
             megaEmail = m_requestArgs.at(0);
             megaPass = m_requestArgs.at(1);
+            mega2FACode = m_requestArgs.at(2);
         }
+#ifndef Q_OS_WIN //see above, mega-cmd shell doesn't work with QProcess on windows
+        //if login command, use interactive command to avoid pass leak
+        //instead of command line args
         m_process->waitForReadyRead();
         m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1());
         m_process->waitForBytesWritten();
+#endif
 
         //TODO: check for 2FA
         //FIXME: test
-        /*m_process->waitForReadyRead();
-        m_process->write(mega2FACode);
-        m_process->waitForBytesWritten();*/
+        m_process->waitForReadyRead();
+        m_process->write(mega2FACode.toLatin1());
+        m_process->waitForBytesWritten();
     }
-#endif
 
     //close write channel to allow
     //ready output signals, see docs

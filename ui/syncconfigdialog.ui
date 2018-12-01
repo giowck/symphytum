@@ -548,8 +548,8 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>176</x>
-     <y>185</y>
+     <x>221</x>
+     <y>146</y>
     </hint>
     <hint type="destinationlabel">
      <x>338</x>
@@ -564,12 +564,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>322</x>
-     <y>99</y>
+     <x>376</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
-     <x>341</x>
-     <y>221</y>
+     <x>376</x>
+     <y>244</y>
     </hint>
    </hints>
   </connection>
@@ -580,12 +580,28 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>56</y>
+     <x>376</x>
+     <y>54</y>
     </hint>
     <hint type="destinationlabel">
      <x>317</x>
      <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mega2FALineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>okMegaButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>232</y>
     </hint>
    </hints>
   </connection>

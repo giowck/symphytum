@@ -90,6 +90,7 @@ void SyncConfigDialog::okMegaButtonClicked()
     QStringList megaCredentials;
     megaCredentials.append(ui->megaEmailLineEdit->text().trimmed());
     megaCredentials.append(ui->megaPassLineEdit->text().trimmed());
+    megaCredentials.append(ui->mega2FALineEdit->text().trimmed());
     m_syncDriver->startAuthenticationRequest(megaCredentials);
 
     ui->stackedWidget->setCurrentIndex(2);
