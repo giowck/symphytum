@@ -219,6 +219,7 @@ void SyncConfigDialog::init()
     QRegExp re("^[0-9]{6}$");
     QRegExpValidator *mega2faValidator = new QRegExpValidator(re, this);
     ui->mega2FALineEdit->setValidator(mega2faValidator);
+    ui->mega2FAGroupBox->hide();
 }
 
 void SyncConfigDialog::createConnections()

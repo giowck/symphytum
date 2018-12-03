@@ -157,7 +157,7 @@ void MegaSyncDriver::processFinished(int exitCode,
                                      QProcess::ExitStatus exitStatus)
 {
     Q_UNUSED(exitCode);
-    bool error = false; //TODO: check all messages since megacmd changed output after upgrade
+    bool error = false;
 
     //copy request args and clean them for future requests
     QStringList requestArgs = m_requestArgs;
@@ -169,9 +169,9 @@ void MegaSyncDriver::processFinished(int exitCode,
         switch (m_currentRequest) {
         case AuthRequest:
         {
-#ifdef Q_OS_WIN //FIXME: still needed windows custom?
+#ifdef Q_OS_WIN
             if (!result.contains("[API:err:")) { //windows not using interactive cmd shell,
-                                             //just login command, see startRequest()
+                                                 //just login command, see startRequest()
 #else
             if (result.contains("100.00 %")) {
 #endif
@@ -185,8 +185,9 @@ void MegaSyncDriver::processFinished(int exitCode,
                 error = true;
 
                 //clean errors a bit up
-                if (result.contains("invalid email or password"))
-                    result = tr("Login failed: invalid email or password\n");
+                if (result.contains("invalid email or password") ||
+                        result.contains("incorrect authentication"))
+                    result = tr("Login failed: incorrect email or password\n");
             }
         }
             break;
@@ -514,11 +515,12 @@ void MegaSyncDriver::startRequest()
         m_process->waitForBytesWritten();
 #endif
 
-        //TODO: check for 2FA
-        //FIXME: test
-        m_process->waitForReadyRead();
-        m_process->write(mega2FACode.toLatin1());
-        m_process->waitForBytesWritten();
+        //input 2FA code if required
+        if (!mega2FACode.isEmpty()) {
+            m_process->waitForReadyRead();
+            m_process->write(mega2FACode.toLatin1());
+            m_process->waitForBytesWritten();
+        }
     }
 
     //close write channel to allow
