@@ -36,7 +36,11 @@ macOS:
 1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile
 2. Move py files to app boundle in the sync subfolder where the binary is
 3. Use macdeployqt
-4. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
+4. Add the following to the info.plist file inside the app bundle to force the light theme on mojave (10.14).
+    This is required until Qt implements proper support for dark theme.
+    <key>NSRequiresAquaSystemAppearance</key>
+    <string>True</string>
+5. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
    (alt link: https://web.archive.org/web/20150423212042/http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/)
 
 Ubuntu:
