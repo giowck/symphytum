@@ -511,14 +511,14 @@ void MegaSyncDriver::startRequest()
         //if login command, use interactive command to avoid pass leak
         //instead of command line args
         m_process->waitForReadyRead();
-        m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1());
+        m_process->write("login " + megaEmail.toLatin1() + " " + megaPass.toLatin1() + "\n");
         m_process->waitForBytesWritten();
 #endif
 
         //input 2FA code if required
         if (!mega2FACode.isEmpty()) {
             m_process->waitForReadyRead();
-            m_process->write(mega2FACode.toLatin1());
+            m_process->write(mega2FACode.toLatin1() + "\n");
             m_process->waitForBytesWritten();
         }
     }
