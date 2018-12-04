@@ -33,7 +33,7 @@ class MegaSyncDriver : public AbstractSyncDriver
     Q_OBJECT
 
 public:
-    explicit MegaSyncDriver(QObject *parent = 0);
+    explicit MegaSyncDriver(QObject *parent = nullptr);
     ~MegaSyncDriver();
 
     void startAuthenticationRequest(const QStringList &megaCredentials);

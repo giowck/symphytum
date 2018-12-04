@@ -14,6 +14,7 @@
 
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
+#include <QtGui/QRegExpValidator>
 
 
 //-----------------------------------------------------------------------------
@@ -23,7 +24,7 @@
 SyncConfigDialog::SyncConfigDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SyncConfigDialog), m_syncService(SyncEngine::DropboxSync),
-    m_syncDriver(0)
+    m_syncDriver(nullptr)
 {
     ui->setupUi(this);
 
@@ -89,6 +90,7 @@ void SyncConfigDialog::okMegaButtonClicked()
     QStringList megaCredentials;
     megaCredentials.append(ui->megaEmailLineEdit->text().trimmed());
     megaCredentials.append(ui->megaPassLineEdit->text().trimmed());
+    megaCredentials.append(ui->mega2FALineEdit->text().trimmed());
     m_syncDriver->startAuthenticationRequest(megaCredentials);
 
     ui->stackedWidget->setCurrentIndex(2);
@@ -212,6 +214,12 @@ void SyncConfigDialog::init()
     ui->serviceComboBox->addItem(QIcon(":/images/icons/megasync.png"),
                                  tr("MEGA"));
     ui->loginButton->setDefault(true);
+
+    //2FA mega
+    QRegExp re("^[0-9]{6}$");
+    QRegExpValidator *mega2faValidator = new QRegExpValidator(re, this);
+    ui->mega2FALineEdit->setValidator(mega2faValidator);
+    ui->mega2FAGroupBox->hide();
 }
 
 void SyncConfigDialog::createConnections()

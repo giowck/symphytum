@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>387</width>
-    <height>255</height>
+    <width>459</width>
+    <height>326</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -441,6 +441,39 @@
         </layout>
        </item>
        <item>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="toolTip">
+          <string>Enable this if your MEGA account is protected by 2FA. &lt;br /&gt; If you don't know what this is then your account is probably not using 2FA.</string>
+         </property>
+         <property name="text">
+          <string>Use two factor authentication (2FA)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="mega2FAGroupBox">
+         <property name="title">
+          <string>2FA</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Two factor code (2FA):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="mega2FALineEdit">
+            <property name="placeholderText">
+             <string>(optional, use if 2FA is enabled)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_7">
          <property name="text">
           <string>&lt;i&gt;Your password will not be stored, only a session key&lt;/i&gt;</string>
@@ -534,12 +567,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>176</x>
-     <y>185</y>
+     <x>89</x>
+     <y>18</y>
     </hint>
     <hint type="destinationlabel">
-     <x>338</x>
-     <y>226</y>
+     <x>89</x>
+     <y>27</y>
     </hint>
    </hints>
   </connection>
@@ -550,12 +583,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>322</x>
-     <y>99</y>
+     <x>376</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
-     <x>341</x>
-     <y>221</y>
+     <x>376</x>
+     <y>244</y>
     </hint>
    </hints>
   </connection>
@@ -566,12 +599,44 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>56</y>
+     <x>376</x>
+     <y>54</y>
     </hint>
     <hint type="destinationlabel">
      <x>317</x>
      <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mega2FALineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>okMegaButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>mega2FAGroupBox</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>120</y>
     </hint>
    </hints>
   </connection>
