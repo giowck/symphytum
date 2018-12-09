@@ -8,21 +8,30 @@ You can donate by using any credit card through Paypal. A paypal account is **no
 
 ## Bitcoin
 Please send [bitcoin](https://bitcoin.org) to the following address:
-[bc1q98t5jteqrxcfl63dr3futf4s4gxzdv8gwst9jz](bitcoin:bc1q98t5jteqrxcfl63dr3futf4s4gxzdv8gwst9jz?message=Symphytum%20donation)
+
+[bc1q98t5jteqrxcfl63dr3futf4s4gxzdv8gwst9jz](https://blockstream.info/address/bc1q98t5jteqrxcfl63dr3futf4s4gxzdv8gwst9jz)
 
 ![bitcoin QR code](https://raw.githubusercontent.com/giowck/symphytum/master/stuff/donation-resources/bitcoin_qr.png)
+
+
 
 ## Bitcoin Lightning Network
 (coming soon, thanks to https://tippin.me/)
 
+
+
 ## Ethereum
 Please send ETH to the following address:
+
 [0x2A0AF261eeeEA07771dAc0FF533D6493aE8ABECe](https://etherscan.io/address/0x2A0AF261eeeEA07771dAc0FF533D6493aE8ABECe)
 
 ![ETH QR code](https://raw.githubusercontent.com/giowck/symphytum/master/stuff/donation-resources/ethereum_qr.png)
 
+
+
 ## IOTA
 Please send [IOTA](https://www.iota.org/) to the following address:
+
 [IRGQN9OYHGFLPKCBCBBOZWQBHRUXSWJBEFHBVZIPDJRGUBDJZSIHHCHAKQDEO9R9WFSUTBHJH9ZKQCOEDQNUXZMNJX](https://thetangle.org/address/IRGQN9OYHGFLPKCBCBBOZWQBHRUXSWJBEFHBVZIPDJRGUBDJZSIHHCHAKQDEO9R9WFSUTBHJH9ZKQCOEDQNUXZMNJX)
 
 ![iota QR code](https://raw.githubusercontent.com/giowck/symphytum/master/stuff/donation-resources/iota_qr.png)
