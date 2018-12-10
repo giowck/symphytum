@@ -2,6 +2,6 @@
 *~
 Makefile*
 object_script.*
-*.pro.user
+*.pro.user*
 .directory
 ./doc/doxygen/*
