@@ -87,6 +87,7 @@ private slots:
     void aboutActionTriggered();
     void aboutQtActionTriggered();
     void onlineDocActionTriggered();
+    void donateActionTriggered();
     void preferenceActionTriggered();
     void formViewModeTriggered();
     void tableViewModeTriggered();
@@ -214,6 +215,7 @@ private:
     QAction *m_aboutAction;
     QAction *m_aboutQtAction;
     QAction *m_onlineDocAction;
+    QAction *m_donateAction;
     QAction *m_newCollectionAction;
     QAction *m_duplicateCollectionAction;
     QAction *m_deleteCollectionAction;

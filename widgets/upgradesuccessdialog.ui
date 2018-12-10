@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>348</width>
-    <height>206</height>
+    <width>436</width>
+    <height>254</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,6 +66,19 @@
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string>For more information about what changed, please visit the &lt;a href=&quot;https://github.com/giowck/symphytum/blob/master/CHANGELOG.md&quot;&gt;changelog page&lt;/a&gt; on GitHub.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>&lt;br /&gt;&lt;b&gt;If you find this software useful, please consider &lt;a href=&quot;https://github.com/giowck/symphytum/blob/master/doc/donate.md&quot;&gt;making a small donation&lt;/a&gt;.&lt;/b&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

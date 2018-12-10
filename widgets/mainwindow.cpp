@@ -185,6 +185,12 @@ void MainWindow::onlineDocActionTriggered()
     QDesktopServices::openUrl(helpUrl);
 }
 
+void MainWindow::donateActionTriggered()
+{
+    QUrl url(DefinitionHolder::DONATE_URL);
+    QDesktopServices::openUrl(url);
+}
+
 void MainWindow::preferenceActionTriggered()
 {
     PreferencesDialog dialog(this);
@@ -1606,6 +1612,9 @@ void MainWindow::createActions()
     m_onlineDocAction = new QAction(tr("Online documentation"), this);
     m_onlineDocAction->setStatusTip(tr("View the project wiki on GitHub"));
 
+    m_donateAction = new QAction(tr("Donate!"), this);
+    m_donateAction->setStatusTip(tr("Say thanks by donating any amount"));
+
     m_newCollectionAction = new QAction(tr("New Collection..."), this);
     m_newCollectionAction->setIcon(QIcon(":/images/icons/newcollection.png"));
     m_newCollectionAction->setStatusTip(tr("Create a new collection"));
@@ -1853,6 +1862,7 @@ void MainWindow::createMenu()
     m_helpMenu->addAction(m_aboutQtAction);
     m_helpMenu->addSeparator();
     m_helpMenu->addAction(m_onlineDocAction);
+    m_helpMenu->addAction(m_donateAction);
     m_helpMenu->addSeparator();
     if (!DefinitionHolder::APP_STORE)
         m_helpMenu->addAction(m_checkUpdatesAction);
@@ -1912,6 +1922,8 @@ void MainWindow::createConnections()
             this, SLOT(aboutQtActionTriggered()));
     connect(m_onlineDocAction, &QAction::triggered,
             this, &MainWindow::onlineDocActionTriggered);
+    connect(m_donateAction, &QAction::triggered,
+            this, &MainWindow::donateActionTriggered);
     connect(m_settingsAction, SIGNAL(triggered()),
             this, SLOT(preferenceActionTriggered()));
     connect(m_findAction, SIGNAL(triggered()),

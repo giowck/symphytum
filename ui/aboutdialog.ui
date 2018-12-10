@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>427</width>
-    <height>294</height>
+    <width>428</width>
+    <height>305</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -151,9 +151,22 @@
         </spacer>
        </item>
        <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>&lt;a href=&quot;https://github.com/giowck/symphytum/blob/master/doc/donate.md&quot;&gt;Found this useful? Please consider a small donation&lt;/a&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>&lt;a href=&quot;https://github.com/giowck/symphytum&quot;&gt;Symphytum on GitHub&lt;/a&gt;</string>
+          <string>&lt;a href=&quot;https://github.com/giowck/symphytum&quot;&gt;Symphytum Project on GitHub&lt;/a&gt;</string>
          </property>
          <property name="openExternalLinks">
           <bool>true</bool>
