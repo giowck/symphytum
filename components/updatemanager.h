@@ -32,7 +32,7 @@ class UpdateManager : public QObject
     Q_OBJECT
 
 public:
-    UpdateManager(QObject *parent = 0);
+    UpdateManager(QObject *parent = nullptr);
     ~UpdateManager();
 
     /** Start checking for updates */

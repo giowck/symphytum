@@ -35,7 +35,7 @@ class NumberFieldWizard : public AbstractFieldWizard
 
 public:
     explicit NumberFieldWizard(const QString &fieldName,
-                               QWidget *parent = 0,
+                               QWidget *parent = nullptr,
                                AbstractFieldWizard::EditMode editMode
                                = AbstractFieldWizard::NewEditMode);
     ~NumberFieldWizard();

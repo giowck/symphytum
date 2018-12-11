@@ -35,7 +35,7 @@ class CheckboxFieldWizard : public AbstractFieldWizard
 
 public:
     explicit CheckboxFieldWizard(const QString &fieldName,
-                                 QWidget *parent = 0,
+                                 QWidget *parent = nullptr,
                                  AbstractFieldWizard::EditMode editMode
                                  = AbstractFieldWizard::NewEditMode);
     ~CheckboxFieldWizard();

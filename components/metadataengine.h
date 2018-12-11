@@ -401,8 +401,8 @@ signals:
     void currentCollectionChanged();
 
 private:
-    MetadataEngine(QObject *parent = 0);
-    MetadataEngine(const MetadataEngine&) : QObject(0) {}
+    MetadataEngine(QObject *parent = nullptr);
+    MetadataEngine(const MetadataEngine&) : QObject(nullptr) {}
     ~MetadataEngine();
 
     /**

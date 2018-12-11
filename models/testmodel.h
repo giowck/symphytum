@@ -29,7 +29,7 @@ class TestModel : public QStandardItemModel
     Q_OBJECT
 
 public:
-    explicit TestModel(QObject *parent = 0);
+    explicit TestModel(QObject *parent = nullptr);
 
 private:
 

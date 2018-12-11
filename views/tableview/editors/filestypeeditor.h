@@ -32,7 +32,7 @@ class FilesTypeEditor : public QWidget
     Q_OBJECT
 
 public:
-    explicit FilesTypeEditor(QWidget *parent = 0);
+    explicit FilesTypeEditor(QWidget *parent = nullptr);
 
     /** Set files as file ids separated by comma */
     void setFiles(const QString &files);

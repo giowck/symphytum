@@ -44,7 +44,7 @@ class FormView : public QAbstractItemView
     Q_OBJECT
 
 public:
-    explicit FormView(QWidget *parent = 0);
+    explicit FormView(QWidget *parent = nullptr);
     ~FormView();
 
     QRect visualRect(const QModelIndex &index) const;

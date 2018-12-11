@@ -30,7 +30,7 @@ class CollectionViewDelegate : public QStyledItemDelegate
     Q_OBJECT
 
 public:
-    explicit CollectionViewDelegate(QObject *parent = 0);
+    explicit CollectionViewDelegate(QObject *parent = nullptr);
 
     /** Reimplemented for undo */
     void setModelData(QWidget *editor, QAbstractItemModel *model,

@@ -27,7 +27,7 @@ class TextArea : public QTextEdit
     Q_OBJECT
 
 public:
-    explicit TextArea(QWidget *parent = 0);
+    explicit TextArea(QWidget *parent = nullptr);
 
 signals:
     void editingFinished();

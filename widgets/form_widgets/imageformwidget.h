@@ -37,7 +37,7 @@ class ImageFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    explicit ImageFormWidget(QWidget *parent = 0);
+    explicit ImageFormWidget(QWidget *parent = nullptr);
     ~ImageFormWidget();
 
     void setFieldName(const QString &name);

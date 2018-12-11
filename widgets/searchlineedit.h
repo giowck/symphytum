@@ -46,7 +46,7 @@ class SearchLineEdit : public QLineEdit
     Q_OBJECT
 
 public:
-    SearchLineEdit(QWidget *parent = 0);
+    SearchLineEdit(QWidget *parent = nullptr);
 
 protected:
     void resizeEvent(QResizeEvent *);

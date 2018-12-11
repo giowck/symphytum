@@ -37,7 +37,7 @@ class ImportDialog : public QDialog
     Q_OBJECT
     
 public:
-    explicit ImportDialog(QWidget *parent = 0);
+    explicit ImportDialog(QWidget *parent = nullptr);
     ~ImportDialog();
 
 private slots:

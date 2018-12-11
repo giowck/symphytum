@@ -34,7 +34,7 @@ class NumberFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    NumberFormWidget(QWidget *parent = 0);
+    NumberFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

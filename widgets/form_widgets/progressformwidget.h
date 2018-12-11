@@ -36,7 +36,7 @@ class ProgressFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    ProgressFormWidget(QWidget *parent = 0);
+    ProgressFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

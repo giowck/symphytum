@@ -41,7 +41,7 @@
 //-----------------------------------------------------------------------------
 
 TableViewDelegate::TableViewDelegate(QObject *parent) :
-    QStyledItemDelegate(parent), m_metadataEngine(0)
+    QStyledItemDelegate(parent), m_metadataEngine(nullptr)
 {
     m_metadataEngine = &MetadataEngine::getInstance();
 

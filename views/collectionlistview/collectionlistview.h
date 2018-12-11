@@ -35,7 +35,7 @@ class CollectionListView : public QListView
     Q_OBJECT
 
 public:
-    explicit CollectionListView(QWidget *parent = 0);
+    explicit CollectionListView(QWidget *parent = nullptr);
 
     /**
      * Create a new collection and move focus on newly created item

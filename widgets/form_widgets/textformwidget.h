@@ -38,7 +38,7 @@ class TextFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    explicit TextFormWidget(QWidget *parent = 0);
+    explicit TextFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

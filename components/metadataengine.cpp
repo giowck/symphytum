@@ -26,9 +26,9 @@
 // Static init
 //-----------------------------------------------------------------------------
 
-MetadataEngine* MetadataEngine::m_instance = 0;
+MetadataEngine* MetadataEngine::m_instance = nullptr;
 int MetadataEngine::m_currentCollectionId = 0;
-QStringList* MetadataEngine::m_currentCollectionFieldNameList = 0;
+QStringList* MetadataEngine::m_currentCollectionFieldNameList = nullptr;
 
 
 //-----------------------------------------------------------------------------
@@ -375,7 +375,7 @@ void MetadataEngine::setFieldProperties(FieldProperty propertyType,
 QAbstractItemModel* MetadataEngine::createModel(CollectionType type,
                                                const int collectionId)
 {
-    QAbstractItemModel *model = 0;
+    QAbstractItemModel *model = nullptr;
 
     switch (type) {
     case StandardCollection:

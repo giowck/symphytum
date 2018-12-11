@@ -36,7 +36,7 @@ class CreationDateFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    CreationDateFormWidget(QWidget *parent = 0);
+    CreationDateFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

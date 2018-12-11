@@ -32,7 +32,7 @@ class ImageTypeEditor : public QWidget
     Q_OBJECT
 
 public:
-    explicit ImageTypeEditor(QWidget *parent = 0);
+    explicit ImageTypeEditor(QWidget *parent = nullptr);
 
     /** Set current file id */
     void setImage(int fileId);

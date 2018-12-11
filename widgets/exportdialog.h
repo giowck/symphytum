@@ -44,7 +44,7 @@ public:
      */
     explicit ExportDialog(const int collectionId,
                          QList<int> &selectionRecordIdList,
-                         QWidget *parent = 0);
+                         QWidget *parent = nullptr);
     ~ExportDialog();
 
 private slots:

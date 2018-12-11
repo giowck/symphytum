@@ -38,7 +38,7 @@ class SyncConfigDialog : public QDialog
     Q_OBJECT
     
 public:
-    explicit SyncConfigDialog(QWidget *parent = 0);
+    explicit SyncConfigDialog(QWidget *parent = nullptr);
     ~SyncConfigDialog();
 
     /**

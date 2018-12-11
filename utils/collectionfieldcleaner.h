@@ -37,7 +37,7 @@ class CollectionFieldCleaner : public QObject
     Q_OBJECT
 
 public:
-    explicit CollectionFieldCleaner(QObject *parent = 0);
+    explicit CollectionFieldCleaner(QObject *parent = nullptr);
 
     /** Clean the specified field */
     void cleanField(int collectionId, int fieldId);

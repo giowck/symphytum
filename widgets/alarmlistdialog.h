@@ -37,7 +37,7 @@ class AlarmListDialog : public QDialog
     Q_OBJECT
     
 public:
-    explicit AlarmListDialog(QWidget *parent = 0);
+    explicit AlarmListDialog(QWidget *parent = nullptr);
     ~AlarmListDialog();
 
     /** Check for alarm again */

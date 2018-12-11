@@ -38,7 +38,7 @@ class AbstractFormWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit AbstractFormWidget(QWidget *parent = 0);
+    explicit AbstractFormWidget(QWidget *parent = nullptr);
     virtual ~AbstractFormWidget();
 
     /** Get the height unit need for FormLayoutMatrix */

@@ -35,7 +35,7 @@ class AbstractSyncDriver : public QObject
     Q_OBJECT
 
 public:
-    explicit AbstractSyncDriver(QObject *parent = 0);
+    explicit AbstractSyncDriver(QObject *parent = nullptr);
     virtual ~AbstractSyncDriver();
 
     /**

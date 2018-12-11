@@ -59,9 +59,9 @@
 //-----------------------------------------------------------------------------
 
 MainWindow::ViewMode MainWindow::m_currentViewMode = MainWindow::FormViewMode;
-QAbstractItemModel* MainWindow::m_currentModel = 0;
-QStatusBar* MainWindow::m_statusBar = 0;
-QUndoStack* MainWindow::m_undoStack = 0;
+QAbstractItemModel* MainWindow::m_currentModel = nullptr;
+QStatusBar* MainWindow::m_statusBar = nullptr;
+QUndoStack* MainWindow::m_undoStack = nullptr;
 
 
 //-----------------------------------------------------------------------------
@@ -70,9 +70,9 @@ QUndoStack* MainWindow::m_undoStack = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
-      m_addFieldDialog(0),
-      m_updateManager(0),
-      m_alarmListDialog(0),
+      m_addFieldDialog(nullptr),
+      m_updateManager(nullptr),
+      m_alarmListDialog(nullptr),
       m_lastUsedCollectionId(0)
 {
     //init GUI elements

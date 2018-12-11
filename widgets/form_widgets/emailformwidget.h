@@ -36,7 +36,7 @@ class EmailFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    explicit EmailFormWidget(QWidget *parent = 0);
+    explicit EmailFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

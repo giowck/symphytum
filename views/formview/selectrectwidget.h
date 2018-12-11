@@ -33,7 +33,7 @@ class SelectRectWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SelectRectWidget(QWidget *parent = 0);
+    explicit SelectRectWidget(QWidget *parent = nullptr);
     
 private:
     QLabel *label;

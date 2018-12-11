@@ -44,7 +44,7 @@ public:
      */
     explicit PrintDialog(const int collectionId,
                          QList<int> &selectionRecordIdList,
-                         QWidget *parent = 0);
+                         QWidget *parent = nullptr);
     ~PrintDialog();
 
 private slots:

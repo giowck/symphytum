@@ -35,7 +35,7 @@ class ImageFieldWizard : public AbstractFieldWizard
 
 public:
     explicit ImageFieldWizard(const QString &fieldName,
-                              QWidget *parent = 0,
+                              QWidget *parent = nullptr,
                               AbstractFieldWizard::EditMode editMode
                               = AbstractFieldWizard::NewEditMode);
     ~ImageFieldWizard();

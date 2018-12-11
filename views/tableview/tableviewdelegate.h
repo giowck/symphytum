@@ -32,7 +32,7 @@ class TableViewDelegate : public QStyledItemDelegate
     Q_OBJECT
 
 public:
-    explicit TableViewDelegate(QObject *parent = 0);
+    explicit TableViewDelegate(QObject *parent = nullptr);
     
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const;

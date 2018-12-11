@@ -36,7 +36,7 @@ class DockWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit DockWidget(QWidget *parent = 0);
+    explicit DockWidget(QWidget *parent = nullptr);
 
     /** Create a new collection */
     void createNewCollection();

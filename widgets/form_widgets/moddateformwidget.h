@@ -36,7 +36,7 @@ class ModDateFormWidget : public AbstractFormWidget
     Q_OBJECT
 
 public:
-    ModDateFormWidget(QWidget *parent = 0);
+    ModDateFormWidget(QWidget *parent = nullptr);
 
     void setFieldName(const QString &name);
     QString getFieldName() const;

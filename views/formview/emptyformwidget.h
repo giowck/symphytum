@@ -52,7 +52,7 @@ public:
      */
     void setState(State s);
 
-    explicit EmptyFormWidget(QWidget *parent = 0);
+    explicit EmptyFormWidget(QWidget *parent = nullptr);
     ~EmptyFormWidget();
     
 private:

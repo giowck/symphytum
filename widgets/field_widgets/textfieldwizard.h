@@ -35,7 +35,7 @@ class TextFieldWizard : public AbstractFieldWizard
     
 public:
     explicit TextFieldWizard(const QString &fieldName,
-                             QWidget *parent = 0,
+                             QWidget *parent = nullptr,
                              AbstractFieldWizard::EditMode editMode
                              = AbstractFieldWizard::NewEditMode);
     ~TextFieldWizard();

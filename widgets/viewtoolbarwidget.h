@@ -39,7 +39,7 @@ class ViewToolBarWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit ViewToolBarWidget(QWidget *parent = 0);
+    explicit ViewToolBarWidget(QWidget *parent = nullptr);
 
     /** This enum indicates the possible view modes */
     enum ViewMode {

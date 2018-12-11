@@ -47,7 +47,7 @@ class SyncProcessDialog : public QDialog
     Q_OBJECT
     
 public:
-    explicit SyncProcessDialog(QWidget *parent = 0);
+    explicit SyncProcessDialog(QWidget *parent = nullptr);
     ~SyncProcessDialog();
 
     /** Set that on sync completion this dialog will close itself */
