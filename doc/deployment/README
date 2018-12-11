@@ -34,7 +34,7 @@ Windows Portable:
 
 macOS:
 1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile
-2. Move py files to app boundle in the sync subfolder where the binary is
+2. Move py files to app boundle in the sync subfolder where the binary is (unarchive macOS python deploy.tar.gz first)
 3. Use macdeployqt
 4. Add the following to the info.plist file inside the app bundle to force the light theme on mojave (10.14).
     This is required until Qt implements proper support for dark theme.
@@ -47,7 +47,7 @@ Ubuntu:
 1. Copy deb dir from installers dir
 2. Update DEBIAN/control as needed
 3. Copy executable to usr/bin
-4. Copy dropbox_client.py and dropbox to usr/share/symphytum/sync
+4. Copy dropbox_client.py and dropbox to usr/share/symphytum/sync (unarchive dropbox.tar.gz first)
 5. Create deb package
    sudo chown root:root -R deb/
    sudo chmod -R 0755 deb/
