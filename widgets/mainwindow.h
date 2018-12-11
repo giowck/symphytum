@@ -196,6 +196,9 @@ private:
     /** Check if there are any alarm triggers to show in the AlarmListDialog */
     void checkAlarmTriggers();
 
+    /** Check if 30 days of usage have passed from first start and suggest to donate */
+    void checkDonationSuggestion();
+
     QToolBar *m_toolBar;
     QDockWidget *m_dockContainerWidget;
     DockWidget *m_dockWidget;

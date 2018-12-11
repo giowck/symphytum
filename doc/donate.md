@@ -1,6 +1,8 @@
 # Donate
 If Symphytum has been useful to you, please consider saying "thanks" by donating money, even if it's just one dollar. This shows your appreciation and keeps us motivated to work on further software improvements.
 
+**We are currently looking for funds to buy and maintain yearly certificates to sign the Windows and macOS executables. One year amounts to 170$-200$. Signed installers and executables are a big step to make our users trust our software because signed software is much less likely to contain any kind of malware.**
+
 * [Paypal](#paypal)
 * [Bitcoin](#bitcoin)
 * [Bitcoin LN](#bitcoin-lightning-network)

@@ -96,6 +96,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     setWindowTitle(tr("%1").arg(DefinitionHolder::NAME));
     setMinimumHeight(500);
+
+    checkDonationSuggestion();
 }
 
 MainWindow::~MainWindow()
@@ -2299,5 +2301,30 @@ void MainWindow::checkAlarmTriggers()
     if (alarmManager.checkAlarms()) {
         //this is a workaround to activate focus on the dialog
         QTimer::singleShot(100, this, SLOT(showAlarmListDialog()));
+    }
+}
+
+void MainWindow::checkDonationSuggestion()
+{
+    bool skipDonate = m_settingsManager->restoreProperty("skipDonate", "mainWindow").toBool();
+    if (!skipDonate) {
+        QDate lastUsageDate = m_settingsManager->restoreProperty("lastUsageDate", "mainWindow").toDate();
+        int daysUsed = m_settingsManager->restoreProperty("donationDaysCount", "mainWindow").toInt();
+        if (daysUsed >= 30) {
+            int r = QMessageBox::question(this, tr("Support %1").arg(DefinitionHolder::NAME),
+                                          tr("Dear user, you have been using %1 for a while. If you enjoy using this software, "
+                                             "please consider supporting our development effort by making a small donation, thanks!<br />"
+                                             "Would you like to donate now?").arg(DefinitionHolder::NAME),
+                                          QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+            if (r == QMessageBox::Yes) {
+                donateActionTriggered();
+            }
+            m_settingsManager->saveProperty("skipDonate", "mainWindow", true);
+        }
+        else if (lastUsageDate != QDate::currentDate()) {
+            daysUsed++;
+            m_settingsManager->saveProperty("donationDaysCount", "mainWindow", daysUsed);
+            m_settingsManager->saveProperty("lastUsageDate", "mainWindow", QDate::currentDate());
+        }
     }
 }
