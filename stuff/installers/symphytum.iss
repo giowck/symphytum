@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Symphytum"
-#define MyAppVersion "2.3"
+#define MyAppVersion "2.4"
 #define MyAppPublisher "Symphytum Developers"
 #define MyAppURL "http://giowck.github.io/symphytum/"
 #define MyAppExeName "symphytum.exe"
@@ -21,8 +21,8 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-OutputDir=C:\Users\giowck\Desktop
-OutputBaseFilename=symphytum-2.3-setup
+OutputDir=C:\Users\user\Desktop
+OutputBaseFilename=symphytum-2.4-setup
 Compression=lzma
 SolidCompression=yes
 
@@ -60,33 +60,33 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "C:\Users\giowck\Desktop\symphytum.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\sync\*"; DestDir: "{app}\sync"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\imageformats\*"; DestDir: "{app}\imageformats"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\sqldrivers\*"; DestDir: "{app}\sqldrivers"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\bearer\*"; DestDir: "{app}\bearer"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\iconengines\*"; DestDir: "{app}\iconengines"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\printsupport\*"; DestDir: "{app}\printsupport"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\giowck\Desktop\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\libstdc++-6.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\libGLESV2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\opengl32sw.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\D3Dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Core.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Widgets.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Network.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Sql.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\Qt5WinExtras.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\giowck\Desktop\MEGAcmdSetup.exe"; DestDir: "{tmp}"; Check: InstallMEGAcmd; Flags: deleteafterinstall ignoreversion uninsremovereadonly
+Source: "C:\Users\user\Desktop\symphytum.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\sync\*"; DestDir: "{app}\sync"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\imageformats\*"; DestDir: "{app}\imageformats"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\sqldrivers\*"; DestDir: "{app}\sqldrivers"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\bearer\*"; DestDir: "{app}\bearer"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\iconengines\*"; DestDir: "{app}\iconengines"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\printsupport\*"; DestDir: "{app}\printsupport"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\user\Desktop\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libstdc++-6.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libGLESV2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\opengl32sw.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\D3Dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Widgets.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Network.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Sql.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\Qt5WinExtras.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\MEGAcmdSetup.exe"; DestDir: "{tmp}"; Check: InstallMEGAcmd; Flags: deleteafterinstall ignoreversion uninsremovereadonly
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]

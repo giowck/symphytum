@@ -7,5 +7,4 @@ Get PyInstaller working with Dropbox Python SDK
 4. Install dropbox sdk with: pip install dropbox
 5. Install pyinstaller (tested on PyInstaller 3.2.1) with: pip install pyinstaller
 6. Create executable with: pyinstaller dropbox_client.py
-7. Check subfolder dist/dropbox_client for result
-
+7. Check subfolder dist/dropbox_client for result (that folder will be renamed sync and used by innosetup)
