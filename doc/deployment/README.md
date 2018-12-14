@@ -120,6 +120,7 @@ AppImage:
 ```
 
 Snap:
+----------------
 1. Use Ubuntu 16.04 or the latest supported LTS by snapcraft
 2. Run snapcraft in the `stuff/installers/snap` directory after reviewing the yaml file
 3. Upload new snap to snap store
