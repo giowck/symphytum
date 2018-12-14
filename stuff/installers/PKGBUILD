@@ -1,15 +1,16 @@
-# Maintainer: Giorgio Wicklein <giowckln@gmail.com>
+# Past Maintainer: Giorgio Wicklein <giowckln@gmail.com>
+# Maintainer: Oirio Joshi <joshirio@protonmail.com>
 pkgname=symphytum
-pkgver=2.3
+pkgver=2.4
 pkgrel=1
 pkgdesc="Personal database software"
 arch=('i686' 'x86_64')
-url="http://giowck.github.io/symphytum/"
+url="https://github.com/giowck/symphytum"
 license=('BSD')
 depends=('qt5-base' 'qt5-svg' 'qt5-imageformats' 'sqlite' 'python3' 'python-setuptools' 'python-six' 'python-certifi' 'python-chardet' 'python-idna' 'python-requests' 'python-urllib3')
 optdepends=('megacmd-bin: MEGA cloud sync support')
 source=("https://github.com/giowck/symphytum/releases/download/v$pkgver/$pkgname-$pkgver-src.tar.gz")
-md5sums=('8f139f45f4b1f85fd44f4198bdbca580')
+sha256sums=('a62947fbaaaf34f99274b69b4b0bef618dec9e82bb23f5038e246b85cb3f9d57')
 
 build() {
   qmake-qt5 -config release
@@ -29,9 +30,10 @@ package() {
 
   # Sync framework files
   install -d "${pkgdir}/usr/share/symphytum/"
+  tar xzvf $srcdir/stuff/installers/deb/usr/share/symphytum/sync/dropbox-*.tar.gz -C $srcdir/stuff/installers/deb/usr/share/symphytum/sync/
+  rm -v $srcdir/stuff/installers/deb/usr/share/symphytum/sync/dropbox-*.tar.gz
   cp -R "$srcdir/stuff/installers/deb/usr/share/symphytum/" "${pkgdir}/usr/share/"
 
   # Copy license
   install -Dm644 "$srcdir/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
-
