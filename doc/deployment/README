@@ -40,7 +40,14 @@ macOS:
     This is required until Qt implements proper support for dark theme.
     <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
-5. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
+5. Add or modify the following entries to the Info.plist file.
+    <key>Bundle identifier</key>
+    <string>com.giowisys.Symphytum</string>
+    <key>Bundle version</key>
+    <string>2.4</string>
+    <key>Bundle versions string, short</key>
+    <string>2.4</string>
+6. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
    (alt link: https://web.archive.org/web/20150423212042/http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/)
 
 Ubuntu:

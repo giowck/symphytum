@@ -1557,7 +1557,7 @@ void MainWindow::checkForUpdatesSlot()
     //check if current version has been just updated and inform user if so
     if (m_settingsManager->restoreSoftwareBuild() < DefinitionHolder::SOFTWARE_BUILD) {
         UpgradeSuccessDialog *ud = new UpgradeSuccessDialog(this);
-        ud->show();
+        ud->exec();
     }
 
     if (!(DefinitionHolder::APP_STORE || (!m_settingsManager->restoreCheckUpdates()))) {
