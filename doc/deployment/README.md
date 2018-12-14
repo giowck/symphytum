@@ -2,72 +2,89 @@ Deployment
 ==========
 
 Build Symphytum:
+----------------
 
 1. Check and update translation files if needed
-2. Check DefinitionHolder
-3. Set dropbox app secret in DropboxSyncDriver::initSecrets()
+2. Check `DefinitionHolder`
+3. Set dropbox app secret in `DropboxSyncDriver::initSecrets()`
 4. Check authors description in about dialog, see AUTHORS file
-5. Check and update CHANGELOG file
+5. Check and update `CHANGELOG` file
 6. Create archive of last commit:
+```
    git archive -o symphytum-1.0-src.tar.gz HEAD
+```
 7. Uncompress and open project with release config
 8. Compile
 
 Prepare Dropbox SDK:
-1. Edit components/sync_framework/scripts/dropbox_client.py
+----------------
+1. Edit `components/sync_framework/scripts/dropbox_client.py`
    and set correct app key
 2. Download latest Dropbox python SDK:
    https://www.dropbox.com/developers/
-4. Go to dropbox folder in the sdk folder
-5. Copy dropbox_client.py and the dropbox folder to somewhere for later use
+4. Go to `dropbox` folder in the sdk folder
+5. Copy `dropbox_client.py` and the `dropbox` folder to somewhere for later use
 
 Windows:
+----------------
 1. Prepare dropbox client (windows exe) as described in "pyinstaller dropbox howto" or reuse from previous deployment (setup.exe)
 2. Download MEGAcmd installer for windows from https://mega.nz/cmd, which is used by the installer (.iss) script
-3. Open and compile symphytum.iss after review
-4. The missing .DLL files can be copied from the Qt install or use windeployqt
+3. Open and compile `symphytum.iss` after review
+4. The missing .DLL files can be copied from the Qt install or use `windeployqt`
 
 Windows Portable:
+----------------
 1. Follow similar steps as above
-2. Enable DefinitionHolder::WIN_PORTABLE before compiling to use local and portable storage directories
+2. Enable `DefinitionHolder::WIN_PORTABLE` before compiling to use local and portable storage directories
 3. Instead of running installer, just create a zip
 
 macOS:
-1. Use 'qmake -spec macx-clang Symphytum.pro' to generate Makefile
+----------------
+1. Use `qmake -spec macx-clang Symphytum.pro` to generate Makefile
 2. Move py files to app boundle in the sync subfolder where the binary is (unarchive macOS python deploy.tar.gz first)
-3. Use macdeployqt
-4. Add the following to the info.plist file inside the app bundle to force the light theme on mojave (10.14).
+3. Use `macdeployqt`
+4. Add the following to the `Info.plist` file inside the app bundle to force the light theme on mojave (10.14).
+```
     This is required until Qt implements proper support for dark theme.
     <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
+```
 5. Add or modify the following entries to the Info.plist file.
+```
     <key>Bundle identifier</key>
     <string>com.giowisys.Symphytum</string>
     <key>Bundle version</key>
     <string>2.4</string>
     <key>Bundle versions string, short</key>
     <string>2.4</string>
+```
 6. Create a DMG follow this: http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/
    (alt link: https://web.archive.org/web/20150423212042/http://mac101.net/content/how-to/how-to-create-dmg-art-for-fancy-application-installations/)
 
 Ubuntu:
-1. Copy deb dir from installers dir
-2. Update DEBIAN/control as needed
-3. Copy executable to usr/bin
-4. Copy dropbox_client.py and dropbox to usr/share/symphytum/sync (unarchive dropbox.tar.gz first)
+----------------
+1. Copy `deb` dir from `installers` dir
+2. Update `DEBIAN/control` as needed
+3. Copy executable to `usr/bin`
+4. Copy `dropbox_client.py` and `dropbox` to `usr/share/symphytum/sync` (unarchive dropbox.tar.gz first)
 5. Create deb package
+```
    sudo chown root:root -R deb/
    sudo chmod -R 0755 deb/
    dpkg -b deb/ symphytum-1.0-x86_64.deb
+```
 
 Arch Linux:
-1. Adjust PKGBUILD script from the installers directory
+----------------
+1. Adjust `PKGBUILD` script from the `installers` directory
 2. copy source tarball to current build directory
-3. run updpkgsums to update checksums for source tarball
-4. makepkg --printsrcinfo > .SRCINFO 
-5. run makepkg -i to build pacman package and to install it
+3. run `updpkgsums` to update checksums for source tarball
+4. `makepkg --printsrcinfo > .SRCINFO`
+5. run `makepkg -i` to build pacman package and to install it
 
 AppImage:
+----------------
+```
 -> Create or reuse from a previous AppImage (see --appimage-extract command) the pyinstaller package for linux
    on for example Ubuntu 16.04 LTS (did not work on 14.04):
    sudo apt install python-pip
@@ -101,8 +118,9 @@ AppImage:
    for future Qt versions, try to detect changes with: strings libQt5Network.so.5 | grep '1\.0\'.
 -> Create the final AppImage with:
    ./appimagetool-x86_64.AppImage /home/user/Desktop/myappimg
+```
 
 Snap:
 1. Use Ubuntu 16.04 or the latest supported LTS by snapcraft
-2. Run snapcraft in the stuff/installers/snap directory after reviewing the yaml file
+2. Run snapcraft in the `stuff/installers/snap` directory after reviewing the yaml file
 3. Upload new snap to snap store
