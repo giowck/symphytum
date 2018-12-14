@@ -43,9 +43,8 @@ macOS:
 1. Use `qmake -spec macx-clang Symphytum.pro` to generate Makefile
 2. Move py files to app boundle in the sync subfolder where the binary is (unarchive macOS python deploy.tar.gz first)
 3. Use `macdeployqt`
-4. Add the following to the `Info.plist` file inside the app bundle to force the light theme on mojave (10.14).
+4. Add the following to the `Info.plist` file inside the app bundle to force the light theme on mojave (10.14). This is required until Qt implements proper support for dark theme.
 ```
-    This is required until Qt implements proper support for dark theme.
     <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
 ```
