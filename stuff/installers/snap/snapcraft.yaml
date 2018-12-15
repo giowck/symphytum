@@ -31,7 +31,7 @@ apps:
 parts:
   symphytum:
     source: https://github.com/giowck/symphytum.git
-#    source-tag: v2.4 TODO enable again, just for testing
+    source-tag: v2.4
     plugin: qmake
     qt-version: qt5
     options:
