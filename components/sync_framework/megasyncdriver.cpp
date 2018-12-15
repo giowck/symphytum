@@ -247,6 +247,20 @@ void MegaSyncDriver::processFinished(int exitCode,
                         result.prepend(tr("Failed to replace temporary downloaded file: %1\n")
                                        .arg(orig));
                         error = true;
+
+#ifdef Q_OS_WIN
+                        //FIXME: there is a bug on MEGAcmd 1.0.0 where it fails to download a file
+                        //on a cold boot of mega-get, see https://github.com/meganz/MEGAcmd/issues/143
+                        //so as a workaround we just repeat the same command again, only once
+                        static bool firstTry = true;
+                        if (firstTry && dest.contains("sync.meta")) {
+                            m_currentRequest = DownloadRequest;
+                            m_requestArgs = requestArgs;
+                            startRequest();
+                            firstTry = false;
+                            return;
+                        }
+#endif
                     }
                 }
                 if (!error)
@@ -264,6 +278,7 @@ void MegaSyncDriver::processFinished(int exitCode,
             //megacmd says fail not found when really it should
             //say not logged in
             //see bug https://github.com/meganz/MEGAcmd/issues/19
+            //FIXME: check in future versions if bug still present
             if (!result.contains("[API:err:")) {
                 //do next step
                 m_currentRequest = UploadRequestRmStep;
