@@ -1,5 +1,5 @@
 name: symphytum
-version: '2.3'
+version: '2.4'
 summary: Easy-to-use personal database software
 description: |
   Symphytum is a personal database software for everyone 
@@ -9,11 +9,14 @@ description: |
 icon: gui/symphytum.png
 grade: stable
 confinement: strict
+base: core18 # based on ubuntu 18.04 LTS
 
 apps:
   symphytum:
     command: desktop-launch symphytum
     desktop: usr/share/applications/symphytum.desktop
+    environment:
+      DISABLE_WAYLAND: 1 # disable wayland (not ready yet), comment out this line to enable full wayland support
     plugs:
       - home
       - network
@@ -21,26 +24,27 @@ apps:
       - removable-media
       - unity7
       - x11
+      - wayland
       - desktop
       - desktop-legacy
 
 parts:
   symphytum:
     source: https://github.com/giowck/symphytum.git
-    source-tag: v2.3
+#    source-tag: v2.4 TODO enable again, just for testing
     plugin: qmake
     qt-version: qt5
     options:
       - CONFIG+=release
-    prepare: | #remove features until 18.04 is released with QT >= 5.8 AND set APP_STORE to true
-      sed -i '/QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);/d' main.cpp
-      sed -i 's#model()->setData(index, QDateTime::currentDateTime().toString(Qt::ISODateWithMs));#model()->setData(index, QDateTime::currentDateTime());#' views/formview/formview.cpp
-      sed -i 's#auto list = getAllCollectionContentFiles(collectionId, i);#QStringList list = getAllCollectionContentFiles(collectionId, i);#' components/metadataengine.cpp
-      sed -i 's#args.append("/usr/share/symphytum/sync/dropbox_client.py");#args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");#' components/sync_framework/dropboxsyncdriver.cpp #relocate absolute path of dropbox python sync script
-      sed -i 's#megaCmdPath = "/usr/bin/mega-exec";#megaCmdPath = "/snap/symphytum/current/usr/bin/mega-exec";#' components/sync_framework/megasyncdriver.cpp #relocate absolute path of megacmd sync command
-    install: |
+    override-build: | # enable snap deployment target and set app store
+      sed -i 's#bool DefinitionHolder::SNAP_LINUX = false;#bool DefinitionHolder::SNAP_LINUX = true;#' utils/definitionholder.cpp
+      sed -i 's#bool DefinitionHolder::APP_STORE = false;#bool DefinitionHolder::APP_STORE = true;#' utils/definitionholder.cpp
+      snapcraftctl build # call default snapcraft build
+      #custom install steps (formerly known as install but now deprecated)
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp symphytum $SNAPCRAFT_PART_INSTALL/bin
+      tar xzvf stuff/installers/deb/usr/share/symphytum/sync/dropbox-*.tar.gz -C stuff/installers/deb/usr/share/symphytum/sync/
+      rm -v stuff/installers/deb/usr/share/symphytum/sync/dropbox-*.tar.gz
       cp -R stuff/installers/deb/usr $SNAPCRAFT_PART_INSTALL/
       sed -i 's|Icon=symphytum|Icon=${SNAP}/usr/share/pixmaps/symphytum.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/symphytum.desktop
     build-packages:
@@ -53,6 +57,7 @@ parts:
       - libqt5sql5-sqlite
       - libqt5svg5
       - libqt5printsupport5
+      - qtwayland5
       - zlib1g
       - dbus
     after: [desktop-qt5]
@@ -78,31 +83,45 @@ parts:
       - urllib3
       
   megacmd-sync:
-    source: https://mega.nz/linux/MEGAsync/xUbuntu_16.04/amd64/megacmd-xUbuntu_16.04_amd64.deb
+    source: https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megacmd-xUbuntu_18.04_amd64.deb
     plugin: dump
     stage:
       - usr/*
     stage-packages:
       - libc-ares2
-      - libc6
-      - libcrypto++9v5
+      - libcrypto++6
       - libgcc1
       - libmediainfo0v5
       - libpcre3
       - libpcrecpp0v5
-      - libssl1.0.0
+      - libssl1.1
       - libstdc++6
       - libzen0v5
       - zlib1g
-    
-  desktop-qt5: #custom define, see BUG: https://github.com/ubuntu/snapcraft-desktop-helpers/issues/62
+      - apt-transport-https
+
+  desktop-qt5: # custom define becasue no remote parts are supported when using a base (at least not on 16.04), https://github.com/ubuntu/snapcraft-desktop-helpers
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: qt
+    plugin: make
+    build-packages:
+      – qtbase5-dev
+      – dpkg-dev
+    make-parameters: ["FLAVOR=qt5"]
+    build-packages:
+      - qtbase5-dev
+      - dpkg-dev
     stage-packages:
       - libxkbcommon0
       - ttf-ubuntu-font-family
       - dmz-cursor-theme
       - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
       - shared-mime-info
       - libqt5gui5
       - libgdk-pixbuf2.0-0
       - libqt5svg5 # for loading icon themes which are svg
+      - try: [appmenu-qt5] # not available on core18
       - locales-all
+

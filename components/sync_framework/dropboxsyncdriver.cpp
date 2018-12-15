@@ -20,7 +20,7 @@
 
 DropboxSyncDriver::DropboxSyncDriver(QObject *parent) :
     AbstractSyncDriver(parent),
-    m_process(0), m_currentRequest(NoRequest),
+    m_process(nullptr), m_currentRequest(NoRequest),
     m_totUploadChunks(0), m_chunksUploaded(0)
 {
     initSecrets();
@@ -346,6 +346,9 @@ void DropboxSyncDriver::startRequest()
     if(DefinitionHolder::APPIMAGE_LINUX) {
         pythonInterpreterPath = QCoreApplication::applicationDirPath()
                 + "/../share/symphytum/sync/dropbox_client/dropbox_client";
+    } else if (DefinitionHolder::SNAP_LINUX) {
+        pythonInterpreterPath = "python3";
+        args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");
     } else {
         pythonInterpreterPath = "python3";
         args.append("/usr/share/symphytum/sync/dropbox_client.py");

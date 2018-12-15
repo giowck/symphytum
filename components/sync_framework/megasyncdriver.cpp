@@ -428,7 +428,11 @@ void MegaSyncDriver::startRequest()
     megaCmdPath.append("mega-exec");
 #endif
 #ifdef Q_OS_LINUX
-    megaCmdPath = "/usr/bin/mega-exec";
+    if (DefinitionHolder::SNAP_LINUX) {
+        megaCmdPath = "/snap/symphytum/current/usr/bin/mega-exec";
+    } else {
+        megaCmdPath = "/usr/bin/mega-exec";
+    }
 #endif
 
     //decode session token

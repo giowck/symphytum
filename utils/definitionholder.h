@@ -37,6 +37,7 @@ public:
     static bool APP_STORE;         /**< Deployment target is an app store  */
     static bool APPIMAGE_LINUX;    /**< Deployment target is an AppImage   */
     static bool WIN_PORTABLE;      /**< Deployment is portable Windows app */
+    static bool SNAP_LINUX;        /**< Deployment target is snap package  */
 
 private:
     DefinitionHolder() {} //static only

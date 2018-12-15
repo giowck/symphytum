@@ -31,6 +31,7 @@ int DefinitionHolder::DATABASE_VERSION = 3;
 bool DefinitionHolder::APP_STORE = false;
 bool DefinitionHolder::APPIMAGE_LINUX = false;
 bool DefinitionHolder::WIN_PORTABLE = false;
+bool DefinitionHolder::SNAP_LINUX = false;
 QString DefinitionHolder::COPYRIGHT =
         QString("Copyright &copy; 2014-%1 Symphytum Developers"
                 "<br />Copyright &copy; 2012-2014 GIOWISYS Software UG (haftungsbeschr%2nkt)")
