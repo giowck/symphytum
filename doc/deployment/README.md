@@ -85,7 +85,7 @@ AppImage:
 ----------------
 ```
 -> Create or reuse from a previous AppImage (see --appimage-extract command) the pyinstaller package for linux
-   on for example Ubuntu 16.04 LTS (did not work on 14.04):
+   on for example Ubuntu 16.04 LTS:
    sudo apt install python-pip
    pip install pyinstaller
    pip install dropbox
@@ -93,9 +93,9 @@ AppImage:
 -> Build pyinstaller package:
    pyinstaller dropbox_client.py
 -> Copy the dist/dropbox_client directory for later use.
--> Use Ubuntu 14.04 LTS for the AppImage creation
+-> Use Ubuntu 16.04 LTS for the AppImage creation
 -> Install missing deps:
-   sudo apt install build-essentials mesa-common-dev libglu1-mesa-dev libmysqlclient18 libpq5 libodbc1 libsybdb5
+   sudo apt install build-essential mesa-common-dev libglu1-mesa-dev libmysqlclient20 libpq5 libodbc1 libsybdb5
 -> Download Qt installer from qt.io/download
 -> Set APPIMAGE_LINUX to true in DefinitionHolder and then compile project in release mode
 -> Download linuxdeployqt from https://github.com/probonopd/linuxdeployqt
@@ -105,13 +105,15 @@ AppImage:
 -> Create myappimg folder on desktop and place files from stuff/deb/ here:
    copy the compiled symphytum binary to myappimg/usr/bin
    copy the whole usr/share folder from stuff/deb to myappimg/usr/share
-   remove dropbox folder and dropbox_client.py from myappimg/usr/share/symphytum/sync/
+   remove dropbox folder/archive and dropbox_client.py from myappimg/usr/share/symphytum/sync/
+   remove DEBIAN folder from myappimg folder
 -> Create the AppDir with:
    ./linuxdeployqt-continuous-x86_64.AppImage /home/user/Desktop/myappimg/usr/share/applications/symphytum.desktop  -bundle-non-qt-libs -no-translations -qmake=/home/user/Qt/5.9.2/gcc_64/bin/qmake
+-> If you get an error about missing sql libs, try https://github.com/probonopd/linuxdeployqt/issues/70#issuecomment-293471028
 -> Integrate the pyinstaller package from above (after step above to avoid missing lib errors, pyinstaller is already self contained):
    move the previously created pyinstaller package (dropbox_client folder from above) to myappimg/usr/share/symphytum/sync/
    now the dropbox driver executable should be at myappimg/usr/share/symphytum/sync/dropbox_client/dropbox_client
--> Patch the AppDir to fix an OpenSSL currently affecting Qt's SDK, see https://github.com/Subsurface-divelog/subsurface/issues/779
+-> This is no longer needed as Qt 5.11.3: Patch the AppDir to fix an OpenSSL currently affecting Qt's SDK, see https://github.com/Subsurface-divelog/subsurface/issues/779
    sed -i -e 's|1.0.1e|1.0.0\x00|g' /home/user/Desktop/myappimg/usr/lib/libQt5Network.so.5
    for Qt 5.10.1 use: sed -i -e 's|1.0.2k|1.0.0\x00|g' /home/user/Desktop/myappimg/usr/lib/libQt5Network.so.5
    for future Qt versions, try to detect changes with: strings libQt5Network.so.5 | grep '1\.0\'.
