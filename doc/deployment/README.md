@@ -113,7 +113,7 @@ AppImage:
 -> Integrate the pyinstaller package from above (after step above to avoid missing lib errors, pyinstaller is already self contained):
    move the previously created pyinstaller package (dropbox_client folder from above) to myappimg/usr/share/symphytum/sync/
    now the dropbox driver executable should be at myappimg/usr/share/symphytum/sync/dropbox_client/dropbox_client
--> This is no longer needed as Qt 5.11.3: Patch the AppDir to fix an OpenSSL currently affecting Qt's SDK, see https://github.com/Subsurface-divelog/subsurface/issues/779
+-> This is no longer needed as of Qt 5.11.3: Patch the AppDir to fix an OpenSSL currently affecting Qt's SDK, see https://github.com/Subsurface-divelog/subsurface/issues/779
    sed -i -e 's|1.0.1e|1.0.0\x00|g' /home/user/Desktop/myappimg/usr/lib/libQt5Network.so.5
    for Qt 5.10.1 use: sed -i -e 's|1.0.2k|1.0.0\x00|g' /home/user/Desktop/myappimg/usr/lib/libQt5Network.so.5
    for future Qt versions, try to detect changes with: strings libQt5Network.so.5 | grep '1\.0\'.
