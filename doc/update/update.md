@@ -2,7 +2,7 @@
 
 ## New Version: 2.4
 A new software version is available.  
-Updating Symphytum is save, all your data and files won't be deleted or altered.
+Updating Symphytum is safe, all your data and files won't be deleted or altered.
 
 Please **create a backup (File->Backup) before upgrading** to be on the safe side.
   
