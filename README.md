@@ -102,6 +102,8 @@ A [Snap package](https://snapcraft.io/) is a new self containing distribution fo
 
 [Symphytum on the Snap Store](https://snapcraft.io/symphytum). The snap file can also be downloaded manually from the [releases](https://github.com/giowck/symphytum/releases) page.
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/symphytum)
+
 ## Build from Source
 Unpack source archive   
 ```
