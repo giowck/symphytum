@@ -31,10 +31,10 @@ Please **create a backup (File->Backup) before upgrading** to be on the safe sid
 - Reload views when undo redo commands are executed, fixes #68
 
 
-The complete changelog can be found [here](https://github.com/giowck/symphytum/blob/master/CHANGELOG.md)
+The complete changelog can be found [here](https://github.com/giowck/symphytum/blob/master/CHANGELOG.md).
 
 ### MEGA Cloud
-If you use the MEGA cloud service integration, please make sure to update your installed MEGAcmd version to 1.0.0, which is done automatically with the Windows installer if MEGAcmd checkbox is selected during install, other operating systems must update manually.
+If you use the MEGA cloud service integration, please make sure to update your installed MEGAcmd version to 1.0.0, which is done automatically with the Windows installer if MEGAcmd checkbox is selected during install and for the snap package for Linux, other operating systems must update manually.
 You can download MEGAcmd 1.0.0 from [https://mega.nz/cmd](https://mega.nz/cmd).
 
 ### Compatibility
