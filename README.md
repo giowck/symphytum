@@ -125,4 +125,5 @@ If you find Symphytum useful. please consider [donating](https://github.com/giow
 
 
 Copyright (c) 2014-2018 Symphytum Developers
+
 Copyright (c) 2012-2014 GIOWISYS Software UG
