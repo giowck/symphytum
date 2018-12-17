@@ -14,7 +14,7 @@ If Symphytum has been useful to you, please consider saying "thanks" by donating
 ## Paypal
 You can donate by using any credit card through Paypal. A paypal account is **not** required.
 
-[![paypal donate button](https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PQZSXEYYXBR3W&source=url)
+[![paypal donate button](https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PQZSXEYYXBR3W&source=url&lc=US)
 
 ---
 
