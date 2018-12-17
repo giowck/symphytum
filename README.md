@@ -25,7 +25,7 @@ Symphytum is a personal database software for everyone who desires to manage and
 ## Introduction
 Symphytum is a free and open-source personal database software written in C++ and Qt for Windows, macOS and Linux. Design and edit simple databases in a visual and intuitive way, without any need to study complex database languages. Symphytum is directed at users who just want to organize data in custom designed collections without giving up advantages of database engines like fast loading speed, large data set handling, fast searching, sorting and more.
 
-Manage all kind of data ranging from contacts, inventory, any type of collection, customers and so on. There are limitations though, Symphytum is not able to handle relational data and automatic field calculations yet.
+Manage all kind of data ranging from contacts, inventory, any type of collection, customers and so on. There are limitations though, Symphytum is not able to handle relational data and automatic field calculations yet. Also the import from CSV files is very limited, all imported data sets are handled just as text fields, future improvements to the import dialog, to specify each field type, are planned though.
 
 Symphytum is able to synchronise your data through different cloud services like Dropbox or MEGA. It can detect and handle sync conflicts in case multiple user are using the same database via a supported cloud service.
 
