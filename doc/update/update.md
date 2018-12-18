@@ -45,7 +45,7 @@ You can download MEGAcmd 1.0.0 from [https://mega.nz/cmd](https://mega.nz/cmd).
 Version 2.4 **upgrades the internal database format** to a new version (v3), making it incompatible with older versions. Your database schema will be automatically upgraded during the first start. Older software versions using the cloud sync will show a warning about incompatible database versions recommending to upgrade the software version to resolve the issue.
 
 ## How to Update
-As always, it is highly recommended to create a backup before proceeding (**File->Backup**).  
+First, it is highly recommended to create a backup before proceeding (**File->Backup**).  
 Symphytum can be updated to the latest version manually by downloading and repeating the installation procedure.
 
 **Note: Close Symphytum before starting the installation**
