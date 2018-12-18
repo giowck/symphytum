@@ -1,5 +1,9 @@
 # Symphytum Update
 
+Quick links
+* [What's New?](#what-changed?)
+* [How to Update](#how-to-update)
+
 ## New Version: 2.4
 A new software version is available.  
 Updating Symphytum is safe, all your data and files won't be deleted or altered.
@@ -45,6 +49,6 @@ Symphytum can be updated to the latest version manually by downloading and repea
 
 **Note: Close Symphytum before starting the installation**
 
-Please visit the [download section](https://github.com/giowck/symphytum#download) on the main page and download the appropriate executable for your operating system. The software will detect and upgrade automatically the inernal database structure, if required, on first launch.
+Please visit the [download section](https://github.com/giowck/symphytum#download) on the main page and download the appropriate executable for your operating system. The software will detect and upgrade automatically the internal database structure, if required, on first launch.
 
 **Windows portable**: to update your windows portable folder, just copy the `portable_data` folder over to the new portable folder (once extracted).
