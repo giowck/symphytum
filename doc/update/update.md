@@ -1,6 +1,6 @@
 # Symphytum Update
 
-Quick links
+Quick links:
 * [What's New?](#what-is-new)
 * [How to Update](#how-to-update)
 
