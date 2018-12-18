@@ -1,7 +1,7 @@
 # Symphytum Update
 
 Quick links
-* [What's New?](#what-changed?)
+* [What's New?](#what-is-new)
 * [How to Update](#how-to-update)
 
 ## New Version: 2.4
@@ -10,7 +10,7 @@ Updating Symphytum is safe, all your data and files won't be deleted or altered.
 
 Please **create a backup (File->Backup) before upgrading** to be on the safe side.
   
-## What changed?
+## What is New
 
 ### New Features
 - Ability to select font style for form view in settings, issue #70 
