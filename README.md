@@ -100,7 +100,7 @@ Download [Symphytum-x86_64.AppImage](https://github.com/giowck/symphytum/release
 #### Snap
 A [Snap package](https://snapcraft.io/) is a new self containing distribution format, supposed to work on most Linux distributions (Ubuntu, Debian, Arch Linux, Fedora, etc). The technology is still young with some limitations.
 
-[Symphytum on the Snap Store](https://snapcraft.io/symphytum). The snap file can also be downloaded manually from the [releases](https://github.com/giowck/symphytum/releases) page.
+[Symphytum on the Snap Store](https://snapcraft.io/symphytum). The snap file can also be downloaded manually from the [releases](https://github.com/giowck/symphytum/releases) page. Note that snaps installed from the Snap Store are automatically updated, except the .snap file when downloaded and installed manually with `sudo snap install symphytum_amd64.snap --dangerous`.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/symphytum)
 
