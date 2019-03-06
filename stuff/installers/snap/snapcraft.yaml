@@ -1,3 +1,4 @@
+# see https://github.com/joshirio/symphytum-build.snapcraft.io/ for releasing on snap store
 name: symphytum
 version: '2.4'
 summary: Easy-to-use personal database software
@@ -104,9 +105,6 @@ parts:
     source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
     source-subdir: qt
     plugin: make
-    build-packages:
-      – qtbase5-dev
-      – dpkg-dev
     make-parameters: ["FLAVOR=qt5"]
     build-packages:
       - qtbase5-dev
@@ -124,4 +122,3 @@ parts:
       - libqt5svg5 # for loading icon themes which are svg
       - try: [appmenu-qt5] # not available on core18
       - locales-all
-
