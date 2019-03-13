@@ -29,7 +29,10 @@ Please send [bitcoin](https://bitcoin.org) to the following address:
 ---
 
 ## Bitcoin Lightning Network
-(coming soon, thanks to https://tippin.me/)
+You can donate bitcoin on LN via tippin.me:
+[https://tippin.me/@joshirio_dev](https://tippin.me/@joshirio_dev)
+
+[![bitcoin LN](https://raw.githubusercontent.com/giowck/symphytum/master/stuff/donation-resources/tippinme_button.png)](https://tippin.me/@joshirio_dev)
 
 
 ---

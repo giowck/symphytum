@@ -1,5 +1,12 @@
 CHANGELOG
 
+Version 2.5
+===========
+
+### Bug Fixes
+- MEGA sync driver: hotfix API compatibility change, issue #86
+
+
 Version 2.4
 ===========
 
