@@ -1,7 +1,7 @@
 # Past Maintainer: Giorgio Wicklein <giowckln@gmail.com>
 # Maintainer: Oirio Joshi <joshirio@protonmail.com>
 pkgname=symphytum
-pkgver=2.4
+pkgver=2.5
 pkgrel=1
 pkgdesc="Personal database software"
 arch=('i686' 'x86_64')
