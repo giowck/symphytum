@@ -4,7 +4,7 @@ Quick links:
 * [What's New?](#what-is-new)
 * [How to Update](#how-to-update)
 
-## New Version: 2.4
+## New Version: 2.5
 A new software version is available.  
 Updating Symphytum is safe, all your data and files won't be deleted or altered.
 
@@ -12,37 +12,22 @@ Please **create a backup (File->Backup) before upgrading** to be on the safe sid
   
 ## What is New
 
-### New Features
-- Ability to select font style for form view in settings, issue #70 
-- Toolbar button to lock the form view to prevent unwanted field movements, issue #62 
-- Reorder collections in the collections list by context menu (right mouse button click), issue #69 
-
-### Improvements
-- French translation added, thanks to Yann Yvinec
-- Show info on Windows to restart after background color change, issue #66
-- Allow empty dates as default value for new records, issue #56
-- Allow minimum date as low as 100.01.01 and display empty values on form view for unset dates
-- Add original directory import path for file type fields, issue #57
-- Show an info dialog after a successful software upgrade
-- Add wiki link to help menu
-- Add error checking and backup handling during database version upgrades
-- MEGA sync driver upgrade to MEGAcmd 1.0.0 and 2FA support, issues #75 and #76 
-- New donation links and actions
+This is a minor quick fix release to address a compatibility issue for the MEGA sync driver, after a change at the MEGA API.
 
 ### Bug Fixes
-- Files are now correctly included in the backup file when using Qt 5.11, bug #60 
-- Highlight correct characters after editing text containing search results, bug #64
-- Reload views when undo redo commands are executed, fixes #68
+- MEGA sync driver: hotfix API compatibility change, issue #86
 
 
 The complete changelog can be found [here](https://github.com/giowck/symphytum/blob/master/CHANGELOG.md).
 
 ### MEGA Cloud
+*(since version 2.4)*
+
 If you use the MEGA cloud service integration, please make sure to update your installed MEGAcmd version to 1.0.0, which is done automatically with the Windows installer if MEGAcmd checkbox is selected during install and for the snap package for Linux, other operating systems must update manually.
 You can download MEGAcmd 1.0.0 from [https://mega.nz/cmd](https://mega.nz/cmd).
 
 ### Compatibility
-Version 2.4 **upgrades the internal database format** to a new version (v3), making it incompatible with older versions. Your database schema will be automatically upgraded during the first start. Older software versions using the cloud sync will show a warning about incompatible database versions recommending to upgrade the software version to resolve the issue.
+Version 2.5 **doesn't change the internal database format** so it remains compatible with 2.4 clients.
 
 ## How to Update
 First, it is highly recommended to create a backup before proceeding (**File->Backup**).  
