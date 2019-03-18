@@ -3,7 +3,7 @@
   "branch": "stable",
   "runtime": "org.kde.Platform",
   "sdk": "org.kde.Sdk",
-  "runtime-version": "5.11",
+  "runtime-version": "5.12",
   "command": "symphytum",
   "finish-args": [
     "--socket=wayland",
@@ -28,8 +28,8 @@
     "sources": [
       {
         "type": "file",
-        "url": "https://github.com/giowck/symphytum/releases/download/v2.3/symphytum-2.3-src.tar.gz",
-        "sha256": "11761e83d780ec903f9c5b1f5dd0235036d09d21e8e57fd78704e9f39ca69e12"
+        "url": "https://github.com/giowck/symphytum/releases/download/v2.5/symphytum-2.5-src.tar.gz",
+        "sha256": "521950fc2b19481a7e976c096c6e4f305e0975cc459d5753753991e784840a32"
       },
       {
         "type": "file",
