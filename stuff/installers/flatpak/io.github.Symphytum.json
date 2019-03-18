@@ -1,0 +1,45 @@
+{
+  "app-id": "io.github.Symphytum",
+  "branch": "stable",
+  "runtime": "org.kde.Platform",
+  "sdk": "org.kde.Sdk",
+  "runtime-version": "5.11",
+  "command": "symphytum",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=x11",
+    "--device=dri",
+    "--share=ipc",
+    "--share=network",
+    /* For QtSingleApplication */
+    "--env=TMPDIR=/var/tmp",
+    "--filesystem=host"
+  ],
+  "modules": [
+  {
+    "name": "symphytum",
+    "buildsystem": "simple",
+      "build-commands": [
+        "tar xvzf symphytum*.tar.gz",
+        "qmake -config release",
+        "make",
+        "install -D symphytum /app/bin/symphytum"
+      ],
+    "sources": [
+      {
+        "type": "file",
+        "url": "https://github.com/giowck/symphytum/releases/download/v2.3/symphytum-2.3-src.tar.gz",
+        "sha256": "11761e83d780ec903f9c5b1f5dd0235036d09d21e8e57fd78704e9f39ca69e12"
+      },
+      {
+        "type": "file",
+        "path": "io.github.Symphytum.png"
+      },
+      {
+        "type": "file",
+        "path": "io.github.Symphytum.desktop"
+        }
+      ]
+    }
+  ]
+}
