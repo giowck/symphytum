@@ -12,6 +12,12 @@ grade: stable
 confinement: strict
 base: core18 # based on ubuntu 18.04 LTS
 
+plugs: # additional plug to fix mouse cursor theme
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+
 apps:
   symphytum:
     command: desktop-launch symphytum
@@ -61,19 +67,12 @@ parts:
       - qtwayland5
       - zlib1g
       - dbus
+      - qt5-style-plugins # for mouse cursor theme fix
     after: [desktop-qt5]
     
   dropbox-sync:
     plugin: python
     python-version: python3
-#    stage-packages: #try this if python-packages (uses PyPi) fails
-#      - python3-setuptools
-#      - python3-six
-#      - python3-certifi
-#      - python3-chardet
-#      - python3-idna
-#      - python3-requests
-#      - python3-urllib3
     python-packages:
       - setuptools
       - six
