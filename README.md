@@ -1,3 +1,5 @@
+[![Snap Status](https://build.snapcraft.io/badge/joshirio/symphytum-build.snapcraft.io.svg)](https://build.snapcraft.io/user/joshirio/symphytum-build.snapcraft.io)
+
 ![logo](https://raw.githubusercontent.com/giowck/symphytum/master/stuff/logo/symphytum_64.png "Symphytum")
 # Symphytum
 Symphytum is a personal database software for everyone who desires to manage and organize data in an easy and intuitive way, without having to study complex database languages and software user interfaces.        
