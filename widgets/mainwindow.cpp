@@ -1560,6 +1560,23 @@ void MainWindow::checkForUpdatesSlot()
         ud->exec();
     }
 
+    //ask user on auto update checking on 2nd start
+    if ((!m_settingsManager->isFirstTimeStart()) && (!DefinitionHolder::APP_STORE)) {
+        if (!m_settingsManager->restoreUserConfirmedAutoUpdateChecks()) {
+            int r = QMessageBox::question(this, tr("Software Updates"),
+                                          tr("Should %1 <b>check automatically</b> for software updates?<br />"
+                                             "This option can be changes later at any time in the software preferences.<br /><br />"
+                                             "The information about the latest release is downloaded from GitHub, "
+                                             "their <a href=\"https://help.github.com/en/articles/github-privacy-statement\">"
+                                             "privacy policy</a> may apply.").arg(DefinitionHolder::NAME),
+                                          QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+            if ((r == QMessageBox::Yes) || (r == QMessageBox::No)) {
+                m_settingsManager->saveUserConfirmedAutoUpdateChecks(true);
+                m_settingsManager->saveCheckUpdates(r == QMessageBox::Yes);
+            }
+        }
+    }
+
     if (!(DefinitionHolder::APP_STORE || (!m_settingsManager->restoreCheckUpdates()))) {
         if (!m_updateManager) {
             m_updateManager = new UpdateManager(this);

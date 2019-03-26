@@ -139,6 +139,17 @@ int SettingsManager::restoreSoftwareBuild() const
     return (i > 0) ? i : DefinitionHolder::SOFTWARE_BUILD;
 }
 
+bool SettingsManager::isFirstTimeStart() const
+{
+    int i;
+
+    m_settings->beginGroup(DefinitionHolder::NAME.toLower());
+    i = m_settings->value("build", 0).toInt(); //0 means no previous software launch
+    m_settings->endGroup();
+
+    return i == 0;
+}
+
 void SettingsManager::saveViewMode(int mode)
 {
     m_settings->beginGroup("mainWindow");
@@ -332,10 +343,28 @@ bool SettingsManager::restoreCheckUpdates()
     bool b;
 
     m_settings->beginGroup(DefinitionHolder::NAME.toLower());
-    b = m_settings->value("checkUpdates", true).toBool();
+    b = m_settings->value("checkUpdates", false).toBool();
     m_settings->endGroup();
 
     return b;
+}
+
+bool SettingsManager::restoreUserConfirmedAutoUpdateChecks() const
+{
+    bool wasAsked;
+
+    m_settings->beginGroup(DefinitionHolder::NAME.toLower());
+    wasAsked = m_settings->value("userConfirmUpdatesCheck", false).toBool();
+    m_settings->endGroup();
+
+    return wasAsked;
+}
+
+void SettingsManager::saveUserConfirmedAutoUpdateChecks(const bool wasAsked)
+{
+    m_settings->beginGroup(DefinitionHolder::NAME.toLower());
+    m_settings->setValue("userConfirmUpdatesCheck", wasAsked);
+    m_settings->endGroup();
 }
 
 void SettingsManager::saveToUploadList(const QStringList &list)
