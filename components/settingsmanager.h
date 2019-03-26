@@ -93,6 +93,9 @@ public:
     /** Retrive the last saved software build (version) */
     int restoreSoftwareBuild() const;
 
+    /** If it is the first time the app is started */
+    bool isFirstTimeStart() const;
+
     /** Save the specified int as MainWindow's view mode */
     void saveViewMode(int mode);
 
@@ -158,6 +161,12 @@ public:
 
     /** Check updates automatically at startup */
     bool restoreCheckUpdates();
+
+    /** Return whether user already confirmed updates checking */
+    bool restoreUserConfirmedAutoUpdateChecks() const;
+
+    /** Set whether user already confirmed updates checking */
+    void saveUserConfirmedAutoUpdateChecks(const bool wasAsked);
 
     /** Save list of files to upload */
     void saveToUploadList(const QStringList &list);
