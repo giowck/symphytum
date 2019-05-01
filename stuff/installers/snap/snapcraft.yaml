@@ -29,7 +29,7 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 apps:
   symphytum:
     adapter: full
-    command: bin/symphytum
+    command: bin/symphytum -style fusion
     command-chain:
       - bin/desktop-launch
       - bin/gtk3-env-launch
