@@ -43,6 +43,7 @@ SQLite is tiny, efficient and very fast. It can handle huge amount of data while
 * **Date Reminder**. Date fields keep you informed on tasks, appointments or birthdays, if requested. All Reminders, once triggered, are listed in one place.
 * **Fast Search**. Search while typing with highlighted results in a table view.
 * **Backup and Export**. Backup your data with a simple backup wizard and export your data to CSV.
+* **Multilingual**. User interface available in English, German, Polish, French and Italian.
 
 
 ### How it Looks
