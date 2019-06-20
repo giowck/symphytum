@@ -88,7 +88,7 @@ bool BackupTask::fullExport(const QString &destPath,
 
     QFile destFile(destPath);
     if (!destFile.open(QIODevice::WriteOnly)) {
-        errorMessage = tr("Failed to open create file %1: %2")
+        errorMessage = tr("Failed to create file %1: %2")
                 .arg(destPath).arg(destFile.errorString());
         return false;
     }

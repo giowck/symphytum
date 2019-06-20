@@ -72,7 +72,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Cantarell&apos;;&quot;&gt;2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Cantarell&apos;;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Cantarell&apos;;&quot;&gt;THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="289"/>
@@ -1047,7 +1047,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;interactive MEGAcmdShell executables (mega-cmd in linux, MEGAcmdShell&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;in MAC and MEGAcmdShell.exe in Windows), distributed under the &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;aforementioned GNU General Public License. &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="179"/>
@@ -1096,7 +1096,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Germany&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2012-2014&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../ui/aboutdialog.ui" line="247"/>
@@ -1225,7 +1225,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="236"/>
-        <source>Email address. Input field for email adresses. New email can be written with one click on the inline email button</source>
+        <source>Email address. Input field for email addresses. New email can be written with one click on the inline email button</source>
         <translation>Indirizzo email. Campo di immissione per indirizzi email. La nuova email può essere scritta con un clic sul pulsante incorporato di posta elettronica</translation>
     </message>
     <message>
@@ -1504,7 +1504,7 @@ p, li { white-space: pre-wrap; }
     <name>BackupTask</name>
     <message>
         <location filename="../../components/backupmanager.cpp" line="91"/>
-        <source>Failed to open create file %1: %2</source>
+        <source>Failed to create file %1: %2</source>
         <translation>Impossibile creare il file %1: %2</translation>
     </message>
     <message>
@@ -1924,7 +1924,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="154"/>
-        <source>Create at least one new collection using the apropriate toolbar button or menu entry</source>
+        <source>Create at least one new collection using the appropriate toolbar button or menu entry</source>
         <translation>Crea almeno una nuova raccolta utilizzando il pulsante della barra degli strumenti o la voce dal menù</translation>
     </message>
     <message>
@@ -1943,11 +1943,6 @@ p, li { white-space: pre-wrap; }
         <translation>Esporta</translation>
     </message>
     <message>
-        <location filename="../../ui/exportdialog.ui" line="58"/>
-        <source>Symphytum&apos;s data can be exported to other applications by choosing an apropriate file format.</source>
-        <translation>I dati di Symphytum possono essere esportati in altre applicazioni scegliendo il giusto formato del file.</translation>
-    </message>
-    <message>
         <location filename="../../ui/exportdialog.ui" line="96"/>
         <source>Format:</source>
         <translation>Formato:</translation>
@@ -1956,6 +1951,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../../ui/exportdialog.ui" line="74"/>
         <source>All &amp;records</source>
         <translation>Tutti i &amp;record</translation>
+    </message>
+    <message>
+        <location filename="../../ui/exportdialog.ui" line="58"/>
+        <source>Symphytum&apos;s data can be exported to other applications by choosing an appropriate file format.</source>
+        <translation>I dati di Symphytum possono essere esportati in altre applicazioni scegliendo il giusto formato del file.</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="84"/>
@@ -2125,14 +2125,14 @@ Ulteriori sezioni possono essere configurate:</translation>
         <translation>salva il percorso originale della directory da cui è stato importato il file</translation>
     </message>
     <message>
-        <location filename="../../ui/filesfieldwizard.ui" line="74"/>
-        <source>Show originl import path</source>
-        <translation>Mostra il percorso originale</translation>
-    </message>
-    <message>
         <location filename="../../ui/filesfieldwizard.ui" line="54"/>
         <source>Show file type</source>
         <translation>Mostra tipo di file</translation>
+    </message>
+    <message>
+        <location filename="../../ui/filesfieldwizard.ui" line="74"/>
+        <source>Show original import path</source>
+        <translation>Mostra il percorso originale</translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="119"/>

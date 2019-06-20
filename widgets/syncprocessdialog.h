@@ -88,7 +88,7 @@ private:
     void createConnections();
     void createSyncConnections();
 
-    /** Start checking the status of the cloud by emitting apropriate signals */
+    /** Start checking the status of the cloud by emitting appropriate signals */
     void startSyncCheck();
 
     /** Start sync process */

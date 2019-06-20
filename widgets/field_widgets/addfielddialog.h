@@ -1,10 +1,10 @@
 /**
   * \class AddFieldDialog
   * \brief This dialog is used to add new fields to a collection.
-  *        After the field type and field name selection, the apropriate
+  *        After the field type and field name selection, the appropriate
   *        field wizard is launched to configure the chosen field type.
   *        Each field wizard will take care of the real field creation
-  *        algorithm and this class manages only the launch of the apropriate wizard
+  *        algorithm and this class manages only the launch of the appropriate wizard
   *        and its termination. The central component of this widget is the
   *        stacked widget, which contains the start page to select a field type
   *        and name, the next pages are generated according to selected field type

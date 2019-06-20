@@ -1196,7 +1196,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="198"/>
         <source>Status field with two possible values: checked (yes) and unchecked (no). Checkboxes are generally used to answer simple yes/no questions.</source>
-        <translation>Pole stanu mogące przyjąć dwie wartości: Zaznaczony (tak) i niezaznaczony (nie). Pola tego typu używane są dla ilustracji prostych pytań o odpowiedziach Tak/Nie. </translation>
+        <translation>Pole stanu mogące przyjąć dwie wartości: Zaznaczony (tak) i niezaznaczony (nie). Pola tego typu używane są dla ilustracji prostych pytań o odpowiedziach Tak/Nie.</translation>
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="205"/>
@@ -1225,7 +1225,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../../widgets/field_widgets/addfielddialog.cpp" line="236"/>
-        <source>Email address. Input field for email adresses. New email can be written with one click on the inline email button</source>
+        <source>Email address. Input field for email addresses. New email can be written with one click on the inline email button</source>
         <translation>Adres e-mail. Umozliwia przechowywanie adresu poczty elektronicznej. Można napisać nową wiadomośc klikając na przycisk obok adresu</translation>
     </message>
     <message>
@@ -1504,7 +1504,7 @@ p, li { white-space: pre-wrap; }
     <name>BackupTask</name>
     <message>
         <location filename="../../components/backupmanager.cpp" line="91"/>
-        <source>Failed to open create file %1: %2</source>
+        <source>Failed to create file %1: %2</source>
         <translation>Nie udało się otworzyć pliku %1: %2</translation>
     </message>
     <message>
@@ -1923,7 +1923,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../../ui/emptyformwidget.ui" line="154"/>
-        <source>Create at least one new collection using the apropriate toolbar button or menu entry</source>
+        <source>Create at least one new collection using the appropriate toolbar button or menu entry</source>
         <translation>Utwórz co najmniej jeden zbiór używając przycisku na głównym pasku narzędzi lub pozycji menu</translation>
     </message>
     <message>
@@ -1942,11 +1942,6 @@ p, li { white-space: pre-wrap; }
         <translation>Eksport</translation>
     </message>
     <message>
-        <location filename="../../ui/exportdialog.ui" line="58"/>
-        <source>Symphytum&apos;s data can be exported to other applications by choosing an apropriate file format.</source>
-        <translation>Dane z Symphytum mogą zostać zapisane w innym formacie dostępnym dla innych programów.</translation>
-    </message>
-    <message>
         <location filename="../../ui/exportdialog.ui" line="96"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -1957,6 +1952,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../ui/exportdialog.ui" line="58"/>
+        <source>Symphytum&apos;s data can be exported to other applications by choosing an appropriate file format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../ui/exportdialog.ui" line="84"/>
         <source>Selected records (&amp;0 items)</source>
         <translation type="unfinished"></translation>
@@ -1964,7 +1964,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../ui/exportdialog.ui" line="107"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location filename="../../ui/exportdialog.ui" line="165"/>
@@ -2124,14 +2124,14 @@ Można dołączyć dodatkowe sekcje:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/filesfieldwizard.ui" line="74"/>
-        <source>Show originl import path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../ui/filesfieldwizard.ui" line="54"/>
         <source>Show file type</source>
         <translation>Pokazuj typ pliku</translation>
+    </message>
+    <message>
+        <location filename="../../ui/filesfieldwizard.ui" line="74"/>
+        <source>Show original import path</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../ui/filesfieldwizard.ui" line="119"/>
@@ -2196,14 +2196,14 @@ Można dołączyć dodatkowe sekcje:</translation>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="431"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="459"/>
         <source>Invalid Input</source>
-        <translation type="unfinished">Niewłaściwe dane</translation>
+        <translation>Niewłaściwe dane</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="358"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="432"/>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="460"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished">Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
+        <translation>Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/filesformwidget.cpp" line="442"/>
@@ -2280,12 +2280,12 @@ Można dołączyć dodatkowe sekcje:</translation>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="92"/>
         <source>Invalid Input</source>
-        <translation type="unfinished">Niewłaściwe dane</translation>
+        <translation>Niewłaściwe dane</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="93"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished">Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
+        <translation>Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/filestypeeditor.cpp" line="103"/>
@@ -2422,13 +2422,13 @@ Można dołączyć dodatkowe sekcje:</translation>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="346"/>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="414"/>
         <source>Invalid Input</source>
-        <translation type="unfinished">Niewłaściwe dane</translation>
+        <translation>Niewłaściwe dane</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="347"/>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="415"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished">Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
+        <translation>Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../widgets/form_widgets/imageformwidget.cpp" line="425"/>
@@ -2486,12 +2486,12 @@ Można dołączyć dodatkowe sekcje:</translation>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="88"/>
         <source>Invalid Input</source>
-        <translation type="unfinished">Niewłaściwe dane</translation>
+        <translation>Niewłaściwe dane</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="89"/>
         <source>The entered data is not valid!&lt;br&gt;%1</source>
-        <translation type="unfinished">Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
+        <translation>Wprowadzone dane nie są poprawne!&lt;br&gt;%1</translation>
     </message>
     <message>
         <location filename="../../views/tableview/editors/imagetypeeditor.cpp" line="99"/>

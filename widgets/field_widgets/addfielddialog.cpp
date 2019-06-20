@@ -93,7 +93,7 @@ void AddFieldDialog::nextButtonClicked()
     if (!m_currentWizard) { //only if not already created
         QString fieldName = ui->fieldNameLineEdit->text();
 
-        //create apropriate wizard
+        //create appropriate wizard
         int item = ui->fieldTypeListWidget->currentRow();
         switch (item) {
         case 0:
@@ -234,7 +234,7 @@ void AddFieldDialog::updateFieldDescription()
         break;
     case 11:
         ui->descriptionLabel->setText(tr("Email address. "
-                                         "Input field for email adresses. "
+                                         "Input field for email addresses. "
                                          "New email can be written with one click "
                                          "on the inline email button"
                                          ));

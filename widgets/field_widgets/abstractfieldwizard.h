@@ -75,7 +75,7 @@ public:
      * Create field with the configuration (parameters) from the wizard.
      * Field properties from the wizard are obtained by calling
      * getFieldProperties() on the correct subclass to
-     * create the field with apropriate metadata.
+     * create the field with appropriate metadata.
      * @param fieldType - the type of the field to create
      * @param mode - whether the field to create is new or is modified
      *               from an existing one.
@@ -98,7 +98,7 @@ signals:
      * This signal is usually emitted when the finish button
      * has been pressed on the wizard. This signal is catched
      * by AddFieldDialog which in turn calls createField() on
-     * the apropriate wizard implementation.
+     * the appropriate wizard implementation.
      */
     void finishSignal();
 

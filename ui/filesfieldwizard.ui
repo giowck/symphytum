@@ -71,7 +71,7 @@ Additional sections can be configured:</string>
          <string>save the original directory path from which a file was imported</string>
         </property>
         <property name="text">
-         <string>Show originl import path</string>
+         <string>Show original import path</string>
         </property>
        </widget>
       </item>

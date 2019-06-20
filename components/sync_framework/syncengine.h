@@ -57,7 +57,7 @@ public:
     static SyncEngine& getInstance();
     static void destroy();
 
-    /** Create the apropriate sync driver for the specified sync service */
+    /** Create the appropriate sync driver for the specified sync service */
     static AbstractSyncDriver* createSyncDriver(SyncService service,
                                                 QObject *parent = nullptr);
 

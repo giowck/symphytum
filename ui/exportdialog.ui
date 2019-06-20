@@ -55,7 +55,7 @@
        <item>
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>Symphytum's data can be exported to other applications by choosing an apropriate file format.</string>
+          <string>Symphytum's data can be exported to other applications by choosing an appropriate file format.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
