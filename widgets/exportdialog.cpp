@@ -383,7 +383,7 @@ void ExportDialog::initRecordListToExport()
 
 QString ExportDialog::textTypeItemText(const QVariant &data, int fieldId)
 {
-    Q_UNUSED(fieldId);
+    Q_UNUSED(fieldId)
 
     return data.toString();
 }
@@ -459,7 +459,7 @@ QString ExportDialog::dateTypeItemText(const QVariant &data, int fieldId)
 
 QString ExportDialog::checkboxTypeItemText(const QVariant &data, int fieldId)
 {
-    Q_UNUSED(fieldId);
+    Q_UNUSED(fieldId)
 
     QString text;
     bool checked = data.toInt();
@@ -538,19 +538,19 @@ QString ExportDialog::progressTypeItemText(const QVariant &data, int fieldId)
 
 QString ExportDialog::imageTypeItemText(const QVariant &data, int fieldId)
 {
-    Q_UNUSED(fieldId);
+    Q_UNUSED(fieldId)
 
     QString fileName, hashName, origDirPath;
     QDateTime dateTime;
     m_metadataEngine->getContentFile(data.toInt(),
                                      fileName,
                                      hashName, dateTime, origDirPath);
-    return fileName;
+    return fileName + "/" + hashName;
 }
 
 QString ExportDialog::filesTypeItemText(const QVariant &data, int fieldId)
 {
-    Q_UNUSED(fieldId);
+    Q_UNUSED(fieldId)
 
     QString dataString = data.toString();
 
