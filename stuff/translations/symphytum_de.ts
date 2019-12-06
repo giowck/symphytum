@@ -3285,7 +3285,7 @@ Dateiarchiv reduziert um %2 MiB</translation>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="2332"/>
         <source>Dear user, you have been using %1 for a while. If you enjoy using this software, please consider supporting our development effort by making a small donation, thanks!&lt;br /&gt;Would you like to donate now?</source>
-        <translation>Lieber Benutzer, Sie benutzen %1 seit einiger Zeit. Falls Sie diese Software als nützlich erachten, bitten erwägen Sie ine kleine Spende um unseren Entwicklungsaufwand zu Unterstützen, danke!&lt;br /&gt;Möchten Sie jetzt Spenden?</translation>
+        <translation>Lieber Benutzer, Sie benutzen %1 seit einiger Zeit. Falls Sie diese Software als nützlich erachten, bitten erwägen Sie eine kleine Spende um unseren Entwicklungsaufwand zu Unterstützen, danke!&lt;br /&gt;Möchten Sie jetzt Spenden?</translation>
     </message>
 </context>
 <context>
