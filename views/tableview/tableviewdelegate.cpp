@@ -51,6 +51,9 @@ TableViewDelegate::TableViewDelegate(QObject *parent) :
     if (m_cacheImages) {
         QPixmapCache::setCacheLimit(10240 * 200); //200 * 10MB ~ 2GB RAM needed
     }
+
+    //load property: images should be hidden for better scrolling performance on weak devices
+    m_hideImages = sm.restoreProperty("hideImages", "tableView").toBool();
 }
 
 void TableViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
@@ -796,54 +799,62 @@ void TableViewDelegate::paintImageType(QPainter *painter,
     int fileId = index.data().toInt();
     if (!fileId) return;
 
-    QStyleOptionViewItem opt(option);
+    //check if images should be hidden for better scrolling performance
+    if (m_hideImages) { //show hidden as standard text
+        QStyleOptionViewItem opt(option);
+        opt.text = tr("hidden");
+        opt.font.setStyle(QFont::StyleItalic);
+        opt.widget->style()->drawControl(QStyle::CE_ItemViewItem, &opt, painter);
+    } else { // show image
+        QStyleOptionViewItem opt(option);
 
-    QString filePath;
-    QString fileName;
-    QString fileHash;
-    QString origDirPath;
-    QDateTime addedDateTime;
-    FileManager fm;
+        QString filePath;
+        QString fileName;
+        QString fileHash;
+        QString origDirPath;
+        QDateTime addedDateTime;
+        FileManager fm;
 
-    m_metadataEngine->getContentFile(fileId,
-                                     fileName,
-                                     fileHash,
-                                     addedDateTime,
-                                     origDirPath);
+        m_metadataEngine->getContentFile(fileId,
+                                         fileName,
+                                         fileHash,
+                                         addedDateTime,
+                                         origDirPath);
 
-    //if file was not found
-    if (fileHash.isEmpty()) return;
+        //if file was not found
+        if (fileHash.isEmpty()) return;
 
-    filePath = fm.getFilesDirectory() + fileHash;
-    QPixmap pixmap;
+        filePath = fm.getFilesDirectory() + fileHash;
+        QPixmap pixmap;
 
-    //use caching if enabled
-    if (m_cacheImages) {
-        if (!QPixmapCache::find(fileHash, &pixmap)) {
+        //use caching if enabled
+        if (m_cacheImages) {
+            if (!QPixmapCache::find(fileHash, &pixmap)) {
+                pixmap.load(filePath);
+                pixmap = pixmap.scaled(QSize(opt.rect.width(),
+                                             opt.rect.height()),
+                                       Qt::KeepAspectRatio,
+                                       Qt::FastTransformation);
+                QPixmapCache::insert(fileHash, pixmap);
+            }
+        } else {
             pixmap.load(filePath);
-            pixmap = pixmap.scaled(QSize(opt.rect.width(),
-                                         opt.rect.height()),
-                                   Qt::KeepAspectRatio,
-                                   Qt::FastTransformation);
-            QPixmapCache::insert(fileHash, pixmap);
         }
-    } else {
-        pixmap.load(filePath);
+
+        QRect imageRect = pixmap.scaled(QSize(opt.rect.width(),
+                                              opt.rect.height()),
+                                        Qt::KeepAspectRatio,
+                                        Qt::FastTransformation).rect();
+        QRect drawRect(opt.rect);
+
+        //center
+        drawRect.moveLeft(opt.rect.center().x() - (imageRect.width() / 2));
+        drawRect.moveTop(opt.rect.center().y() - (imageRect.height() / 2));
+
+        drawRect.setWidth(imageRect.width());
+        drawRect.setHeight(imageRect.height());
+        painter->drawPixmap(drawRect, pixmap);
     }
-
-    QRect imageRect = pixmap.scaled(QSize(opt.rect.width(),
-                                          opt.rect.height()),
-                                    Qt::KeepAspectRatio,
-                                    Qt::FastTransformation).rect();
-    QRect drawRect(opt.rect);
-
-    //center
-    drawRect.moveLeft(opt.rect.center().x() - (imageRect.width() / 2));
-    drawRect.moveTop(opt.rect.center().y() - (imageRect.height() / 2));
-
-    drawRect.setWidth(imageRect.width());
-    drawRect.setHeight(imageRect.height());
-    painter->drawPixmap(drawRect, pixmap);
 }
 
 void TableViewDelegate::paintFilesType(QPainter *painter,

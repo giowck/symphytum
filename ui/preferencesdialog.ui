@@ -603,6 +603,16 @@
               </item>
              </layout>
             </item>
+            <item>
+             <widget class="QCheckBox" name="hideImagesTableViewCheckBox">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Images that are loaded from disk in table view can cause a poor scrolling experience. &lt;br/&gt;Hiding images from the table view allows a smooth scrolling experience on weak devices.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Improve scrolling in table view by hiding images</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
