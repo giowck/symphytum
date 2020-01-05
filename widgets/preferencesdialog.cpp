@@ -73,6 +73,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(tableViewRowSizeSpinChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
             this, SLOT(cacheImagesTableViewCheckBoxChanged()));
+    connect(ui->hideImagesTableViewCheckBox, &QCheckBox::stateChanged,
+            this, &PreferencesDialog::hideImagesTableViewCheckBoxChanged);
     connect(ui->browseDbPathButton, SIGNAL(clicked(bool)),
             this, SLOT(browseDbPathButtonClicked()));
     connect(ui->resetDbPathButton, SIGNAL(clicked(bool)),
@@ -245,6 +247,17 @@ void PreferencesDialog::cacheImagesTableViewCheckBoxChanged()
                              QMessageBox::Ok);
 }
 
+void PreferencesDialog::hideImagesTableViewCheckBoxChanged()
+{
+    bool b = ui->hideImagesTableViewCheckBox->isChecked();
+
+    m_settingsManager->saveProperty("hideImages", "tableView", b);
+
+    QMessageBox::information(this, tr("Restart required!"),
+                             tr("A restart is required for this setting to take effect."),
+                             QMessageBox::Ok);
+}
+
 void PreferencesDialog::browseDbPathButtonClicked()
 {
     QString currentDbPath;
@@ -358,6 +371,11 @@ void PreferencesDialog::loadSettings()
     bool cacheImg =  m_settingsManager->restoreProperty(
                 "cacheImages", "tableView").toBool();
     ui->cacheImagesTableViewCheckBox->setChecked(cacheImg);
+
+    //table view img hiding
+    bool hideImg =  m_settingsManager->restoreProperty(
+                "hideImages", "tableView").toBool();
+    ui->hideImagesTableViewCheckBox->setChecked(hideImg);
 }
 
 void PreferencesDialog::updateDatabasePath()

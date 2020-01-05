@@ -80,6 +80,7 @@ private:
 
     MetadataEngine *m_metadataEngine;
     bool m_cacheImages;
+    bool m_hideImages;
 };
 
 #endif // TABLEVIEWDELEGATE_H
