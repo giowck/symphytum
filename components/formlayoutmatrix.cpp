@@ -284,36 +284,46 @@ bool FormLayoutMatrix::findFormWidgetIndex(AbstractFormWidget *fw, int &row, int
 void FormLayoutMatrix::simplifyMatrix()
 {
     bool rowRemoved = false;
+    bool scanningEdge = true;
 
-    //check for empty rows
-    for (int i = 0; i < m_rows; i++) {
-        bool markedRow = false; //current row removal flag
-        QList<AbstractFormWidget*>& currentColumn = m_matrix[i];
+    //This used to prune out all empty rows/columns
+    //New functionality only prunes away extra rows/columns
+    //  ie., those on the edges of the layout.
 
-        if (currentColumn.isEmpty()) {
-            markedRow = true;
-        } else {
-            markedRow = true; //init value
-            //check if all elements of the row are empty
-            for (int c = 0; c < m_columns; c++) {
-                AbstractFormWidget* p = currentColumn.at(c);
-                //markedRow is only true if all previous and current cell is empty
-                markedRow = markedRow && ((p == NULL) || (p == (void*)NO_FORM_WIDGET));
+    //check for empty rows, from outside in
+    for (int i = m_rows-1; i >= 0; i--) {
+        if (scanningEdge == true) { //only test for removal if we're on the edge.
+            bool markedRow = false; //current row removal flag
+            QList<AbstractFormWidget*>& currentColumn = m_matrix[i];
+
+            if (currentColumn.isEmpty()) {
+                markedRow = true;
+            } else {
+                markedRow = true; //init value
+                //check if all elements of the row are empty
+                for (int c = 0; c < m_columns; c++) {
+                    AbstractFormWidget* p = currentColumn.at(c);
+                    //markedRow is only true if all previous and current cell is empty
+                    markedRow = markedRow && ((p == NULL) || (p == (void*)NO_FORM_WIDGET));
+                }
             }
-        }
 
-        if (markedRow) {
-            removeRow(i);
-            rowRemoved = true;
-            simplifyMatrix(); //repeat for all rows but now with one row less
-            break; //break cycle because after removal the indexes are not coherent anymore
+            //if we find an empty row, we remove it and then re-try with the next-to-last row.
+            if (markedRow) {
+                removeRow(i);
+                //removing an edge row will not affect the indexing of subsequent loops
+            } else {
+                //this row is not empty, then we have found all the empty edges, no more removals.
+                scanningEdge = false;
+            }
         }
     }
 
     //if no row was deleted the indexes are still valid, so we can check columns
-    if (!rowRemoved) {
-        //check for empty columns
-        for (int i = 0; i < m_columns; i++) {
+    //check for empty columns
+    scanningEdge = true;
+    for (int i = m_columns-1; i >= 0; i--) {
+        if (scanningEdge == true) {
             bool markedColumn = true; //current column removal flag
             int j = 0;
             while (j < m_rows) {
@@ -328,8 +338,10 @@ void FormLayoutMatrix::simplifyMatrix()
 
             if (markedColumn) {
                 removeColumn(i);
-                simplifyMatrix(); //repeat for all columns but now with one column less
-                break; //break cycle because after removal the indexes are not coherent anymore
+                //removing an edge column will not affect the indexing of subsequent loops
+            } else {
+                //this row is not empty, then we have found all the empty edges, no more removals.
+                scanningEdge = false;
             }
         }
     }
