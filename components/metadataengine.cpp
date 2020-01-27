@@ -504,13 +504,34 @@ int MetadataEngine::duplicateCollection(int collectionId, bool copyMetadataOnly)
     //copy collection structure
     QString originalTableName = getTableName(collectionId);
     QString originalTableMetadataName = originalTableName + "_metadata";
-    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
-               .arg(tableName).arg(originalTableName));
+
+    //don't use the following because SQLite can't alter tables afterwards to add primary key constraint
+    //query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+    //           .arg(tableName).arg(originalTableName));
+    //so we use info from sqlite_master to copy the table structure, including constraints
+    query.exec(QString("SELECT sql FROM sqlite_master WHERE tbl_name='%1'")
+               .arg(originalTableName));
+    if (query.next()) {
+        //get the original sql create statement
+        QString sql = query.value(0).toString();
+        sql.replace(originalTableName, tableName);
+        //create duplicate
+        query.exec(sql);
+    }
 
     //copy metadata table
-    query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
-               .arg(metadataTableName).arg(originalTableMetadataName));
-
+    //don't use the following because SQLite can't alter tables afterwards to add primary key constraint
+    //query.exec(QString("CREATE TABLE '%1' AS SELECT * FROM '%2' WHERE 0")
+    //           .arg(metadataTableName).arg(originalTableMetadataName));
+    query.exec(QString("SELECT sql FROM sqlite_master WHERE tbl_name='%1'")
+               .arg(originalTableMetadataName));
+    if (query.next()) {
+        //get the original sql create statement
+        QString sql = query.value(0).toString();
+        sql.replace(originalTableMetadataName, metadataTableName);
+        //create duplicate
+        query.exec(sql);
+    }
     query.exec(QString("INSERT INTO '%1' SELECT * FROM '%2'")
                .arg(metadataTableName).arg(originalTableMetadataName));
 
