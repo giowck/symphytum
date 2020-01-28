@@ -377,7 +377,8 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
 {
     //handle database version upgrades
     int currentUpgradeVersion = oldVersion;
-    QSqlQuery query(getDatabase());
+    QSqlDatabase db = getDatabase();
+    QSqlQuery query(db);
 
     //upgrade v1 -> v2
     if (currentUpgradeVersion == 1) {
@@ -428,6 +429,72 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
             return false;
         }
         currentUpgradeVersion = 3;
+    }
+    //upgrade v3 -> v4
+    if (currentUpgradeVersion == 3) {
+        bool error = false;
+        QString errorMessage;
+
+        //fix inconsistent data sets, see https://github.com/giowck/symphytum/issues/122
+        //first, check if there are any
+        //get all collections, including the metadata copy
+        QStringList collectionsToCheck;
+        error |= !query.exec("SELECT table_name FROM collections");
+        while (query.next()) {
+            QString c = query.value(0).toString();
+            collectionsToCheck.append(c);
+            collectionsToCheck.append(c + "_metadata");
+        }
+
+        //check for any _id NULL values
+        QStringList collectionsToFix;
+        foreach (QString tableName, collectionsToCheck) {
+            error |= !query.exec(QString("SELECT _id FROM %1 WHERE _id IS NULL").arg(tableName));
+            if (query.next()) {
+                collectionsToFix.append(tableName);
+            }
+        }
+
+        //correct NULL _id records if any
+        if (collectionsToFix.size() > 0) {
+            //start transaction to speed up writes
+            db.transaction();
+
+            foreach (QString tableName, collectionsToFix) {
+                //get original CREATE TABLE statement
+                error |= !query.exec(QString("SELECT sql FROM sqlite_master "
+                                             "WHERE tbl_name=\"%1\"").arg(tableName));
+                if (query.next()) {
+                    QString create_sql = query.value(0).toString();
+                    //add PRIMARY KEY constraint
+                    create_sql.replace("_id INT", "_id INTEGER PRIMARY KEY");
+                    //rename table
+                    QString tableNameFixed = tableName + "_fixed";
+                    create_sql.replace(tableName, tableNameFixed);
+                    //create new fixed table
+                    error |= !query.exec(create_sql);
+                    //copy data over to new table
+                    error |= !query.exec(QString("INSERT INTO %1 SELECT * FROM %2")
+                                         .arg(tableNameFixed).arg(tableName));
+                    //delete old table
+                    error |= !query.exec(QString("DROP TABLE %1").arg(tableName));
+                    //rename fixed table to original name
+                    error |= !query.exec(QString("ALTER TABLE %1 RENAME TO %2")
+                                         .arg(tableNameFixed).arg(tableName));
+                }
+            }
+
+            //commit transaction
+            db.commit();
+        }
+
+        if (error)  {
+            QMessageBox::critical(nullptr, QObject::tr("Database Version Upgrade Failed"),
+                                  QObject::tr("Error: failed in v3 -> v4"));
+            return false;
+        }
+
+        currentUpgradeVersion = 4;
     }
     //add new blocks on new versions here
 
