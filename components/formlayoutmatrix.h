@@ -116,8 +116,10 @@ public:
 
     /** Look if there are some improvements to do like
       * removing unused (empty) matrix rows or columns
+      * @param aggressive - if true all empty rows/columns will be pruned away,
+      *        if false, only empty rows/columns at the edges will be removed
       */
-    void simplifyMatrix();
+    void simplifyMatrix(const bool aggressive);
 
     /** Create a QString representation of the layout matrix */
     QString toString();
@@ -182,6 +184,10 @@ private:
                                               *   the key (int) represents the row and the
                                               *   list of FW represents current row's columns.
                                               */
+    bool m_pruneEmptyRowsCols; /**< If true, empty rows/columns are pruned
+                                *   from the matrix, @see simplifyMastrix()
+                                *   for additional info and context
+                                */
 };
 
 #endif // FORMLAYOUTMATRIX_H

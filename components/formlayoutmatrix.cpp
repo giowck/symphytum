@@ -7,9 +7,11 @@
 //-----------------------------------------------------------------------------
 
 #include "formlayoutmatrix.h"
+#include "settingsmanager.h"
 #include "../widgets/form_widgets/abstractformwidget.h"
 
 #include <QtCore/QString>
+#include <QtCore/QVariant>
 
 
 //-----------------------------------------------------------------------------
@@ -18,7 +20,9 @@
 
 FormLayoutMatrix::FormLayoutMatrix() : m_rows(0), m_columns(0)
 {
-
+    //load settings
+    SettingsManager sm;
+    m_pruneEmptyRowsCols = sm.restoreProperty("pruneEmptyRowsCols", "formView").toBool(); //default false
 }
 
 FormLayoutMatrix::FormLayoutMatrix(const FormLayoutMatrix &other) :
@@ -202,7 +206,7 @@ void FormLayoutMatrix::formWidgetMovement(AbstractFormWidget *fw, int newRow, in
     }
 
     //remove empty rows/cols if they exist
-    simplifyMatrix();
+    simplifyMatrix(m_pruneEmptyRowsCols);
 }
 
 void FormLayoutMatrix::formWidgetResize(AbstractFormWidget *fw, int newWidthUnits, int newHeightUnits)
@@ -261,7 +265,7 @@ void FormLayoutMatrix::formWidgetResize(AbstractFormWidget *fw, int newWidthUnit
     }
 
     //remove empty rows/cols if they exist
-    simplifyMatrix();
+    simplifyMatrix(m_pruneEmptyRowsCols);
 }
 
 bool FormLayoutMatrix::findFormWidgetIndex(AbstractFormWidget *fw, int &row, int &column)
@@ -281,55 +285,120 @@ bool FormLayoutMatrix::findFormWidgetIndex(AbstractFormWidget *fw, int &row, int
     return found;
 }
 
-void FormLayoutMatrix::simplifyMatrix()
+void FormLayoutMatrix::simplifyMatrix(const bool aggressive)
 {
-    bool rowRemoved = false;
+    //prune away ALL empty rows/columns if aggro mode
+    if (aggressive) {
+        bool rowRemoved = false;
 
-    //check for empty rows
-    for (int i = 0; i < m_rows; i++) {
-        bool markedRow = false; //current row removal flag
-        QList<AbstractFormWidget*>& currentColumn = m_matrix[i];
+        //check for empty rows
+        for (int i = 0; i < m_rows; i++) {
+            bool markedRow = false; //current row removal flag
+            QList<AbstractFormWidget*>& currentColumn = m_matrix[i];
 
-        if (currentColumn.isEmpty()) {
-            markedRow = true;
-        } else {
-            markedRow = true; //init value
-            //check if all elements of the row are empty
-            for (int c = 0; c < m_columns; c++) {
-                AbstractFormWidget* p = currentColumn.at(c);
-                //markedRow is only true if all previous and current cell is empty
-                markedRow = markedRow && ((p == NULL) || (p == (void*)NO_FORM_WIDGET));
-            }
-        }
-
-        if (markedRow) {
-            removeRow(i);
-            rowRemoved = true;
-            simplifyMatrix(); //repeat for all rows but now with one row less
-            break; //break cycle because after removal the indexes are not coherent anymore
-        }
-    }
-
-    //if no row was deleted the indexes are still valid, so we can check columns
-    if (!rowRemoved) {
-        //check for empty columns
-        for (int i = 0; i < m_columns; i++) {
-            bool markedColumn = true; //current column removal flag
-            int j = 0;
-            while (j < m_rows) {
-                AbstractFormWidget* p = m_matrix[j].at(i);
-                if ((p == (void*)NO_FORM_WIDGET) || (p == NULL)) {
-                    j++;
-                } else {
-                    markedColumn = false;
-                    break; //there is an item that is valid so exit cycle
+            if (currentColumn.isEmpty()) {
+                markedRow = true;
+            } else {
+                markedRow = true; //init value
+                //check if all elements of the row are empty
+                for (int c = 0; c < m_columns; c++) {
+                    AbstractFormWidget* p = currentColumn.at(c);
+                    //markedRow is only true if all previous and current cell is empty
+                    markedRow = markedRow && ((p == NULL) || (p == (void*)NO_FORM_WIDGET));
                 }
             }
 
-            if (markedColumn) {
-                removeColumn(i);
-                simplifyMatrix(); //repeat for all columns but now with one column less
+            if (markedRow) {
+                removeRow(i);
+                rowRemoved = true;
+                simplifyMatrix(m_pruneEmptyRowsCols); //repeat for all rows but now with one row less
                 break; //break cycle because after removal the indexes are not coherent anymore
+            }
+        }
+
+        //if no row was deleted the indexes are still valid, so we can check columns
+        if (!rowRemoved) {
+            //check for empty columns
+            for (int i = 0; i < m_columns; i++) {
+                bool markedColumn = true; //current column removal flag
+                int j = 0;
+                while (j < m_rows) {
+                    AbstractFormWidget* p = m_matrix[j].at(i);
+                    if ((p == (void*)NO_FORM_WIDGET) || (p == NULL)) {
+                        j++;
+                    } else {
+                        markedColumn = false;
+                        break; //there is an item that is valid so exit cycle
+                    }
+                }
+
+                if (markedColumn) {
+                    removeColumn(i);
+                    simplifyMatrix(m_pruneEmptyRowsCols); //repeat for all columns but now with one column less
+                    break; //break cycle because after removal the indexes are not coherent anymore
+                }
+            }
+        }
+    } else { //allow empty rows/columns inside the matrix just remove those at the edges of the layout
+        bool scanningEdge = true;
+
+        //instead of pruning out all empty rows/columns
+        //only prune away extra rows/columns
+        //ie., those on the edges of the layout
+
+        //check for empty rows, from outside in
+        for (int i = m_rows-1; i >= 0; i--) {
+            if (scanningEdge == true) { //only test for removal if we're on the edge
+                bool markedRow = false; //current row removal flag
+                QList<AbstractFormWidget*>& currentColumn = m_matrix[i];
+
+                if (currentColumn.isEmpty()) {
+                    markedRow = true;
+                } else {
+                    markedRow = true; //init value
+                    //check if all elements of the row are empty
+                    for (int c = 0; c < m_columns; c++) {
+                        AbstractFormWidget* p = currentColumn.at(c);
+                        //markedRow is only true if all previous and current cell is empty
+                        markedRow = markedRow && ((p == NULL) || (p == (void*)NO_FORM_WIDGET));
+                    }
+                }
+
+                //if we find an empty row, we remove it and then re-try with the next-to-last row
+                if (markedRow) {
+                    removeRow(i);
+                    //removing an edge row will not affect the indexing of subsequent loops
+                } else {
+                    //this row is not empty, then we have found all the empty edges, no more removals
+                    scanningEdge = false;
+                }
+            }
+        }
+
+        //if no row was deleted the indexes are still valid, so we can check columns
+        //check for empty columns
+        scanningEdge = true;
+        for (int i = m_columns-1; i >= 0; i--) {
+            if (scanningEdge == true) {
+                bool markedColumn = true; //current column removal flag
+                int j = 0;
+                while (j < m_rows) {
+                    AbstractFormWidget* p = m_matrix[j].at(i);
+                    if ((p == (void*)NO_FORM_WIDGET) || (p == NULL)) {
+                        j++;
+                    } else {
+                        markedColumn = false;
+                        break; //there is an item that is valid so exit cycle
+                    }
+                }
+
+                if (markedColumn) {
+                    removeColumn(i);
+                    //removing an edge column will not affect the indexing of subsequent loops
+                } else {
+                    //this row is not empty, then we have found all the empty edges, no more removals
+                    scanningEdge = false;
+                }
             }
         }
     }

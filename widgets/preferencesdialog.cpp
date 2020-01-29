@@ -69,6 +69,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(formViewFontSizeComboChanged()));
     connect(ui->formViewFontCombo, &QFontComboBox::currentTextChanged,
             this, &PreferencesDialog::formViewFontComboChanged);
+    connect(ui->unusedSpaceStrategyComboBox, SIGNAL(activated(int)),
+            this, SLOT(unusedSpaceStrategyComboChanged()));
     connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
             this, SLOT(tableViewRowSizeSpinChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
@@ -227,6 +229,20 @@ void PreferencesDialog::formViewFontComboChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::unusedSpaceStrategyComboChanged()
+{
+    bool pruneUnusedSpace = ui->unusedSpaceStrategyComboBox->currentIndex();
+    m_settingsManager->saveProperty("pruneEmptyRowsCols", "formView", pruneUnusedSpace);
+
+    if (pruneUnusedSpace) {
+        QMessageBox::information(this, tr("Unused space"),
+                                 tr("Already existing unused space will be removed the next time a field is rearranged."),
+                                 QMessageBox::Ok);
+    }
+
+    m_appearanceChanged = true;
+}
+
 void PreferencesDialog::tableViewRowSizeSpinChanged()
 {
     int rows = ui->tableRowSizeSpinBox->value();
@@ -359,6 +375,11 @@ void PreferencesDialog::loadSettings()
     if (!fontFamily.isEmpty()) {
         ui->formViewFontCombo->setCurrentText(fontFamily);
     }
+
+    //prune empty rows/cols in form view
+    bool pruneEmptySpace = m_settingsManager->restoreProperty(
+                "pruneEmptyRowsCols", "formView").toBool();
+    ui->unusedSpaceStrategyComboBox->setCurrentIndex(pruneEmptySpace ? 1 : 0);
 
     //table view row size
     int tableRowSize =  m_settingsManager->restoreProperty(

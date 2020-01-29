@@ -126,5 +126,5 @@ You can use Symphytum for free and for any purprose.
 ## Donate
 If you find Symphytum useful. please consider [donating](https://github.com/giowck/symphytum/blob/master/doc/donate.md) to support this project, thanks.
 
-Copyright (c) 2014-2019 Symphytum Developers  
+Copyright (c) 2014-2020 Symphytum Developers  
 Copyright (c) 2012-2014 GIOWISYS Software UG

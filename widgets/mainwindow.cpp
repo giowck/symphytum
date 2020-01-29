@@ -200,10 +200,16 @@ void MainWindow::preferenceActionTriggered()
 
     //handle changes that requires triggers
     if (dialog.appearanceChanged()) {
-        if (m_formView)
+        if (m_formView) {
             m_formView->reloadAppearanceSettings();
-        if (m_tableView)
+            //reload because some settings like pruneUnusedSpace
+            //require components like FormView (and FormLayoutMatrix) to be reloaded
+            //to read new settings
+            this->currentCollectionChanged();
+        }
+        if (m_tableView) {
             m_tableView->reloadRowSize();
+        }
     }
     if (dialog.cloudSyncChanged()) {
         if (m_settingsManager->isCloudSyncActive()) {
