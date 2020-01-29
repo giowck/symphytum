@@ -446,16 +446,17 @@ bool DatabaseManager::upgradeDatabase(const int oldVersion)
             collectionsToCheck.append(c + "_metadata");
         }
 
-        //check for any _id NULL values
+        //check for any _id columns that are not PRIMARY KEY
         QStringList collectionsToFix;
         foreach (QString tableName, collectionsToCheck) {
-            error |= !query.exec(QString("SELECT _id FROM %1 WHERE _id IS NULL").arg(tableName));
+            error |= !query.exec(QString("SELECT sql FROM sqlite_master WHERE tbl_name=\"%1\" "
+                                         "AND sql NOT LIKE \"%PRIMARY%\"").arg(tableName));
             if (query.next()) {
                 collectionsToFix.append(tableName);
             }
         }
 
-        //correct NULL _id records if any
+        //correct NULL _id records if any by adding PRIMARY KEY constraint
         if (collectionsToFix.size() > 0) {
             //start transaction to speed up writes
             db.transaction();
