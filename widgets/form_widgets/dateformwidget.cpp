@@ -16,6 +16,7 @@
 
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QDateTimeEdit>
+#include <QtWidgets/QCalendarWidget>
 #include <QtCore/QDateTime>
 #include <QtWidgets/QVBoxLayout>
 #include <QtCore/QVariant>
@@ -91,7 +92,10 @@ void DateFormWidget::clearData()
     //display empty date by using trick (date is below minimum)
     //by using special case value
     m_dateTimeEdit->setSpecialValueText(" ");
-    m_dateTimeEdit->setDate(QDate::fromString("01/01/0001", "dd/MM/yyyy"));
+    m_dateTimeEdit->setDate(QDate::fromString("01/01/0100", "dd/MM/yyyy"));
+
+    //clear popup predefined date, if any
+    m_dateTimeEdit->calendarWidget()->setSelectedDate(QDate());
 }
 
 void DateFormWidget::setData(const QVariant &data)
@@ -99,6 +103,11 @@ void DateFormWidget::setData(const QVariant &data)
     if (!data.isNull()) {
         m_dateTimeEdit->setDateTime(data.toDateTime());
         *m_lastValidDateTime = data.toDateTime();
+
+        //if date not defined (01/01/0100) set calender popup to current date for better UX
+        if (data.toDate() == QDate::fromString("01/01/0100", "dd/MM/yyyy")) {
+            m_dateTimeEdit->calendarWidget()->setSelectedDate(QDate::currentDate());
+        }
     } else {
         clearData();
     }
