@@ -879,14 +879,14 @@ void MetadataEngine::deleteField(const int fieldId, int collectionId)
     query.exec();
 
     //mark column keys for deletion
-    query.exec(QString("UPDATE '%1' SET key='del_me' WHERE key LIKE 'col%2%'")
+    query.exec(QString("UPDATE '%1' SET key='del_me' WHERE key LIKE 'col%2@_%' ESCAPE '@'")
                .arg(metadataTable).arg(fieldId));
 
     //make a list of all column keys after the one to delete
     //that need to be decremented
     QStringList columnsToDecrement;
     QStringList decrementedColumns;
-    query.exec(QString("SELECT key FROM '%1' WHERE key LIKE 'col%_%' "
+    query.exec(QString("SELECT key FROM '%1' WHERE key LIKE 'col%@_%' ESCAPE '@' "
                        "AND key != 'column_count'")
                .arg(metadataTable));
     while (query.next()) {
