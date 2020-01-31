@@ -22,6 +22,10 @@
 
 class MetadataEngine;
 
+struct TableViewDelegateFlags { //a bit of a hack
+    static bool dataChangedOnLastEdit; /**< A flag to indicate that the data was really changed (edit finished)*/
+};
+
 
 //-----------------------------------------------------------------------------
 // TableViewDelegate

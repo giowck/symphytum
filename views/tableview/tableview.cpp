@@ -248,7 +248,9 @@ void TableView::saveSectionSizes()
 void TableView::editingFinished()
 {
     int row = m_lastUsedRow;
-    emit recordEditFinished(row, row);
+    if (TableViewDelegateFlags::dataChangedOnLastEdit) {
+        emit recordEditFinished(row, row);
+    }
 }
 
 

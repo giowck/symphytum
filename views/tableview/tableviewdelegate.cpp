@@ -40,6 +40,8 @@
 // Public
 //-----------------------------------------------------------------------------
 
+bool TableViewDelegateFlags::dataChangedOnLastEdit = false;
+
 TableViewDelegate::TableViewDelegate(QObject *parent) :
     QStyledItemDelegate(parent), m_metadataEngine(nullptr)
 {
@@ -249,7 +251,7 @@ QWidget* TableViewDelegate::createEditor(QWidget *parent, const QStyleOptionView
     case MetadataEngine::CreationDateType:
     case MetadataEngine::ModDateType:
         //editing not supported
-        e = new QWidget(parent);
+        e = nullptr;
         break;
     default:
         e = QStyledItemDelegate::createEditor(parent, option, index);
@@ -502,7 +504,8 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
         //create undo action
         QVariant oldData = index.data();
         QVariant newData = data;
-        if (oldData != newData) {
+        TableViewDelegateFlags::dataChangedOnLastEdit = oldData != newData;
+        if (TableViewDelegateFlags::dataChangedOnLastEdit) {
             QUndoStack *stack = MainWindow::getUndoStack();
             if (stack) {
                 ModRecordCommand *cmd = new ModRecordCommand(
@@ -514,9 +517,9 @@ void TableViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
 
             //sync set local data changed
             SyncSession::LOCAL_DATA_CHANGED = true;
-        }
 
-        model->setData(index, data);
+            model->setData(index, data);
+        }
     } else {
         //on invalid input show message
         QWidget *parent = qobject_cast<QWidget*>(this->parent());
