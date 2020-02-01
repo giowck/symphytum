@@ -62,6 +62,7 @@ private slots:
     void formViewFontComboChanged();
     void unusedSpaceStrategyComboChanged();
     void tableViewRowSizeSpinChanged();
+    void columnWidthComboChanged();
     void cacheImagesTableViewCheckBoxChanged();
     void hideImagesTableViewCheckBoxChanged();
     void browseDbPathButtonClicked();

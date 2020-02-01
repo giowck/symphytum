@@ -209,18 +209,21 @@ void TableView::saveSectionOrder()
     int id = MetadataEngine::getInstance().getCurrentCollectionId();
     QString collection = QString("collection_") + QString::number(id);
     QList<int> sectionOrder;
-    int columnCount = model()->columnCount();
+    QAbstractItemModel *m = model();
+    if (m) {
+        int columnCount = m->columnCount();
 
-    for (int i = 1; i < columnCount; i++) { //+1 because of _id column 0
-        sectionOrder.append(header->visualIndex(i));
+        for (int i = 1; i < columnCount; i++) { //+1 because of _id column 0
+            sectionOrder.append(header->visualIndex(i));
+        }
+
+        QList<QVariant> list;
+        foreach(int i, sectionOrder){
+            list << i;
+        }
+
+        s.saveProperty("tableview_section_order", collection, list);
     }
-
-    QList<QVariant> list;
-    foreach(int i, sectionOrder){
-      list << i;
-    }
-
-    s.saveProperty("tableview_section_order", collection, list);
 }
 
 void TableView::saveSectionSizes()
@@ -231,18 +234,21 @@ void TableView::saveSectionSizes()
     int id = MetadataEngine::getInstance().getCurrentCollectionId();
     QString collection = QString("collection_") + QString::number(id);
     QList<int> sectionSizes;
-    int columnCount = model()->columnCount();
+    QAbstractItemModel *m = model();
+    if (m) {
+        int columnCount = m->columnCount();
 
-    for (int i = 1; i < columnCount; i++) { //+1 because of _id column 0
-        sectionSizes.append(header->sectionSize(header->visualIndex(i)));
+        for (int i = 1; i < columnCount; i++) { //+1 because of _id column 0
+            sectionSizes.append(header->sectionSize(header->visualIndex(i)));
+        }
+
+        QList<QVariant> list;
+        foreach(int i, sectionSizes){
+            list << i;
+        }
+
+        s.saveProperty("tableview_section_sizes", collection, list);
     }
-
-    QList<QVariant> list;
-    foreach(int i, sectionSizes){
-      list << i;
-    }
-
-    s.saveProperty("tableview_section_sizes", collection, list);
 }
 
 void TableView::editingFinished()
@@ -318,22 +324,32 @@ void TableView::restoreSectionOrder()
 
 void TableView::restoreSectionSizes()
 {
-    //restore section order
     SettingsManager s;
     QHeaderView *header = horizontalHeader();
-    int id = MetadataEngine::getInstance().getCurrentCollectionId();
-    QString collection = QString("collection_") + QString::number(id);
-    QList<int> sectionSizes;
 
-    QList<QVariant> list;
-    list = s.restoreProperty("tableview_section_sizes", collection).toList();
-    foreach(QVariant v, list){
-      sectionSizes << v.toInt();
-    }
+    //setup column resize mode
+    int tableColumnWidthMode =  s.restoreProperty(
+                "columnResizeMode", "tableView").toInt();
+    if (tableColumnWidthMode == 1) { //1 means fixed resize mode
+        header->setSectionResizeMode(QHeaderView::ResizeToContents);
+    } else {
+        header->setSectionResizeMode(QHeaderView::Interactive);
 
-    for (int i = 0; i < sectionSizes.size(); i++) {
-        int visualIndex = header->visualIndex(i+1); //+1 because of _id column 0
-        header->resizeSection(visualIndex, sectionSizes.at(i));
+        //restore section sizes
+        int id = MetadataEngine::getInstance().getCurrentCollectionId();
+        QString collection = QString("collection_") + QString::number(id);
+        QList<int> sectionSizes;
+
+        QList<QVariant> list;
+        list = s.restoreProperty("tableview_section_sizes", collection).toList();
+        foreach(QVariant v, list){
+          sectionSizes << v.toInt();
+        }
+
+        for (int i = 0; i < sectionSizes.size(); i++) {
+            int visualIndex = header->visualIndex(i+1); //+1 because of _id column 0
+            header->resizeSection(visualIndex, sectionSizes.at(i));
+        }
     }
 }
 

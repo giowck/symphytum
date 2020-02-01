@@ -73,6 +73,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
             this, SLOT(unusedSpaceStrategyComboChanged()));
     connect(ui->tableRowSizeSpinBox, SIGNAL(editingFinished()),
             this, SLOT(tableViewRowSizeSpinChanged()));
+    connect(ui->columnWidthComboBox, SIGNAL(activated(int)),
+            this, SLOT(columnWidthComboChanged()));
     connect(ui->cacheImagesTableViewCheckBox, SIGNAL(stateChanged(int)),
             this, SLOT(cacheImagesTableViewCheckBoxChanged()));
     connect(ui->hideImagesTableViewCheckBox, &QCheckBox::stateChanged,
@@ -252,6 +254,14 @@ void PreferencesDialog::tableViewRowSizeSpinChanged()
     m_appearanceChanged = true;
 }
 
+void PreferencesDialog::columnWidthComboChanged()
+{
+    int mode = ui->columnWidthComboBox->currentIndex();
+    m_settingsManager->saveProperty("columnResizeMode", "tableView", mode);
+
+    m_appearanceChanged = true;
+}
+
 void PreferencesDialog::cacheImagesTableViewCheckBoxChanged()
 {
     bool b = ui->cacheImagesTableViewCheckBox->isChecked();
@@ -386,6 +396,13 @@ void PreferencesDialog::loadSettings()
                 "rowSize", "tableView").toInt();
     if (tableRowSize) {
         ui->tableRowSizeSpinBox->setValue(tableRowSize);
+    }
+
+    //table view column resize mode
+    int tableColumnWidthMode =  m_settingsManager->restoreProperty(
+                "columnResizeMode", "tableView").toInt();
+    if (tableColumnWidthMode) {
+        ui->columnWidthComboBox->setCurrentIndex(tableColumnWidthMode);
     }
 
     //table view img caching

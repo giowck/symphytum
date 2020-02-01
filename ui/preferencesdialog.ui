@@ -378,14 +378,14 @@
             <string>Table View</string>
            </property>
            <layout class="QGridLayout" name="gridLayout_2">
-            <item row="0" column="0">
+            <item row="1" column="0">
              <widget class="QLabel" name="label_11">
               <property name="text">
                <string>Row size:</string>
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
+            <item row="1" column="1">
              <widget class="QSpinBox" name="tableRowSizeSpinBox">
               <property name="toolTip">
                <string>Number of lines of text that are shown for each row in table view</string>
@@ -399,6 +399,30 @@
               <property name="maximum">
                <number>30</number>
               </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>Column width:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="columnWidthComboBox">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Adjustable:&lt;/span&gt; the width of the columns can be freely adjusted&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Automatic width:&lt;/span&gt; the width of the columns is fixed and always resized automatically to fit all content&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Adjustable</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Automatic width</string>
+               </property>
+              </item>
              </widget>
             </item>
            </layout>
