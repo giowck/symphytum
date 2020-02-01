@@ -188,7 +188,11 @@ void TableView::contextMenuEvent(QContextMenuEvent *event)
 void TableView::initView()
 {
     QHeaderView *header = horizontalHeader();
+
+    header->blockSignals(true); //block signals to avoid saveSectionSizes/Order being called
     header->hideSection(0); //hide _id column
+    header->blockSignals(false);
+
     setAlternatingRowColors(true);
 
     //allow section move and resizing
@@ -316,10 +320,13 @@ void TableView::restoreSectionOrder()
       sectionOrder << v.toInt();
     }
 
+    header->blockSignals(true); //block signals to avoid saveSectionSizes/Order being called
     for (int i = 0; i < sectionOrder.size(); i++) {
         int visualIndex = header->visualIndex(i+1); //+1 because of _id column 0
+
         header->moveSection(visualIndex, sectionOrder.at(i));
     }
+    header->blockSignals(false);
 }
 
 void TableView::restoreSectionSizes()
@@ -346,10 +353,12 @@ void TableView::restoreSectionSizes()
           sectionSizes << v.toInt();
         }
 
+        header->blockSignals(true); //block signals to avoid saveSectionSizes/Order being called
         for (int i = 0; i < sectionSizes.size(); i++) {
             int visualIndex = header->visualIndex(i+1); //+1 because of _id column 0
             header->resizeSection(visualIndex, sectionSizes.at(i));
         }
+        header->blockSignals(false);
     }
 }
 
