@@ -45,5 +45,6 @@
         <file>images/icons/unlocked.png</file>
         <file>images/icons/down.png</file>
         <file>images/icons/up.png</file>
+        <file>images/icons/foldersync.png</file>
     </qresource>
 </RCC>

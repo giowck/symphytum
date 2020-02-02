@@ -10,6 +10,7 @@
 #include "abstractsyncdriver.h"
 #include "dropboxsyncdriver.h"
 #include "megasyncdriver.h"
+#include "foldersyncdriver.h"
 #include "../settingsmanager.h"
 #include "../filemanager.h"
 #include "../../utils/definitionholder.h"
@@ -57,6 +58,9 @@ AbstractSyncDriver* SyncEngine::createSyncDriver(SyncService service,
         break;
     case SyncEngine::MegaSync:
         driver = new MegaSyncDriver(parent);
+        break;
+    case SyncEngine::FolderSync:
+        driver = new FolderSyncDriver(parent);
         break;
     }
 

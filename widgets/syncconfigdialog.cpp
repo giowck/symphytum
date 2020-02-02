@@ -69,6 +69,10 @@ void SyncConfigDialog::loginButtonClicked()
         configPage = 3;
         //start auth req only later after email and pass prompt
         break;
+    case SyncEngine::FolderSync:
+        configPage = 4;
+        //start auth req only later after path configured
+        break;
     default:
         configPage = 0;
         break;
@@ -167,7 +171,8 @@ void SyncConfigDialog::syncErrorConnectionFailed()
 
 void SyncConfigDialog::syncUrlAuth(const QString &url)
 {
-    if (m_syncService == SyncEngine::MegaSync) {
+    if ((m_syncService == SyncEngine::MegaSync) ||
+            (m_syncService == SyncEngine::FolderSync)) {
         //start validation directly since no URL auth is needed
         this->okButtonClicked();
     } else {
@@ -213,6 +218,8 @@ void SyncConfigDialog::init()
                                  tr("Dropbox"));
     ui->serviceComboBox->addItem(QIcon(":/images/icons/megasync.png"),
                                  tr("MEGA"));
+    ui->serviceComboBox->addItem(QIcon(":/images/icons/foldersync.png"),
+                                 tr("Generic provider (folder based)"));
     ui->loginButton->setDefault(true);
 
     //2FA mega

@@ -23,6 +23,7 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
+    components/sync_framework/foldersyncdriver.cpp \
         widgets/mainwindow.cpp \
     utils/definitionholder.cpp \
     views/formview/formview.cpp \
@@ -109,6 +110,7 @@ SOURCES += main.cpp\
     widgets/upgradesuccessdialog.cpp
 
 HEADERS  += widgets/mainwindow.h \
+    components/sync_framework/foldersyncdriver.h \
     utils/definitionholder.h \
     views/formview/formview.h \
     components/formlayoutmatrix.h \
