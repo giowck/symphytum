@@ -573,7 +573,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="folderSyncPathLineEdit">
            <property name="placeholderText">
             <string>path to your sync folder</string>
            </property>

@@ -15,6 +15,7 @@
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
 #include <QtGui/QRegExpValidator>
+#include <QtWidgets/QFileDialog>
 
 
 //-----------------------------------------------------------------------------
@@ -100,6 +101,14 @@ void SyncConfigDialog::okMegaButtonClicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
+void SyncConfigDialog::okFolderSyncButtonClicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+
+    QString folderPath = ui->folderSyncPathLineEdit->text().trimmed();
+    m_syncDriver->startAuthenticationRequest(QStringList() << folderPath);
+}
+
 void SyncConfigDialog::finishButtonClicked()
 {
     //save cloud service config
@@ -142,6 +151,24 @@ void SyncConfigDialog::megaCredentialsInputEdited()
     ui->okMegaButton->setEnabled(!ui->megaEmailLineEdit->text().trimmed().isEmpty() &&
                                  ui->megaEmailLineEdit->text().contains("@") &&
                                  !ui->megaPassLineEdit->text().trimmed().isEmpty());
+}
+
+void SyncConfigDialog::folderSyncPathEdited()
+{
+    ui->okFolderSyncButton->setEnabled(!ui->folderSyncPathLineEdit->text()
+                                       .trimmed().isEmpty());
+}
+
+void SyncConfigDialog::folderSyncBrowseButtonClicked()
+{
+    QString documentsDir = QStandardPaths::standardLocations(
+                QStandardPaths::DocumentsLocation).at(0);
+    QString folderPath = QFileDialog::getExistingDirectory(this,
+                                                           tr("Select sync folder"),
+                                                           documentsDir,
+                                                           QFileDialog::ShowDirsOnly
+                                                           | QFileDialog::DontResolveSymlinks);
+    ui->folderSyncPathLineEdit->setText(folderPath);
 }
 
 void SyncConfigDialog::syncError(const QString &message)
@@ -259,6 +286,16 @@ void SyncConfigDialog::createConnections()
             this, &SyncConfigDialog::megaCredentialsInputEdited);
     connect(ui->megaPassLineEdit, &QLineEdit::textEdited,
             this, &SyncConfigDialog::megaCredentialsInputEdited);
+
+    //foldersync
+    connect(ui->folderSyncPathLineEdit, &QLineEdit::textChanged,
+            this, &SyncConfigDialog::folderSyncPathEdited);
+    connect(ui->okFolderSyncButton, &QPushButton::clicked,
+            this, &SyncConfigDialog::okFolderSyncButtonClicked);
+    connect(ui->folderSyncBrowseButton, &QPushButton::clicked,
+            this, &SyncConfigDialog::folderSyncBrowseButtonClicked);
+    connect(ui->cancelFolderSyncButton, &QPushButton::clicked,
+            this, &QDialog::reject);
 }
 
 void SyncConfigDialog::updateFinishButton(bool enabled)
