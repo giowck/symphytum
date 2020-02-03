@@ -15,12 +15,38 @@
 
 #include "abstractsyncdriver.h"
 
-#include <QtCore/QProcess>
+#include <QtCore/QThread>
 
 
 //-----------------------------------------------------------------------------
 // Forward declarations
 //-----------------------------------------------------------------------------
+
+class FolderSyncTask : public QObject
+{
+    Q_OBJECT
+public:
+    enum FileOp {
+        CopyOp,
+        RemoveOp
+    };
+    FolderSyncTask(QObject *parent = nullptr);
+    ~FolderSyncTask();
+    void configureTask(const QString &srcfileName,
+                       const QString &destFileName = QString(),
+                       FileOp operation = RemoveOp);
+public slots:
+    void startFileOp();
+signals:
+    void finishedSignal(const QString &srcFileName,
+                        const QString &destFileName,
+                        int operation);
+    void errorSignal(const QString &message);
+private:
+    QString m_srcFileName;
+    QString m_destFileName;
+    FileOp m_currentOp;
+};
 
 
 //-----------------------------------------------------------------------------
@@ -47,15 +73,18 @@ public:
     QString getServiceUrl();
 
 private slots:
-    void processError(QProcess::ProcessError error);
-    void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
-    void processReadyReadOutput();
+    /** Stop the file operation thread if running */
+    void stopFileOp();
+    void fileOperationErrorSlot(const QString &message);
+    void fileOperationFinishedSlot(const QString &srcFileName,
+                                   const QString &destFileName,
+                                   int op);
 
 private:
     /** Supported request types */
     enum SyncRequest {
         NoRequest,
-        AuthRequest,
+        InitRequest,
         AuthValidationRequest,
         UserNameRequest,
         DownloadRequest,
@@ -63,17 +92,13 @@ private:
         RemoveRequest
     };
 
-    void initSecrets();
     void startRequest();
+    void createFileThreadConnections(QThread *thread, FolderSyncTask *fileTask);
 
-    QProcess *m_process;
     SyncRequest m_currentRequest;
-    QString m_accessTokenEncoded;
-    QString m_appSecretEncoded;
+    QString m_folderPath;
     QStringList m_requestArgs;
-    QString m_processOutput;
-    int m_totUploadChunks;
-    int m_chunksUploaded;
+    QThread *m_fileOpThread;
 };
 
 #endif // FOLDERSYNCDRIVER_H

@@ -11,7 +11,75 @@
 #include "../../utils/definitionholder.h"
 
 #include <QtCore/QFileInfo>
+#include <QtCore/QDir>
 #include <QtWidgets/QApplication>
+
+
+//-----------------------------------------------------------------------------
+// FolderSyncTask
+//-----------------------------------------------------------------------------
+
+FolderSyncTask::FolderSyncTask(QObject *parent)
+    : QObject(parent), m_currentOp(CopyOp)
+{
+}
+
+FolderSyncTask::~FolderSyncTask()
+{
+}
+
+void FolderSyncTask::configureTask(const QString &srcfileName,
+                                   const QString &destFileName,
+                                   FileOp operation)
+{
+    m_srcFileName = srcfileName;
+    m_destFileName = destFileName;
+    m_currentOp = operation;
+}
+
+void FolderSyncTask::startFileOp()
+{
+    bool error = false;
+    QString errMessage;
+    QFile src(m_srcFileName);
+    QFile dest(m_destFileName);
+
+    switch (m_currentOp) {
+    case CopyOp:
+        if (dest.exists()) {
+            error = !dest.remove(m_destFileName);
+            if (error) {
+                errMessage = tr("Failed to copy %1 to %2: %3 because removing failed")
+                        .arg(m_srcFileName).arg(m_destFileName)
+                        .arg(src.errorString());
+                break;
+            }
+        }
+        if (!src.copy(m_destFileName)) {
+            error = true;
+            errMessage = tr("Failed to copy %1 to %2: %3")
+                    .arg(m_srcFileName).arg(m_destFileName)
+                    .arg(src.errorString());
+        }
+        break;
+    case RemoveOp:
+        if (!QFile::remove(m_srcFileName)) {
+            error = true;
+            errMessage = tr("Failed to remove %1: %2")
+                    .arg(m_srcFileName).arg(src.errorString());
+        }
+        break;
+    default:
+        break;
+    }
+
+    if (error) {
+        emit errorSignal(errMessage);
+        return;
+    }
+
+    emit finishedSignal(m_srcFileName, m_destFileName, m_currentOp);
+}
 
 
 //-----------------------------------------------------------------------------
@@ -20,31 +88,29 @@
 
 FolderSyncDriver::FolderSyncDriver(QObject *parent) :
     AbstractSyncDriver(parent),
-    m_process(nullptr), m_currentRequest(NoRequest),
-    m_totUploadChunks(0), m_chunksUploaded(0)
+    m_currentRequest(NoRequest),
+    m_fileOpThread(nullptr)
 {
-    initSecrets();
-
-    m_process = new QProcess(this);
-    connect(m_process, SIGNAL(readyReadStandardOutput()),
-            this, SLOT(processReadyReadOutput()));
-    connect(m_process, SIGNAL(readyReadStandardError()),
-            this, SLOT(processReadyReadOutput()));
-    connect(m_process, SIGNAL(error(QProcess::ProcessError)),
-            this, SLOT(processError(QProcess::ProcessError)));
-    connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)),
-            this, SLOT(processFinished(int,QProcess::ExitStatus)));
+    m_folderPath = "/invalid";
 }
 
 FolderSyncDriver::~FolderSyncDriver()
 {
-    stopAllRequests();
+    stopFileOp();
+
+    if (m_fileOpThread)
+        delete m_fileOpThread;
 }
 
 void FolderSyncDriver::startAuthenticationRequest(const QStringList &args)
 {
-    Q_UNUSED(args);
-    m_currentRequest = AuthRequest;
+    m_currentRequest = InitRequest;
+
+    //folder path
+    if (args.size()) {
+        m_folderPath = args.at(0);
+    }
+
     startRequest();
 }
 
@@ -88,18 +154,12 @@ void FolderSyncDriver::startRemoveRequest(const QString &cloudFilePath)
 
 void FolderSyncDriver::stopAllRequests()
 {
-   if (m_process) {
-        if (m_process->state() != QProcess::NotRunning) {
-            m_process->kill();
-            m_process->waitForFinished();
-            m_currentRequest = NoRequest;
-        }
-    }
+   stopFileOp();
 }
 
 QString FolderSyncDriver::getServiceUrl()
 {
-    return "<a href=\"https://www.dropbox.com\">www.dropbox.com</a>";
+    return "Generic folder based sync";
 }
 
 
@@ -107,270 +167,64 @@ QString FolderSyncDriver::getServiceUrl()
 // Private slots
 //-----------------------------------------------------------------------------
 
-void FolderSyncDriver::processError(QProcess::ProcessError error)
+void FolderSyncDriver::stopFileOp()
 {
-    //if process has been killed (request is cleared)
-    if (m_currentRequest == NoRequest) return;
-
-    QString errorMessage;
-
-    switch (error) {
-    case QProcess::FailedToStart:
-        errorMessage = tr("Dropbox sync process failed to start");
-        break;
-    case QProcess::Crashed:
-        errorMessage = tr("Dropbox sync process crashed");
-        break;
-    case QProcess::WriteError:
-        errorMessage = tr("Dropbox sync process write error");
-        break;
-    case QProcess::ReadError:
-        errorMessage = tr("Dropbox sync process read error");
-        break;
-    case QProcess::UnknownError:
-        errorMessage = tr("Unknown error during Dropbox sync process");
-        break;
-    default:
-        errorMessage = tr("Unknown error during Dropbox sync process "
-                          "(in switch default)");
-        break;
-    }
-
-    //clean request args
-    m_requestArgs.clear();
-
-    emit errorSignal(errorMessage);
-}
-
-void FolderSyncDriver::processFinished(int exitCode,
-                                        QProcess::ExitStatus exitStatus)
-{
-    Q_UNUSED(exitCode);
-    bool error = false;
-
-    //copy request args and clean them for future requests
-    QStringList requestArgs = m_requestArgs;
-    m_requestArgs.clear();
-
-    if (exitStatus == QProcess::NormalExit) {
-        QString result = m_processOutput;
-
-        switch (m_currentRequest) {
-        case AuthRequest:
-        {
-            QString url;
-            if (result.contains("URL:")) {
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "URL") {
-                        if ((i + 2) < list.size()) {
-                            url = list.at(i + 1);
-                            //since https:// contains ':'
-                            url.append(":").append(list.at(i + 2));
-                        }
-                    }
-                }
-                emit authenticationUrlReady(url);
-            } else {
-                error = true;
-            }
-        }
-            break;
-        case AuthValidationRequest:
-        {
-            if (result.contains("Access token:")) {
-                QString token;
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "Access token") {
-                        if ((i + 1) < list.size())
-                            token = list.at(i + 1);
-                    }
-                }
-                QString encodedToken = QString(token.toLatin1().toBase64());
-                m_accessTokenEncoded = encodedToken;
-                SettingsManager s;
-                s.saveEncodedAccessToken(encodedToken);
-                emit authenticationValidated();
-            } else {
-                error = true;
-            }
-        }
-            break;
-        case UserNameRequest:
-        {
-            if (result.contains("User:")) {
-                QString user;
-                QStringList list = result.split(':', QString::SkipEmptyParts);
-                for (int i = 0; i < list.size(); i++) {
-                    QString s = list.at(i);
-                    if (s == "User") {
-                        if ((i + 1) < list.size())
-                            user = list.at(i + 1);
-                    }
-                }
-                emit userNameResultReady(user);
-            } else {
-                error = true;
-            }
-        }
-            break;
-        case DownloadRequest:
-        {
-            QString src, dest;
-            src = requestArgs.at(0);
-            dest = requestArgs.at(1);
-
-            if (result.contains("Download:OK")) {
-                emit downloadReady(src, dest);
-            } else if (result.contains("not_found")) {
-                emit downloadFileNotFound(src);
-            } else {
-                error = true;
-            }
-        }
-            break;
-        case UploadRequest:
-        {
-            QString src, dest;
-            src = requestArgs.at(0);
-            dest = requestArgs.at(1);
-
-            if (result.contains("Upload:OK")) {
-                emit uploadReady(src, dest);
-            } else {
-                error = true;
-            }
-        }
-            break;
-        case RemoveRequest:
-        {
-            QString file;
-            file = requestArgs.at(0);
-
-            if (result.contains("Delete:OK") || result.contains("not_found")) {
-                emit removeReady(file);
-            } else {
-                error = true;
-            }
-        }
-            break;
-        default:
-            break;
-        }
-
-        //inform about errors with signals
-        if (error) {
-            if (result.contains("invalid_access_token"))
-                emit authTokenExpired();
-            else if (result.contains("Failed to establish a new connection"))
-                emit connectionFailed();
-            else if (result.contains("503")) //this was never tested
-                                             //check the output when storage full
-                                             //for the correct err code
-                emit storageQuotaExceeded();
-            else
-                emit errorSignal(result);
+    if (m_fileOpThread) {
+        if (m_fileOpThread->isRunning()) {
+            m_fileOpThread->terminate();
+            m_fileOpThread->wait();
         }
     }
 }
 
-void FolderSyncDriver::processReadyReadOutput()
+void FolderSyncDriver::fileOperationErrorSlot(const QString &message)
 {
-    QString newOutput;
-    newOutput.append(m_process->readAllStandardError());
-    newOutput.append(m_process->readAllStandardOutput());
-    m_processOutput.append(newOutput);
+    m_fileOpThread = nullptr;
+    emit errorSignal(message);
+}
+
+void FolderSyncDriver::fileOperationFinishedSlot(const QString &srcFileName,
+                                                 const QString &destFileName,
+                                                 int op)
+{
+    Q_UNUSED(op)
+
+    m_fileOpThread = nullptr;
 
     switch (m_currentRequest) {
+    case DownloadRequest:
+    {
+        QFileInfo src(srcFileName);
+        emit downloadReady(src.fileName(), destFileName);
+    }
+        break;
     case UploadRequest:
-        if (m_totUploadChunks) {
-            if (m_processOutput.contains("Uploading:")) {
-                emit uploadedChunkReady(m_chunksUploaded, m_totUploadChunks);
-                m_chunksUploaded++;
-            }
-        }
+    {
+        QFileInfo dest(destFileName);
+        emit uploadReady(srcFileName, dest.fileName());
+    }
+        break;
+    case RemoveRequest:
+    {
+        QFileInfo file(srcFileName);
+        emit removeReady(file.fileName());
+    }
         break;
     default:
         break;
     }
 }
+
 
 //-----------------------------------------------------------------------------
 // Private
 //-----------------------------------------------------------------------------
 
-void FolderSyncDriver::initSecrets()
-{
-    //init app secret
-    //app secret is a base64 encoded string
-    //where on the base64 string the second half part
-    //is moved ahead, and the original first half becomes the second one:
-    //1. Encode app secret in base64
-    //2. Result is: firstHalf+secondHalf
-    //3. Now switch first and second half
-    //4. Result is: secondHalf+firstHalf
-    //to decode apply reverse algorithm
-    m_appSecretEncoded = "J6d2x2MXR1aHptamhhcD";
-
-    //load encoded access token from settings
-    //access token is saved just as base64 encoded string
-    SettingsManager s;
-    m_accessTokenEncoded = s.restoreEncodedAccessToken();
-}
-
 void FolderSyncDriver::startRequest()
 {
-    QStringList args;
-    QString pythonInterpreterPath;
-    QString appSecret;
-    QString accessToken;
-    QString command;
-
-#ifdef Q_OS_WIN
-    pythonInterpreterPath = QApplication::applicationDirPath()
-            .append("/sync/").append("dropbox_client.exe");
-#endif
-#ifdef Q_OS_OSX
-    if (QSysInfo::MacintoshVersion <= QSysInfo::MV_10_6)
-        pythonInterpreterPath = "python2.6";
-    else
-        pythonInterpreterPath = "python2.7"; //python3 not yet available
-    QString path = QApplication::applicationDirPath().append("/sync/");
-    path.append("dropbox_client.py");
-    args.append(path);
-#endif
-#ifdef Q_OS_LINUX
-    if(DefinitionHolder::APPIMAGE_LINUX) {
-        pythonInterpreterPath = QCoreApplication::applicationDirPath()
-                + "/../share/symphytum/sync/dropbox_client/dropbox_client";
-    } else if (DefinitionHolder::SNAP_LINUX) {
-        pythonInterpreterPath = "python3";
-        args.append("/snap/symphytum/current/usr/share/symphytum/sync/dropbox_client.py");
-    } else {
-        pythonInterpreterPath = "python3";
-        args.append("/usr/share/symphytum/sync/dropbox_client.py");
-    }
-#endif
-
-    //decode access token
-    accessToken = QString(
-                QByteArray::fromBase64(m_accessTokenEncoded.toLatin1()));
-
-    //decode app secret
-    QString s2;
-    QString s1;
-    for (int i = 0; i < m_appSecretEncoded.size()/2; i++) {
-        s2.append(m_appSecretEncoded.at(i));
-    }
-    for (int i = m_appSecretEncoded.size()/2;
-         i < m_appSecretEncoded.size(); i++) {
-        s1.append(m_appSecretEncoded.at(i));
-    }
-    QString e = s1 + s2;
-    appSecret = QString(QByteArray::fromBase64(e.toLatin1()));
+    //copy request args and clean them for future requests
+    QStringList requestArgs = m_requestArgs;
+    m_requestArgs.clear();
 
     //init command and etra args
     QStringList extraArgs; //extra arguments for specific command
@@ -378,61 +232,132 @@ void FolderSyncDriver::startRequest()
     case NoRequest:
         //skip
         break;
-    case AuthRequest:
-        command = "authorize_url";
-        accessToken = "none";
+    case InitRequest:
+    {
+        //check if directory is valid and writable
+        QDir dir;
+        dir.mkpath(m_folderPath);
+
+        QFileInfo dirInfo(m_folderPath);
+        if (dirInfo.isDir() && dirInfo.isWritable()) {
+            m_folderPath = dirInfo.absoluteFilePath(); //in case path was relative
+            emit authenticationUrlReady("skip");
+        } else {
+            emit errorSignal(tr("Sync directory %1 is not valid or writing permissions are missing.")
+                             .arg(m_folderPath));
+        }
+    }
         break;
     case AuthValidationRequest:
-        command = "create_access_token";
-        accessToken = "none";
-        extraArgs = m_requestArgs;
+    {
+        SettingsManager s;
+        s.saveEncodedAccessToken(m_folderPath); //save sync folder as access token
+        emit authenticationValidated();
+    }
         break;
     case UserNameRequest:
-        command = "user_name";
+    {
+        emit userNameResultReady(m_folderPath);
+    }
         break;
     case DownloadRequest:
-        command = "download_file";
-        extraArgs = m_requestArgs;
+    {
+        //get folder from settings
+        SettingsManager sm;
+        m_folderPath= sm.restoreEncodedAccessToken();
+
+        QString src, dest;
+        src = m_folderPath + "/" + requestArgs.at(0);
+        dest = requestArgs.at(1);
+
+        //check if file exists
+        if (!QFileInfo::exists(src)) {
+            emit downloadFileNotFound(requestArgs.at(0)); //flag without full path
+        } else {
+            //create file op thread
+            m_fileOpThread = new QThread;
+            FolderSyncTask *fileTask = new FolderSyncTask; //parent is null bc moved to thread later
+
+            fileTask->configureTask(src, dest, FolderSyncTask::CopyOp);
+
+            fileTask->moveToThread(m_fileOpThread);
+            createFileThreadConnections(m_fileOpThread, fileTask);
+
+            m_fileOpThread->start();
+        }
+    }
         break;
     case RemoveRequest:
-        command = "delete_file";
-        extraArgs = m_requestArgs;
+    {
+        //get folder from settings
+        SettingsManager sm;
+        m_folderPath= sm.restoreEncodedAccessToken();
+
+        QString file;
+        file = m_folderPath + "/" + requestArgs.at(0);
+
+        //create file op thread
+        m_fileOpThread = new QThread;
+        FolderSyncTask *fileTask = new FolderSyncTask;
+
+        fileTask->configureTask(file, "", FolderSyncTask::RemoveOp);
+
+        fileTask->moveToThread(m_fileOpThread);
+        createFileThreadConnections(m_fileOpThread, fileTask);
+
+        m_fileOpThread->start();
+    }
         break;
     case UploadRequest:
-        //files bigger 4MiB are uploaded in chunks
-        //FIXME: since there's a timeout bug in python v2 SDK for Dropbox
-        //reduce to 1 MiB chunks
-        QFileInfo file(m_requestArgs.at(0));
-        qint64 size = file.size();
-        //qint64 _4MiB = 4194304; //using 1MB to avoid timeouts
-        qint64 _1MiB = 1048576;
-        if (size <= _1MiB) {
-            command = "upload_file";
-            m_totUploadChunks = 0;
-            m_chunksUploaded = 0;
-        } else {
-            command = "upload_file_chunked";
-            m_chunksUploaded = 0;
-            m_totUploadChunks = size / _1MiB;
+    {
+        //get folder from settings
+        SettingsManager sm;
+        m_folderPath= sm.restoreEncodedAccessToken();
 
-            //if rest, add smaller chunk
-            if (size % _1MiB)
-                m_totUploadChunks++;
-        }
-        extraArgs = m_requestArgs;
+        QString src, dest;
+        src = requestArgs.at(0);
+        dest = m_folderPath + "/" + requestArgs.at(1);
+
+        //create file op thread
+        m_fileOpThread = new QThread;
+        FolderSyncTask *fileTask = new FolderSyncTask;
+
+        fileTask->configureTask(src, dest, FolderSyncTask::CopyOp);
+
+        fileTask->moveToThread(m_fileOpThread);
+        createFileThreadConnections(m_fileOpThread, fileTask);
+
+        m_fileOpThread->start();
+    }
         break;
     }
+}
 
-    //init args
-    args.append(appSecret);
-    args.append(accessToken);
-    args.append(command);
-    args.append(extraArgs);
+void FolderSyncDriver::createFileThreadConnections(QThread *thread,
+                                                   FolderSyncTask *fileTask)
+{
 
-    m_processOutput.clear();
-    m_process->start(pythonInterpreterPath, args);
+    //thread start and stop
+    connect(thread, SIGNAL(started()),
+            fileTask, SLOT(startFileOp()));
+    connect(fileTask, SIGNAL(finishedSignal(QString,QString,int)),
+            thread, SLOT(quit()));
+    connect(fileTask, SIGNAL(errorSignal(QString)),
+            thread, SLOT(quit()));
 
-    //close write channel to allow
-    //ready output signals, see docs
-    m_process->closeWriteChannel();
+    //fileTask delete
+    connect(fileTask, SIGNAL(finishedSignal(QString,QString,int)),
+            fileTask, SLOT(deleteLater()));
+    connect(fileTask, SIGNAL(errorSignal(QString)),
+            fileTask, SLOT(deleteLater()));
+
+    //thread delete
+    connect(thread, SIGNAL(finished()),
+            thread, SLOT(deleteLater()));
+
+    //fileTask signals
+    connect(fileTask, SIGNAL(errorSignal(QString)),
+            this, SLOT(fileOperationErrorSlot(QString)));
+    connect(fileTask, SIGNAL(finishedSignal(QString,QString,int)),
+            this, SLOT(fileOperationFinishedSlot(QString,QString,int)));
 }

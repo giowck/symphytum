@@ -106,6 +106,7 @@ void SyncConfigDialog::okFolderSyncButtonClicked()
     ui->stackedWidget->setCurrentIndex(2);
 
     QString folderPath = ui->folderSyncPathLineEdit->text().trimmed();
+    folderPath.append("/SymphytumSync");
     m_syncDriver->startAuthenticationRequest(QStringList() << folderPath);
 }
 
@@ -169,6 +170,7 @@ void SyncConfigDialog::folderSyncBrowseButtonClicked()
                                                            QFileDialog::ShowDirsOnly
                                                            | QFileDialog::DontResolveSymlinks);
     ui->folderSyncPathLineEdit->setText(folderPath);
+    ui->folderSyncPathLineEdit->setFocus();
 }
 
 void SyncConfigDialog::syncError(const QString &message)
