@@ -293,7 +293,7 @@ void FileManager::startAddFile(const QString &file)
 {
     //create file op thread
     m_fileOpThread = new QThread;
-    FileTask *fileTask = new FileTask(m_fileDirPath);
+    FileTask *fileTask = new FileTask(m_fileDirPath); //parent is null because moved later to thread
 
     //create dest file name
     QByteArray dateArray = QDateTime::currentDateTime().toString().toUtf8();

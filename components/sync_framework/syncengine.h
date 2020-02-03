@@ -42,7 +42,8 @@ public:
     /** Enum of supported sync services */
     enum SyncService {
         DropboxSync = 0,
-        MegaSync = 1
+        MegaSync = 1,
+        FolderSync = 2
     };
 
     /** Structure of the metadata file */

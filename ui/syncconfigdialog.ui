@@ -545,6 +545,121 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="folderSyncConfig">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="folderConfLabel">
+         <property name="styleSheet">
+          <string notr="true">font-size: 16px;</string>
+         </property>
+         <property name="text">
+          <string>Please configure your sync target folder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Sync Folder:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="folderSyncPathLineEdit">
+           <property name="placeholderText">
+            <string>path to your sync folder</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="folderSyncBrowseButton">
+           <property name="text">
+            <string>&amp;Browse</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;The sync folder can be any folder and will be used by Symphytum as the target for saving sync related files. For example, this folder could be located inside your Nextcloud, OwnCloud or any other folder that is then scanned and synced by your sync provider of choice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>164</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="Line" name="line_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cancelFolderSyncButton">
+           <property name="text">
+            <string>&amp;Cancel</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="okFolderSyncButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>&amp;OK</string>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -567,12 +682,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>89</x>
-     <y>18</y>
+     <x>134</x>
+     <y>145</y>
     </hint>
     <hint type="destinationlabel">
-     <x>89</x>
-     <y>27</y>
+     <x>448</x>
+     <y>315</y>
     </hint>
    </hints>
   </connection>
@@ -587,8 +702,8 @@
      <y>80</y>
     </hint>
     <hint type="destinationlabel">
-     <x>376</x>
-     <y>244</y>
+     <x>448</x>
+     <y>315</y>
     </hint>
    </hints>
   </connection>
@@ -603,8 +718,8 @@
      <y>54</y>
     </hint>
     <hint type="destinationlabel">
-     <x>317</x>
-     <y>225</y>
+     <x>448</x>
+     <y>315</y>
     </hint>
    </hints>
   </connection>
@@ -619,8 +734,8 @@
      <y>153</y>
     </hint>
     <hint type="destinationlabel">
-     <x>346</x>
-     <y>232</y>
+     <x>448</x>
+     <y>315</y>
     </hint>
    </hints>
   </connection>
@@ -637,6 +752,22 @@
     <hint type="destinationlabel">
      <x>52</x>
      <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>folderSyncPathLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>okFolderSyncButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>297</y>
     </hint>
    </hints>
   </connection>

@@ -15,6 +15,7 @@
 #include <QtGui/QDesktopServices>
 #include <QtCore/QUrl>
 #include <QtGui/QRegExpValidator>
+#include <QtWidgets/QFileDialog>
 
 
 //-----------------------------------------------------------------------------
@@ -69,6 +70,10 @@ void SyncConfigDialog::loginButtonClicked()
         configPage = 3;
         //start auth req only later after email and pass prompt
         break;
+    case SyncEngine::FolderSync:
+        configPage = 4;
+        //start auth req only later after path configured
+        break;
     default:
         configPage = 0;
         break;
@@ -94,6 +99,15 @@ void SyncConfigDialog::okMegaButtonClicked()
     m_syncDriver->startAuthenticationRequest(megaCredentials);
 
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void SyncConfigDialog::okFolderSyncButtonClicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+
+    QString folderPath = ui->folderSyncPathLineEdit->text().trimmed();
+    folderPath.append("/SymphytumSync");
+    m_syncDriver->startAuthenticationRequest(QStringList() << folderPath);
 }
 
 void SyncConfigDialog::finishButtonClicked()
@@ -140,6 +154,25 @@ void SyncConfigDialog::megaCredentialsInputEdited()
                                  !ui->megaPassLineEdit->text().trimmed().isEmpty());
 }
 
+void SyncConfigDialog::folderSyncPathEdited()
+{
+    ui->okFolderSyncButton->setEnabled(!ui->folderSyncPathLineEdit->text()
+                                       .trimmed().isEmpty());
+}
+
+void SyncConfigDialog::folderSyncBrowseButtonClicked()
+{
+    QString documentsDir = QStandardPaths::standardLocations(
+                QStandardPaths::DocumentsLocation).at(0);
+    QString folderPath = QFileDialog::getExistingDirectory(this,
+                                                           tr("Select sync folder"),
+                                                           documentsDir,
+                                                           QFileDialog::ShowDirsOnly
+                                                           | QFileDialog::DontResolveSymlinks);
+    ui->folderSyncPathLineEdit->setText(folderPath);
+    ui->folderSyncPathLineEdit->setFocus();
+}
+
 void SyncConfigDialog::syncError(const QString &message)
 {
     if (ui->stackedWidget->currentIndex() == 1) {
@@ -167,7 +200,8 @@ void SyncConfigDialog::syncErrorConnectionFailed()
 
 void SyncConfigDialog::syncUrlAuth(const QString &url)
 {
-    if (m_syncService == SyncEngine::MegaSync) {
+    if ((m_syncService == SyncEngine::MegaSync) ||
+            (m_syncService == SyncEngine::FolderSync)) {
         //start validation directly since no URL auth is needed
         this->okButtonClicked();
     } else {
@@ -213,6 +247,8 @@ void SyncConfigDialog::init()
                                  tr("Dropbox"));
     ui->serviceComboBox->addItem(QIcon(":/images/icons/megasync.png"),
                                  tr("MEGA"));
+    ui->serviceComboBox->addItem(QIcon(":/images/icons/foldersync.png"),
+                                 tr("Generic provider (folder based)"));
     ui->loginButton->setDefault(true);
 
     //2FA mega
@@ -252,6 +288,16 @@ void SyncConfigDialog::createConnections()
             this, &SyncConfigDialog::megaCredentialsInputEdited);
     connect(ui->megaPassLineEdit, &QLineEdit::textEdited,
             this, &SyncConfigDialog::megaCredentialsInputEdited);
+
+    //foldersync
+    connect(ui->folderSyncPathLineEdit, &QLineEdit::textChanged,
+            this, &SyncConfigDialog::folderSyncPathEdited);
+    connect(ui->okFolderSyncButton, &QPushButton::clicked,
+            this, &SyncConfigDialog::okFolderSyncButtonClicked);
+    connect(ui->folderSyncBrowseButton, &QPushButton::clicked,
+            this, &SyncConfigDialog::folderSyncBrowseButtonClicked);
+    connect(ui->cancelFolderSyncButton, &QPushButton::clicked,
+            this, &QDialog::reject);
 }
 
 void SyncConfigDialog::updateFinishButton(bool enabled)

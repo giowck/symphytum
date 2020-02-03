@@ -52,10 +52,13 @@ private slots:
     void loginButtonClicked();
     void okButtonClicked();
     void okMegaButtonClicked();
+    void okFolderSyncButtonClicked();
     void finishButtonClicked();
     void retryButtonClicked();
     void codeLineEditTextEdited();
     void megaCredentialsInputEdited();
+    void folderSyncPathEdited();
+    void folderSyncBrowseButtonClicked();
 
     //sync slots
     /** Called if an error occurred */
