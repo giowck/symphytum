@@ -122,7 +122,7 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
 //    separator2->setFrameShadow(QFrame::Raised);
 
     //formView
-    m_formViewButton = new QPushButton(tr("Form"), m_mainFrame);
+    m_formViewButton = new QPushButton(tr("FORM"), m_mainFrame);
     m_formViewButton->setStatusTip(tr("Change current view mode to a form-like view"));
     m_formViewButton->setCheckable(true);
     m_formViewButton->setChecked(true);
@@ -130,7 +130,7 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
     m_formViewButton->setObjectName("viewModeActionLeft");
 
     //tableView
-    m_tableViewButton = new QPushButton(tr("Table"), m_mainFrame);
+    m_tableViewButton = new QPushButton(tr("TABLE"), m_mainFrame);
     m_tableViewButton->setStatusTip(tr("Change current view mode to a table-like view"));
     m_tableViewButton->setCheckable(true);
     m_tableViewButton->setFocusPolicy(Qt::NoFocus);
@@ -319,10 +319,11 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
                 "border-bottom: 2px solid #555;"
                 "border-top-left-radius: 9px;"
                 "border-bottom-left-radius: 9px;"
-                "padding: 3px;"
+                "padding: 8px;"
                 "background: qradialgradient(cx: 0.3, cy: -0.4,"
                 "fx: 0.3, fy: -0.4,"
                 "radius: 1.35, stop: 0 #fff, stop: 1 #888);"
+                "font-weight: bold;"
                 "}"
                 "QPushButton#viewModeActionRight {"
                 "min-width: 80px;"
@@ -333,10 +334,11 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
                 "border-bottom: 2px solid #555;"
                 "border-top-right-radius: 9px;"
                 "border-bottom-right-radius: 9px;"
-                "padding: 3px;"
+                "padding: 8px;"
                 "background: qradialgradient(cx: 0.3, cy: -0.4,"
                 "fx: 0.3, fy: -0.4,"
                 "radius: 1.35, stop: 0 #fff, stop: 1 #888);"
+                "font-weight: bold;"
                 "}"
                 "QPushButton:hover#viewModeActionLeft,"
                 "QPushButton:hover#viewModeActionRight {"
@@ -358,9 +360,9 @@ ViewToolBarWidget::ViewToolBarWidget(QWidget *parent) :
                 "}"
                 );
 
-//    //adjust button's height as toolbutton's one
-//    m_formViewButton->setMinimumHeight(m_newRecordButton->height());
-//    m_tableViewButton->setMinimumHeight(m_newRecordButton->height());
+    //adjust button's height as toolbutton's one
+    m_formViewButton->setMinimumHeight(m_newRecordButton->height());
+    m_tableViewButton->setMinimumHeight(m_newRecordButton->height());
 
     setLayout(m_mainLayout);
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Maximum);
