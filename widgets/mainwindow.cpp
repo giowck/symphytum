@@ -1392,6 +1392,27 @@ void MainWindow::lockFormViewActionToggled(const bool locked)
     m_formView->setLockFormLayout(locked);
 }
 
+void MainWindow::safeEditModeActionToggled(const bool locked)
+{
+    m_safeEditModeAction->setChecked(locked);
+
+    lockFormViewActionToggled(locked);
+    m_lockFormViewAction->setDisabled(locked);
+    m_lockFormViewAction->setChecked(locked);
+
+    m_newFieldAction->setDisabled(locked);
+    m_deleteAllRecordsAction->setDisabled(locked);
+    m_deleteCollectionAction->setDisabled(locked);
+    m_newCollectionAction->setDisabled(locked);
+    m_duplicateCollectionAction->setDisabled(locked);
+    m_importAction->setDisabled(locked);
+
+    m_dockWidget->getCollectionListView()->setSafeEditMode(locked);
+    m_formView->setSafeEditMode(locked);
+    m_viewToolBar->setSafeEditMode(locked);
+    m_tableView->setSafeEditMode(locked);
+}
+
 void MainWindow::showAlarmListDialog()
 {
     if (!m_alarmListDialog) {
@@ -1755,6 +1776,11 @@ void MainWindow::createActions()
     m_lockFormViewAction->setIcon(QIcon(":/images/icons/locked.png"));
     m_lockFormViewAction->setStatusTip(tr("Lock the form view design to prevent "
                                           "unwanted field movements"));
+
+    m_safeEditModeAction = new QAction(tr("Simple edit mode (safe mode)"), this);
+    m_safeEditModeAction->setCheckable(true);
+    m_safeEditModeAction->setStatusTip(tr("Lock all destructive actions to prevent "
+                                          "changes to collections. Only editing of records is allowed."));
 }
 
 void MainWindow::createToolBar()
@@ -1846,6 +1872,7 @@ void MainWindow::createMenu()
     m_editMenu->addAction(m_selectAllAction);
     m_editMenu->addSeparator();
     m_editMenu->addAction(m_lockFormViewAction);
+    m_editMenu->addAction(m_safeEditModeAction);
     m_editMenu->addSeparator();
     m_editMenu->addAction(m_findAction);
 
@@ -1979,6 +2006,8 @@ void MainWindow::createConnections()
             this, SLOT(importActionTriggered()));
     connect(m_lockFormViewAction, &QAction::toggled,
             this, &MainWindow::lockFormViewActionToggled);
+    connect(m_safeEditModeAction, &QAction::toggled,
+            this, &MainWindow::safeEditModeActionToggled);
 
     //record actions
     connect(m_newRecordAction, SIGNAL(triggered()),
@@ -2125,10 +2154,17 @@ void MainWindow::restoreSettings()
         m_toggleDockAction->setChecked(true);
     }
 
-    //restore layout locked status of formView
-    bool fwLock = m_settingsManager->restoreProperty("lockFormView", "mainWindow").toBool();
-    m_lockFormViewAction->setChecked(fwLock);
-    m_formView->setLockFormLayout(fwLock);
+    //restore safe edit mode status
+    bool safeEditMode = m_settingsManager->restoreProperty("safeEditMode", "mainWindow").toBool();
+    if (safeEditMode) {
+        //enable safe editing
+        safeEditModeActionToggled(true);
+    } else {
+        //restore layout locked status of formView
+        bool fwLock = m_settingsManager->restoreProperty("lockFormView", "mainWindow").toBool();
+        m_lockFormViewAction->setChecked(fwLock);
+        m_formView->setLockFormLayout(fwLock);
+    }
 
     //sync
     SyncSession::LOCAL_DATA_CHANGED = m_syncEngine->localDataChanged();
@@ -2143,9 +2179,16 @@ void MainWindow::saveSettings()
     m_settingsManager->saveViewMode(m_currentViewMode);
     m_settingsManager->saveLastUsedRecord(m_formView->getCurrentRow());
 
-    //save layout locked status of formView
-    m_settingsManager->saveProperty("lockFormView", "mainWindow",
-                                    m_lockFormViewAction->isChecked());
+    //save safe editing mode status
+    bool safeEditingEnabled = m_safeEditModeAction->isChecked();
+    m_settingsManager->saveProperty("safeEditMode", "mainWindow",
+                                    safeEditingEnabled);
+
+    if (!safeEditingEnabled) {
+        //save layout locked status of formView
+        m_settingsManager->saveProperty("lockFormView", "mainWindow",
+                                        m_lockFormViewAction->isChecked());
+    }
 
     //sync
     if (SyncSession::IS_ENABLED) {

@@ -72,6 +72,14 @@ void TableView::reloadRowSize()
     restoreRowSize();
 }
 
+void TableView::setSafeEditMode(const bool &safeMode)
+{
+    m_newFieldContextAction->setDisabled(safeMode);
+    m_duplicateFieldContextAction->setDisabled(safeMode);
+    m_deleteFieldContextAction->setDisabled(safeMode);
+    m_modifyFieldContextAction->setDisabled(safeMode);
+}
+
 
 //-----------------------------------------------------------------------------
 // Protected slots

@@ -50,6 +50,9 @@ public:
     /** This method is used to set the view mode buttons to the specified state */
     void setViewModeState(ViewMode m);
 
+    /** Set safe editing mode (disable field editing actions) */
+    void setSafeEditMode(const bool &safeMode);
+
 public slots:
     /** Set the focus on the search line */
     void setSearchLineFocus();

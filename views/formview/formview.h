@@ -69,6 +69,9 @@ public:
     /** This reloads all properties and settings related to form view's appearence */
     void reloadAppearanceSettings();
 
+    /** Set safe editing mode (disable field editing actions) */
+    void setSafeEditMode(const bool &safeMode);
+
 signals:
     /** Emitted when new field action was triggered from context menu */
     void newFieldSignal();

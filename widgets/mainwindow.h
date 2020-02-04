@@ -115,6 +115,7 @@ private slots:
     void exportActionTriggered();
     void importActionTriggered();
     void lockFormViewActionToggled(const bool locked);
+    void safeEditModeActionToggled(const bool locked);
 
     /** Create and show alarm list dialog */
     void showAlarmListDialog();
@@ -245,6 +246,7 @@ private:
     QAction *m_exportAction;
     QAction *m_importAction;
     QAction *m_lockFormViewAction;
+    QAction *m_safeEditModeAction;
 #ifdef Q_OS_OSX
     QAction *m_minimizeAction;
     QAction *m_closeWindowAction;

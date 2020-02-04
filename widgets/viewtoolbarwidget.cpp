@@ -380,6 +380,13 @@ void ViewToolBarWidget::setViewModeState(ViewMode m)
     }
 }
 
+void ViewToolBarWidget::setSafeEditMode(const bool &safeMode)
+{
+    m_newFieldButton->setDisabled(safeMode);
+    m_duplicateFieldButton->setDisabled(safeMode);
+    m_deleteFieldButton->setDisabled(safeMode);
+}
+
 
 //-----------------------------------------------------------------------------
 // Public slots

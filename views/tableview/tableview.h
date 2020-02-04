@@ -48,6 +48,9 @@ public:
     /** Reload default row size from settings */
     void reloadRowSize();
 
+    /** Set safe editing mode (disable field editing actions) */
+    void setSafeEditMode(const bool &safeMode);
+
 signals:
     /** Emitted when new field action was triggered from context menu */
     void newFieldSignal();

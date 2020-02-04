@@ -55,6 +55,9 @@ public:
     /** Detach collection model from view */
     void detachModel();
 
+    /** Set safe editing mode (disable editing actions) */
+    void setSafeEditMode(const bool &safeMode);
+
 protected:
     void currentChanged(const QModelIndex &current, const QModelIndex &previous);
     void contextMenuEvent(QContextMenuEvent *event);
@@ -79,6 +82,9 @@ private slots:
     /** Called on duplicate collection context menu click */
     void duplicateCollectionActionTriggered();
 
+    /** Called on rename collection context menu click */
+    void renameCollectionActionTriggered();
+
     /** Called on move collection up context menu click */
     void moveUpActionTriggered();
 
@@ -98,7 +104,9 @@ private:
     QAction *m_duplicateCollectionAction;
     QAction *m_moveCollectionUpInList;
     QAction *m_moveCollectionDownInList;
+    QAction *m_renameCollectionAction;
     int m_currentCollectionId;
+    bool m_safeEditMode;
 };
 
 #endif // COLLECTIONLISTVIEW_H

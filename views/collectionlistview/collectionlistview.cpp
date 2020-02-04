@@ -29,7 +29,7 @@
 //-----------------------------------------------------------------------------
 
 CollectionListView::CollectionListView(QWidget *parent) :
-    QListView(parent), m_currentCollectionId(0)
+    QListView(parent), m_currentCollectionId(0), m_safeEditMode(false)
 {
     setAttribute(Qt::WA_MacShowFocusRect, 0); //on mac disable focus rect around borders
     setFocusPolicy(Qt::ClickFocus);
@@ -77,6 +77,7 @@ CollectionListView::CollectionListView(QWidget *parent) :
     m_newCollectionAction = new QAction(tr("New"), this);
     m_duplicateCollectionAction = new QAction(tr("Duplicate"), this);
     m_deleteCollectionAction = new QAction(tr("Delete"), this);
+    m_renameCollectionAction = new QAction(tr("Rename"), this);
     m_moveCollectionUpInList = new QAction(tr("Move up in list"), this);
     m_moveCollectionUpInList->setIcon(QIcon(":/images/icons/up.png"));
     m_moveCollectionUpInList->setStatusTip(tr("Move the selected collection up in the list"));
@@ -89,6 +90,8 @@ CollectionListView::CollectionListView(QWidget *parent) :
             this, SLOT(deleteCollectionActionTriggered()));
     connect(m_duplicateCollectionAction, SIGNAL(triggered()),
             this, SLOT(duplicateCollectionActionTriggered()));
+    connect(m_renameCollectionAction, SIGNAL(triggered()),
+            this, SLOT(renameCollectionActionTriggered()));
     connect(m_newCollectionAction, SIGNAL(triggered()),
             this, SLOT(newCollectionActionTriggered()));
     connect(m_moveCollectionUpInList, &QAction::triggered,
@@ -274,6 +277,17 @@ void CollectionListView::detachModel()
     }
 }
 
+void CollectionListView::setSafeEditMode(const bool &safeMode)
+{
+    m_safeEditMode = safeMode;
+    static CollectionListView::EditTriggers originalEditTriggers = this->editTriggers();
+
+    if (safeMode)
+        this->setEditTriggers(CollectionListView::NoEditTriggers);
+    else
+        this->setEditTriggers(originalEditTriggers);
+}
+
 
 //-----------------------------------------------------------------------------
 // Protected
@@ -292,8 +306,11 @@ void CollectionListView::currentChanged(const QModelIndex &current,
 void CollectionListView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu(this);
-    menu.addAction(m_newCollectionAction);
-    if (MetadataEngine::getInstance().getCurrentCollectionId() != 0) {
+    if (!m_safeEditMode)
+        menu.addAction(m_newCollectionAction);
+    if ((MetadataEngine::getInstance().getCurrentCollectionId() != 0)
+            && (m_safeEditMode == false)) {
+        menu.addAction(m_renameCollectionAction);
         menu.addAction(m_duplicateCollectionAction);
         menu.addAction(m_deleteCollectionAction);
         menu.addSeparator();
@@ -346,6 +363,12 @@ void CollectionListView::deleteCollectionActionTriggered()
 void CollectionListView::duplicateCollectionActionTriggered()
 {
     duplicateCollection();
+}
+
+void CollectionListView::renameCollectionActionTriggered()
+{
+    //edit it
+    edit(this->currentIndex());
 }
 
 void CollectionListView::moveUpActionTriggered()
