@@ -1,5 +1,32 @@
 CHANGELOG
 
+Version 2.6
+===========
+
+### New Features
+- New sync driver: generic folder sync for any folder based sync service, like Nextcloud and OwnCloud (#126)
+- New safe edit mode where destructive actions are disabled and only record editing is allowed (#82)
+- Allow empty rows and columns by default in form view. New setting to enable auto pruning of unused space (#120).
+- Automatic column width based on contents, as a new option in the settings (#116)
+- Improve performance of scrolling by allowing to hide images in table view (#107)
+- Italian translation (thanks to Pierfrancesco Passerini)
+
+### Improvements
+- Set current date in CalenderWidget popup when date is not set (#91)
+- Collections can be renamed als by clicking on the context menu
+- CSV exports now include the original file name of images (#83)
+- Ask for user permission before checking for updates
+- Minor fixes in German translation files
+- Improve slightly the styling of view mode buttons in tool bar
+
+### Bug Fixes
+- Duplicated collections no longer produce empty CSV and PDF files (#121, #122)
+- Duplicated collections no longer contain inconsistent records with null ids (#122)
+- Critical bug where deleting a field results in "invalid_column" (#125)
+- Don't update last modification date time if no data was changed in table view (#115)
+- Save and restore section order correctly in table view (#119)
+
+
 Version 2.5
 ===========
 
