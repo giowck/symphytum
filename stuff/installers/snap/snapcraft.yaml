@@ -1,6 +1,6 @@
 # see https://github.com/joshirio/symphytum-build.snapcraft.io/ for releasing on snap store
 name: symphytum
-version: '2.5'
+version: '2.6'
 summary: Easy-to-use personal database software
 description: |
   Symphytum is a personal database software for everyone 
@@ -60,7 +60,7 @@ parts:
 
   symphytum:
     source: https://github.com/giowck/symphytum.git
-    source-tag: v2.5
+    source-tag: v2.6
     plugin: qmake
     qt-version: qt5
     options:
