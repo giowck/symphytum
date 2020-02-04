@@ -19,16 +19,15 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={pf}\{#MyAppName}
+DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 OutputDir=C:\Users\user\Desktop
-OutputBaseFilename=symphytum-2.5-setup
+OutputBaseFilename=symphytum-2.6-setup
 Compression=lzma
 SolidCompression=yes
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "armenian"; MessagesFile: "compiler:Languages\Armenian.islu"
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "catalan"; MessagesFile: "compiler:Languages\Catalan.isl"
 Name: "corsican"; MessagesFile: "compiler:Languages\Corsican.isl"
@@ -38,19 +37,13 @@ Name: "dutch"; MessagesFile: "compiler:Languages\Dutch.isl"
 Name: "finnish"; MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
-Name: "greek"; MessagesFile: "compiler:Languages\Greek.isl"
 Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"
-Name: "hungarian"; MessagesFile: "compiler:Languages\Hungarian.isl"
 Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
-Name: "nepali"; MessagesFile: "compiler:Languages\Nepali.islu"
 Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"
 Name: "polish"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "portuguese"; MessagesFile: "compiler:Languages\Portuguese.isl"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
-Name: "scottishgaelic"; MessagesFile: "compiler:Languages\ScottishGaelic.isl"
-Name: "serbiancyrillic"; MessagesFile: "compiler:Languages\SerbianCyrillic.isl"
-Name: "serbianlatin"; MessagesFile: "compiler:Languages\SerbianLatin.isl"
 Name: "slovenian"; MessagesFile: "compiler:Languages\Slovenian.isl"
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
@@ -86,6 +79,9 @@ Source: "C:\Users\user\Desktop\Qt5PrintSupport.dll"; DestDir: "{app}"; Flags: ig
 Source: "C:\Users\user\Desktop\Qt5WinExtras.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\user\Desktop\libeay32.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\user\Desktop\ssleay32.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libssl-1_1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\user\Desktop\libcrypto-1_1.dll"; DestDir: "{app}"; Flags: ignoreversion
+
 Source: "C:\Users\user\Desktop\MEGAcmdSetup.exe"; DestDir: "{tmp}"; Check: InstallMEGAcmd; Flags: deleteafterinstall ignoreversion uninsremovereadonly
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

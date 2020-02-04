@@ -76,7 +76,7 @@ Download [Symphytum-windows-portable.zip](https://github.com/giowck/symphytum/re
 ---
 
 ### macOS
-For macOS 10.11 (El Capitan) and later, 64bit
+For macOS 10.12 (Sierra) and later, 64bit
 
 Download [symphytum-2.5.dmg](https://github.com/giowck/symphytum/releases/download/v2.5/symphytum-2.5.dmg)
 
