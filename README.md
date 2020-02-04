@@ -66,19 +66,19 @@ General releases, source archives and other info can be found on the [releases](
 For Windows 7, 8 and 10 32 or 64 bit
 
 #### Installer
-Download the Windows installer [symphytum-2.5-setup.exe](https://github.com/giowck/symphytum/releases/download/v2.5/symphytum-2.5-setup.exe)
+Download the Windows installer [symphytum-2.6-setup.exe](https://github.com/giowck/symphytum/releases/download/v2.6/symphytum-2.6-setup.exe)
 
 #### Portable ZIP Archive
 A portable ZIP for Windows is just a ZIP archive that, once extracted, can be moved and launched on any machine. The personal data is contained inside the folder alongside the main executable (symphytum.exe).
 
-Download [Symphytum-windows-portable.zip](https://github.com/giowck/symphytum/releases/download/v2.5/Symphytum-windows-portable.zip)
+Download [Symphytum-windows-portable.zip](https://github.com/giowck/symphytum/releases/download/v2.6/Symphytum-windows-portable.zip)
 
 ---
 
 ### macOS
 For macOS 10.12 (Sierra) and later, 64bit
 
-Download [symphytum-2.5.dmg](https://github.com/giowck/symphytum/releases/download/v2.5/symphytum-2.5.dmg)
+Download [symphytum-2.6.dmg](https://github.com/giowck/symphytum/releases/download/v2.6/symphytum-2.6.dmg)
 
 ---
 
@@ -88,7 +88,7 @@ For GNU/Linux, 64 bit. The AppImage should run on most linux machines, choose th
 #### Ubuntu Based
 Ubuntu 18.04 and other derivatives such as Linux Mint, elementaryOS and other.
 
-Download [symphytum-2.5-x86_64.deb](https://github.com/giowck/symphytum/releases/download/v2.5/symphytum-2.5-x86_64.deb)
+Download [symphytum-2.6-x86_64.deb](https://github.com/giowck/symphytum/releases/download/v2.6/symphytum-2.6-x86_64.deb)
 
 #### Arch Linux Based
 Arch Linux and derivatives like Manjaro can install Symphytum from the Arch User Repository (AUR).
@@ -98,7 +98,7 @@ Arch Linux and derivatives like Manjaro can install Symphytum from the Arch User
 #### AppImage
 An [AppImage](https://appimage.org/) is a self containing executable which should run on most common modern Linux distributions. For more info on how to make the downloaded image executable, please visit [this page](https://discourse.appimage.org/t/how-to-make-an-appimage-executable/80). To improve the system integration of the AppImage, please visit the [AppImage Wiki](https://github.com/AppImage/AppImageKit/wiki).
 
-Download [Symphytum-x86_64.AppImage](https://github.com/giowck/symphytum/releases/download/v2.5/Symphytum-x86_64.AppImage)
+Download [Symphytum-x86_64.AppImage](https://github.com/giowck/symphytum/releases/download/v2.6/Symphytum-x86_64.AppImage)
 
 #### Snap
 A [Snap package](https://snapcraft.io/) is a new self containing distribution format, supposed to work on most Linux distributions (Ubuntu, Debian, Arch Linux, Fedora, etc). The technology is still young with some limitations.
