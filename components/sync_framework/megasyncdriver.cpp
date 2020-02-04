@@ -25,7 +25,7 @@ MegaSyncDriver::MegaSyncDriver(QObject *parent) :
     m_process(nullptr), m_currentRequest(NoRequest)
 {
     initSecrets();
-    m_megaFolderPath = DefinitionHolder::NAME + "/";
+    m_megaFolderPath = "/" + DefinitionHolder::NAME + "/";
 
     m_process = new QProcess(this);
     connect(m_process, SIGNAL(readyReadStandardOutput()),
@@ -468,6 +468,12 @@ void MegaSyncDriver::startRequest()
     case DownloadRequest:
         command = "get";
         extraArgs = m_requestArgs;
+#ifdef Q_OS_WIN
+        //replace forward slashes with backward slashes (windows path style) for local files
+        if (extraArgs.size() >= 2) {
+            extraArgs[1].replace("/", "\\");
+        }
+#endif
         break;
     case RemoveRequest:
         command = "rm";
@@ -488,6 +494,12 @@ void MegaSyncDriver::startRequest()
         command = "put";
         extraArgs = m_requestArgs;
         extraArgs.append("-c"); //create path if needed
+#ifdef Q_OS_WIN
+        //replace forward slashes with backward slashes (windows path style) for local files
+        if (extraArgs.size()) {
+            extraArgs[0].replace("/", "\\");
+        }
+#endif
         break;
     case UploadRequestRmStep:
         command = "rm";

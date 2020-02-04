@@ -20,6 +20,7 @@ Version 2.6
 - Improve slightly the styling of view mode buttons in tool bar
 
 ### Bug Fixes
+- MEGA sync driver: fix after upstream API change (MEGAcmd output)
 - Duplicated collections no longer produce empty CSV and PDF files (#121, #122)
 - Duplicated collections no longer contain inconsistent records with null ids (#122)
 - Critical bug where deleting a field results in "invalid_column" (#125)
