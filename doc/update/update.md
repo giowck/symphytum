@@ -36,9 +36,6 @@ Please **create a backup (File->Backup) before upgrading** to be on the safe sid
 - Don't update last modification date time if no data was changed in table view (#115)
 - Save and restore section order correctly in table view (#119)
 
-### Bug Fixes
-- MEGA sync driver: hotfix API compatibility change, issue #86
-
 
 The complete changelog can be found [here](https://github.com/giowck/symphytum/blob/master/CHANGELOG.md).
 
