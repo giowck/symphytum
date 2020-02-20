@@ -489,10 +489,13 @@ void FileManager::addFileToUploadList(const QString &file)
 
 void FileManager::addFileToDeleteList(const QString &file)
 {
-    QStringList list = fileListToRemove();
-    if (!list.contains(file)) {
-        list.append(file);
-        m_settingsManager->saveToDeleteList(list);
+    QStringList toUploadList = fileListToUpload();
+    if (!toUploadList.contains(file)) { //check and avoid if file has yet to be uploaded
+        QStringList list = fileListToRemove();
+        if (!list.contains(file)) {
+            list.append(file);
+            m_settingsManager->saveToDeleteList(list);
+        }
     }
 
     //set local data changed
