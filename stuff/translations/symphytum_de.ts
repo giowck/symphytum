@@ -3027,7 +3027,7 @@ Dateiarchiv reduziert um %2 MiB</translation>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1662"/>
         <source>Say thanks by donating any amount</source>
-        <translation>Sagr &quot;danke&quot; durch eine beliebige Spende</translation>
+        <translation>Sagen Sie Danke, indem Sie einen beliebigen Betrag spenden</translation>
     </message>
     <message>
         <location filename="../../widgets/mainwindow.cpp" line="1664"/>
